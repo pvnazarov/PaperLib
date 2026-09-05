@@ -7309,6 +7309,25 @@
       "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
       "sha256_before": "9693d6d0dc9ee43bf5151634a8b9b4993e7c401a2edba1d586b4e719b751a522",
       "sha256_after": "6fc21882a2fb94c17163fb275c29179c9eee217729f6054796e5dba99a286f4d"
+    },
+    {
+      "seq": 383,
+      "date": "2026-09-05",
+      "file": "outputs/2026-09-05_reading_digest.md",
+      "keys": [
+        "<whole file>"
+      ],
+      "before": {
+        "<whole file>": null
+      },
+      "after": {
+        "<whole file>": "reports/2026-09-05_reading_digest.md"
+      },
+      "reason": "the reading digest the owner asked for: every cluster, then every paper with its summary, key points and limitations. Deliberately not named *_literature_review.md, which build.newest_review() would pick up as the taxonomy",
+      "evidence": "125 of 125 papers and 19 of 19 topics present in both parts; all 125 anchor links resolve; no unwritten sections",
+      "approved": "the owner said: please write a review md file. Each cluster and each paper to be represented. First clusters, then papers. Paper titles as subsection, then doi link, the summary, key points and limitations.",
+      "sha256_before": null,
+      "sha256_after": "aead8feef2e7ce71ebb484863133d940ce571d36df38a154ec7b6b842d1ae4e0"
     }
   ],
   "_about": [

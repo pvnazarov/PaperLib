@@ -23,7 +23,7 @@ PY := $(if $(VENV_READY),.venv/bin/python,python3)
 AREAS := $(notdir $(wildcard areas/*))
 
 .PHONY: help all areas new-area portal update build render embed bib test verify \
-        deploy clean venv topics audit edit review route inbox ui example demo demo-clean
+        deploy clean venv topics audit edit review digest route inbox ui example demo demo-clean
 
 help:
 	@echo "AREA=<name> selects the collection. Omit it only if there is exactly one."
@@ -44,6 +44,7 @@ help:
 	@echo "  make bib   AREA=x      Crossref/arXiv for new DOIs only        (NETWORK)"
 	@echo ""
 	@echo "  make review AREA=x     regenerate the literature review -> reports/ (a draft)"
+	@echo "  make digest AREA=x     clusters + every paper in full -> reports/ (a draft)"
 	@echo "  make topics AREA=x     propose topics for unfiled papers -> reports/ (a draft)"
 	@echo "  make audit  AREA=x     validate library.json against every other source"
 	@echo "  make verify AREA=x     re-hash every source against its sidecar"
@@ -159,6 +160,13 @@ ui:
 # scripts/edit_upstream.py with recorded approval, not by cp.
 review:
 	python3 scripts/make_review.py $(if $(TAXONOMY),--taxonomy $(TAXONOMY),)
+
+# A reading document, not a contract. The literature review above IS the taxonomy
+# -- build.py reads the newest *_literature_review.md out of outputs/ -- so this
+# one is named _reading_digest.md and cannot be mistaken for it. Clusters first,
+# then every paper with its summary, key points and limitations.
+digest:
+	python3 scripts/make_digest.py $(if $(OUT),--out $(OUT),)
 
 # Deliberately NOT part of `update`. It writes a draft for a person to read; if
 # anything in data/ ever read it, that would be a second taxonomy.
