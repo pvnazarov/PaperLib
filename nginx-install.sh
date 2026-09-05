@@ -181,6 +181,11 @@ location /paperlib/neoantigens/ {
                 text/javascript js;
                 text/plain      md;
         }
+        # REQUIRED alongside the types block above. Declaring `types` replaces the
+        # map for this location, and nginx's built-in fallback for anything not
+        # listed is text/plain -- which would serve a several-hundred-megabyte
+        # .tar.gz as text and break the download offer.
+        default_type application/octet-stream;
         charset utf-8;
 }
 

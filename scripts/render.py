@@ -95,6 +95,22 @@ def slim(lib: dict) -> dict:
 
 
 DIGEST_GLOB = "*_reading_digest.md"
+# Kept identical to make_bundle.GLOB. The archive is built straight into dist/ --
+# it is hundreds of megabytes, so it is not copied from anywhere -- and the link
+# exists only while the file does.
+BUNDLE_GLOB = "*_raw-meta-outputs.tar.gz"
+
+
+def bundle_link() -> str:
+    got = sorted(DIST.glob(BUNDLE_GLOB))
+    if not got:
+        return ""
+    b = got[-1]
+    mb = b.stat().st_size / (1024 * 1024)
+    return ('<br><span class="bundle"><strong>Temporary download:</strong> '
+            '<a href="' + esc(b.name) + '">' + esc(b.name) + '</a> '
+            f'({mb:.0f}&nbsp;MB) &mdash; the sources, the sidecars and the review. '
+            'Publisher PDFs; for personal research use.</span>')
 
 
 def newest_digest() -> Path | None:
@@ -200,6 +216,7 @@ def main() -> int:
         "__N_JOURNALS__": str(len({p["venue"] for p in papers if p.get("venue")})),
         "__N_AUTHORS_TOTAL__": str(len({a for p in papers for a in (p.get("authors") or [])})),
         "__DIGEST_LINK__": digest_link(),
+        "__BUNDLE_LINK__": bundle_link(),
     }
     html = tpl
     for k, v in subs.items():

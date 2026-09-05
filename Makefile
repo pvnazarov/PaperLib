@@ -23,7 +23,7 @@ PY := $(if $(VENV_READY),.venv/bin/python,python3)
 AREAS := $(notdir $(wildcard areas/*))
 
 .PHONY: help all areas new-area portal update build render embed bib test verify \
-        deploy clean venv topics audit edit review digest route inbox ui example demo demo-clean
+        deploy clean venv topics audit edit review digest bundle bundle-clean route inbox ui example demo demo-clean
 
 help:
 	@echo "AREA=<name> selects the collection. Omit it only if there is exactly one."
@@ -45,6 +45,8 @@ help:
 	@echo ""
 	@echo "  make review AREA=x     regenerate the literature review -> reports/ (a draft)"
 	@echo "  make digest AREA=x     clusters + every paper in full -> reports/ (a draft)"
+	@echo "  make bundle AREA=x     temporary raw+meta+outputs download (DRY RUN; APPLY=1)"
+	@echo "  make bundle-clean AREA=x   remove it, then re-render to drop the link"
 	@echo "  make topics AREA=x     propose topics for unfiled papers -> reports/ (a draft)"
 	@echo "  make audit  AREA=x     validate library.json against every other source"
 	@echo "  make verify AREA=x     re-hash every source against its sidecar"
@@ -167,6 +169,17 @@ review:
 # then every paper with its summary, key points and limitations.
 digest:
 	python3 scripts/make_digest.py $(if $(OUT),--out $(OUT),)
+
+# A temporary download of raw/ + meta/ + outputs/, built straight into dist/ and
+# linked from the page footer only while the file is there. DRY RUN unless APPLY=1.
+bundle:
+	python3 scripts/make_bundle.py $(if $(APPLY),--apply,)
+
+# Take the offer down. Deletes only the archive; `make render` then drops the link.
+bundle-clean:
+	@test -n "$(AREA)" || { echo "make bundle-clean: pass AREA=<name>"; exit 1; }
+	rm -f areas/$(AREA)/dist/*_raw-meta-outputs.tar.gz
+	@echo "bundle-clean: removed. Run 'make render AREA=$(AREA)' to drop the link."
 
 # Deliberately NOT part of `update`. It writes a draft for a person to read; if
 # anything in data/ ever read it, that would be a second taxonomy.

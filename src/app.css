@@ -210,6 +210,11 @@ aside {
 .digest a:hover, .digest a:focus-visible { text-decoration: underline; }
 .digest span { display: block; color: var(--muted); margin-top: 2px; }
 
+/* Temporary bundle offer in the footer. Deliberately plain: it is a standing
+   offer that will be withdrawn, not a feature of the page. */
+.bundle { display: inline-block; margin-top: 6px; }
+.bundle a { color: var(--accent); word-break: break-all; }
+
 /* ── facets ──────────────────────────────────────────── */
 
 .facet { border-top: 1px solid var(--line); padding: 8px 0 4px; }
