@@ -53,7 +53,7 @@
   "sidecars_changed_not_ours": [],
   "sidecars_no_longer_as_we_left_them": []
  },
- "bytes_verified": true,
+ "bytes_verified": false,
  "sources": {
   "Abramson(2024) Nature; Accurate structure prediction of biomolecular interactions with AlphaFold 3.pdf": "aba3109f2892454c9512570001598a069aaf422adb5aa0f3879414cb29a258fb",
   "Al-okaily(2024) Journal of Immunological Methods; ERAMER A novel in silico tool for prediction of ERAP1 enzyme trimming.pdf": "7be0cfde2faecae51cd583c5a86cfce952efbfc7e4dca21544ba8def43674c62",

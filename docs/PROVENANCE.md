@@ -198,6 +198,37 @@ is; removal entries now carry `"removed": true` and are skipped. And the ingest'
 tie-break between two files sharing a DOI is filename sort order, which is
 arbitrary -- it has no notion of which document is the paper.
 
+## The page-count heuristic, with measured thresholds
+
+Added after the news-article ingest, and the measurement is the point: the obvious
+signals do not work. Profiled against the 125 genuine papers then held --
+
+| signal | genuine papers matching | usable? |
+|---|---|---|
+| news-aggregator footprint | **0 of 125** | yes -- refuses |
+| no reference section | 26 of 125 | no, `pdftotext` rarely puts "References" on its own line in a two-column layout |
+| under 6 pages | 8 of 125 | no, alone |
+| characters per page | minimum 1808 vs the news article's 1080 | no -- a 1.7x margin is too thin |
+
+So the refusal rests only on the aggregator footprint, which is what the document
+says about itself: it names the site it was retrieved from. Short **and** thin
+together warns but does not refuse, because among documents under 6 pages the
+thinnest genuine one was 3653 characters per page against the news article's 1080
+-- a 3.4x margin, good enough to flag and not to block. `--allow-nonpaper`
+overrides.
+
+The second half is the tie-break. Files are now planned most-paper-like first
+rather than in filename order, so a collision between two copies of one work keeps
+the better document. Verified by replaying the original failure: with both files in
+an empty area and the same `--doi-map`, the 22-page article is ingested and the
+4-page news piece refused. Against all 125 papers already held, 0 would be refused
+and 0 would warn.
+
+Worth recording that the tie-break alone would NOT have saved this case: the real
+article has no DOI in its first three pages, so it is refused for that instead and
+the news piece would still have won. The aggregator refusal is the load-bearing
+defence; the ordering is the backstop.
+
 ## The stability check was passing vacuously
 
 `batch1_stability` -- the MUST that a revision must not quietly re-file the

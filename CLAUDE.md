@@ -191,6 +191,14 @@ what a reader sees. Keep both.
   turned `Juan C. Almagro` into `CAlmagro` and `Mathias Fynbo Jensen` into
   `FynboJensen`. The filename is the join key and `raw/` is add-only, so a wrong
   surname is permanent — check generated names before `--apply`, never after.
+- **A DOI does not prove a document is the paper.** A news article about a paper
+  cites its DOI, so the registration resolves correctly and a real title, venue and
+  byline get attached to the wrong file. `ingest_inbox.py` refuses a text carrying a
+  news-aggregator footprint and plans the most paper-like file first, so a collision
+  between two copies keeps the better document instead of whichever sorted first.
+  Thresholds are measured against the collection, not chosen: "no reference section"
+  fires on 26 of 125 genuine papers and is useless as a refusal; the aggregator
+  footprint fires on none.
 - **Duplicate checks must compare against THIS RUN, not just the collection on
   disk.** Two byte-identical files in one inbox both passed sha256, DOI and
   filename checks, both planned the same `raw/` name, and the second would have

@@ -101,6 +101,79 @@ def text_of(path: Path, pages: int = 3) -> str:
         return ""
 
 
+# ── is this document actually the paper? ─────────────────────────────────────
+#
+# A news article ABOUT a paper carries that paper's DOI, because it cites it. The
+# registration then resolves correctly and the sidecar attaches a real title,
+# venue, year and byline to the wrong document. Measured 2026-09-05: a 4-page
+# medicalxpress.com piece was ingested as a Science Advances research article, and
+# nothing in the pipeline objected -- it was found only by reading the PDF.
+#
+# THRESHOLDS ARE MEASURED, not chosen. Profiled against the 125 genuine papers
+# then in the collection:
+#
+#   aggregator footprint   0 of 125 false positives. Conclusive enough to refuse:
+#                          the document names the site it was retrieved from.
+#   no reference section   26 of 125 -- pdftotext often does not put "References"
+#                          on its own line in a two-column Nature layout. USELESS
+#                          as a refusal, and not used as one.
+#   under 6 pages          8 of 125 genuine papers. Weak alone.
+#   chars per page         minimum across all 125 was 1808, and the news article
+#                          was 1080 -- only a 1.7x margin, so density alone cannot
+#                          refuse either. But the thin papers are all LONG; among
+#                          documents under 6 pages the thinnest genuine one was
+#                          3653 ch/page. SHORT AND THIN together is the signal,
+#                          and it warns rather than refuses.
+AGGREGATOR = re.compile(
+    r"(?i)(medicalxpress\.com|phys\.org|sciencedaily\.com|news-medical\.net|"
+    r"eurekalert\.org|sciencealert\.com|retrieved\s+\d{1,2}\s+\w+\s+\d{4}\s+from\s+https?://)")
+REFS = re.compile(r"(?im)^\s*(references|bibliography|literature cited)\s*$")
+SHORT_PAGES = 6
+THIN_CHARS_PER_PAGE = 2500
+
+
+def pdf_profile(path: Path, full_text: str) -> dict:
+    """Page count and the shape of the text, for judging what a file IS."""
+    pages = 0
+    try:
+        info = subprocess.run(["pdfinfo", str(path)], capture_output=True,
+                              text=True, timeout=60).stdout
+        for line in info.split("\n"):
+            if line.startswith("Pages:"):
+                pages = int(line.split()[1])
+                break
+    except (OSError, subprocess.SubprocessError, ValueError, IndexError):
+        pages = 0
+    chars = len(full_text)
+    return {"pages": pages, "chars": chars,
+            "per_page": chars / pages if pages else float(chars),
+            "refs": bool(REFS.search(full_text)),
+            "aggregator": bool(AGGREGATOR.search(full_text))}
+
+
+def not_a_paper(prof: dict) -> tuple[str | None, str | None]:
+    """(fatal reason, warning) -- fatal means refuse, warning means say so loudly."""
+    if prof["aggregator"]:
+        return ("the text carries a news-aggregator footprint (a retrieval URL or "
+                "site name). 0 of 125 genuine papers in this collection do. This "
+                "reads as an article ABOUT a paper, not the paper", None)
+    if prof["pages"] and prof["pages"] < SHORT_PAGES and prof["per_page"] < THIN_CHARS_PER_PAGE:
+        return (None, f"only {prof['pages']} pages at {prof['per_page']:.0f} characters "
+                      f"per page. The thinnest genuine SHORT paper measured here was "
+                      f"3653/page; check this is the paper and not a summary of it")
+    return (None, None)
+
+
+def paper_likeness(prof: dict) -> tuple:
+    """Sort key: more paper-like first. Deterministic, so §10 still holds.
+
+    This is what breaks a tie between two inbox files that are the same paper. It
+    used to be filename sort order, which is arbitrary and picked the news article
+    over the real 22-page article because '2026-01-...' sorts before 'sciadv...'.
+    """
+    return (not prof["aggregator"], prof["refs"], prof["pages"], prof["chars"])
+
+
 def find_doi(txt: str) -> str | None:
     """The DOI printed on the paper, or None.
 
@@ -289,6 +362,11 @@ provenance: {q}{rec['provenance']}{q}
 """
 
 
+def _as_nums(key: tuple) -> tuple:
+    """paper_likeness as numbers, so it can be negated for a descending sort."""
+    return tuple(int(x) if isinstance(x, bool) else x for x in key)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="write raw/ and meta/")
@@ -310,6 +388,10 @@ def main() -> int:
                          "article whose PDF still carries its preprint DOI, which "
                          "would otherwise be filed as `posted-content` with no "
                          "venue. Every use is printed and recorded in the sidecar.")
+    ap.add_argument("--allow-nonpaper", action="store_true",
+                    help="ingest a file whose text carries a news-aggregator "
+                         "footprint. It is refused by default because such a "
+                         "document cites the paper's DOI without being the paper.")
     ap.add_argument("--no-network", action="store_true")
     ap.add_argument("--approved", default=None,
                     help="the owner's words, recorded in the ledger; required with --apply")
@@ -366,6 +448,18 @@ def main() -> int:
     # somebody else's owner in every sidecar it writes.
     owner = build.load_project().get("contact_name") or "the data owner"
 
+    # Profile every file BEFORE planning, and plan the most paper-like first, so a
+    # collision between two copies of the same work keeps the better document. The
+    # secondary key is the filename, so the order is fully determined.
+    profiles: dict[str, dict] = {}
+    for f in files:
+        if f.suffix.lower() == ".pdf":
+            profiles[f.name] = pdf_profile(f, text_of(f, pages=9999))
+    if profiles:
+        files = sorted(files, key=lambda f: (
+            tuple(-x for x in _as_nums(paper_likeness(profiles[f.name])))
+            if f.name in profiles else (0,), f.name))
+
     plans, refused = [], 0
     # What THIS RUN has already planned. Every check below compares against the
     # collection as it stands on disk, which is empty of anything planned a moment
@@ -392,6 +486,21 @@ def main() -> int:
                   f"planned earlier in this same run.")
             refused += 1
             continue
+        prof = profiles.get(f.name)
+        if prof:
+            fatal, warn = not_a_paper(prof)
+            print(f"  {prof['pages']} pages · {prof['chars']} chars "
+                  f"({prof['per_page']:.0f}/page) · "
+                  f"reference section {'found' if prof['refs'] else 'not found'}")
+            if fatal and not args.allow_nonpaper:
+                print(f"  REFUSED: {fatal}. Pass --allow-nonpaper to ingest it anyway.")
+                refused += 1
+                continue
+            if fatal:
+                print(f"  WARNING (--allow-nonpaper): {fatal}")
+            if warn:
+                print(f"  WARNING: {warn}")
+
         txt = text_of(f)
         doi = find_doi(txt)
         # The map is a LAST resort, not an override: a DOI printed on the paper is
