@@ -137,6 +137,38 @@ the surnames in the source filenames took the disagreements from 4 to 1 — and 
 one that remains is `Łuksza`, where the *source* filename had dropped the `Ł` and
 the registration is right.
 
+## The map: Tier 1 turned on, and a bug that had hidden it
+
+The owner reported the map looked random with new papers on the edge. Both causes
+were measurable: the TF-IDF vocabulary was frozen on the first 60 papers and
+contained none of batch 2's subject matter (proteasome, cleavage, splicing, ERAP1
+all absent from its 585 terms), and those papers were then projected by
+`umap.transform()` into a layout fitted without them, which puts out-of-sample
+points at the periphery.
+
+**Tier 1 had never actually run.** `embed.py` read `model["svd"].n_components`
+unconditionally when writing `similarity.json`, and Tier 1 fits no SVD -- the
+encoder emits dense vectors directly. It crashed *after* saving the model and the
+sha256 cache but *before* writing `similarity.json`, so a run printed its
+encoding progress, exited 0, and silently left the previous tier's map in place.
+Three different encoders produced byte-identical output, which is what gave it
+away. Fixed by taking `n_components` from the vector width in Tier 1 and writing
+`explained_variance: null`, since explained variance is an SVD statistic and
+inventing one would be a fabricated number.
+
+**Upstream's choice of embedding input did not transfer.** `embed_text` used the
+Summary alone, on the stated reasoning that "the Abstract is condensed from the
+Summary, there is nothing to gain from the more derived text". True where it was
+written; false here, because in this project the Abstract and Summary are written
+separately from reading the paper. Measured, all four prose sections beat the
+Summary alone by 4.5 points of top-5 topic agreement. `--sections` is now a
+first-class option rather than a diagnostic that could never be persisted.
+
+The full slate -- three encoders, four input combinations, every result including
+the losers, and a correction to a misleading number reported earlier in the same
+session -- is in `areas/neoantigens/reports/2026-09-05_embedding_slate.txt`.
+SPECTER, the pre-committed favourite, came last.
+
 ## What was dropped, and why
 
 - **`wiki/group.md` and the All / Ours / Shared switch.** It decides which papers

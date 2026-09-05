@@ -39,6 +39,7 @@ help:
 	@echo "  make update AREA=x     build + embed + render  (no network, idempotent)"
 	@echo "  make build AREA=x      meta/ + newest review -> data/library.json"
 	@echo "  make embed AREA=x      vectors, neighbours, this area's own 2-D map"
+	@echo "                         REFIT=1 refits everything (Tier $$(TIER), $$(STMODEL))"
 	@echo "  make render AREA=x     library.json + shared src/ -> areas/x/dist/"
 	@echo "  make bib   AREA=x      Crossref/arXiv for new DOIs only        (NETWORK)"
 	@echo ""
@@ -102,12 +103,19 @@ bib: build
 # Its own vectors, its own neighbours, its own UMAP layout, cached per area and
 # keyed by sha256 so adding papers PLACES them in the existing map rather than
 # reshuffling it. A map that rearranges itself every week cannot be learned.
+# TIER and STMODEL are the measured choice for this collection, not defaults.
+# A plain `make embed` loads the saved model and keeps whatever tier it was fitted
+# at, so these matter on a REFIT -- without them a refit would silently drop back
+# to Tier 0 TF-IDF and undo the change. Evidence:
+# areas/neoantigens/reports/2026-09-05_embedding_slate.txt
+TIER    ?= 1
+STMODEL ?= pubmedbert
 embed:
 	@test -n "$(VENV_READY)" || { \
 	  echo "make embed: no installed venv. Run 'make venv' first --"; \
 	  echo "            numpy/scikit-learn/umap-learn are not present system-wide."; \
 	  exit 1; }
-	$(PY) scripts/embed.py
+	$(PY) scripts/embed.py $(if $(REFIT),--refit --tier $(TIER) --st-model $(STMODEL),) $(EMBEDFLAGS)
 
 # ------------------------------------------------------------- ingestion --
 

@@ -268,12 +268,22 @@ def _strip_authors(text: str, authors: list[str] | None) -> str:
     return text
 
 
-def embed_text(paper: dict, *, strip: bool, key_points: bool) -> tuple[str, dict]:
-    """title + Summary (one step from the source), optionally + Key points.
+def embed_text(paper: dict, *, strip: bool, sections: tuple[str, ...]) -> tuple[str, dict]:
+    """title + the chosen prose sections.
 
-    §7: prefer `## Summary` over `## Abstract` -- the Summary is one step from the
-    source's own extracted text, the Abstract is condensed from the Summary. There
-    is nothing to gain from the more derived text.
+    UPSTREAM PREFERRED SUMMARY ALONE, and said so: "the Abstract is condensed from
+    the Summary, there is nothing to gain from the more derived text." That was
+    true of the collection it was written for. It is NOT true here: in this
+    project the Abstract and the Summary are written separately from reading the
+    paper -- the Abstract says what the paper did, the Summary what it found and
+    how -- so they are complementary rather than one being a condensation of the
+    other, and Key points and Limitations add specific claims that appear nowhere
+    else.
+
+    Measured on the 117-paper collection, 2026-09-05, top-5 same-topic agreement
+    with a domain encoder: summary alone 32.6%, +abstract 34.0%, +key points
+    35.4%, +limitations 37.1%. The default is therefore all four. Pass
+    `--sections summary` to reproduce upstream's input.
     """
     summary = paper.get("summary") or ""
     stats = {"circulation": [], "authorship": [], "venue": False, "authors": False}
@@ -297,9 +307,18 @@ def embed_text(paper: dict, *, strip: bool, key_points: bool) -> tuple[str, dict
         stats["authors"] = summary != before
         summary = re.sub(r"\s{2,}", " ", summary).strip()
 
-    bits = [paper.get("title") or "", summary]
-    if key_points:
+    bits = [paper.get("title") or ""]
+    if "summary" in sections:
+        bits.append(summary)
+    # The Abstract goes through no stripping: it is written to say what the paper
+    # did, and the circulation and authorship patterns those filters exist for do
+    # not occur in it. Key points and Limitations likewise.
+    if "abstract" in sections:
+        bits.append(paper.get("abstract") or "")
+    if "key_points" in sections:
         bits += paper.get("key_points") or []
+    if "limitations" in sections:
+        bits.append(paper.get("limitations") or "")
     return "  ".join(b for b in bits if b), stats
 
 
@@ -641,8 +660,10 @@ def main() -> int:
     ap.add_argument("--eval", action="store_true", help="score and diagnose; no writes")
     ap.add_argument("--no-strip", action="store_true",
                     help="do NOT strip circulation sentences (C1 diagnostic only)")
-    ap.add_argument("--key-points", action="store_true",
-                    help="include Key points in the embedded text")
+    ap.add_argument("--sections", default="all",
+                    help="which prose goes into the embedding: 'all' (default: "
+                         "summary+abstract+key_points+limitations, measured best), "
+                         "'summary' (upstream's input), or a comma-separated list")
     ap.add_argument("--check-layout", action="store_true",
                     help="C2: transform N-1 then N papers; existing coords must not move")
     ap.add_argument("--tier", type=int, default=0, choices=(0, 1),
@@ -665,7 +686,13 @@ def main() -> int:
     papers = lib["papers"]
 
     strip = not args.no_strip
-    pairs = [embed_text(p, strip=strip, key_points=args.key_points) for p in papers]
+    SECTIONS = ("summary", "abstract", "key_points", "limitations")
+    sections = (SECTIONS if args.sections == "all"
+                else tuple(x.strip() for x in args.sections.split(",") if x.strip()))
+    unknown = [x for x in sections if x not in SECTIONS]
+    if unknown:
+        sys.exit(f"embed: unknown --sections value(s): {unknown}. Choose from {SECTIONS}.")
+    pairs = [embed_text(p, strip=strip, sections=sections) for p in papers]
     texts = [t for t, _ in pairs]
     stats = [s for _, s in pairs]
     n_circ = sum(len(s["circulation"]) for s in stats)
@@ -674,8 +701,8 @@ def main() -> int:
     n_auth_p = sum(1 for s in stats if s["authorship"])
     n_venue = sum(1 for s in stats if s["venue"])
     n_names = sum(1 for s in stats if s["authors"])
-    print(f"embed: {len(papers)} papers · input = title + summary"
-          f"{' + key points' if args.key_points else ''}")
+    print(f"embed: {len(papers)} papers · input = title"
+          f" ({'+'.join(sections)})")
     if strip:
         print(f"embed: removed from the EMBEDDING INPUT only "
               f"(library.json and the page are untouched):")
@@ -712,7 +739,7 @@ def main() -> int:
         print(f"embed: probe -> {out}  (nothing else was written)")
         return 0
 
-    scratch = args.no_strip or args.key_points          # diagnostic runs: never persist
+    scratch = args.no_strip          # --no-strip is a diagnostic; --sections is not
     model = None if (args.refit or scratch) else load_model()
     fresh = model is None
     # What the DISCARDED model was numbered, so a refit counts on from there
@@ -834,8 +861,18 @@ def main() -> int:
                  else f"1 ({TIER1_MODELS.get(model['st'], model['st'])})"),
         "model_version": model["model_version"],
         "layout_version": model["layout_version"],
-        "n_components": int(model["svd"].n_components),
-        "explained_variance": round(float(model["svd"].explained_variance_ratio_.sum()), 4),
+        # Tier 1 fits NO SVD -- the encoder emits dense vectors directly, so
+        # `model["svd"]` is None and both of these are Tier 0 statistics. Reading
+        # them unconditionally crashed every Tier 1 run AFTER the model and cache
+        # had been saved but BEFORE similarity.json was written, so the run looked
+        # like it had worked and silently left the previous tier's map in place.
+        # Found 2026-09-05, the first time Tier 1 was actually run.
+        "n_components": (int(model["svd"].n_components) if model.get("svd") is not None
+                         else int(vecs.shape[1])),
+        # Explained variance is a property of a truncated SVD. A sentence encoder
+        # has none, and inventing a number here would be a fabricated statistic.
+        "explained_variance": (round(float(model["svd"].explained_variance_ratio_.sum()), 4)
+                               if model.get("svd") is not None else None),
         "seed": SEED,
         "min_sim": MIN_SIM,
         "top_k": TOP_K,
@@ -865,8 +902,12 @@ def main() -> int:
 
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     same, overall, excess = c1_leakage(papers, vecs)
-    print(f"embed: explained variance {out['explained_variance']:.1%} over "
-          f"{out['n_components']} components")
+    if out["explained_variance"] is None:
+        print(f"embed: {out['n_components']}-dimensional encoder vectors "
+              f"(explained variance is an SVD statistic and does not apply)")
+    else:
+        print(f"embed: explained variance {out['explained_variance']:.1%} over "
+              f"{out['n_components']} components")
     # `nan <= 0.02` is False, so an UNDEFINED statistic printed as "FAIL" -- which
     # is what a collection with no circulator recorded on any paper produced. A
     # criterion that cannot be evaluated has not been failed; saying otherwise

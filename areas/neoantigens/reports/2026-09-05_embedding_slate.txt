@@ -1,0 +1,85 @@
+Embedding slate, 2026-09-05 -- every result, losers included.
+
+WHY: the owner reported the map looked close to random, with the newest papers
+pushed to the edge. Two causes, both confirmed by measurement:
+
+  1. The TF-IDF vocabulary was fitted on the FIRST 60 papers and frozen -- 585
+     terms. The subject matter of the 57 papers added later was ABSENT from it:
+     proteasome, proteasomal, erap1, trimming, cleavage, splicing, transporter,
+     indel, noncanonical. Those papers could only be positioned by the generic
+     words they shared with batch 1 ("binding", "prediction", "cancer"), which is
+     the failure mode embed.py's own comments name.
+  2. They were placed by umap.transform() into a layout fitted on the old 60.
+     Out-of-sample points land at the periphery. Near-featureless vectors plus
+     outside projection is exactly "new papers on the edge".
+
+Neither is a design flaw: the sha256 layout cache exists to stop the map
+reshuffling, and it did its job. It assumes a few papers are added to a stable
+collection. This one nearly doubled.
+
+MEASURE: top-5 same-topic agreement in the FULL vector space -- for every paper,
+its five nearest by cosine, ignoring the display threshold. The 18 topics were
+drawn by READING and are independent of the vectors, so this is not the circular
+cohesion measure eval/reclustering.json rules out. Same k, all 117 papers, every
+candidate. Part-level (5 parts) is the coarser check.
+
+  model / input                     topic(18)   part(5)   separation   coverage
+  ------------------------------------------------------------------------------
+  Tier 0 TF-IDF, frozen (was live)     n/a        n/a         n/a       0 orphan
+      -- on the 2-D map: 20.3% ; of the neighbour lists shown: 24.6%
+  Tier 0 TF-IDF, refit on 117         33.7%      51.1%       0.054     69 orphan
+  Tier 1 SPECTER                      27.9%      52.5%       0.036      0 orphan
+  Tier 1 PubMedBERT                   32.8%      55.7%       0.127      0 orphan
+  Tier 1 all-mpnet                    32.5%      51.6%       0.137      0 orphan
+  random baseline                      5.8%      20.4%          --
+
+  "separation" = mean cosine of same-topic pairs minus mean of different-topic
+  pairs. "orphan" = papers with no neighbour above min_sim 0.25.
+
+TWO RESULTS WORTH STATING PLAINLY:
+
+  * SPECTER LOST. It was the pre-committed strongest prior -- "purpose-built for
+    scientific paper similarity from title + abstract, which is exactly this task
+    ... the one to beat" -- and it came last on topic agreement, 27.9%, below
+    refitted TF-IDF. Its cosines are crammed into 0.85-0.88, so almost everything
+    looks similar to everything; that is what the near-zero separation says.
+  * A NUMBER REPORTED EARLIER IN THIS SESSION WAS MISLEADING and is corrected
+    here. Refitted Tier 0 appeared to score 65.5% on the neighbour lists the page
+    shows. That was measured over only the 48 of 117 papers that had ANY neighbour
+    clear the threshold -- precision at very low recall on a self-selected subset.
+    On the same footing as everything else it scores 33.7%.
+
+INPUT TEXT was the larger lever, and upstream's reasoning did not transfer.
+embed.py preferred Summary alone: "the Abstract is condensed from the Summary,
+there is nothing to gain from the more derived text." True of the collection it
+was written for; false here, where Abstract and Summary are written separately
+from reading -- what the paper did versus what it found and how.
+
+  input (PubMedBERT)          topic     part   separation
+  summary alone (upstream)    32.6%    55.9%       0.127
+  + abstract                  34.0%    55.6%       0.150
+  + key points                35.4%    57.6%       0.149
+  + limitations  (SHIPPED)    37.1%    59.3%       0.147
+
+  The same enrichment on all-mpnet moved topic agreement 32.5% -> 33.2%: a domain
+  encoder benefits from more domain text, a general one barely does.
+
+SHIPPED: Tier 1, NeuML/pubmedbert-base-embeddings, 768 dims, all four prose
+sections. On the live page: 34.0% of each paper's five nearest DOTS share its
+topic (was 20.3%), 37.3% of the neighbour lists shown (was 24.6%), and every one
+of the 117 papers has a neighbour list (refitted TF-IDF left 69 with none).
+
+A BUG WAS FOUND DOING THIS: Tier 1 had never run in this toolkit. embed.py read
+model["svd"].n_components unconditionally when writing similarity.json, and Tier 1
+fits no SVD. It crashed AFTER saving the model and cache but BEFORE writing
+similarity.json -- so the first three runs looked successful and silently left the
+previous tier's map in place, with byte-identical output. Caught only because
+three different encoders produced identical scores, which is impossible.
+
+WHAT THIS DOES NOT ESTABLISH: that 37% is good. It is 6x better than chance and
+roughly a third of each paper's nearest neighbours share its topic. Topics were
+drawn to be browsable, not to be linearly separable, and several are genuinely
+adjacent -- "MHC class I binding" and "Immunogenicity predictors" share most of
+their vocabulary and much of their subject. The remaining levers, untested:
+fine-tuning an encoder on this corpus, using citation structure rather than text,
+and tuning UMAP's n_neighbors/min_dist for 117 points.

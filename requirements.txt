@@ -30,3 +30,10 @@ umap-learn==0.5.12
 #
 # ui_check.py detects the missing browser and prints exactly that line.
 playwright==1.62.0
+
+# Tier 1 embeddings. The map is fitted with a sentence encoder, not TF-IDF:
+# measured on this collection, a domain encoder over all four prose sections
+# raised top-5 same-topic agreement from 20.3% to 34.0% and gave every paper a
+# neighbour list. See areas/neoantigens/reports/2026-09-05_embedding_slate.txt.
+# Pulls torch (~5 GB with CUDA wheels); CPU is ample for a few hundred papers.
+sentence-transformers==6.0.1
