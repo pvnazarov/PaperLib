@@ -1,0 +1,254 @@
+{
+  "_comment": "Taxonomy for areas/neoantigens, 117 papers. Drawn by reading; criteria in eval/reclustering.json were written first.",
+  "parts": [
+    {
+      "letter": "A",
+      "name": "Antigen presentation"
+    },
+    {
+      "letter": "B",
+      "name": "Immunogenicity and T cell recognition"
+    },
+    {
+      "letter": "C",
+      "name": "Self-discrimination and repertoire limits"
+    },
+    {
+      "letter": "D",
+      "name": "Discovery and clinical translation"
+    },
+    {
+      "letter": "E",
+      "name": "Resources, pipelines and evaluation"
+    }
+  ],
+  "topics": [
+    {
+      "name": "Antigen processing and peptide supply",
+      "part": "A",
+      "part_name": "Antigen presentation",
+      "description": "How a peptide comes to exist at all: proteolysis, transport and the cell biology of presentation. Upstream of every binding prediction, and assumed away by most of them."
+    },
+    {
+      "name": "Predicting proteolysis, trimming and transport",
+      "part": "A",
+      "part_name": "Antigen presentation",
+      "description": "Computational models of the steps before the groove - proteasomal cleavage, TAP transport, ERAP1 trimming. A peptide that is never cut out or never transported cannot be presented however well it would bind."
+    },
+    {
+      "name": "MHC class I binding and presentation",
+      "part": "A",
+      "part_name": "Antigen presentation",
+      "description": "Predicting which peptides a class I molecule binds and displays. The best-served task in the field, and the one whose benchmarks are most entangled with their own training data."
+    },
+    {
+      "name": "MHC class II presentation and CD4 responses",
+      "part": "A",
+      "part_name": "Antigen presentation",
+      "description": "The same problem for class II, where the groove is open at both ends, the binding core is not fixed by length, and the data are thinner - together with the evidence that CD4 responses matter more than the field long assumed."
+    },
+    {
+      "name": "HLA genotyping",
+      "part": "A",
+      "part_name": "Antigen presentation",
+      "description": "Calling a patient's HLA alleles from sequencing data. A deliberately narrow topic of two method papers: it is one step, it is nearly solved, and every downstream prediction is conditioned on it being right."
+    },
+    {
+      "name": "Immunogenicity predictors for neoepitopes",
+      "part": "B",
+      "part_name": "Immunogenicity and T cell recognition",
+      "description": "Models that go past presentation to ask which presented peptides a T cell responds to - the step where most predicted candidates are lost, and where the training labels are weakest."
+    },
+    {
+      "name": "Peptide features and neoantigen quality",
+      "part": "B",
+      "part_name": "Immunogenicity and T cell recognition",
+      "description": "What makes one neoepitope more visible than another: TCR-facing composition, novelty against the wild type and against the whole self proteome, and quality models that combine recognition with discrimination from self."
+    },
+    {
+      "name": "TCR specificity and structural recognition",
+      "part": "B",
+      "part_name": "Immunogenicity and T cell recognition",
+      "description": "Predicting or measuring which receptor sees which peptide-MHC, by sequence model, by structure, or by direct affinity measurement. Generalisation to unseen peptides is still unsolved."
+    },
+    {
+      "name": "Thymic selection and repertoire availability",
+      "part": "C",
+      "part_name": "Self-discrimination and repertoire limits",
+      "description": "Whether a T cell capable of seeing a given peptide exists at all. Selection shapes the repertoire before it meets a tumour, and both too much and too little similarity to self remove the responding clones."
+    },
+    {
+      "name": "Molecular mimicry and off-target toxicity",
+      "part": "C",
+      "part_name": "Self-discrimination and repertoire limits",
+      "description": "Cross-reactivity as a hazard: engineered receptors that killed the wrong tissue, and self antigens with counterparts in viruses and the microbiome."
+    },
+    {
+      "name": "Tumour immune escape",
+      "part": "C",
+      "part_name": "Self-discrimination and repertoire limits",
+      "description": "What tumours do to stop being seen - losing an HLA allele, downregulating class I, recruiting suppressive T cells - and why a correct prediction can still fail in a patient."
+    },
+    {
+      "name": "Neoantigen sources beyond point mutations",
+      "part": "D",
+      "part_name": "Discovery and clinical translation",
+      "description": "Where else a tumour-specific peptide can come from: splicing, indels and frameshifts, noncoding and noncanonical translation, and post-translational splicing. Window-based pipelines over missense variants cannot represent most of these."
+    },
+    {
+      "name": "Finding and measuring neoantigen-reactive T cells",
+      "part": "D",
+      "part_name": "Discovery and clinical translation",
+      "description": "The inverse problem: identify the reactive T cells directly by phenotype and read their receptors off, rather than predicting antigens and hunting for the cells. Includes how that reactivity is measured."
+    },
+    {
+      "name": "Neoantigen vaccines and clinical responses",
+      "part": "D",
+      "part_name": "Discovery and clinical translation",
+      "description": "Trials and translational studies where predicted neoantigens were given to patients, and what was observed in the T cells afterwards - from first-in-human peptide vaccines to a randomised mRNA trial."
+    },
+    {
+      "name": "Immunotherapy response prediction",
+      "part": "D",
+      "part_name": "Discovery and clinical translation",
+      "description": "Using the neoantigen landscape to say in advance who will benefit: quality- and clonality-aware scores set against tumour mutation burden."
+    },
+    {
+      "name": "Databases and reference resources",
+      "part": "E",
+      "part_name": "Resources, pipelines and evaluation",
+      "description": "The curated substrate the field trains and benchmarks on: epitope databases, benign immunopeptidome references, the sequenced MHC itself, and the sequence resources that define what counts as self."
+    },
+    {
+      "name": "Pipelines and analysis tools",
+      "part": "E",
+      "part_name": "Resources, pipelines and evaluation",
+      "description": "Software that assembles the parts into something usable - end-to-end pipelines, feature toolboxes, prioritisation interfaces, reviews of the whole workflow, and the sequence-search and nearest-neighbour infrastructure underneath."
+    },
+    {
+      "name": "Benchmarking, bias and generalisation",
+      "part": "E",
+      "part_name": "Resources, pipelines and evaluation",
+      "description": "Papers that measure how well the methods above actually work, and find the answer turns on training-set bias, train-test leakage, and whether the test peptides were ever seen."
+    }
+  ],
+  "assignments": {
+    "Androlewicz(1993) Proceedings of the National Academy of Sciences; Evidence that transporters associated with antigen processing translocate a major histocompatibility complex class I-binding peptide into the endoplasmic reticulum in an ATP-depen.pdf": "Antigen processing and peptide supply",
+    "Roche(2016) Microbiology Spectrum; Antigen Processing and Presentation Mechanisms in Myeloid Cells.pdf": "Antigen processing and peptide supply",
+    "Rock(2009) The Journal of Immunology; Proteases in MHC Class I Presentation and Cross-Presentation.pdf": "Antigen processing and peptide supply",
+    "Keşmir(2002) Protein Engineering, Design and Selection; Prediction of proteasome cleavage motifs by neural networks.pdf": "Predicting proteolysis, trimming and transport",
+    "Nielsen(2005) Immunogenetics; The role of the proteasome in generating cytotoxic T-cell epitopes insights obtained from improved predictions of proteasomal cleavage.pdf": "Predicting proteolysis, trimming and transport",
+    "Weeder(2021) Bioinformatics; pepsickle rapidly and accurately predicts proteasomal cleavage sites for improved neoantigen identification.pdf": "Predicting proteolysis, trimming and transport",
+    "Zhang(2023) Computers in Biology and Medicine; DeepTAP An RNN-based method of TAP-binding peptide prediction in the selection of tumor neoantigens.pdf": "Predicting proteolysis, trimming and transport",
+    "Al-okaily(2024) Journal of Immunological Methods; ERAMER A novel in silico tool for prediction of ERAP1 enzyme trimming.pdf": "Predicting proteolysis, trimming and transport",
+    "Li(2023) Briefings in Bioinformatics; ProsperousPlus a one-stop and comprehensive platform for accurate protease-specific substrate cleavage prediction and machine-learning model construction.pdf": "Predicting proteolysis, trimming and transport",
+    "Reynisson(2020) Nucleic Acids Research; NetMHCpan-4.1 and NetMHCIIpan-4.0 improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data.pdf": "MHC class I binding and presentation",
+    "Qu(2023) Bioinformatics; DeepMHCI an anchor position-aware deep interaction model for accurate MHC-I peptide binding affinity prediction.pdf": "MHC class I binding and presentation",
+    "Zhang(2024) Briefings in Bioinformatics; ConvNeXt-MHC improving MHC–peptide affinity prediction by structure-derived degenerate coding and the ConvNeXt model.pdf": "MHC class I binding and presentation",
+    "Xu(2024) Nature Communications; ImmuneApp for HLA-I epitope prediction and immunopeptidome analysis.pdf": "MHC class I binding and presentation",
+    "Niu(2024) Briefings in Bioinformatics; Attention-aware differential learning for predicting peptide-MHC class I binding and T cell receptor recognition.pdf": "MHC class I binding and presentation",
+    "Albert(2023) Nature Machine Intelligence; Deep neural networks predict class I major histocompatibility complex epitope presentation and transfer learn neoepitope immunogenicity.pdf": "MHC class I binding and presentation",
+    "Bulik-Sullivan(2018) Nature Biotechnology; Deep learning using tumor HLA peptide mass spectrometry datasets improves neoantigen identification.pdf": "MHC class I binding and presentation",
+    "O’Donnell(2020) Cell Systems; MHCflurry 2.0 Improved Pan-Allele Prediction of MHC Class I-Presented Peptides by Incorporating Antigen Processing.pdf": "MHC class I binding and presentation",
+    "Sarkizova(2019) Nature Biotechnology; A large peptidome dataset improves HLA class I epitope prediction across most of the human population.pdf": "MHC class I binding and presentation",
+    "Rammensee(1995) Current Opinion in Immunology; Chemistry of peptides associated with MHC class I and class II molecules.pdf": "MHC class I binding and presentation",
+    "Nilsson(2023) Science Advances; Accurate prediction of HLA class II antigen presentation across all loci using tailored data acquisition and refined machine learning.pdf": "MHC class II presentation and CD4 responses",
+    "You(2022) Bioinformatics; DeepMHCII a novel binding core-aware deep interaction model for accurate MHC-II peptide binding affinity prediction.pdf": "MHC class II presentation and CD4 responses",
+    "Yuan(2026) Research; EpiMII Structure-Aware Graph Neural Networks for MHC-II Epitope Generation.pdf": "MHC class II presentation and CD4 responses",
+    "Racle(2023) Immunity; Machine learning predictions of MHC-II specificities reveal alternative binding mode of class II epitopes.pdf": "MHC class II presentation and CD4 responses",
+    "Racle(2023) unknown; How to predict binding specificity and ligands for new MHC-II alleles with MixMHC2pred.pdf": "MHC class II presentation and CD4 responses",
+    "Kreiter(2015) Nature; Mutant MHC class II epitopes drive therapeutic immune responses to cancer.pdf": "MHC class II presentation and CD4 responses",
+    "Szolek(2014) Bioinformatics; OptiType precision HLA typing from next-generation sequencing data.pdf": "HLA genotyping",
+    "Orenbuch(2019) Bioinformatics; arcasHLA high-resolution HLA typing from RNAseq.pdf": "HLA genotyping",
+    "Li(2021) Briefings in Bioinformatics; DeepImmuno deep learning-empowered prediction and generation of immunogenic peptides for T-cell immunity.pdf": "Immunogenicity predictors for neoepitopes",
+    "Farriol-Duran(2025) Genome Medicine; PredIG an interpretable predictor of T-cell epitope immunogenicity.pdf": "Immunogenicity predictors for neoepitopes",
+    "Schmidt(2021) Cell Reports Medicine; Prediction of neo-epitope immunogenicity reveals TCR recognition determinants and provides insight into immunoediting.pdf": "Immunogenicity predictors for neoepitopes",
+    "Gfeller(2023) Cell Systems; Improved predictions of antigen presentation and TCR recognition with MixMHCpred2.2 and PRIME2.0 reveal potent SARS-CoV-2 CD8+ T-cell epitopes.pdf": "Immunogenicity predictors for neoepitopes",
+    "Wan(2024) NAR Cancer; A large-scale study of peptide features defining immunogenicity of cancer neo-epitopes.pdf": "Immunogenicity predictors for neoepitopes",
+    "Shao(2025) Frontiers in Immunology; NeoTImmuML a machine learning-based prediction model for human tumor neoantigen immunogenicity.pdf": "Immunogenicity predictors for neoepitopes",
+    "O’Brien(2024) PLOS Computational Biology; A modular protein language modelling approach to immunogenicity prediction.pdf": "Immunogenicity predictors for neoepitopes",
+    "Jiang(2024) Bioinformatics; NeoaPred a deep-learning framework for predicting immunogenic neoantigen based on surface and structural features of peptide–human leukocyte antigen complexes.pdf": "Immunogenicity predictors for neoepitopes",
+    "Deng(2023) Briefings in Bioinformatics; IEPAPI a method for immune epitope prediction by incorporating antigen presentation and immunogenicity.pdf": "Immunogenicity predictors for neoepitopes",
+    "Bhasin(2004) Vaccine; Prediction of CTL epitopes using QM, SVM and ANN techniques.pdf": "Immunogenicity predictors for neoepitopes",
+    "Zhao(2003) Bioinformatics; Application of support vector machines for T-cell epitopes prediction.pdf": "Immunogenicity predictors for neoepitopes",
+    "Calis(2013) PLoS Computational Biology; Properties of MHC Class I Presented Peptides That Enhance Immunogenicity.pdf": "Peptide features and neoantigen quality",
+    "Chowell(2015) Proceedings of the National Academy of Sciences; TCR contact residue hydrophobicity is a hallmark of immunogenic CD8 + T cell epitopes.pdf": "Peptide features and neoantigen quality",
+    "Wood(2018) BMC Cancer; Population-level distribution and putative immunogenicity of cancer neoepitopes.pdf": "Peptide features and neoantigen quality",
+    "Łuksza(2022) Nature; Neoantigen quality predicts immunoediting in survivors of pancreatic cancer.pdf": "Peptide features and neoantigen quality",
+    "Richman(2019) Cell Systems; Neoantigen Dissimilarity to the Self-Proteome Predicts Immunogenicity and Response to Immune Checkpoint Blockade.pdf": "Peptide features and neoantigen quality",
+    "Łuksza(2017) Nature; A neoantigen fitness model predicts tumour response to checkpoint blockade immunotherapy.pdf": "Peptide features and neoantigen quality",
+    "PancreaticCancerGenomeInitiative(2017) Nature; Identification of unique neoantigen qualities in long-term survivors of pancreatic cancer.pdf": "Peptide features and neoantigen quality",
+    "Devlin(2020) Nature Chemical Biology; Structural dissimilarity from self drives neoepitope escape from immune tolerance.pdf": "Peptide features and neoantigen quality",
+    "Zhu(2025) Communications Biology; Structure guided analysis of KRAS G12 mutants in HLA-A 1101 reveals a length encoded immunogenic advantage in G12D.pdf": "Peptide features and neoantigen quality",
+    "Bradley(2023) eLife; Structure-based prediction of T cell receptorpeptide-MHC interactions.pdf": "TCR specificity and structural recognition",
+    "Bravi(2023) eLife; A transfer-learning approach to predict antigen immunogenicity and T-cell receptor specificity.pdf": "TCR specificity and structural recognition",
+    "Jensen(2024) eLife; Enhancing TCR specificity predictions by combined pan- and peptide-specific training, loss-scaling, and sequence similarity integration.pdf": "TCR specificity and structural recognition",
+    "Culka(2026) Cell Systems; Predicting specificity of TCR-pMHC interactions using machine-learning and biophysical models.pdf": "TCR specificity and structural recognition",
+    "Abramson(2024) Nature; Accurate structure prediction of biomolecular interactions with AlphaFold 3.pdf": "TCR specificity and structural recognition",
+    "Almagro(1995) Protein Science; Molecular modeling of a T-cell receptor bound to a major histocompatibility complex molecule Implications for T-cell recognition.pdf": "TCR specificity and structural recognition",
+    "Schmidt(2023) Nature Communications; Neoantigen-specific CD8 T cells with high structural avidity preferentially reside in and eliminate tumors.pdf": "TCR specificity and structural recognition",
+    "Moris(2020) Briefings in Bioinformatics; Current challenges for unseen-epitope TCR interaction prediction and a new perspective derived from image classification.pdf": "TCR specificity and structural recognition",
+    "Koncz(2021) Proceedings of the National Academy of Sciences; Self-mediated positive selection of T cells sets an obstacle to the recognition of nonself.pdf": "Thymic selection and repertoire availability",
+    "Xing(2013) Proceedings of the National Academy of Sciences; Thymoproteasome subunit-β5T generates peptide-MHC complexes specialized for positive selection.pdf": "Thymic selection and repertoire availability",
+    "Finnigan(2024) Nature Communications; Structural basis for self-discrimination by neoantigen-specific TCRs.pdf": "Thymic selection and repertoire availability",
+    "Li(2023) Nature Communications; Crystal structures of MHC class I complexes reveal the elusive intermediate conformations explored during peptide editing.pdf": "Thymic selection and repertoire availability",
+    "Nelson(2015) Immunity; T Cell Receptor Cross-Reactivity between Similar Foreign and Self Peptides Influences Naive Cell Population Size and Autoimmunity.pdf": "Thymic selection and repertoire availability",
+    "Jardine(2016) Science; HIV-1 broadly neutralizing antibody precursor B cells revealed by germline-targeting immunogen.pdf": "Thymic selection and repertoire availability",
+    "Raman(2016) Scientific Reports; Direct molecular mimicry enables off-target cardiovascular toxicity by an enhanced affinity TCR designed for cancer immunotherapy.pdf": "Molecular mimicry and off-target toxicity",
+    "Ragone(2022) Journal of Translational Medicine; Molecular mimicry between tumor associated antigens and microbiota-derived epitopes.pdf": "Molecular mimicry and off-target toxicity",
+    "BenHamza(2024) Blood; Virus-reactive T cells expanded in aplastic anemia eliminate hematopoietic progenitor cells by molecular mimicry.pdf": "Molecular mimicry and off-target toxicity",
+    "Cameron(2013) Science Translational Medicine; Identification of a Titin-Derived HLA-A1–Presented Peptide as a Cross-Reactive Target for Engineered MAGE A3–Directed T Cells.pdf": "Molecular mimicry and off-target toxicity",
+    "McGranahan(2017) Cell; Allele-Specific HLA Loss and Immune Escape in Lung Cancer Evolution.pdf": "Tumour immune escape",
+    "Taylor(2022) Frontiers in Immunology; Mechanisms of MHC-I Downregulation and Role in Immunotherapy Response.pdf": "Tumour immune escape",
+    "Sultan(2024) Nature; Neoantigen-specific cytotoxic Tr1 CD4 T cells suppress cancer immunotherapy.pdf": "Tumour immune escape",
+    "Li(2024) Science Translational Medicine; Splicing neoantigen discovery with SNAF reveals shared targets for cancer immunotherapy.pdf": "Neoantigen sources beyond point mutations",
+    "Lang(2024) Bioinformatics Advances; Prediction of tumor-specific splicing from somatic mutations as a source of neoantigen candidates.pdf": "Neoantigen sources beyond point mutations",
+    "Hanada(2004) Nature; Immune recognition of a human renal cancer antigen through post-translational protein splicing.pdf": "Neoantigen sources beyond point mutations",
+    "Chong(2021) Nature Biotechnology; Identification of tumor antigens with immunopeptidomics.pdf": "Neoantigen sources beyond point mutations",
+    "Xing(2026) JHEP Reports; Mass spectrometry-based de novo sequencing reveals non-canonical neoantigens with antitumor efficacy in hepatocellular carcinoma.pdf": "Neoantigen sources beyond point mutations",
+    "Ma(2026) npj Precision Oncology; Inferring translational efficiency from transcriptomes improves noncanonical neoantigen prioritization and cancer patient stratification.pdf": "Neoantigen sources beyond point mutations",
+    "Jin(2025) Cancer Letters; Driver mutation landscape of acute myeloid leukemia provides insights for neoantigen-based immunotherapy.pdf": "Neoantigen sources beyond point mutations",
+    "Hanada(2022) Cancer Cell; A phenotypic signature that identifies neoantigen-reactive T cells in fresh human lung cancers.pdf": "Finding and measuring neoantigen-reactive T cells",
+    "Lowery(2022) Science; Molecular signatures of antitumor neoantigen-reactive T cells from metastatic human cancers.pdf": "Finding and measuring neoantigen-reactive T cells",
+    "Zheng(2022) Cancer Cell; Transcriptomic profiles of neoantigen-reactive T cells in human gastrointestinal cancers.pdf": "Finding and measuring neoantigen-reactive T cells",
+    "Kiesgen(2021) Nature Protocols; Comparative analysis of assays to measure CAR T-cell-mediated cytotoxicity.pdf": "Finding and measuring neoantigen-reactive T cells",
+    "Rojas(2023) Nature; Personalized RNA neoantigen vaccines stimulate T cells in pancreatic cancer.pdf": "Neoantigen vaccines and clinical responses",
+    "Sethna(2025) Nature; RNA neoantigen vaccines prime long-lived CD8+ T cells in pancreatic cancer.pdf": "Neoantigen vaccines and clinical responses",
+    "Cai(2025) Science Advances; Immunopeptidomics-guided discovery and characterization of neoantigens for personalized cancer immunotherapy.pdf": "Neoantigen vaccines and clinical responses",
+    "Ott(2017) Nature; An immunogenic personal neoantigen vaccine for patients with melanoma.pdf": "Neoantigen vaccines and clinical responses",
+    "Ott(2020) Cell; A Phase Ib Trial of Personalized Neoantigen Therapy Plus Anti-PD-1 in Patients with Advanced Melanoma, Non-small Cell Lung Cancer, or Bladder Cancer.pdf": "Neoantigen vaccines and clinical responses",
+    "Sahin(2017) Nature; Personalized RNA mutanome vaccines mobilize poly-specific therapeutic immunity against cancer.pdf": "Neoantigen vaccines and clinical responses",
+    "Hu(2021) Nature Medicine; Personal neoantigen vaccines induce persistent memory T cell responses and epitope spreading in patients with melanoma.pdf": "Neoantigen vaccines and clinical responses",
+    "Keskin(2018) Nature; Neoantigen vaccine generates intratumoral T cell responses in phase Ib glioblastoma trial.pdf": "Neoantigen vaccines and clinical responses",
+    "Weber(2024) The Lancet; Individualised neoantigen therapy mRNA-4157 (V940) plus pembrolizumab versus pembrolizumab monotherapy in resected melanoma (KEYNOTE-942) a randomised, phase 2b study.pdf": "Neoantigen vaccines and clinical responses",
+    "Khattak(2026) Journal of Clinical Oncology; Intismeran Autogene Plus Pembrolizumab Versus Pembrolizumab Alone in High-Risk Resected Melanoma 5-Year Update of the Randomized Phase IIb KEYNOTE-942 Study.pdf": "Neoantigen vaccines and clinical responses",
+    "Lee(2026) Nature Communications; NeoPrecis enhancing immunotherapy response prediction through integration of qualified immunogenicity and clonality-aware neoantigen landscapes.pdf": "Immunotherapy response prediction",
+    "Ghorani(2018) Annals of Oncology; Differential binding affinity of mutated peptides for MHC class I is a predictor of survival in advanced lung cancer and melanoma.pdf": "Immunotherapy response prediction",
+    "Brown(2018) OncoImmunology; Neoantigen characteristics in the context of the complete predicted MHC class I self-immunopeptidome.pdf": "Immunotherapy response prediction",
+    "Vita(2018) Nucleic Acids Research; The Immune Epitope Database (IEDB) 2018 update.pdf": "Databases and reference resources",
+    "Vita(2024) Nucleic Acids Research; The Immune Epitope Database (IEDB) 2024 update.pdf": "Databases and reference resources",
+    "Koşaloğlu-Yalçın(2022) Nucleic Acids Research; The Cancer Epitope Database and Analysis Resource (CEDAR).pdf": "Databases and reference resources",
+    "Wu(2022) Genomics, Proteomics & Bioinformatics; TSNAdb v2.0 The Updated Version of Tumor-Specific Neoantigen Database.pdf": "Databases and reference resources",
+    "Marcu(2021) Journal for ImmunoTherapy of Cancer; HLA Ligand Atlas a benign reference of HLA-presented peptides to improve T-cell-based cancer immunotherapy.pdf": "Databases and reference resources",
+    "UniProtConsortium(2022) Nucleic Acids Research; UniProt the Universal Protein Knowledgebase in 2023.pdf": "Databases and reference resources",
+    "Kawashima(2007) Nucleic Acids Research; AAindex amino acid index database, progress report 2008.pdf": "Databases and reference resources",
+    "Rammensee(1999) Immunogenetics; SYFPEITHI database for MHC ligands and peptide motifs.pdf": "Databases and reference resources",
+    "MHCsequencingconsortium(1999) Nature; Complete sequence and gene map of a human major histocompatibility complex.pdf": "Databases and reference resources",
+    "Kubiniok(2022) iScience; Understanding the constitutive presentation of MHC class I immunopeptidomes in primary tissues.pdf": "Databases and reference resources",
+    "Chuwdhury(2024) Briefings in Bioinformatics; ImmuneMirror A machine learning-based integrative pipeline and web server for neoantigen prediction.pdf": "Pipelines and analysis tools",
+    "Xia(2024) Genome Medicine; pVACview an interactive visualization tool for efficient neoantigen prioritization and selection.pdf": "Pipelines and analysis tools",
+    "Wang(2025) Biomarker Research; Computation strategies and clinical applications in neoantigen discovery towards precision cancer immunotherapy.pdf": "Pipelines and analysis tools",
+    "Johnson(2021) IEEE Transactions on Big Data; Billion-Scale Similarity Search with GPUs.pdf": "Pipelines and analysis tools",
+    "Hundal(2020) Cancer Immunology Research; pVACtools A Computational Toolkit to Identify and Visualize Cancer Neoantigens.pdf": "Pipelines and analysis tools",
+    "Sharma(2021) WIREs Data Mining and Knowledge Discovery; Computational resources in healthcare.pdf": "Pipelines and analysis tools",
+    "Malkov(2020) IEEE Transactions on Pattern Analysis and Machine Intelligence; Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs.pdf": "Pipelines and analysis tools",
+    "Steinegger(2017) Nature Biotechnology; MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets.pdf": "Pipelines and analysis tools",
+    "Lang(2021) Bioinformatics; NeoFox annotating neoantigen candidates with neoantigen features.pdf": "Pipelines and analysis tools",
+    "Zhao(2018) PLOS Computational Biology; Systematically benchmarking peptide-MHC binding predictors From synthetic to naturally processed epitopes.pdf": "Benchmarking, bias and generalisation",
+    "Müller(2023) Immunity; Machine learning methods and harmonized datasets improve immunogenic neoantigen prediction.pdf": "Benchmarking, bias and generalisation",
+    "Zhang(2026) Cell Genomics; Cross-task interpretability through unified modeling reveals a universal shortcut bias in neoantigen prediction.pdf": "Benchmarking, bias and generalisation",
+    "Tadros(2025) Genome Medicine; Predicting MHC-I ligands across alleles and species how far can we go.pdf": "Benchmarking, bias and generalisation",
+    "Graber(2025) Nature Machine Intelligence; Resolving data bias improves generalization in binding affinity prediction.pdf": "Benchmarking, bias and generalisation",
+    "Wells(2020) Cell; Key Parameters of Tumor Epitope Immunogenicity Revealed Through a Consortium Approach Improve Neoantigen Prediction.pdf": "Benchmarking, bias and generalisation"
+  }
+}

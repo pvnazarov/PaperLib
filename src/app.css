@@ -1,0 +1,532 @@
+/* TeamLibrary Browser.
+ *
+ * The custom-property NAMES here are deliberately identical to workpage's
+ * assets/site.css, and the light/dark/system pattern is the same three-state one:
+ * bare :root is light, a prefers-color-scheme block guarded with
+ * :not([data-theme='light']) handles system-dark, and [data-theme='dark'] lets an
+ * explicit choice win. So when this page is wired into workpage it can drop these
+ * blocks and <link> the shared sheet instead, with nothing else to change.
+ *
+ * No web fonts, no CDN, no network of any kind (CLAUDE.md §8.1).
+ */
+
+:root {
+  --bg: #f7f7f8;
+  --panel: #ffffff;
+  --ink: #16181d;
+  --muted: #5c6270;
+  --line: #d9dce3;
+  --accent: #2f63e0;
+  --code-bg: #f2f3f6;
+  --field: #ffffff;
+  --selected: #e6edfc;
+  --on-accent: #ffffff;
+  --shadow: 0 1px 2px rgba(16, 18, 24, .06), 0 6px 16px rgba(16, 18, 24, .05);
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  --warn-bg: #fdf3e3;
+  --warn-line: #d79b31;
+  /* TEXT weight, not the border weight: --warn-line is a 1px rule and is far
+     too pale to read as a word. §7.4 -- every token gets a value on bare
+     :root and is redefined in BOTH dark blocks, never only in a media query. */
+  --warn-ink: #a34a11;
+
+  /* ── the nine part colours, on the map and in its key ────────────────
+     Two palettes, because one cannot serve both grounds. The dark set came
+     first and reads well on #14161a; on white the same values are muddy and
+     converge -- a brown, an olive and a dark pink all just read as "a dark
+     dot" at 4 px (owner, 2026-09-03: "too dark ... look visually similar").
+     So the light set is HIGHER CHROMA at a lighter tone, and the muddiest
+     hues (brown, dark pink) are gone. Nine hues at 0/28/48/96/152/190/222/
+     268/328 degrees; orange and gold are the tightest pair at 20 degrees and
+     are separated by tone as well as hue.
+     Read by app.js at paint time, so they follow the theme toggle. */
+  --part-1: #2b6ff0;   /* blue    */
+  --part-2: #ef6c11;   /* orange  */
+  --part-3: #10a862;   /* green   */
+  --part-4: #e0247c;   /* magenta */
+  --part-5: #8348e8;   /* violet  */
+  --part-6: #b58400;   /* gold    */
+  --part-7: #0fa6b8;   /* teal    */
+  --part-8: #6aa314;   /* olive   */
+  --part-9: #e83a3a;   /* red     */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #14161a; --panel: #1c1f25; --ink: #e8eaee; --muted: #9aa2b1;
+    --line: #2c313a; --accent: #7ea2f5; --code-bg: #0f1114; --field: #0f1114;
+    --selected: #2b3446; --on-accent: #14161a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px rgba(0, 0, 0, .3);
+    --warn-bg: #2a2318; --warn-line: #a97c2a; --warn-ink: #f0a45a;
+  --part-1: #7ea2f5; --part-2: #f0995e; --part-3: #4fc98a;
+  --part-4: #f072aa; --part-5: #b57cf7; --part-6: #dcb43f;
+  --part-7: #45c3d6; --part-8: #a3cb52; --part-9: #f47575;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #14161a; --panel: #1c1f25; --ink: #e8eaee; --muted: #9aa2b1;
+  --line: #2c313a; --accent: #7ea2f5; --code-bg: #0f1114; --field: #0f1114;
+  --selected: #2b3446; --on-accent: #14161a;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px rgba(0, 0, 0, .3);
+  --warn-bg: #2a2318; --warn-line: #a97c2a; --warn-ink: #f0a45a;
+  --part-1: #7ea2f5; --part-2: #f0995e; --part-3: #4fc98a;
+  --part-4: #f072aa; --part-5: #b57cf7; --part-6: #dcb43f;
+  --part-7: #45c3d6; --part-8: #a3cb52; --part-9: #f47575;
+}
+
+* { box-sizing: border-box; }
+
+/* Reserve the scrollbar's width whether or not it is showing.
+ *
+ * Not cosmetic: the map's height is derived from its own WIDTH (an aspect ratio),
+ * its width depends on whether a vertical scrollbar is present, and the scrollbar
+ * appears because of what is rendered BELOW the map. That is a feedback loop, and
+ * it was visible -- lassoing a group added the selected-papers list, the page grew
+ * past the viewport, the scrollbar took 15px of width, and the map lost 10px of
+ * height in the same frame (owner, 2026-09-04: "vertical size of the map in
+ * original ... and selected ... are different"). Measured: 458px -> 448px at a
+ * 1100x2000 viewport.
+ *
+ * Fixing it here rather than in layoutMap() is deliberate -- the loop is not
+ * specific to the map, it is what happens to ANY width-derived size on a page
+ * whose height changes. `stable` reserves the gutter without forcing a visible
+ * track. */
+html { scrollbar-gutter: stable; }
+
+body {
+  margin: 0;
+  font: 15px/1.55 var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration: underline; }
+
+/* ── header ──────────────────────────────────────────── */
+
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header h1 { margin: 0; font-size: 19px; letter-spacing: -.01em; }
+header h1 a { color: inherit; text-decoration: none; }
+.sub { margin: 0; color: var(--muted); font-size: 13px; }
+
+/* Matches workpage's .back, so the two pages read as one site. */
+.uplink {
+  flex: none; font-size: 13px; color: var(--muted); text-decoration: none;
+  align-self: center;
+}
+.uplink:hover { color: var(--accent); text-decoration: none; }
+.spacer { flex: 1 1 auto; }
+
+.asof {
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.asof strong { color: var(--ink); font-weight: 600; }
+
+.theme-toggle { display: flex; gap: 2px; }
+.theme-toggle button {
+  font: inherit; font-size: 12px; padding: 3px 9px; cursor: pointer;
+  background: var(--field); color: var(--muted);
+  border: 1px solid var(--line);
+}
+.theme-toggle button:first-child { border-radius: 5px 0 0 5px; }
+.theme-toggle button:last-child { border-radius: 0 5px 5px 0; }
+.theme-toggle button + button { border-left: none; }
+.theme-toggle button[aria-pressed='true'] {
+  background: var(--selected); color: var(--ink); border-color: var(--accent);
+}
+
+/* ── layout ──────────────────────────────────────────── */
+
+.layout {
+  display: grid;
+  grid-template-columns: 288px minmax(0, 1fr);
+  gap: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 18px 20px 40px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  aside { position: static !important; max-height: none !important; }
+}
+
+aside {
+  position: sticky;
+  top: 72px;
+  max-height: calc(100vh - 92px);
+  overflow-y: auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* ── search ──────────────────────────────────────────── */
+
+.search { position: relative; margin-bottom: 6px; }
+.search input {
+  width: 100%; font: inherit; padding: 8px 30px 8px 10px;
+  color: var(--ink); background: var(--field);
+  border: 1px solid var(--line); border-radius: 6px;
+}
+.search input:focus-visible { outline: 2px solid var(--accent); outline-offset: -1px; }
+.search .clear {
+  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  border: none; background: none; color: var(--muted);
+  font: inherit; font-size: 17px; line-height: 1; cursor: pointer; padding: 4px 6px;
+}
+.hint { margin: 0 0 12px; font-size: 11.5px; color: var(--muted); }
+
+/* ── facets ──────────────────────────────────────────── */
+
+.facet { border-top: 1px solid var(--line); padding: 8px 0 4px; }
+.facet > summary {
+  cursor: pointer; font-size: 12px; font-weight: 600; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--muted); padding: 2px 0; list-style: none;
+}
+.facet > summary::-webkit-details-marker { display: none; }
+.facet > summary::before { content: '▸ '; font-size: 10px; }
+.facet[open] > summary::before { content: '▾ '; }
+.facet-body { padding: 4px 0 2px; }
+.facet-scroll { max-height: 232px; overflow-y: auto; }
+/* The TOPIC facet is the primary navigation and now holds 45 entries across 9
+   parts -- 2024px of content. Through the shared 232px window a reader saw six
+   of them and concluded the list was incomplete, which is exactly what the owner
+   reported. Author and Journal keep the short cap: they hold hundreds of entries
+   and have their own search box, so scrolling is the expected way to use them. */
+.facet-scroll.facet-tall { max-height: clamp(320px, 64vh, 1400px); }
+
+/* How many options the facet holds, in its summary. A closed, scrolling list has
+   no other way to say how much of itself you can see. */
+summary .facetn {
+  margin-left: 6px; padding: 0 5px; border-radius: 7px;
+  font-size: 11px; font-weight: 600; color: var(--muted);
+  background: var(--field); border: 1px solid var(--line);
+  flex: none; font-variant-numeric: tabular-nums;
+}
+/* "n on": this part holds topics that are filtering the library RIGHT NOW.
+   Accented because it has to be legible while the part is shut -- it is the
+   only thing standing between a collapsed part and an invisible filter. */
+summary .facetn.on {
+  color: var(--on-accent); background: var(--accent); border-color: var(--accent);
+}
+
+/* ── own / shared / all ────────────────────────────────────────────────
+   A segmented control, not a facet: it partitions the whole library rather
+   than filtering within it, so it sits above the facets and outside their
+   collapsible frames. */
+.scope { padding: 10px 10px 4px; border-bottom: 1px solid var(--line); }
+.segs { display: flex; gap: 0; border: 1px solid var(--line); border-radius: 7px;
+        overflow: hidden; background: var(--field); }
+.seg {
+  flex: 1 1 0; display: flex; flex-direction: column; align-items: center;
+  gap: 1px; padding: 6px 4px; border: 0; border-right: 1px solid var(--line);
+  background: transparent; color: var(--ink); font: inherit; font-size: 12.5px;
+  cursor: pointer; text-align: center;
+}
+.seg:last-child { border-right: 0; }
+.seg:hover { background: var(--code-bg); }
+.seg.on { background: var(--selected); font-weight: 600; }
+.seg .n { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.seg.on .n { color: var(--ink); }
+.scope .hint { margin: 6px 2px 2px; }
+
+/* ── lasso on the map ──────────────────────────────────────────────────
+   Step two of the selection: the highlight exists, and these turn it into a
+   filter. Deliberately styled as chips, because that is what the resulting
+   filter looks like once applied. */
+/* The selected papers, at the bottom of the map page where the standing
+   notices used to be. Separated by a rule rather than a card, so it reads as a
+   continuation of the map rather than a second panel. */
+.selpanel { margin: 18px 0 0; padding-top: 4px; border-top: 1px solid var(--line); }
+
+.lassobar {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  margin: 0 0 10px; padding: 8px 10px;
+  background: var(--selected); border: 1px solid var(--accent); border-radius: 8px;
+}
+.lassobar .spacer { flex: 1 1 auto; }
+.maphint { margin: 0 0 10px; }
+.lassolive {
+  position: absolute; left: 8px; top: 8px; z-index: 3;
+  padding: 3px 8px; border-radius: 6px; font-size: 12px; font-weight: 600;
+  color: var(--on-accent); background: var(--accent);
+  pointer-events: none; font-variant-numeric: tabular-nums;
+}
+/* The canvas is a selection surface now: no text selection, no touch scroll
+   stealing the drag, and a crosshair to say so. */
+canvas.map { cursor: crosshair; touch-action: none; user-select: none; }
+
+.opt {
+  display: flex; align-items: baseline; gap: 6px; width: 100%;
+  font: inherit; font-size: 13px; text-align: left; cursor: pointer;
+  color: var(--ink); background: none; border: none;
+  border-radius: 5px; padding: 3px 6px;
+}
+.opt:hover { background: var(--code-bg); }
+.opt[aria-pressed='true'] { background: var(--selected); font-weight: 600; }
+.opt .n {
+  margin-left: auto; font-size: 11.5px; color: var(--muted);
+  font-variant-numeric: tabular-nums; padding-left: 6px;
+}
+.opt[aria-pressed='true'] .n { color: var(--ink); }
+.opt.zero { opacity: .42; }
+.opt.child { padding-left: 18px; font-size: 12.5px; }
+
+input.authorq {
+  width: 100%; font: inherit; font-size: 12.5px; margin: 2px 0 6px;
+  padding: 5px 8px; color: var(--ink); background: var(--field);
+  border: 1px solid var(--line); border-radius: 5px;
+}
+input.authorq:focus-visible { outline: 2px solid var(--accent); outline-offset: -1px; }
+/* ── the nine parts, inside the Topic facet ────────────────────────────
+   A <details> nested in a <details>. The facet's own summary rules are written
+   with a child selector (`.facet > summary`) precisely so they stop at this
+   boundary and these can look like section headers rather than facet titles. */
+.part { margin: 1px 0; }
+.part > summary {
+  display: flex; align-items: center; gap: 6px;
+  cursor: pointer; list-style: none; border-radius: 5px;
+  padding: 4px 6px; letter-spacing: .03em;
+  font-size: 11.5px; font-weight: 700; color: var(--muted);
+}
+.part > summary::-webkit-details-marker { display: none; }
+.part > summary::before { content: '▸'; flex: none; width: 7px; font-size: 9px; }
+.part[open] > summary::before { content: '▾'; }
+.part > summary:hover { background: var(--code-bg); color: var(--ink); }
+.part > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -1px; }
+/* The name is the flexible column, so both badges stay hard against the right
+   edge and read as a column down the nine parts rather than ragged. */
+.part > summary .part-name { flex: 1 1 auto; }
+/* No papers match the current filters anywhere in this part. Dimmed, not
+   hidden: a part that vanished would make the taxonomy look like it changed.
+   A part with a SELECTED topic is never dimmed even at zero -- that is the
+   reader's own filter, and greying it out would read as a fault. */
+.part.zero > summary { opacity: .5; }
+/* The topics are indented by a GUIDE LINE rather than by whitespace. A part's
+   name starts 35px in (marker + swatch + two gaps), so indenting its topics far
+   enough to read as nested would push 45 already-wrapping names into a ~230px
+   column and wrap most of them a line further. The rule does the same job in
+   16px, and it also marks where the part ends -- which whitespace cannot. */
+.part-body {
+  padding: 1px 0 3px 4px; margin: 0 0 0 12px;
+  border-left: 1px solid var(--line);
+}
+.part-body .opt.child { padding-left: 8px; }
+
+/* Expand all / Collapse all. Collapsing by part costs the reader the ability to
+   scan 45 topics at once; this gives it back in one click. */
+.partall {
+  display: block; margin: 0 0 4px auto; padding: 2px 6px;
+  font: inherit; font-size: 11px; color: var(--muted);
+  background: none; border: 1px solid var(--line); border-radius: 6px;
+  cursor: pointer;
+}
+.partall:hover { background: var(--code-bg); color: var(--ink); }
+
+/* ── results ─────────────────────────────────────────── */
+
+.resulthead {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.resulthead h2 { margin: 0; font-size: 15px; font-weight: 600; }
+.resulthead .of { color: var(--muted); font-weight: 400; }
+.sortby { font-size: 12.5px; color: var(--muted); }
+.sortby select {
+  font: inherit; font-size: 12.5px; color: var(--ink); background: var(--field);
+  border: 1px solid var(--line); border-radius: 5px; padding: 2px 4px;
+}
+
+.chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  font: inherit; font-size: 12px; cursor: pointer;
+  background: var(--selected); color: var(--ink);
+  border: 1px solid var(--accent); border-radius: 999px; padding: 2px 8px;
+}
+.chip .x { color: var(--muted); font-size: 14px; line-height: 1; }
+.chip.clear-all { background: var(--panel); border-color: var(--line); }
+
+ol.hits { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+
+.hit {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+  padding: 10px 13px; cursor: pointer;
+}
+.hit:hover { border-color: var(--accent); box-shadow: var(--shadow); }
+.hit h3 { margin: 0 0 3px; font-size: 14.5px; font-weight: 600; line-height: 1.35; }
+.hit .byline { margin: 0; font-size: 12.5px; color: var(--muted); }
+.hit .crumb { margin: 4px 0 0; font-size: 11.5px; color: var(--muted); }
+.hit mark { background: var(--selected); color: inherit; border-radius: 2px; padding: 0 1px; }
+
+.badges { display: inline-flex; gap: 5px; flex-wrap: wrap; vertical-align: middle; }
+.badge {
+  font-size: 10.5px; letter-spacing: .02em; padding: 1px 6px; border-radius: 4px;
+  background: var(--code-bg); color: var(--muted); border: 1px solid var(--line);
+  white-space: nowrap;
+}
+.badge.type { text-transform: lowercase; }
+.badge.warn { background: var(--warn-bg); border-color: var(--warn-line); color: var(--ink); }
+.badge.area { border-color: var(--accent); color: var(--accent); }
+/* Filled rather than outlined: `ours` is a positive statement about the paper,
+   and the outlined badges are all cautions. */
+.badge.own {
+  background: var(--accent); border-color: var(--accent); color: var(--on-accent);
+  font-weight: 600;
+}
+
+.empty {
+  background: var(--panel); border: 1px dashed var(--line); border-radius: 8px;
+  padding: 26px; text-align: center; color: var(--muted);
+}
+
+/* ── record ──────────────────────────────────────────── */
+
+.record {
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 8px; padding: 20px 22px; box-shadow: var(--shadow);
+}
+.back {
+  font: inherit; font-size: 13px; color: var(--muted); background: none;
+  border: none; cursor: pointer; padding: 0; margin-bottom: 12px;
+}
+.back:hover { color: var(--accent); }
+.record h2 { margin: 0 0 6px; font-size: 20px; line-height: 1.28; }
+.record .authors { margin: 0 0 4px; font-size: 13.5px; }
+.record .meta { margin: 0 0 14px; font-size: 13px; color: var(--muted); }
+.record h3 {
+  margin: 20px 0 5px; font-size: 12px; font-weight: 700; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--muted);
+}
+.record p { margin: 0 0 9px; }
+.record code, .hit code {
+  font-family: var(--mono); font-size: .88em;
+  background: var(--code-bg); border-radius: 3px; padding: .1em .3em;
+}
+.record .crumb ul { margin: 4px 0 0; }
+.record ul { margin: 0 0 9px; padding-left: 20px; }
+.record li { margin-bottom: 3px; }
+
+.actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 4px; }
+.btn {
+  display: inline-block; font: inherit; font-size: 13px; text-decoration: none;
+  padding: 6px 13px; border-radius: 6px; cursor: pointer;
+  background: var(--accent); color: var(--on-accent); border: 1px solid var(--accent);
+}
+.btn:hover { text-decoration: none; filter: brightness(1.08); }
+.btn.secondary { background: var(--panel); color: var(--accent); }
+
+.moreauthors {
+  font: inherit; font-size: 12.5px; color: var(--accent); background: none;
+  border: none; cursor: pointer; padding: 0;
+}
+
+/* The one remaining warning box: a title that came from a filename (§9). */
+.warnbox {
+  background: var(--warn-bg); border-left: 3px solid var(--warn-line);
+  padding: 9px 12px; border-radius: 5px; font-size: 13px;
+}
+
+.tech { margin-top: 18px; font-size: 12px; color: var(--muted); }
+.tech summary { cursor: pointer; }
+.tech dl { display: grid; grid-template-columns: max-content 1fr; gap: 2px 12px; margin: 8px 0 0; }
+.tech dt { color: var(--muted); }
+.tech dd { margin: 0; font-family: var(--mono); font-size: 11.5px; word-break: break-all; }
+
+/* ── notices (CLAUDE.md §9 — content requirements, not decoration) ───── */
+
+.notices {
+  max-width: 1500px; margin: 0 auto; padding: 4px 20px 34px;
+  display: grid; gap: 8px;
+}
+.notice {
+  background: var(--panel); border: 1px solid var(--line);
+  border-left: 3px solid var(--accent); border-radius: 6px;
+  padding: 9px 13px; font-size: 12.5px; color: var(--muted);
+}
+.notice strong { color: var(--ink); }
+
+footer {
+  padding: 14px 20px 24px; text-align: center;
+  font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line);
+}
+
+/* ── the map ─────────────────────────────────────────── */
+
+.mapwrap {
+  position: relative;
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 8px; padding: 6px; box-shadow: var(--shadow);
+}
+canvas.map { display: block; width: 100%; }
+
+.maptip {
+  position: absolute; max-width: 260px; pointer-events: none;
+  background: var(--ink); color: var(--bg);
+  font-size: 11.5px; line-height: 1.35;
+  padding: 5px 8px; border-radius: 5px; z-index: 5;
+}
+
+.mapkey { display: flex; flex-wrap: wrap; gap: 4px 10px; margin: 10px 0 4px; }
+.keyitem {
+  display: inline-flex; align-items: center; gap: 6px;
+  font: inherit; font-size: 11.5px; color: var(--muted);
+  background: none; border: none; cursor: pointer; padding: 2px 4px; border-radius: 4px;
+}
+.keyitem:hover { background: var(--code-bg); color: var(--ink); }
+.keyitem.off { opacity: .38; }
+.swatch { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+
+.record.focus { margin-top: 12px; padding: 14px 16px; }
+
+/* ── similar papers ──────────────────────────────────── */
+
+ul.simlist { list-style: none; margin: 0 0 8px; padding: 0; }
+ul.simlist li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  gap: 0 10px;
+  align-items: baseline;
+  padding: 5px 0;
+  border-top: 1px solid var(--line);
+}
+.simhit {
+  font: inherit; text-align: left; background: none; border: none;
+  cursor: pointer; padding: 0; color: var(--ink); min-width: 0;
+}
+.simhit:hover .simtitle { color: var(--accent); text-decoration: underline; }
+.simtitle { display: block; font-size: 13.5px; line-height: 1.35; }
+.simmeta { display: block; font-size: 11.5px; color: var(--muted); }
+.simscore {
+  font-family: var(--mono); font-size: 11.5px; color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.simterms {
+  grid-column: 1 / -1;
+  font-size: 11px; color: var(--muted); font-family: var(--mono);
+}
+
+/* The map's date, when it is OLDER than the library's: papers added since are
+   not plotted, so this is a missing-data warning rather than a detail. */
+.sortby.stale { color: var(--warn-ink); font-weight: 600; }

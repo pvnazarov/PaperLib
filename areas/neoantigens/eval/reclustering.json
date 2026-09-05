@@ -1,0 +1,28 @@
+{
+  "written_before": "any candidate taxonomy for the 117-paper collection existed. The 14-topic taxonomy being replaced covers the first 60 papers only; the 57 papers of batch 2 have not yet been read at the time this file is written.",
+
+  "not_naive": "One observation predates this file and must be declared rather than presented later as a discovery: reading the batch-2 FILENAMES (not the papers) showed several on antigen processing and the proteasome — TAP transport, ERAP1, proteasomal cleavage — and the current Part A has no topic upstream of binding. That is a hypothesis this evaluation may confirm or reject; it is not a criterion, and 'a topic I expected to need was needed' is not evidence.",
+
+  "circularity": "The similarity vectors that would score within-topic cohesion are TF-IDF over the same summaries that a reading-based clustering is drawn from, and the summaries were written by the same process that will draw the clusters. Cohesion therefore measures agreement with the proposer, not quality. It is recorded below as a SHOULD and as a diagnostic only; no MUST depends on it, and a cohesion improvement is not evidence that the taxonomy is better.",
+
+  "pool": "117 papers in areas/neoantigens/meta/ as of 2026-09-05, after the batch-2 ingest. Any count quoted in the report is measured against meta/, never against a review.",
+
+  "must": [
+    {"id": "coverage",        "claim": "every one of the 117 papers is assigned to exactly one topic; zero unfiled"},
+    {"id": "declared",        "claim": "every topic used in an assignment is declared in the topics list"},
+    {"id": "part_name_match", "claim": "every topic's part_name agrees with its part letter"},
+    {"id": "no_orphan_topic", "claim": "every declared topic has at least one paper"},
+    {"id": "batch1_stability","claim": "at most 15 of the 60 batch-1 papers change topic. A revision that re-files a quarter of the existing collection is a re-clustering of everything, not an extension, and must be argued as such rather than slipped in with an ingest"},
+    {"id": "no_giant_topic",  "claim": "no topic holds more than 15 papers. A topic a reader cannot skim is not one topic"}
+  ],
+
+  "should": [
+    {"id": "min_topic_size",  "claim": "no topic holds fewer than 3 papers, unless its subject is genuinely narrow and the description says so"},
+    {"id": "part_balance",    "claim": "no part holds more than 40% of the collection"},
+    {"id": "topic_count",     "claim": "between 14 and 22 topics — enough to separate 117 papers, few enough to browse"},
+    {"id": "cohesion",        "claim": "median within-topic cohesion does not fall relative to the 14-topic taxonomy. DIAGNOSTIC ONLY — see circularity above"},
+    {"id": "seam_declared",   "claim": "every paper that could defensibly sit in another topic is named in the review prose, as the 14-topic version named three"}
+  ],
+
+  "reporting": "scripts/score_eval.py prints what passed and failed. Failures go in reports/ and are stated in the summary to the owner. A criterion that failed and was reported is a finding; one that failed and was quietly dropped is a defect in this evaluation."
+}

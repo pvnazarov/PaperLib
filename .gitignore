@@ -1,0 +1,47 @@
+# --- the papers themselves ---------------------------------------------------
+# raw/ is publisher PDFs: large, and a git history cannot forget them. Every
+# sha256 in meta/ is the claim that ties a sidecar to bytes that live only here
+# and in the backup; `make verify` re-proves it.
+areas/*/raw/
+areas/*/inbox/
+inbox/
+
+# meta/ IS tracked, deliberately. It is small, it is the ground truth for what
+# the collection holds, and a per-edit reversible diff is a far stronger audit
+# trail than any ledger this project could hand-roll.
+#
+# outputs/ is tracked too. It holds the literature review, which IS the taxonomy;
+# versioning it is the audit trail for "why did this paper's topic change between
+# two builds" -- the one question add-only updates make hard to answer any other
+# way. Read-only does not mean untracked.
+
+# --- generated ---------------------------------------------------------------
+areas/*/dist/
+dist/
+index/registry.json
+dist-archive/
+areas/*/data/*.npy
+areas/*/data/*.npz
+areas/*/data/*.pkl
+areas/*/reports/build_*.txt
+areas/*/reports/bib_disagreements_*.txt
+# Draft reviews. make_review writes these into reports/ and installing one into
+# outputs/ is what makes it the taxonomy -- so the draft is a regenerable byproduct
+# that would duplicate 88 KB of outputs/ in the history on every re-clustering.
+# Measurements in reports/ ARE tracked: they are the evidence for a revision.
+areas/*/reports/*_literature_review.md
+
+# library.json and similarity.json ARE tracked: they are the build's contract and
+# both are deterministic, so an unchanged rebuild is a no-op for git and a dirty
+# tree means the data really moved rather than that somebody ran make.
+
+# --- the source archive this project was built from --------------------------
+# Kept on disk so any claim in docs/PROVENANCE.md can be checked by diff, but it
+# is 167 KB of somebody else's release and does not belong in this history.
+teamlibrary-toolkit-2026-09-05/
+teamlibrary-toolkit-2026-09-05.tar.gz
+
+# --- environment -------------------------------------------------------------
+.venv/
+__pycache__/
+*.pyc

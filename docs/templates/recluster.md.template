@@ -1,0 +1,53 @@
+## How to read this
+
+Every paper in the collection, clustered by subject. {n} papers, {t} topics in {parts} parts,
+each paper in exactly one topic.
+
+<!--
+  TEMPLATE. Rename to `annotations/review_prose/recluster.md` and REWRITE it before
+  running `make review TAXONOMY=…`.
+
+  A re-clustering is a different act from a first clustering and from a consolidation,
+  and prose written for one is FALSE about the others — which is why make_review.py
+  picks the file by mode and refuses to invent a default.
+
+  What this block has to say, and the order is the point:
+    1. WHY the old taxonomy was re-drawn — the specific faults, not "it was time".
+    2. WHAT PROPOSED and WHAT DECIDED. If the vectors proposed and reading decided,
+       say so; that order is a claim about the document's reliability. TF-IDF groups
+       by shared vocabulary, which is not the same thing as subject, and it will
+       confidently suggest wrong homes.
+    3. HOW MANY papers moved — {moved} of {n} — and where the before-and-after
+       measurement lives.
+    4. Which criteria FAILED. Report them. A re-clustering that reports only its
+       successes is not evidence of anything.
+
+  Write the criteria down in eval/ BEFORE you build a candidate taxonomy. Criteria
+  chosen after seeing the answers are not criteria.
+
+  Available placeholders: {n} {t} {parts} {moved} {reviewed} {curated} {with_authors}
+-->
+
+**The clustering is the only judgement in this document, and it was re-drawn.** Say what was
+wrong with the previous taxonomy, in specifics.
+
+**How it was done, in that order:** say what proposed and what decided.
+
+**{moved} of {n} papers changed topic.** Point at the before-and-after measurement, and name
+the criteria that failed.
+
+Everything else is mechanical:
+
+| Element | Where it comes from |
+|---|---|
+| first author, year, journal, title | the publisher's own registration via Crossref or arXiv, keyed on a DOI or arXiv ID verified against the paper's bytes — or, for the papers that register nowhere, the paper's own first page |
+| DOI / arXiv ID | the sidecar's `doi:` field |
+| summary | the sidecar's `## Abstract` — written once at ingest from the source's own extracted text |
+| `[src]` link | the source file in `raw/` |
+
+**The summaries are paraphrases, not quotations, and this document is not a source.** Each entry
+links the paper itself; a claim you intend to rely on must be checked there.
+
+**Author lists are deliberately incomplete here.** Each entry names the registered first author
+and `et al.`, never a reconstructed list. Full, verified lists exist for {with_authors} of {n}
+papers, in `data/bib_cache.json` and searchable in the browser.

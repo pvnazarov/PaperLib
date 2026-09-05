@@ -1,0 +1,44 @@
+## How to read this
+
+Every paper in the collection, clustered by subject. {n} papers, {t} topics in {parts} parts,
+each paper in exactly one topic.
+
+<!--
+  TEMPLATE. Rename to `annotations/review_prose/consolidate.md` and REWRITE it before
+  running `make review` without --taxonomy.
+
+  This block is the review's account of how its own clustering was arrived at. It is
+  true of one collection and one act, which is why there is no default and why
+  make_review.py refuses to run without it. Consolidation means: the taxonomy already
+  in library.json is written back out unchanged. Say where that taxonomy came from,
+  who decided it and when — and say plainly that this document reproduces lines
+  already drawn rather than drawing new ones.
+
+  Available placeholders: {n} papers · {t} topics · {parts} parts · {reviewed} kept
+  from an earlier clustering · {curated} assigned locally · {with_authors} papers
+  with a verified author list · {moved} (0 here; only a re-clustering moves papers).
+-->
+
+**What is a judgement here, and whose.** The clustering is the only judgement in this
+document. Describe its provenance here: which papers keep an earlier clustering, which were
+assigned since, on whose instruction, and when.
+
+**So this document consolidates a taxonomy rather than deciding one.** A fresh pass over all
+{n} abstracts might draw some lines elsewhere; this reproduces the lines already drawn, in one
+place, so that the review is again the single source of the taxonomy.
+
+Everything else is mechanical:
+
+| Element | Where it comes from |
+|---|---|
+| first author, year, journal, title | the publisher's own registration via Crossref or arXiv, keyed on a DOI or arXiv ID verified against the paper's bytes — or, for the papers that register nowhere, the paper's own first page |
+| DOI / arXiv ID | the sidecar's `doi:` field |
+| summary | the sidecar's `## Abstract` — written once at ingest from the source's own extracted text |
+| `[src]` link | the source file in `raw/` |
+
+**The summaries are paraphrases, not quotations, and this document is not a source.** Each entry
+links the paper itself; a claim you intend to rely on must be checked there.
+
+**Author lists are deliberately incomplete here.** Each entry names the registered first author
+and `et al.`, never a reconstructed list. Full, verified lists exist for {with_authors} of {n}
+papers, in `data/bib_cache.json` and searchable in the browser.

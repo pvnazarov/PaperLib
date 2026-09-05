@@ -1,0 +1,22 @@
+{
+  "_comment": [
+    "What every AREA inherits. An area's own project.json overrides anything here,",
+    "so shared facts (who to contact, what identifies us to Crossref) are corrected",
+    "in one place instead of in five.",
+    "",
+    "user_agent   sent to Crossref and arXiv by `make bib` and by the ingest.",
+    "             Identify the tool honestly and do NOT put a personal email address",
+    "             here -- it goes to third parties on every lookup.",
+    "contact_email  appears ON THE PUBLISHED PAGE. Left blank deliberately: filling",
+    "             it publishes that address at hatkapina.cc. Set it if you want it.",
+    "site_dir_prefix  the path under the web root; areas land in <prefix>/<area>/.",
+    "has_roster  false: we collect published literature and write none of it, so there is no own/shared distinction and wiki/group.md is deliberately absent."
+  ],
+  "name": "PaperLib",
+  "subtitle": "",
+  "site_dir_prefix": "paperlib",
+  "contact_name": "",
+  "contact_email": "",
+  "user_agent": "PaperLib/0.1 (internal research tool)",
+  "has_roster": false
+}

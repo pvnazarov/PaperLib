@@ -1,0 +1,19 @@
+# Tier 1 -- NOT installed by default, and deliberately separate from
+# requirements.txt (CLAUDE.md D3, ADR 0004).
+#
+# Tier 1 was measured on 2026-09-03 and DID NOT earn the swap: 39/55 against
+# Tier 0's 38/55 is one neighbour on 55 pre-committed points, and it costs
+# ~2.5 GB of dependencies plus the loss of shared-terms as an explanation.
+# Every clone should not pay that for a tie.
+#
+# This file exists so the experiment is REPRODUCIBLE rather than folklore:
+#
+#   .venv/bin/pip install -r requirements-tier1.txt
+#   .venv/bin/python scripts/embed.py --tier 1 --st-model pubmedbert --probe /tmp/p.npz
+#   .venv/bin/python scripts/score_eval.py --compare data/embed_cache.npz /tmp/p.npz
+#
+# `--probe` writes only that one npz, so the shipped Tier 0 model and the live
+# site are untouched by a candidate run.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.9.1+cpu
+sentence-transformers==5.1.2

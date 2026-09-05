@@ -1,0 +1,51 @@
+  PASS  MUST   coverage          117 assigned of 117 sources; unfiled=0
+  PASS  MUST   declared          0 undeclared topic(s) used
+  PASS  MUST   part_name_match   0 mismatch(es)
+  PASS  MUST   no_orphan_topic   orphans: none
+  PASS  MUST   batch1_stability  0 of 60 batch-1 papers changed topic (limit 15); 2 renames applied first: ['Thymic selection and repertoire availability', 'MHC class II presentation and CD4 responses']
+  PASS  MUST   no_giant_topic    topics over 15: none
+  PASS  SHOULD min_topic_size    under 3: [('HLA genotyping', 2)]; description declares narrowness: ['HLA genotyping']
+  PASS  SHOULD part_balance      largest part holds 24%
+  PASS  SHOULD topic_count       18 topics
+  n/a   SHOULD cohesion          NOT MEASURED - diagnostic only, and circular by the file's own statement
+  n/a   SHOULD seam_declared     verified by reading the review prose, not by this script
+
+9 passed, 0 failed, 2 not measured
+
+---
+Criteria: eval/reclustering.json, written 2026-09-05 before any candidate taxonomy
+for the 117-paper collection existed, and before the 57 batch-2 papers were read.
+
+NOTES ON THE PASSES, because a bare PASS overstates two of them:
+
+  min_topic_size  passed ONLY through the exception the criterion allows. "HLA
+                  genotyping" holds 2 papers, below the stated floor of 3. It is
+                  kept because the subject is genuinely narrow and the topic
+                  description says so, which is what the SHOULD permits -- but it
+                  is a use of an escape clause, not a clean pass, and the next
+                  revision should either grow it or fold it into MHC class I.
+
+  batch1_stability  passed with 0 of 60 moved, which is a stronger result than the
+                  criterion asked for. Two topics were RENAMED ("Thymic selection
+                  and self-discrimination" -> "... and repertoire availability";
+                  "MHC class II presentation" -> "... and CD4 responses") and the
+                  rename map was declared to the scorer before measuring, so those
+                  are not counted as moves. Renames are declared here so a reader
+                  can disagree with that accounting.
+
+NOT MEASURED, and why:
+
+  cohesion        The criteria file states the circularity: the vectors that would
+                  score within-topic cohesion are TF-IDF over the same summaries a
+                  reading-based clustering was drawn from. Cohesion would measure
+                  agreement with the proposer. It was declared diagnostic-only in
+                  advance and is not reported as evidence.
+
+  seam_declared   Verified by reading annotations/review_prose/recluster.md, which
+                  names the papers that could defensibly sit elsewhere. Not
+                  checkable by script.
+
+WHAT THIS DOES NOT ESTABLISH: that the new taxonomy is better than the old one.
+It establishes that the new taxonomy satisfies constraints fixed in advance, that
+it covers 117 papers with none unfiled, and that it did not quietly re-file the
+existing collection while extending it.

@@ -1,0 +1,32 @@
+# build.py and selftest.py are STANDARD LIBRARY ONLY and need nothing here, so a
+# fresh clone can produce data/library.json before any of this is installed
+# (README "Environment"). These start at embed.py.
+#
+# Versions resolved from PyPI on 2026-09-02 with `pip index versions <pkg>` and are
+# the current latest, not guesses. Nothing here has been installed or run yet --
+# `make venv` is the first test of these pins.
+
+# Tier 0 embeddings (ADR 0001 / CLAUDE.md D3): TF-IDF + TruncatedSVD, and top-k
+# neighbours computed in the FULL space, never off the 2D map (§7.1 Trap 1).
+numpy==2.5.2
+scikit-learn==1.9.0
+
+# Frozen-layout projection: UMAP supports .transform() onto an already-fitted model,
+# which is what places a new paper into the existing map instead of reshuffling it
+# for every reader (§7.1 Trap 2). scikit-learn's t-SNE cannot do this, and that is
+# the deciding argument between them, not quality.
+umap-learn==0.5.12
+
+# make ui only (scripts/ui_check.py). Pinned on the owner's instruction, 2026-09-04.
+# Nothing in `make update` imports it: `make audit` reads DATA and structurally cannot
+# see that a facet is a long list behind a short window or that a filter is hidden in a
+# collapsed section -- both of those shipped, and the owner found them (CLAUDE.md §12).
+#
+# THE PIP PACKAGE IS NOT ENOUGH. Playwright ships its browsers separately, so
+# `make venv` leaves you with the library and no Chromium, and `make ui` then fails at
+# launch, not at import. That last ~115 MB stays an explicit, separate command:
+#
+#     .venv/bin/playwright install chromium
+#
+# ui_check.py detects the missing browser and prints exactly that line.
+playwright==1.62.0

@@ -1,0 +1,13 @@
+{
+  "_comment": [
+    "What this AREA calls itself. Inherits paperlib.json; anything set here",
+    "wins. site_dir is the path under the web root deploy.sh publishes into."
+  ],
+  "name": "Neoantigens",
+  "tagline": "the neoantigen literature: prediction, presentation and vaccines",
+  "subtitle": "",
+  "footer_scope": "the neoantigens literature",
+  "site_dir": "paperlib/neoantigens",
+  "uplink_label": "PaperLib",
+  "uplink_href": "/paperlib/"
+}

@@ -1,0 +1,9543 @@
+{
+ "data_as_of": "2026-09-05",
+ "tier": "0 (TF-IDF + TruncatedSVD)",
+ "model_version": 1,
+ "layout_version": 1,
+ "n_components": 59,
+ "explained_variance": 0.9932,
+ "seed": 20260903,
+ "min_sim": 0.25,
+ "top_k": 8,
+ "stripped": {
+  "circulation_sentences": 0,
+  "circulation_papers": 0,
+  "authorship_sentences": 1,
+  "authorship_papers": 1,
+  "venue_removed": 0,
+  "author_names_removed": 0
+ },
+ "extent": {
+  "lo": [
+   0.9838006496429443,
+   -1.1907235383987427
+  ],
+  "hi": [
+   6.215866565704346,
+   4.317529678344727
+  ]
+ },
+ "notice": "This map is built from the summaries, not from the papers. Two papers can sit next to each other because they were summarised in the same vocabulary rather than because they resemble each other. Nearest neighbours are computed in the full embedding space, not from these 2-D positions.",
+ "papers": {
+  "2024-01-01_abramson-2024-nature-accurate-structure": {
+   "xy": [
+    0.4763,
+    0.28313
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.3757,
+     "terms": [
+      "network",
+      "methods",
+      "structure",
+      "collection"
+     ]
+    },
+    {
+     "id": "2023-01-01_bradley-2023-elife-structure-based-predi",
+     "sim": 0.3187,
+     "terms": [
+      "structure",
+      "based predictors",
+      "structure based",
+      "alphafold"
+     ]
+    },
+    {
+     "id": "2020-01-01_malkov-2020-ieee-transactions-on-pattern",
+     "sim": 0.2737,
+     "terms": [
+      "methods",
+      "structure",
+      "protein",
+      "based"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.2719,
+     "terms": [
+      "protein",
+      "prediction",
+      "antigen",
+      "collection"
+     ]
+    },
+    {
+     "id": "2021-01-01_sharma-2021-wires-data-mining-and-knowle",
+     "sim": 0.2578,
+     "terms": [
+      "relevance",
+      "prediction",
+      "collection"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_al-okaily-2024-journal-of-immunological": {
+   "xy": [
+    0.03278,
+    0.42087
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.5955,
+     "terms": [
+      "step",
+      "groove",
+      "binding",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.5476,
+     "terms": [
+      "binding",
+      "presentation",
+      "makes",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2022-01-01_you-2022-bioinformatics-deepmhcii-a-nove",
+     "sim": 0.5457,
+     "terms": [
+      "groove",
+      "length",
+      "novel",
+      "binding"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.4987,
+     "terms": [
+      "prediction",
+      "peptide"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.4846,
+     "terms": [
+      "binding",
+      "mhc"
+     ]
+    },
+    {
+     "id": "2023-01-01_li-2023-nature-communications-crystal-st",
+     "sim": 0.4642,
+     "terms": [
+      "groove",
+      "mhc",
+      "peptide",
+      "binding"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.4555,
+     "terms": [
+      "presentation",
+      "mhc"
+     ]
+    },
+    {
+     "id": "2023-01-01_schmidt-2023-nature-communications-neoan",
+     "sim": 0.4437,
+     "terms": [
+      "presentation",
+      "tools",
+      "prediction"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_albert-2023-nature-machine-intelligence": {
+   "xy": [
+    0.95169,
+    0.32334
+   ],
+   "near": [
+    {
+     "id": "2024-01-01_xu-2024-nature-communications-immuneapp",
+     "sim": 0.6277,
+     "terms": [
+      "presentation",
+      "data",
+      "labels",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2019-01-01_sarkizova-2019-nature-biotechnology-a-la",
+     "sim": 0.5351,
+     "terms": [
+      "metric",
+      "problem",
+      "ranking",
+      "epitope"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.468,
+     "terms": [
+      "presentation",
+      "class"
+     ]
+    },
+    {
+     "id": "2023-01-01_deng-2023-briefings-in-bioinformatics-ie",
+     "sim": 0.4501,
+     "terms": [
+      "immunogenicity",
+      "presentation",
+      "precision",
+      "epitope"
+     ]
+    },
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.4415,
+     "terms": [
+      "non",
+      "epitope"
+     ]
+    },
+    {
+     "id": "2025-01-01_farriol-duran-2025-genome-medicine-predi",
+     "sim": 0.4363,
+     "terms": [
+      "immunogenicity",
+      "metric",
+      "candidates",
+      "experimental"
+     ]
+    },
+    {
+     "id": "2021-01-01_li-2021-briefings-in-bioinformatics-deep",
+     "sim": 0.3983,
+     "terms": [
+      "labels",
+      "immunogenic",
+      "scarce",
+      "deep"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.3958,
+     "terms": [
+      "immunogenicity",
+      "ranking",
+      "design",
+      "answer"
+     ]
+    }
+   ]
+  },
+  "1995-01-01_almagro-1995-protein-science-molecular-m": {
+   "xy": [
+    0.6076,
+    0.37447
+   ],
+   "near": [
+    {
+     "id": "2003-01-01_zhao-2003-bioinformatics-application-of",
+     "sim": 0.4491,
+     "terms": [
+      "receptor",
+      "recognition",
+      "cell",
+      "cross"
+     ]
+    },
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.3954,
+     "terms": [
+      "cell receptor",
+      "cell",
+      "receptor",
+      "recognition"
+     ]
+    },
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.3645,
+     "terms": [
+      "class ii",
+      "cell",
+      "cross",
+      "ii"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.3348,
+     "terms": [
+      "complex",
+      "cell",
+      "class",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.3252,
+     "terms": [
+      "complex",
+      "structure",
+      "analysis",
+      "sequence"
+     ]
+    },
+    {
+     "id": "2015-01-01_kreiter-2015-nature-mutant-mhc-class-ii",
+     "sim": 0.3201,
+     "terms": [
+      "class ii",
+      "ii",
+      "mhc class",
+      "class"
+     ]
+    },
+    {
+     "id": "2024-01-01_niu-2024-briefings-in-bioinformatics-att",
+     "sim": 0.3137,
+     "terms": [
+      "receptor",
+      "recognition",
+      "known",
+      "cell receptor"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.3134,
+     "terms": [
+      "recognition",
+      "known",
+      "cell",
+      "model"
+     ]
+    }
+   ]
+  },
+  "1993-01-01_androlewicz-1993-proceedings-of-the-nati": {
+   "xy": [
+    0.96083,
+    0.58782
+   ],
+   "near": [
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.605,
+     "terms": [
+      "class",
+      "processing",
+      "antigen",
+      "cell"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.6038,
+     "terms": [
+      "processing",
+      "antigen",
+      "binding",
+      "class"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.6032,
+     "terms": [
+      "class",
+      "associated",
+      "peptides",
+      "binding"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.5507,
+     "terms": [
+      "peptides",
+      "class",
+      "cell"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.5295,
+     "terms": [
+      "antigen",
+      "class",
+      "peptides",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2015-01-01_kreiter-2015-nature-mutant-mhc-class-ii",
+     "sim": 0.5251,
+     "terms": [
+      "class",
+      "mutant"
+     ]
+    },
+    {
+     "id": "2024-01-01_niu-2024-briefings-in-bioinformatics-att",
+     "sim": 0.4903,
+     "terms": [
+      "class binding",
+      "binding",
+      "argument",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.4569,
+     "terms": [
+      "antigen",
+      "class"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_benhamza-2024-blood-virus-reactive-t-cel": {
+   "xy": [
+    0.66995,
+    0.82033
+   ],
+   "near": [
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.5635,
+     "terms": [
+      "cells",
+      "reactive",
+      "failure",
+      "treated"
+     ]
+    },
+    {
+     "id": "2003-01-01_zhao-2003-bioinformatics-application-of",
+     "sim": 0.5373,
+     "terms": [
+      "long",
+      "mimicry",
+      "cross reactivity",
+      "reactivity"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.518,
+     "terms": [
+      "reactive",
+      "mechanism",
+      "cross",
+      "target"
+     ]
+    },
+    {
+     "id": "2022-01-01_hanada-2022-cancer-cell-a-phenotypic-sig",
+     "sim": 0.5083,
+     "terms": [
+      "cells",
+      "reactive",
+      "work",
+      "tcr"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.3814,
+     "terms": [
+      "cells",
+      "reactive",
+      "cell"
+     ]
+    },
+    {
+     "id": "2022-01-01_ragone-2022-journal-of-translational-med",
+     "sim": 0.328,
+     "terms": [
+      "goes",
+      "mimicry",
+      "molecular mimicry",
+      "epitopes"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.3244,
+     "terms": [
+      "cells",
+      "cross",
+      "presented"
+     ]
+    },
+    {
+     "id": "2016-01-01_raman-2016-scientific-reports-direct-mol",
+     "sim": 0.317,
+     "terms": [
+      "reactive",
+      "cross",
+      "molecular mimicry",
+      "mimicry"
+     ]
+    }
+   ]
+  },
+  "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep": {
+   "xy": [
+    0.95715,
+    0.33191
+   ],
+   "near": [
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.6575,
+     "terms": [
+      "mhc",
+      "epitope",
+      "paper",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.5816,
+     "terms": [
+      "binders",
+      "predictor",
+      "models",
+      "trained"
+     ]
+    },
+    {
+     "id": "2018-01-01_zhao-2018-plos-computational-biology-sys",
+     "sim": 0.5721,
+     "terms": [
+      "binders",
+      "non",
+      "binding",
+      "methods"
+     ]
+    },
+    {
+     "id": "2025-01-01_farriol-duran-2025-genome-medicine-predi",
+     "sim": 0.5105,
+     "terms": [
+      "epitope",
+      "predictor",
+      "analysis",
+      "paper"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.4814,
+     "terms": [
+      "epitope",
+      "prediction",
+      "epitopes",
+      "paper"
+     ]
+    },
+    {
+     "id": "2015-01-01_chowell-2015-proceedings-of-the-national",
+     "sim": 0.4793,
+     "terms": [
+      "epitopes",
+      "binders",
+      "mhc",
+      "argument"
+     ]
+    },
+    {
+     "id": "2023-01-01_albert-2023-nature-machine-intelligence",
+     "sim": 0.4415,
+     "terms": [
+      "non",
+      "epitope"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.4359,
+     "terms": [
+      "argument",
+      "evidence",
+      "binding",
+      "cell"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_bradley-2023-elife-structure-based-predi": {
+   "xy": [
+    0.41349,
+    0.33787
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.5546,
+     "terms": [
+      "set",
+      "new",
+      "tcr",
+      "unseen"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.3591,
+     "terms": [
+      "based",
+      "pipeline",
+      "sequence",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2024-01-01_abramson-2024-nature-accurate-structure",
+     "sim": 0.3187,
+     "terms": [
+      "structure",
+      "based predictors",
+      "structure based",
+      "alphafold"
+     ]
+    },
+    {
+     "id": "2003-01-01_zhao-2003-bioinformatics-application-of",
+     "sim": 0.3165,
+     "terms": [
+      "epitopes",
+      "receptor",
+      "approach",
+      "tcr"
+     ]
+    },
+    {
+     "id": "1999-01-01_rammensee-1999-immunogenetics-syfpeithi",
+     "sim": 0.2838,
+     "terms": [
+      "based",
+      "based prediction",
+      "prediction",
+      "mhc"
+     ]
+    },
+    {
+     "id": "2026-01-01_culka-2026-cell-systems-predicting-speci",
+     "sim": 0.2766,
+     "terms": [
+      "tcr",
+      "tcr pmhc",
+      "biophysical",
+      "pmhc pairs"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.2571,
+     "terms": [
+      "epitopes",
+      "paper",
+      "prediction",
+      "cell"
+     ]
+    },
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.2529,
+     "terms": [
+      "epitopes",
+      "paper",
+      "prediction",
+      "mhc"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_bravi-2023-elife-a-transfer-learning-app": {
+   "xy": [
+    0.63268,
+    0.33472
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.4317,
+     "terms": [
+      "acid",
+      "amino acid",
+      "sequences",
+      "predict"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.3958,
+     "terms": [
+      "acid",
+      "amino acid",
+      "amino",
+      "predict"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.3036,
+     "terms": [
+      "step",
+      "predictions",
+      "cell"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.2557,
+     "terms": [
+      "model",
+      "step",
+      "antigens",
+      "cell"
+     ]
+    },
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.2512,
+     "terms": [
+      "antigens",
+      "cell receptor",
+      "specificity",
+      "receptor"
+     ]
+    }
+   ]
+  },
+  "2018-01-01_brown-2018-oncoimmunology-neoantigen-cha": {
+   "xy": [
+    0.42366,
+    0.63812
+   ],
+   "near": [
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.5277,
+     "terms": [
+      "self",
+      "peptides",
+      "self peptides",
+      "space"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.4712,
+     "terms": [
+      "peptides",
+      "sampling",
+      "predicted",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.4023,
+     "terms": [
+      "context",
+      "lets",
+      "contribution",
+      "predicted"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.3963,
+     "terms": [
+      "proxy",
+      "lets",
+      "predicted",
+      "immune"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.3391,
+     "terms": [
+      "mhc class",
+      "immune",
+      "presentation",
+      "class"
+     ]
+    },
+    {
+     "id": "2017-01-01_steinegger-2017-nature-biotechnology-mms",
+     "sim": 0.3345,
+     "terms": [
+      "self",
+      "scale",
+      "present",
+      "class"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.3236,
+     "terms": [
+      "present",
+      "peptides",
+      "class"
+     ]
+    },
+    {
+     "id": "2021-01-01_chong-2021-nature-biotechnology-identifi",
+     "sim": 0.2739,
+     "terms": [
+      "space",
+      "predicted",
+      "tumour",
+      "peptides"
+     ]
+    }
+   ]
+  },
+  "2018-01-01_bulik-sullivan-2018-nature-biotechnology": {
+   "xy": [
+    0.63721,
+    0.04271
+   ],
+   "near": [
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.546,
+     "terms": [
+      "neoantigen",
+      "peptide",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.5327,
+     "terms": [
+      "clinical",
+      "data",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.5192,
+     "terms": [
+      "using",
+      "neoantigen",
+      "tumour",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.5013,
+     "terms": [
+      "reactive",
+      "neoantigen",
+      "cells",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.4997,
+     "terms": [
+      "learning",
+      "binding",
+      "prediction",
+      "mhc"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.4988,
+     "terms": [
+      "tumor",
+      "peptide",
+      "binding",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.4843,
+     "terms": [
+      "identification",
+      "case",
+      "cells",
+      "tumour"
+     ]
+    },
+    {
+     "id": "1999-01-01_mhcsequencingconsortium-1999-nature-comp",
+     "sim": 0.4651,
+     "terms": [
+      "sequencing",
+      "hla",
+      "specific",
+      "binding"
+     ]
+    }
+   ]
+  },
+  "2025-01-01_cai-2025-science-advances-immunopeptidom": {
+   "xy": [
+    0.24179,
+    0.78974
+   ],
+   "near": [
+    {
+     "id": "2024-01-01_lang-2024-bioinformatics-advances-predic",
+     "sim": 0.7844,
+     "terms": [
+      "tissue",
+      "canonical",
+      "discovery",
+      "normal"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.4817,
+     "terms": [
+      "peptides",
+      "tissue",
+      "immunopeptidomics",
+      "ones"
+     ]
+    },
+    {
+     "id": "2024-01-01_li-2024-science-translational-medicine-s",
+     "sim": 0.4638,
+     "terms": [
+      "discovery",
+      "targets",
+      "candidates",
+      "cancer immunotherapy"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.3525,
+     "terms": [
+      "peptides",
+      "discovery",
+      "source",
+      "cancer"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.3379,
+     "terms": [
+      "tissue",
+      "normal",
+      "normal tissue",
+      "neoantigens"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.3364,
+     "terms": [
+      "ones",
+      "candidates",
+      "mutations",
+      "immunotherapy"
+     ]
+    },
+    {
+     "id": "2021-01-01_marcu-2021-journal-for-immunotherapy-of",
+     "sim": 0.3046,
+     "terms": [
+      "atlas",
+      "tissue",
+      "normal tissue",
+      "normal"
+     ]
+    },
+    {
+     "id": "2021-01-01_chong-2021-nature-biotechnology-identifi",
+     "sim": 0.2984,
+     "terms": [
+      "tumour specific",
+      "immunopeptidomics",
+      "tumour",
+      "peptides"
+     ]
+    }
+   ]
+  },
+  "2013-01-01_calis-2013-plos-computational-biology-pr": {
+   "xy": [
+    0.65159,
+    0.52871
+   ],
+   "near": [
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.5019,
+     "terms": [
+      "presented",
+      "shows",
+      "ones",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.4442,
+     "terms": [
+      "presented",
+      "ones",
+      "mhc",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.4358,
+     "terms": [
+      "surface",
+      "mhc",
+      "groove",
+      "presentation"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.4081,
+     "terms": [
+      "answer",
+      "reading",
+      "asks",
+      "ones"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.4069,
+     "terms": [
+      "presented",
+      "presented peptides",
+      "structural",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.3935,
+     "terms": [
+      "presented",
+      "immunogenicity",
+      "surface",
+      "targets"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3829,
+     "terms": [
+      "presented peptides",
+      "presented",
+      "mhc class",
+      "presentation"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.347,
+     "terms": [
+      "separates",
+      "peptides",
+      "class",
+      "binding"
+     ]
+    }
+   ]
+  },
+  "2013-01-01_cameron-2013-science-translational-medic": {
+   "xy": [
+    0.6748,
+    0.9514
+   ],
+   "near": [
+    {
+     "id": "2022-01-01_hanada-2022-cancer-cell-a-phenotypic-sig",
+     "sim": 0.5661,
+     "terms": [
+      "reactive",
+      "useful",
+      "tcr",
+      "cells"
+     ]
+    },
+    {
+     "id": "2024-01-01_benhamza-2024-blood-virus-reactive-t-cel",
+     "sim": 0.518,
+     "terms": [
+      "reactive",
+      "mechanism",
+      "cross",
+      "target"
+     ]
+    },
+    {
+     "id": "2016-01-01_raman-2016-scientific-reports-direct-mol",
+     "sim": 0.5075,
+     "terms": [
+      "engineered",
+      "reactive",
+      "cross",
+      "specificity"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.4926,
+     "terms": [
+      "presented",
+      "analysis",
+      "makes",
+      "hla"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.4707,
+     "terms": [
+      "peptide"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.4676,
+     "terms": [
+      "reactive",
+      "did",
+      "useful",
+      "cells"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.4469,
+     "terms": [
+      "presented",
+      "cross",
+      "cells"
+     ]
+    },
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.4434,
+     "terms": [
+      "reactive",
+      "cells"
+     ]
+    }
+   ]
+  },
+  "2021-01-01_chong-2021-nature-biotechnology-identifi": {
+   "xy": [
+    0.06727,
+    0.7754
+   ],
+   "near": [
+    {
+     "id": "2024-01-01_lang-2024-bioinformatics-advances-predic",
+     "sim": 0.5114,
+     "terms": [
+      "tumour specific",
+      "specific",
+      "tumor",
+      "rate"
+     ]
+    },
+    {
+     "id": "2022-01-01_wu-2022-genomics-proteomics-bioinformati",
+     "sim": 0.5024,
+     "terms": [
+      "positive",
+      "identification",
+      "database",
+      "tumor"
+     ]
+    },
+    {
+     "id": "2007-01-01_kawashima-2007-nucleic-acids-research-aa",
+     "sim": 0.4272,
+     "terms": [
+      "used",
+      "reference",
+      "database",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.4209,
+     "terms": [
+      "identification",
+      "case",
+      "tumor",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.4181,
+     "terms": [
+      "detect",
+      "immunopeptidomics",
+      "predicted",
+      "specific"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.4016,
+     "terms": [
+      "antigens",
+      "predicted",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2019-01-01_sarkizova-2019-nature-biotechnology-a-la",
+     "sim": 0.4011,
+     "terms": [
+      "immunopeptidomics",
+      "positive",
+      "problem",
+      "single"
+     ]
+    },
+    {
+     "id": "2021-01-01_marcu-2021-journal-for-immunotherapy-of",
+     "sim": 0.3977,
+     "terms": [
+      "reference",
+      "tumour",
+      "used",
+      "problem"
+     ]
+    }
+   ]
+  },
+  "2015-01-01_chowell-2015-proceedings-of-the-national": {
+   "xy": [
+    0.96454,
+    0.46817
+   ],
+   "near": [
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.4793,
+     "terms": [
+      "epitopes",
+      "binders",
+      "mhc",
+      "argument"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.4578,
+     "terms": [
+      "mhc binding",
+      "binding",
+      "mhc",
+      "processing"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3589,
+     "terms": [
+      "binders",
+      "binding",
+      "processing",
+      "predicted"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.283,
+     "terms": [
+      "binding",
+      "processing",
+      "argument",
+      "cell"
+     ]
+    },
+    {
+     "id": "2026-01-01_xing-2026-jhep-reports-mass-spectrometry",
+     "sim": 0.2757,
+     "terms": [
+      "immunogenic",
+      "antigens",
+      "processing",
+      "predicted"
+     ]
+    },
+    {
+     "id": "2018-01-01_zhao-2018-plos-computational-biology-sys",
+     "sim": 0.255,
+     "terms": [
+      "binders",
+      "binding",
+      "predictors trained",
+      "mhc binding"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.2516,
+     "terms": [
+      "antigens",
+      "predicted",
+      "response",
+      "model"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_chuwdhury-2024-briefings-in-bioinformati": {
+   "xy": [
+    0.28242,
+    0.51373
+   ],
+   "near": [
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.4286,
+     "terms": [
+      "tools",
+      "mhc",
+      "presentation",
+      "binding"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.3716,
+     "terms": [
+      "pipeline",
+      "mhc",
+      "based",
+      "binding"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.3697,
+     "terms": [
+      "pipeline",
+      "candidate",
+      "neoantigen prediction",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3666,
+     "terms": [
+      "gap",
+      "binding affinity",
+      "processing",
+      "presentation"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.3418,
+     "terms": [
+      "roughly",
+      "pipeline",
+      "group",
+      "neoantigen prediction"
+     ]
+    },
+    {
+     "id": "1999-01-01_mhcsequencingconsortium-1999-nature-comp",
+     "sim": 0.3216,
+     "terms": [
+      "half",
+      "tools",
+      "mhc",
+      "hla"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.3072,
+     "terms": [
+      "pipeline",
+      "variant"
+     ]
+    },
+    {
+     "id": "2026-01-01_ma-2026-npj-precision-oncology-inferring",
+     "sim": 0.3035,
+     "terms": [
+      "pipeline",
+      "clinical",
+      "neoantigen"
+     ]
+    }
+   ]
+  },
+  "2026-01-01_culka-2026-cell-systems-predicting-speci": {
+   "xy": [
+    0.39037,
+    0.28061
+   ],
+   "near": [
+    {
+     "id": "2025-01-01_graber-2025-nature-machine-intelligence",
+     "sim": 0.3373,
+     "terms": [
+      "performance",
+      "models",
+      "training",
+      "test"
+     ]
+    },
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.2913,
+     "terms": [
+      "using",
+      "models",
+      "predicting",
+      "trained"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.2792,
+     "terms": [
+      "using",
+      "specificity",
+      "training",
+      "paper"
+     ]
+    },
+    {
+     "id": "2023-01-01_bradley-2023-elife-structure-based-predi",
+     "sim": 0.2766,
+     "terms": [
+      "tcr",
+      "tcr pmhc",
+      "biophysical",
+      "pmhc pairs"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.2558,
+     "terms": [
+      "specificity",
+      "sequence",
+      "predicting",
+      "training"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_deng-2023-briefings-in-bioinformatics-ie": {
+   "xy": [
+    0.97969,
+    0.45651
+   ],
+   "near": [
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.6607,
+     "terms": [
+      "presentation",
+      "antigen presentation",
+      "presented",
+      "immune"
+     ]
+    },
+    {
+     "id": "2023-01-01_gfeller-2023-cell-systems-improved-predi",
+     "sim": 0.6015,
+     "terms": [
+      "presentation",
+      "recognition",
+      "tcr recognition",
+      "antigen presentation"
+     ]
+    },
+    {
+     "id": "2021-01-01_schmidt-2021-cell-reports-medicine-predi",
+     "sim": 0.583,
+     "terms": [
+      "recognition",
+      "tcr recognition",
+      "predicted",
+      "immune"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.5341,
+     "terms": [
+      "recognition",
+      "presented",
+      "immune",
+      "antigen"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.5113,
+     "terms": [
+      "antigen",
+      "presented",
+      "predicted",
+      "presentation"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.4997,
+     "terms": [
+      "epitope",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.4752,
+     "terms": [
+      "immune",
+      "antigen",
+      "epitope",
+      "binding"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.4564,
+     "terms": [
+      "claim",
+      "antigen",
+      "immunogenicity"
+     ]
+    }
+   ]
+  },
+  "2020-01-01_devlin-2020-nature-chemical-biology-stru": {
+   "xy": [
+    0.86855,
+    0.72713
+   ],
+   "near": [
+    {
+     "id": "2019-01-01_richman-2019-cell-systems-neoantigen-dis",
+     "sim": 0.7317,
+     "terms": [
+      "neoepitope",
+      "wild type",
+      "quality",
+      "wild"
+     ]
+    },
+    {
+     "id": "2022-01-01_uniprotconsortium-2022-nucleic-acids-res",
+     "sim": 0.6082,
+     "terms": [
+      "neoepitope",
+      "wild type",
+      "quality",
+      "wild"
+     ]
+    },
+    {
+     "id": "2017-01-01_steinegger-2017-nature-biotechnology-mms",
+     "sim": 0.5362,
+     "terms": [
+      "neoepitope",
+      "self",
+      "sequence",
+      "collection"
+     ]
+    },
+    {
+     "id": "2024-01-01_wan-2024-nar-cancer-a-large-scale-study",
+     "sim": 0.5344,
+     "terms": [
+      "wild type",
+      "wild",
+      "type",
+      "counterpart"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.5013,
+     "terms": [
+      "structural",
+      "immune",
+      "peptide",
+      "collection"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.4864,
+     "terms": [
+      "based",
+      "cost",
+      "binding",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2021-01-01_lang-2021-bioinformatics-neofox-annotati",
+     "sim": 0.4812,
+     "terms": [
+      "self",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.4566,
+     "terms": [
+      "counterpart",
+      "type",
+      "mutation",
+      "does"
+     ]
+    }
+   ]
+  },
+  "2025-01-01_farriol-duran-2025-genome-medicine-predi": {
+   "xy": [
+    0.84387,
+    0.49947
+   ],
+   "near": [
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.5105,
+     "terms": [
+      "epitope",
+      "predictor",
+      "analysis",
+      "paper"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.4418,
+     "terms": [
+      "epitope",
+      "paper",
+      "epitopes",
+      "cell"
+     ]
+    },
+    {
+     "id": "2023-01-01_albert-2023-nature-machine-intelligence",
+     "sim": 0.4363,
+     "terms": [
+      "immunogenicity",
+      "metric",
+      "candidates",
+      "experimental"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.3917,
+     "terms": [
+      "processing",
+      "epitope",
+      "paper",
+      "binding"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.3311,
+     "terms": [
+      "immunogenic",
+      "analysis",
+      "paper",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.3236,
+     "terms": [
+      "epitope immunogenicity",
+      "immunogenicity",
+      "rate",
+      "epitope"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3006,
+     "terms": [
+      "processing",
+      "predictor",
+      "binding"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.2741,
+     "terms": [
+      "epitope",
+      "physicochemical",
+      "paper",
+      "epitopes"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_finnigan-2024-nature-communications-stru": {
+   "xy": [
+    0.65703,
+    0.73092
+   ],
+   "near": [
+    {
+     "id": "2017-01-01_steinegger-2017-nature-biotechnology-mms",
+     "sim": 0.3747,
+     "terms": [
+      "self",
+      "engineered",
+      "engineered tcrs",
+      "tcrs"
+     ]
+    },
+    {
+     "id": "2016-01-01_raman-2016-scientific-reports-direct-mol",
+     "sim": 0.3718,
+     "terms": [
+      "discrimination",
+      "tcrs",
+      "self discrimination",
+      "therapeutically"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.3435,
+     "terms": [
+      "engineered",
+      "structural",
+      "target",
+      "single"
+     ]
+    },
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.3427,
+     "terms": [
+      "neoantigen specific",
+      "tcrs",
+      "neoantigen",
+      "specific"
+     ]
+    },
+    {
+     "id": "2022-01-01_uksza-2022-nature-neoantigen-quality-pre",
+     "sim": 0.3382,
+     "terms": [
+      "discrimination",
+      "specific tcrs",
+      "derives",
+      "peptide derives"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.3269,
+     "terms": [
+      "neoantigen specific",
+      "neoantigen",
+      "question",
+      "specific"
+     ]
+    },
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.3254,
+     "terms": [
+      "self",
+      "given",
+      "reactivity",
+      "self peptide"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.3244,
+     "terms": [
+      "asks",
+      "neoantigen",
+      "mutations",
+      "answer"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_gfeller-2023-cell-systems-improved-predi": {
+   "xy": [
+    0.72979,
+    0.2541
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_deng-2023-briefings-in-bioinformatics-ie",
+     "sim": 0.6015,
+     "terms": [
+      "presentation",
+      "recognition",
+      "tcr recognition",
+      "antigen presentation"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.5318,
+     "terms": [
+      "improved predictions",
+      "improved",
+      "predictions",
+      "paper"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.4481,
+     "terms": [
+      "binding assays",
+      "assays",
+      "using",
+      "training"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.4335,
+     "terms": [
+      "presentation",
+      "antigen presentation",
+      "presented",
+      "antigen"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.3889,
+     "terms": [
+      "recognition",
+      "stated",
+      "earlier",
+      "evidence"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3706,
+     "terms": [
+      "improved",
+      "binding",
+      "presentation",
+      "lets"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.3428,
+     "terms": [
+      "different",
+      "recognition",
+      "paper",
+      "epitopes"
+     ]
+    },
+    {
+     "id": "2020-01-01_reynisson-2020-nucleic-acids-research-ne",
+     "sim": 0.3227,
+     "terms": [
+      "presentation",
+      "improved",
+      "improved predictions",
+      "ms"
+     ]
+    }
+   ]
+  },
+  "2018-01-01_ghorani-2018-annals-of-oncology-differen": {
+   "xy": [
+    0.47744,
+    0.63137
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.4108,
+     "terms": [
+      "melanoma",
+      "lung",
+      "lung cancer",
+      "cells"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.3861,
+     "terms": [
+      "better",
+      "ones",
+      "mutation",
+      "neoantigens"
+     ]
+    },
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.3681,
+     "terms": [
+      "clonal",
+      "self peptide",
+      "self",
+      "makes"
+     ]
+    },
+    {
+     "id": "2020-01-01_devlin-2020-nature-chemical-biology-stru",
+     "sim": 0.3668,
+     "terms": [
+      "distinguishes",
+      "binding",
+      "idea",
+      "predictor"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3559,
+     "terms": [
+      "binding",
+      "binding affinity",
+      "predictor",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.3437,
+     "terms": [
+      "distinguishes",
+      "ones",
+      "mhc class",
+      "class"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.3393,
+     "terms": [
+      "binding",
+      "present",
+      "class",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.3076,
+     "terms": [
+      "melanoma",
+      "mutation",
+      "cells",
+      "tumour"
+     ]
+    }
+   ]
+  },
+  "2025-01-01_graber-2025-nature-machine-intelligence": {
+   "xy": [
+    0.5897,
+    0.0218
+   ],
+   "near": [
+    {
+     "id": "1999-01-01_rammensee-1999-immunogenetics-syfpeithi",
+     "sim": 0.4663,
+     "terms": [
+      "bias",
+      "published",
+      "data",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.4631,
+     "terms": [
+      "data",
+      "available",
+      "paper",
+      "training"
+     ]
+    },
+    {
+     "id": "2024-01-01_vita-2024-nucleic-acids-research-the-imm",
+     "sim": 0.454,
+     "terms": [
+      "substantially",
+      "2018",
+      "published",
+      "performance"
+     ]
+    },
+    {
+     "id": "2023-01-01_li-2023-briefings-in-bioinformatics-pros",
+     "sim": 0.3937,
+     "terms": [
+      "data",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2018-01-01_vita-2018-nucleic-acids-research-the-imm",
+     "sim": 0.3926,
+     "terms": [
+      "published",
+      "2018",
+      "performance",
+      "training"
+     ]
+    },
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.3782,
+     "terms": [
+      "binding",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2022-01-01_you-2022-bioinformatics-deepmhcii-a-nove",
+     "sim": 0.3758,
+     "terms": [
+      "affinity prediction",
+      "affinity",
+      "generalisation",
+      "binding"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3701,
+     "terms": [
+      "binding affinity",
+      "models",
+      "binding",
+      "affinity"
+     ]
+    }
+   ]
+  },
+  "2004-01-01_hanada-2004-nature-immune-recognition-of": {
+   "xy": [
+    0.30288,
+    0.95801
+   ],
+   "near": [
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.5852,
+     "terms": [
+      "protein",
+      "presented",
+      "immune",
+      "antigen"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.5568,
+     "terms": [
+      "peptides",
+      "pipeline",
+      "collection",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.546,
+     "terms": [
+      "neoantigen",
+      "peptide",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2026-01-01_ma-2026-npj-precision-oncology-inferring",
+     "sim": 0.5429,
+     "terms": [
+      "protein",
+      "pipeline",
+      "cancer",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2023-01-01_deng-2023-briefings-in-bioinformatics-ie",
+     "sim": 0.5341,
+     "terms": [
+      "recognition",
+      "presented",
+      "immune",
+      "antigen"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.5295,
+     "terms": [
+      "antigen",
+      "class",
+      "peptides",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.5279,
+     "terms": [
+      "collection",
+      "neoantigen",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.5274,
+     "terms": [
+      "peptides",
+      "presented",
+      "class"
+     ]
+    }
+   ]
+  },
+  "2022-01-01_hanada-2022-cancer-cell-a-phenotypic-sig": {
+   "xy": [
+    0.47649,
+    0.99874
+   ],
+   "near": [
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.6582,
+     "terms": [
+      "cells",
+      "reactive",
+      "human",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.5905,
+     "terms": [
+      "reactive",
+      "cells",
+      "useful",
+      "human"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.5661,
+     "terms": [
+      "reactive",
+      "useful",
+      "tcr",
+      "cells"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.5339,
+     "terms": [
+      "mutations",
+      "work",
+      "neoantigens",
+      "cells"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.5161,
+     "terms": [
+      "cells",
+      "mutations",
+      "work",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2024-01-01_benhamza-2024-blood-virus-reactive-t-cel",
+     "sim": 0.5083,
+     "terms": [
+      "cells",
+      "reactive",
+      "work",
+      "tcr"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.4544,
+     "terms": [
+      "surface",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.4373,
+     "terms": [
+      "neoantigens",
+      "neoantigen"
+     ]
+    }
+   ]
+  },
+  "2021-01-01_hu-2021-nature-medicine-personal-neoanti": {
+   "xy": [
+    0.40696,
+    0.97133
+   ],
+   "near": [
+    {
+     "id": "2025-01-01_sethna-2025-nature-rna-neoantigen-vaccin",
+     "sim": 0.8619,
+     "terms": [
+      "vaccine",
+      "neoantigen vaccines",
+      "did",
+      "looked"
+     ]
+    },
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.6976,
+     "terms": [
+      "melanoma",
+      "vaccine",
+      "patients",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.6813,
+     "terms": [
+      "melanoma",
+      "vaccine",
+      "vaccines",
+      "epitope"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.6389,
+     "terms": [
+      "vaccine",
+      "melanoma",
+      "immunity",
+      "pancreatic"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.628,
+     "terms": [
+      "melanoma",
+      "vaccine",
+      "evidence",
+      "authors"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.5859,
+     "terms": [
+      "pancreatic",
+      "patients",
+      "neoantigens",
+      "matters"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.5727,
+     "terms": [
+      "melanoma",
+      "did",
+      "tumour",
+      "does"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.5693,
+     "terms": [
+      "vaccine",
+      "tumour",
+      "cell",
+      "neoantigen"
+     ]
+    }
+   ]
+  },
+  "2020-01-01_hundal-2020-cancer-immunology-research-p": {
+   "xy": [
+    0.43407,
+    0.9944
+   ],
+   "near": [
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.5408,
+     "terms": [
+      "long",
+      "neoantigens",
+      "makes",
+      "cancer"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.527,
+     "terms": [
+      "papers",
+      "single",
+      "collection"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.5176,
+     "terms": [
+      "pipeline",
+      "design",
+      "single",
+      "makes"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.4702,
+     "terms": [
+      "novel",
+      "papers",
+      "long",
+      "candidates"
+     ]
+    },
+    {
+     "id": "2024-01-01_li-2024-science-translational-medicine-s",
+     "sim": 0.4399,
+     "terms": [
+      "targets",
+      "candidates",
+      "neoantigens",
+      "cancer"
+     ]
+    },
+    {
+     "id": "2022-01-01_wu-2022-genomics-proteomics-bioinformati",
+     "sim": 0.4303,
+     "terms": [
+      "classes",
+      "rest",
+      "coverage",
+      "single"
+     ]
+    },
+    {
+     "id": "2023-01-01_li-2023-briefings-in-bioinformatics-pros",
+     "sim": 0.425,
+     "terms": [
+      "papers",
+      "design",
+      "makes"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.4205,
+     "terms": [
+      "collection"
+     ]
+    }
+   ]
+  },
+  "2016-01-01_jardine-2016-science-hiv-1-broadly-neutr": {
+   "xy": [
+    0.55974,
+    0.94119
+   ],
+   "near": [
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.6357,
+     "terms": [
+      "papers",
+      "neoantigen",
+      "work",
+      "collection"
+     ]
+    },
+    {
+     "id": "2013-01-01_xing-2013-proceedings-of-the-national-ac",
+     "sim": 0.6068,
+     "terms": [
+      "repertoire",
+      "selection",
+      "thymic",
+      "collection"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.5666,
+     "terms": [
+      "neoantigen",
+      "papers",
+      "cells",
+      "collection"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.5223,
+     "terms": [
+      "vaccines",
+      "neoantigen",
+      "collection",
+      "cell"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.5156,
+     "terms": [
+      "papers",
+      "collection",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.4836,
+     "terms": [
+      "neoantigen",
+      "work",
+      "cells"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.4832,
+     "terms": [
+      "vaccines",
+      "collection",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2021-01-01_hu-2021-nature-medicine-personal-neoanti",
+     "sim": 0.477,
+     "terms": [
+      "neoantigen vaccines",
+      "vaccines",
+      "collection",
+      "cell"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_jensen-2024-elife-enhancing-tcr-specific": {
+   "xy": [
+    0.31493,
+    0.22744
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_li-2023-briefings-in-bioinformatics-pros",
+     "sim": 0.3527,
+     "terms": [
+      "new",
+      "data",
+      "specific",
+      "model"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.3362,
+     "terms": [
+      "new",
+      "tcr",
+      "epitope",
+      "specific"
+     ]
+    },
+    {
+     "id": "2021-01-01_sharma-2021-wires-data-mining-and-knowle",
+     "sim": 0.3233,
+     "terms": [
+      "useful",
+      "specific",
+      "epitope"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.3078,
+     "terms": [
+      "new",
+      "specificity",
+      "training",
+      "data"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.2966,
+     "terms": [
+      "data",
+      "peptide",
+      "specificity",
+      "training"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.2797,
+     "terms": [
+      "predictions",
+      "epitope",
+      "epitopes"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_jiang-2024-bioinformatics-neoapred-a-dee": {
+   "xy": [
+    0.74496,
+    0.50844
+   ],
+   "near": [
+    {
+     "id": "2021-01-01_lang-2021-bioinformatics-neofox-annotati",
+     "sim": 0.4897,
+     "terms": [
+      "differential agretopicity",
+      "agretopicity",
+      "differential",
+      "features"
+     ]
+    },
+    {
+     "id": "2020-01-01_devlin-2020-nature-chemical-biology-stru",
+     "sim": 0.3638,
+     "terms": [
+      "structural",
+      "idea",
+      "does",
+      "based"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.3517,
+     "terms": [
+      "immunogenic",
+      "reported",
+      "number",
+      "antigen"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.3459,
+     "terms": [
+      "precision",
+      "based",
+      "neoantigens",
+      "binding"
+     ]
+    },
+    {
+     "id": "2022-01-01_hanada-2022-cancer-cell-a-phenotypic-sig",
+     "sim": 0.3372,
+     "terms": [
+      "surface",
+      "predicting",
+      "human",
+      "neoantigens"
+     ]
+    },
+    {
+     "id": "2026-01-01_xing-2026-jhep-reports-mass-spectrometry",
+     "sim": 0.2873,
+     "terms": [
+      "immunogenic",
+      "predicted",
+      "based",
+      "neoantigens"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.2855,
+     "terms": [
+      "structural",
+      "human",
+      "antigen",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.28,
+     "terms": [
+      "complex",
+      "surface",
+      "immunogenic"
+     ]
+    }
+   ]
+  },
+  "2025-01-01_jin-2025-cancer-letters-driver-mutation": {
+   "xy": [
+    0.17651,
+    0.90267
+   ],
+   "near": [
+    {
+     "id": "2024-01-01_li-2024-science-translational-medicine-s",
+     "sim": 0.5962,
+     "terms": [
+      "mutation",
+      "immunotherapy",
+      "candidates",
+      "based"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.4898,
+     "terms": [
+      "long",
+      "mutation",
+      "mutations",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.4781,
+     "terms": [
+      "asks",
+      "antigens",
+      "neoantigen",
+      "mutation"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.4723,
+     "terms": [
+      "reading",
+      "papers",
+      "neoantigen",
+      "neoantigens"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.4702,
+     "terms": [
+      "novel",
+      "papers",
+      "long",
+      "candidates"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.4608,
+     "terms": [
+      "neoantigen",
+      "single"
+     ]
+    },
+    {
+     "id": "2024-01-01_lang-2024-bioinformatics-advances-predic",
+     "sim": 0.4595,
+     "terms": [
+      "long",
+      "candidates",
+      "mutation",
+      "mutations"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.4449,
+     "terms": [
+      "assays",
+      "single"
+     ]
+    }
+   ]
+  },
+  "2021-01-01_johnson-2021-ieee-transactions-on-big-da": {
+   "xy": [
+    0.27413,
+    0.27179
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_malkov-2020-ieee-transactions-on-pattern",
+     "sim": 0.9603,
+     "terms": [
+      "search",
+      "similarity",
+      "based",
+      "peptide tcr"
+     ]
+    },
+    {
+     "id": "2017-01-01_steinegger-2017-nature-biotechnology-mms",
+     "sim": 0.4983,
+     "terms": [
+      "search",
+      "sets",
+      "scale",
+      "collection"
+     ]
+    },
+    {
+     "id": "2026-01-01_xing-2026-jhep-reports-mass-spectrometry",
+     "sim": 0.4608,
+     "terms": [
+      "search",
+      "directly",
+      "based",
+      "models"
+     ]
+    },
+    {
+     "id": "2022-01-01_hanada-2022-cancer-cell-a-phenotypic-sig",
+     "sim": 0.27,
+     "terms": [
+      "accuracy",
+      "directly",
+      "tcr"
+     ]
+    },
+    {
+     "id": "1999-01-01_rammensee-1999-immunogenetics-syfpeithi",
+     "sim": 0.2624,
+     "terms": [
+      "based",
+      "stated",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.2553,
+     "terms": [
+      "accuracy",
+      "scale",
+      "large",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.2532,
+     "terms": [
+      "based",
+      "collection",
+      "peptide"
+     ]
+    }
+   ]
+  },
+  "2007-01-01_kawashima-2007-nucleic-acids-research-aa": {
+   "xy": [
+    0.62633,
+    0.46968
+   ],
+   "near": [
+    {
+     "id": "2021-01-01_chong-2021-nature-biotechnology-identifi",
+     "sim": 0.4272,
+     "terms": [
+      "used",
+      "reference",
+      "database",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2021-01-01_sharma-2021-wires-data-mining-and-knowle",
+     "sim": 0.3824,
+     "terms": [
+      "relevance",
+      "resource",
+      "collection"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.363,
+     "terms": [
+      "class binding",
+      "class",
+      "binding",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.3582,
+     "terms": [
+      "physicochemical",
+      "acid",
+      "amino acid",
+      "amino"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.2781,
+     "terms": [
+      "used",
+      "collection",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2021-01-01_lang-2021-bioinformatics-neofox-annotati",
+     "sim": 0.2771,
+     "terms": [
+      "hydrophobicity",
+      "features"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.2754,
+     "terms": [
+      "used",
+      "mhc class",
+      "class",
+      "binding"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.2674,
+     "terms": [
+      "acid",
+      "amino acid",
+      "amino",
+      "mhc"
+     ]
+    }
+   ]
+  },
+  "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge": {
+   "xy": [
+    0.4823,
+    0.99534
+   ],
+   "near": [
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.7003,
+     "terms": [
+      "cells",
+      "neoantigen specific",
+      "neoantigen",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.6891,
+     "terms": [
+      "vaccine",
+      "mutations",
+      "tumour",
+      "specific"
+     ]
+    },
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.6734,
+     "terms": [
+      "vaccine",
+      "trial",
+      "neoantigen",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.6444,
+     "terms": [
+      "vaccine",
+      "neoantigen",
+      "tumour",
+      "cell"
+     ]
+    },
+    {
+     "id": "2023-01-01_rojas-2023-nature-personalized-rna-neoan",
+     "sim": 0.6048,
+     "terms": [
+      "cells",
+      "neoantigen",
+      "case",
+      "poorly"
+     ]
+    },
+    {
+     "id": "2025-01-01_sethna-2025-nature-rna-neoantigen-vaccin",
+     "sim": 0.6017,
+     "terms": [
+      "vaccine",
+      "cells",
+      "trial",
+      "question"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.5947,
+     "terms": [
+      "mutations",
+      "neoantigen",
+      "work",
+      "cells"
+     ]
+    },
+    {
+     "id": "2026-01-01_lee-2026-nature-communications-neoprecis",
+     "sim": 0.5723,
+     "terms": [
+      "response",
+      "trial",
+      "vaccine",
+      "mutations"
+     ]
+    }
+   ]
+  },
+  "2002-01-01_ke-mir-2002-protein-engineering-design-a": {
+   "xy": [
+    0.99136,
+    0.57086
+   ],
+   "near": [
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.6575,
+     "terms": [
+      "mhc",
+      "epitope",
+      "paper",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.6,
+     "terms": [
+      "tumour",
+      "processing",
+      "antigen",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.583,
+     "terms": [
+      "processing",
+      "antigen",
+      "binding",
+      "model"
+     ]
+    },
+    {
+     "id": "2015-01-01_kreiter-2015-nature-mutant-mhc-class-ii",
+     "sim": 0.5345,
+     "terms": [
+      "cells",
+      "mhc",
+      "design",
+      "immune"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.5023,
+     "terms": [
+      "paper",
+      "epitope",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.4866,
+     "terms": [
+      "immune",
+      "matters",
+      "tumour",
+      "cells"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.4847,
+     "terms": [
+      "immune",
+      "antigen",
+      "epitope",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2023-01-01_deng-2023-briefings-in-bioinformatics-ie",
+     "sim": 0.4752,
+     "terms": [
+      "immune",
+      "antigen",
+      "epitope",
+      "binding"
+     ]
+    }
+   ]
+  },
+  "2026-01-01_khattak-2026-journal-of-clinical-oncolog": {
+   "xy": [
+    0.06287,
+    0.32666
+   ],
+   "near": [
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.6613,
+     "terms": [
+      "melanoma",
+      "update",
+      "vaccine",
+      "single"
+     ]
+    },
+    {
+     "id": "2021-01-01_hu-2021-nature-medicine-personal-neoanti",
+     "sim": 0.628,
+     "terms": [
+      "melanoma",
+      "vaccine",
+      "evidence",
+      "authors"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.5765,
+     "terms": [
+      "melanoma",
+      "papers",
+      "high",
+      "result"
+     ]
+    },
+    {
+     "id": "2025-01-01_sethna-2025-nature-rna-neoantigen-vaccin",
+     "sim": 0.5665,
+     "terms": [
+      "vaccine",
+      "years",
+      "evidence",
+      "single"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.5599,
+     "terms": [
+      "vaccine",
+      "melanoma",
+      "single",
+      "collection"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.5327,
+     "terms": [
+      "clinical",
+      "data",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.527,
+     "terms": [
+      "papers",
+      "single",
+      "collection"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.5235,
+     "terms": [
+      "years",
+      "neoantigen"
+     ]
+    }
+   ]
+  },
+  "2021-01-01_kiesgen-2021-nature-protocols-comparativ": {
+   "xy": [
+    0.05023,
+    0.28777
+   ],
+   "near": [
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.5193,
+     "terms": [
+      "targets",
+      "immunogenic",
+      "analysis",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2023-01-01_deng-2023-briefings-in-bioinformatics-ie",
+     "sim": 0.4564,
+     "terms": [
+      "claim",
+      "antigen",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.4469,
+     "terms": [
+      "methods",
+      "number",
+      "paper",
+      "collection"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.4449,
+     "terms": [
+      "assays",
+      "single"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.4403,
+     "terms": [
+      "single",
+      "immunogenicity",
+      "cell"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.4252,
+     "terms": [
+      "antigen",
+      "collection"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.414,
+     "terms": [
+      "target",
+      "analysis",
+      "single"
+     ]
+    },
+    {
+     "id": "2026-01-01_ma-2026-npj-precision-oncology-inferring",
+     "sim": 0.4063,
+     "terms": [
+      "used",
+      "paper"
+     ]
+    }
+   ]
+  },
+  "2021-01-01_koncz-2021-proceedings-of-the-national-a": {
+   "xy": [
+    0.51364,
+    0.71783
+   ],
+   "near": [
+    {
+     "id": "2013-01-01_xing-2013-proceedings-of-the-national-ac",
+     "sim": 0.4335,
+     "terms": [
+      "positive selection",
+      "positive",
+      "selection",
+      "ctec"
+     ]
+    },
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.4247,
+     "terms": [
+      "self",
+      "self peptides",
+      "self peptide",
+      "recognition"
+     ]
+    },
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.367,
+     "terms": [
+      "positive",
+      "selected",
+      "human",
+      "cells"
+     ]
+    },
+    {
+     "id": "2017-01-01_steinegger-2017-nature-biotechnology-mms",
+     "sim": 0.3497,
+     "terms": [
+      "self",
+      "proteome",
+      "sets",
+      "human"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.3245,
+     "terms": [
+      "mediated",
+      "claim",
+      "expression",
+      "cell"
+     ]
+    },
+    {
+     "id": "2021-01-01_lang-2021-bioinformatics-neofox-annotati",
+     "sim": 0.3178,
+     "terms": [
+      "self",
+      "ranking",
+      "expression",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2019-01-01_sarkizova-2019-nature-biotechnology-a-la",
+     "sim": 0.2948,
+     "terms": [
+      "positive",
+      "ranking",
+      "human",
+      "cells"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.2832,
+     "terms": [
+      "poorly",
+      "claim",
+      "response",
+      "cells"
+     ]
+    }
+   ]
+  },
+  "2022-01-01_ko-alo-lu-yal-n-2022-nucleic-acids-resea": {
+   "xy": [
+    0.41043,
+    0.10581
+   ],
+   "near": [
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.3987,
+     "terms": [
+      "assay",
+      "analysis",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.3721,
+     "terms": [
+      "different",
+      "epitope",
+      "epitopes",
+      "specific"
+     ]
+    },
+    {
+     "id": "2021-01-01_sharma-2021-wires-data-mining-and-knowle",
+     "sim": 0.3697,
+     "terms": [
+      "context",
+      "resource",
+      "epitope",
+      "specific"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.3696,
+     "terms": [
+      "different",
+      "positives",
+      "bias",
+      "epitope"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.3369,
+     "terms": [
+      "different",
+      "analysis",
+      "makes",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.274,
+     "terms": [
+      "epitopes",
+      "analysis",
+      "epitope"
+     ]
+    },
+    {
+     "id": "1999-01-01_rammensee-1999-immunogenetics-syfpeithi",
+     "sim": 0.2529,
+     "terms": [
+      "bias",
+      "iedb",
+      "database"
+     ]
+    }
+   ]
+  },
+  "2015-01-01_kreiter-2015-nature-mutant-mhc-class-ii": {
+   "xy": [
+    0.86192,
+    0.81205
+   ],
+   "near": [
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.7772,
+     "terms": [
+      "class",
+      "cd8",
+      "class ii",
+      "vaccine"
+     ]
+    },
+    {
+     "id": "2024-01-01_sultan-2024-nature-neoantigen-specific-c",
+     "sim": 0.754,
+     "terms": [
+      "ii",
+      "class ii",
+      "vaccine",
+      "finding"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.6332,
+     "terms": [
+      "class ii",
+      "class",
+      "ii",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-immunity-machine-learning-pre",
+     "sim": 0.5558,
+     "terms": [
+      "ii",
+      "class ii",
+      "class",
+      "finding"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.5406,
+     "terms": [
+      "vaccine",
+      "epitopes",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.5345,
+     "terms": [
+      "cells",
+      "mhc",
+      "design",
+      "immune"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.5251,
+     "terms": [
+      "class",
+      "mutant"
+     ]
+    },
+    {
+     "id": "2021-01-01_hu-2021-nature-medicine-personal-neoanti",
+     "sim": 0.4937,
+     "terms": [
+      "did",
+      "finding",
+      "vaccine",
+      "neoantigen"
+     ]
+    }
+   ]
+  },
+  "2022-01-01_kubiniok-2022-iscience-understanding-the": {
+   "xy": [
+    0.0,
+    0.52498
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.5819,
+     "terms": [
+      "binders",
+      "presented",
+      "predicted",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.5507,
+     "terms": [
+      "peptides",
+      "class",
+      "cell"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.5492,
+     "terms": [
+      "framing",
+      "ones",
+      "presented",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.5442,
+     "terms": [
+      "core",
+      "peptides",
+      "class",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.5274,
+     "terms": [
+      "peptides",
+      "presented",
+      "class"
+     ]
+    },
+    {
+     "id": "2013-01-01_calis-2013-plos-computational-biology-pr",
+     "sim": 0.5019,
+     "terms": [
+      "presented",
+      "shows",
+      "ones",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.4839,
+     "terms": [
+      "mhc class",
+      "presentation",
+      "class",
+      "mhc"
+     ]
+    },
+    {
+     "id": "2025-01-01_cai-2025-science-advances-immunopeptidom",
+     "sim": 0.4817,
+     "terms": [
+      "peptides",
+      "tissue",
+      "immunopeptidomics",
+      "ones"
+     ]
+    }
+   ]
+  },
+  "2021-01-01_lang-2021-bioinformatics-neofox-annotati": {
+   "xy": [
+    0.98695,
+    0.50131
+   ],
+   "near": [
+    {
+     "id": "2019-01-01_richman-2019-cell-systems-neoantigen-dis",
+     "sim": 0.5261,
+     "terms": [
+      "self",
+      "differential agretopicity",
+      "agretopicity",
+      "differential"
+     ]
+    },
+    {
+     "id": "2024-01-01_jiang-2024-bioinformatics-neoapred-a-dee",
+     "sim": 0.4897,
+     "terms": [
+      "differential agretopicity",
+      "agretopicity",
+      "differential",
+      "features"
+     ]
+    },
+    {
+     "id": "2020-01-01_devlin-2020-nature-chemical-biology-stru",
+     "sim": 0.4812,
+     "terms": [
+      "self",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2024-01-01_wan-2024-nar-cancer-a-large-scale-study",
+     "sim": 0.4756,
+     "terms": [
+      "features",
+      "differential agretopicity",
+      "agretopicity",
+      "differential"
+     ]
+    },
+    {
+     "id": "2026-01-01_ma-2026-npj-precision-oncology-inferring",
+     "sim": 0.474,
+     "terms": [
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.387,
+     "terms": [
+      "rest",
+      "papers",
+      "candidates",
+      "makes"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.3854,
+     "terms": [
+      "ranking",
+      "neoantigen",
+      "makes"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.3775,
+     "terms": [
+      "papers",
+      "neoantigen",
+      "self"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_lang-2024-bioinformatics-advances-predic": {
+   "xy": [
+    0.16859,
+    0.89451
+   ],
+   "near": [
+    {
+     "id": "2025-01-01_cai-2025-science-advances-immunopeptidom",
+     "sim": 0.7844,
+     "terms": [
+      "tissue",
+      "canonical",
+      "discovery",
+      "normal"
+     ]
+    },
+    {
+     "id": "2024-01-01_li-2024-science-translational-medicine-s",
+     "sim": 0.5178,
+     "terms": [
+      "discovery",
+      "candidates",
+      "mutation",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2021-01-01_chong-2021-nature-biotechnology-identifi",
+     "sim": 0.5114,
+     "terms": [
+      "tumour specific",
+      "specific",
+      "tumor",
+      "rate"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.4949,
+     "terms": [
+      "source",
+      "discovery",
+      "neoantigen",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.4595,
+     "terms": [
+      "long",
+      "candidates",
+      "mutation",
+      "mutations"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.4502,
+     "terms": [
+      "specific",
+      "tumour",
+      "neoantigen",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2021-01-01_marcu-2021-journal-for-immunotherapy-of",
+     "sim": 0.4482,
+     "terms": [
+      "tissue",
+      "reference",
+      "normal",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.4254,
+     "terms": [
+      "tissue",
+      "specific"
+     ]
+    }
+   ]
+  },
+  "2026-01-01_lee-2026-nature-communications-neoprecis": {
+   "xy": [
+    0.36536,
+    0.78723
+   ],
+   "near": [
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.5723,
+     "terms": [
+      "response",
+      "trial",
+      "vaccine",
+      "mutations"
+     ]
+    },
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.4454,
+     "terms": [
+      "induced",
+      "trial",
+      "vaccine",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.436,
+     "terms": [
+      "seen",
+      "quantity",
+      "pancreatic",
+      "mutations"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.426,
+     "terms": [
+      "present",
+      "worth",
+      "vaccine",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.3919,
+     "terms": [
+      "gap",
+      "actually",
+      "neoantigen",
+      "cells"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.3918,
+     "terms": [
+      "pancreatic",
+      "built",
+      "vaccine",
+      "mutations"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.3857,
+     "terms": [
+      "response",
+      "neoantigen",
+      "immunotherapy",
+      "neoantigens"
+     ]
+    },
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.3765,
+     "terms": [
+      "worth",
+      "rate",
+      "neoantigen",
+      "cells"
+     ]
+    }
+   ]
+  },
+  "2021-01-01_li-2021-briefings-in-bioinformatics-deep": {
+   "xy": [
+    0.80138,
+    0.37326
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_albert-2023-nature-machine-intelligence",
+     "sim": 0.3983,
+     "terms": [
+      "labels",
+      "immunogenic",
+      "scarce",
+      "deep"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.3494,
+     "terms": [
+      "deep learning",
+      "deep",
+      "argument",
+      "learning"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.2583,
+     "terms": [
+      "peptides",
+      "argument",
+      "evidence",
+      "cell"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_li-2023-briefings-in-bioinformatics-pros": {
+   "xy": [
+    0.19553,
+    0.13601
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.4828,
+     "terms": [
+      "design",
+      "makes",
+      "data",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2021-01-01_sharma-2021-wires-data-mining-and-knowle",
+     "sim": 0.4635,
+     "terms": [
+      "design",
+      "specific",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.4574,
+     "terms": [
+      "prediction"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.4516,
+     "terms": [
+      "argument",
+      "data",
+      "learning",
+      "specific"
+     ]
+    },
+    {
+     "id": "2025-01-01_shao-2025-frontiers-in-immunology-neotim",
+     "sim": 0.4422,
+     "terms": [
+      "model",
+      "machine",
+      "machine learning",
+      "learning"
+     ]
+    },
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.4329,
+     "terms": [
+      "makes",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.425,
+     "terms": [
+      "papers",
+      "design",
+      "makes"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.4165,
+     "terms": [
+      "prediction"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_li-2023-nature-communications-crystal-st": {
+   "xy": [
+    0.49691,
+    0.50074
+   ],
+   "near": [
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.5562,
+     "terms": [
+      "class",
+      "anchor",
+      "non",
+      "anchor positions"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.506,
+     "terms": [
+      "groove",
+      "peptide",
+      "mhc",
+      "binding"
+     ]
+    },
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.4642,
+     "terms": [
+      "groove",
+      "mhc",
+      "peptide",
+      "binding"
+     ]
+    },
+    {
+     "id": "2026-01-01_xing-2026-jhep-reports-mass-spectrometry",
+     "sim": 0.3921,
+     "terms": [
+      "canonical",
+      "non",
+      "matters",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.3905,
+     "terms": [
+      "non",
+      "using",
+      "mhc",
+      "predictor"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.3861,
+     "terms": [
+      "sampling",
+      "mhc",
+      "mhc class",
+      "class"
+     ]
+    },
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.3808,
+     "terms": [
+      "class",
+      "treats",
+      "mhc class",
+      "matters"
+     ]
+    },
+    {
+     "id": "2023-01-01_li-2023-briefings-in-bioinformatics-pros",
+     "sim": 0.3496,
+     "terms": [
+      "fixed",
+      "predictor",
+      "model",
+      "prediction"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_li-2024-science-translational-medicine-s": {
+   "xy": [
+    0.15974,
+    0.88595
+   ],
+   "near": [
+    {
+     "id": "2025-01-01_wang-2025-biomarker-research-computation",
+     "sim": 0.7129,
+     "terms": [
+      "derived",
+      "discovery",
+      "targets",
+      "mutation"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.5962,
+     "terms": [
+      "mutation",
+      "immunotherapy",
+      "candidates",
+      "based"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.5479,
+     "terms": [
+      "patients",
+      "work",
+      "neoantigens",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2024-01-01_lang-2024-bioinformatics-advances-predic",
+     "sim": 0.5178,
+     "terms": [
+      "discovery",
+      "candidates",
+      "mutation",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2025-01-01_cai-2025-science-advances-immunopeptidom",
+     "sim": 0.4638,
+     "terms": [
+      "discovery",
+      "targets",
+      "candidates",
+      "cancer immunotherapy"
+     ]
+    },
+    {
+     "id": "2024-01-01_sultan-2024-nature-neoantigen-specific-c",
+     "sim": 0.4453,
+     "terms": [
+      "low",
+      "cancer immunotherapy",
+      "work",
+      "immunotherapy"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.4399,
+     "terms": [
+      "targets",
+      "candidates",
+      "neoantigens",
+      "cancer"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.4299,
+     "terms": [
+      "patients",
+      "mutation",
+      "work",
+      "based"
+     ]
+    }
+   ]
+  },
+  "2022-01-01_lowery-2022-science-molecular-signatures": {
+   "xy": [
+    0.5786,
+    0.97645
+   ],
+   "near": [
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.7003,
+     "terms": [
+      "cells",
+      "neoantigen specific",
+      "neoantigen",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2022-01-01_hanada-2022-cancer-cell-a-phenotypic-sig",
+     "sim": 0.6582,
+     "terms": [
+      "cells",
+      "reactive",
+      "human",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.6055,
+     "terms": [
+      "cells",
+      "reactive",
+      "neoantigen",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2024-01-01_benhamza-2024-blood-virus-reactive-t-cel",
+     "sim": 0.5635,
+     "terms": [
+      "cells",
+      "reactive",
+      "failure",
+      "treated"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.5178,
+     "terms": [
+      "cells",
+      "tumour",
+      "specific",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.5134,
+     "terms": [
+      "neoantigen",
+      "antigen",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.4876,
+     "terms": [
+      "neoantigen",
+      "tumour",
+      "tcrs"
+     ]
+    },
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.4786,
+     "terms": [
+      "neoantigen",
+      "tumour",
+      "cells"
+     ]
+    }
+   ]
+  },
+  "1999-01-01_mhcsequencingconsortium-1999-nature-comp": {
+   "xy": [
+    0.0679,
+    0.34929
+   ],
+   "near": [
+    {
+     "id": "2014-01-01_szolek-2014-bioinformatics-optitype-prec",
+     "sim": 0.6034,
+     "terms": [
+      "typing",
+      "hla typing",
+      "sequencing",
+      "hla"
+     ]
+    },
+    {
+     "id": "2017-01-01_mcgranahan-2017-cell-allele-specific-hla",
+     "sim": 0.4798,
+     "terms": [
+      "hla loss",
+      "hla",
+      "loss",
+      "allele"
+     ]
+    },
+    {
+     "id": "2019-01-01_orenbuch-2019-bioinformatics-arcashla-hi",
+     "sim": 0.4781,
+     "terms": [
+      "hla typing",
+      "typing",
+      "depends",
+      "hla"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.4651,
+     "terms": [
+      "sequencing",
+      "hla",
+      "specific",
+      "binding"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.4632,
+     "terms": [
+      "need",
+      "human",
+      "collection",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2026-01-01_xing-2026-jhep-reports-mass-spectrometry",
+     "sim": 0.4351,
+     "terms": [
+      "sequencing",
+      "reference"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.435,
+     "terms": [
+      "sequencing",
+      "allele",
+      "mhc",
+      "sequence"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.4078,
+     "terms": [
+      "mhc",
+      "binding",
+      "prediction"
+     ]
+    }
+   ]
+  },
+  "2026-01-01_ma-2026-npj-precision-oncology-inferring": {
+   "xy": [
+    0.02824,
+    0.65843
+   ],
+   "near": [
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.5653,
+     "terms": [
+      "neoantigen",
+      "used"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.5429,
+     "terms": [
+      "protein",
+      "pipeline",
+      "cancer",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.5026,
+     "terms": [
+      "clinical",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2019-01-01_orenbuch-2019-bioinformatics-arcashla-hi",
+     "sim": 0.487,
+     "terms": [
+      "rna",
+      "neoantigen pipeline",
+      "pipeline",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2021-01-01_lang-2021-bioinformatics-neofox-annotati",
+     "sim": 0.474,
+     "terms": [
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.4624,
+     "terms": [
+      "clinical",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.4586,
+     "terms": [
+      "directly",
+      "pipeline",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2025-01-01_wang-2025-biomarker-research-computation",
+     "sim": 0.4386,
+     "terms": [
+      "rna",
+      "clinical",
+      "neoantigen",
+      "cancer"
+     ]
+    }
+   ]
+  },
+  "2020-01-01_malkov-2020-ieee-transactions-on-pattern": {
+   "xy": [
+    0.18375,
+    0.20673
+   ],
+   "near": [
+    {
+     "id": "2021-01-01_johnson-2021-ieee-transactions-on-big-da",
+     "sim": 0.9603,
+     "terms": [
+      "search",
+      "similarity",
+      "based",
+      "peptide tcr"
+     ]
+    },
+    {
+     "id": "2017-01-01_steinegger-2017-nature-biotechnology-mms",
+     "sim": 0.5451,
+     "terms": [
+      "search",
+      "sets",
+      "protein",
+      "collection"
+     ]
+    },
+    {
+     "id": "2026-01-01_xing-2026-jhep-reports-mass-spectrometry",
+     "sim": 0.4817,
+     "terms": [
+      "search",
+      "based",
+      "models"
+     ]
+    },
+    {
+     "id": "1999-01-01_rammensee-1999-immunogenetics-syfpeithi",
+     "sim": 0.3107,
+     "terms": [
+      "based",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2022-01-01_hanada-2022-cancer-cell-a-phenotypic-sig",
+     "sim": 0.2956,
+     "terms": [
+      "tcr"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.2954,
+     "terms": [
+      "based",
+      "collection",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2023-01-01_li-2023-briefings-in-bioinformatics-pros",
+     "sim": 0.2786,
+     "terms": [
+      "makes",
+      "model"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.2779,
+     "terms": [
+      "using",
+      "large",
+      "peptide"
+     ]
+    }
+   ]
+  },
+  "2021-01-01_marcu-2021-journal-for-immunotherapy-of": {
+   "xy": [
+    0.27811,
+    0.81848
+   ],
+   "near": [
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.4719,
+     "terms": [
+      "tissue",
+      "presented",
+      "peptides",
+      "cell"
+     ]
+    },
+    {
+     "id": "2024-01-01_lang-2024-bioinformatics-advances-predic",
+     "sim": 0.4482,
+     "terms": [
+      "tissue",
+      "reference",
+      "normal",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2021-01-01_chong-2021-nature-biotechnology-identifi",
+     "sim": 0.3977,
+     "terms": [
+      "reference",
+      "tumour",
+      "used",
+      "problem"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.3874,
+     "terms": [
+      "tissue",
+      "normal",
+      "normal tissue",
+      "cell"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.3802,
+     "terms": [
+      "source",
+      "protein",
+      "presented",
+      "antigen"
+     ]
+    },
+    {
+     "id": "2025-01-01_cai-2025-science-advances-immunopeptidom",
+     "sim": 0.3046,
+     "terms": [
+      "atlas",
+      "tissue",
+      "normal tissue",
+      "normal"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.2983,
+     "terms": [
+      "tumour",
+      "used",
+      "single",
+      "antigen"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.2883,
+     "terms": [
+      "presented peptides",
+      "hla",
+      "presented",
+      "single"
+     ]
+    }
+   ]
+  },
+  "2017-01-01_mcgranahan-2017-cell-allele-specific-hla": {
+   "xy": [
+    0.2609,
+    0.64571
+   ],
+   "near": [
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.514,
+     "terms": [
+      "immune",
+      "tumour",
+      "wrong",
+      "specific"
+     ]
+    },
+    {
+     "id": "1999-01-01_mhcsequencingconsortium-1999-nature-comp",
+     "sim": 0.4798,
+     "terms": [
+      "hla loss",
+      "hla",
+      "loss",
+      "allele"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.4153,
+     "terms": [
+      "immune",
+      "tumour",
+      "score",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.3579,
+     "terms": [
+      "tumour",
+      "neoantigen",
+      "lung cancer",
+      "lung"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.35,
+     "terms": [
+      "tumour",
+      "neoantigen",
+      "immune",
+      "predicted"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.3376,
+     "terms": [
+      "neoantigen prediction",
+      "immune",
+      "prediction",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.2943,
+     "terms": [
+      "neoantigen",
+      "responded",
+      "tumour",
+      "predicted"
+     ]
+    },
+    {
+     "id": "2022-01-01_taylor-2022-frontiers-in-immunology-mech",
+     "sim": 0.2814,
+     "terms": [
+      "tumour",
+      "hla loss",
+      "loss",
+      "neoantigen prediction"
+     ]
+    }
+   ]
+  },
+  "2020-01-01_moris-2020-briefings-in-bioinformatics-c": {
+   "xy": [
+    0.57149,
+    0.00972
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_bradley-2023-elife-structure-based-predi",
+     "sim": 0.5546,
+     "terms": [
+      "set",
+      "new",
+      "tcr",
+      "unseen"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.492,
+     "terms": [
+      "epitope",
+      "paper",
+      "epitopes",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.4852,
+     "terms": [
+      "different",
+      "structure",
+      "tcr"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.4469,
+     "terms": [
+      "methods",
+      "number",
+      "paper",
+      "collection"
+     ]
+    },
+    {
+     "id": "2023-01-01_bravi-2023-elife-a-transfer-learning-app",
+     "sim": 0.4317,
+     "terms": [
+      "acid",
+      "amino acid",
+      "sequences",
+      "predict"
+     ]
+    },
+    {
+     "id": "2021-01-01_sharma-2021-wires-data-mining-and-knowle",
+     "sim": 0.43,
+     "terms": [
+      "epitope",
+      "paper",
+      "collection",
+      "specific"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.4205,
+     "terms": [
+      "collection"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.4079,
+     "terms": [
+      "new",
+      "acid",
+      "amino acid",
+      "predict"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_m-ller-2023-immunity-machine-learning-me": {
+   "xy": [
+    0.76188,
+    0.40958
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.5746,
+     "terms": [
+      "read",
+      "improve",
+      "rate",
+      "benchmark"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.3719,
+     "terms": [
+      "immunogenic",
+      "methods",
+      "number",
+      "reported"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.3581,
+     "terms": [
+      "pipeline",
+      "neoantigen prediction",
+      "class",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2021-01-01_lang-2021-bioinformatics-neofox-annotati",
+     "sim": 0.3498,
+     "terms": [
+      "published",
+      "ranking",
+      "makes",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2023-01-01_li-2023-briefings-in-bioinformatics-pros",
+     "sim": 0.3201,
+     "terms": [
+      "machine",
+      "machine learning",
+      "learning",
+      "makes"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.297,
+     "terms": [
+      "immunogenic",
+      "differ",
+      "makes",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.2871,
+     "terms": [
+      "processing",
+      "contribution",
+      "learning",
+      "class"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.2711,
+     "terms": [
+      "pipeline",
+      "makes"
+     ]
+    }
+   ]
+  },
+  "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro": {
+   "xy": [
+    0.66036,
+    0.92525
+   ],
+   "near": [
+    {
+     "id": "2017-01-01_steinegger-2017-nature-biotechnology-mms",
+     "sim": 0.5442,
+     "terms": [
+      "self",
+      "sequence",
+      "collection",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2003-01-01_zhao-2003-bioinformatics-application-of",
+     "sim": 0.5358,
+     "terms": [
+      "cross",
+      "cross reactivity",
+      "reactivity",
+      "cell"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.5315,
+     "terms": [
+      "antigens",
+      "recognition",
+      "cell",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2018-01-01_brown-2018-oncoimmunology-neoantigen-cha",
+     "sim": 0.5277,
+     "terms": [
+      "self",
+      "peptides",
+      "self peptides",
+      "space"
+     ]
+    },
+    {
+     "id": "2016-01-01_raman-2016-scientific-reports-direct-mol",
+     "sim": 0.498,
+     "terms": [
+      "cross",
+      "weak",
+      "deleted",
+      "cross reactivity"
+     ]
+    },
+    {
+     "id": "2013-01-01_xing-2013-proceedings-of-the-national-ac",
+     "sim": 0.4547,
+     "terms": [
+      "weak",
+      "deleted",
+      "argument",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.4353,
+     "terms": [
+      "cross",
+      "specificity",
+      "makes",
+      "peptides"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.4275,
+     "terms": [
+      "argument",
+      "peptides",
+      "cell",
+      "peptide"
+     ]
+    }
+   ]
+  },
+  "2005-01-01_nielsen-2005-immunogenetics-the-role-of": {
+   "xy": [
+    0.97444,
+    0.43638
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_gfeller-2023-cell-systems-improved-predi",
+     "sim": 0.5318,
+     "terms": [
+      "improved predictions",
+      "improved",
+      "predictions",
+      "paper"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.5023,
+     "terms": [
+      "paper",
+      "epitope",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2023-01-01_deng-2023-briefings-in-bioinformatics-ie",
+     "sim": 0.4997,
+     "terms": [
+      "epitope",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.492,
+     "terms": [
+      "epitope",
+      "paper",
+      "epitopes",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.4814,
+     "terms": [
+      "epitope",
+      "prediction",
+      "epitopes",
+      "paper"
+     ]
+    },
+    {
+     "id": "2025-01-01_farriol-duran-2025-genome-medicine-predi",
+     "sim": 0.4418,
+     "terms": [
+      "epitope",
+      "paper",
+      "epitopes",
+      "cell"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.4407,
+     "terms": []
+    },
+    {
+     "id": "2020-01-01_reynisson-2020-nucleic-acids-research-ne",
+     "sim": 0.407,
+     "terms": [
+      "improved predictions",
+      "improved",
+      "predictions",
+      "paper"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_nilsson-2023-science-advances-accurate-p": {
+   "xy": [
+    0.49057,
+    0.36933
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_racle-2023-immunity-machine-learning-pre",
+     "sim": 0.6944,
+     "terms": [
+      "ii",
+      "class ii",
+      "class",
+      "orientation"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.5793,
+     "terms": [
+      "class ii",
+      "ii",
+      "class",
+      "problem"
+     ]
+    },
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.483,
+     "terms": [
+      "class",
+      "class ii",
+      "ii",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2015-01-01_kreiter-2015-nature-mutant-mhc-class-ii",
+     "sim": 0.4384,
+     "terms": [
+      "class ii",
+      "ii",
+      "class"
+     ]
+    },
+    {
+     "id": "2023-01-01_li-2023-briefings-in-bioinformatics-pros",
+     "sim": 0.4129,
+     "terms": [
+      "data",
+      "machine learning",
+      "accurate",
+      "machine"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3984,
+     "terms": [
+      "represent",
+      "binders",
+      "pan",
+      "class"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.3628,
+     "terms": [
+      "class",
+      "antigen presentation",
+      "antigen",
+      "presentation"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.3505,
+     "terms": [
+      "represent",
+      "class",
+      "prediction",
+      "antigen"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_niu-2024-briefings-in-bioinformatics-att": {
+   "xy": [
+    0.5831,
+    0.42583
+   ],
+   "near": [
+    {
+     "id": "2003-01-01_zhao-2003-bioinformatics-application-of",
+     "sim": 0.5708,
+     "terms": [
+      "long",
+      "recognition",
+      "receptor",
+      "second"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.4903,
+     "terms": [
+      "class binding",
+      "binding",
+      "argument",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.3803,
+     "terms": [
+      "recognition",
+      "known",
+      "tcrs",
+      "response"
+     ]
+    },
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.3437,
+     "terms": [
+      "cell receptor",
+      "recognition",
+      "receptor",
+      "argument"
+     ]
+    },
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.3324,
+     "terms": [
+      "predicting",
+      "argument",
+      "binding",
+      "epitopes"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.3271,
+     "terms": [
+      "long",
+      "sequences",
+      "class",
+      "binding"
+     ]
+    },
+    {
+     "id": "1995-01-01_almagro-1995-protein-science-molecular-m",
+     "sim": 0.3137,
+     "terms": [
+      "receptor",
+      "recognition",
+      "known",
+      "cell receptor"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.2947,
+     "terms": [
+      "sequences",
+      "recognition",
+      "problem",
+      "pairs"
+     ]
+    }
+   ]
+  },
+  "2019-01-01_orenbuch-2019-bioinformatics-arcashla-hi": {
+   "xy": [
+    0.13939,
+    0.57076
+   ],
+   "near": [
+    {
+     "id": "2026-01-01_ma-2026-npj-precision-oncology-inferring",
+     "sim": 0.487,
+     "terms": [
+      "rna",
+      "neoantigen pipeline",
+      "pipeline",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "1999-01-01_mhcsequencingconsortium-1999-nature-comp",
+     "sim": 0.4781,
+     "terms": [
+      "hla typing",
+      "typing",
+      "depends",
+      "hla"
+     ]
+    },
+    {
+     "id": "2014-01-01_szolek-2014-bioinformatics-optitype-prec",
+     "sim": 0.4189,
+     "terms": [
+      "typing",
+      "hla typing",
+      "genotype",
+      "neoantigen pipeline"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.3422,
+     "terms": [
+      "wrong",
+      "filtering",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.324,
+     "terms": [
+      "depends",
+      "practical",
+      "papers",
+      "high"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.293,
+     "terms": [
+      "rna",
+      "wrong",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2019-01-01_sarkizova-2019-nature-biotechnology-a-la",
+     "sim": 0.2866,
+     "terms": [
+      "comes",
+      "value",
+      "hla",
+      "allele"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.2834,
+     "terms": [
+      "papers",
+      "high",
+      "neoantigen",
+      "data"
+     ]
+    }
+   ]
+  },
+  "2017-01-01_ott-2017-nature-an-immunogenic-personal": {
+   "xy": [
+    0.34245,
+    0.95886
+   ],
+   "near": [
+    {
+     "id": "2016-01-01_jardine-2016-science-hiv-1-broadly-neutr",
+     "sim": 0.6357,
+     "terms": [
+      "papers",
+      "neoantigen",
+      "work",
+      "collection"
+     ]
+    },
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.5595,
+     "terms": [
+      "melanoma",
+      "vaccine",
+      "patients",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2024-01-01_li-2024-science-translational-medicine-s",
+     "sim": 0.5479,
+     "terms": [
+      "patients",
+      "work",
+      "neoantigens",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.5336,
+     "terms": [
+      "melanoma",
+      "vaccine",
+      "collection",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.5279,
+     "terms": [
+      "collection",
+      "neoantigen",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.5276,
+     "terms": [
+      "patients",
+      "neoantigen",
+      "work",
+      "neoantigens"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.5085,
+     "terms": [
+      "vaccine",
+      "neoantigen",
+      "work",
+      "cell"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.5072,
+     "terms": [
+      "melanoma",
+      "papers",
+      "clinical",
+      "vaccine"
+     ]
+    }
+   ]
+  },
+  "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person": {
+   "xy": [
+    0.36494,
+    0.95947
+   ],
+   "near": [
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.723,
+     "terms": [
+      "vaccine",
+      "personalized",
+      "melanoma",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2021-01-01_hu-2021-nature-medicine-personal-neoanti",
+     "sim": 0.6976,
+     "terms": [
+      "melanoma",
+      "vaccine",
+      "patients",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.6762,
+     "terms": [
+      "vaccine",
+      "melanoma",
+      "earlier",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.6734,
+     "terms": [
+      "vaccine",
+      "trial",
+      "neoantigen",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.6719,
+     "terms": [
+      "setting",
+      "patients",
+      "neoantigen",
+      "cells"
+     ]
+    },
+    {
+     "id": "2023-01-01_rojas-2023-nature-personalized-rna-neoan",
+     "sim": 0.6707,
+     "terms": [
+      "setting",
+      "personalized",
+      "melanoma",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2025-01-01_sethna-2025-nature-rna-neoantigen-vaccin",
+     "sim": 0.5754,
+     "terms": [
+      "vaccine",
+      "induced",
+      "trial",
+      "cells"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.5714,
+     "terms": [
+      "tumour",
+      "melanoma",
+      "neoantigen",
+      "used"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_o-brien-2024-plos-computational-biology": {
+   "xy": [
+    0.58424,
+    0.17702
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_li-2023-briefings-in-bioinformatics-pros",
+     "sim": 0.4031,
+     "terms": [
+      "papers",
+      "design",
+      "data",
+      "specific"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.3353,
+     "terms": [
+      "protein",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.324,
+     "terms": [
+      "data",
+      "available",
+      "large",
+      "specific"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.3113,
+     "terms": [
+      "immunogenicity",
+      "group",
+      "design",
+      "approach"
+     ]
+    },
+    {
+     "id": "2003-01-01_zhao-2003-bioinformatics-application-of",
+     "sim": 0.2853,
+     "terms": [
+      "papers",
+      "approach",
+      "data",
+      "specific"
+     ]
+    },
+    {
+     "id": "2025-01-01_graber-2025-nature-machine-intelligence",
+     "sim": 0.2736,
+     "terms": [
+      "data",
+      "available",
+      "training",
+      "prediction"
+     ]
+    }
+   ]
+  },
+  "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2": {
+   "xy": [
+    0.85053,
+    0.18847
+   ],
+   "near": [
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.6038,
+     "terms": [
+      "processing",
+      "antigen",
+      "binding",
+      "class"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.583,
+     "terms": [
+      "processing",
+      "antigen",
+      "binding",
+      "model"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.5819,
+     "terms": [
+      "binders",
+      "presented",
+      "predicted",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.5816,
+     "terms": [
+      "binders",
+      "predictor",
+      "models",
+      "trained"
+     ]
+    },
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.5644,
+     "terms": [
+      "processing",
+      "antigen",
+      "mhc class",
+      "presentation"
+     ]
+    },
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.5476,
+     "terms": [
+      "binding",
+      "presentation",
+      "makes",
+      "prediction"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.5428,
+     "terms": [
+      "allele",
+      "class",
+      "mhc class",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.5387,
+     "terms": [
+      "antigen",
+      "presented",
+      "mhc class",
+      "presentation"
+     ]
+    }
+   ]
+  },
+  "2017-01-01_pancreaticcancergenomeinitiative-2017-na": {
+   "xy": [
+    0.39457,
+    0.97154
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.6719,
+     "terms": [
+      "setting",
+      "patients",
+      "neoantigen",
+      "cells"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.6456,
+     "terms": [
+      "identification",
+      "matters",
+      "cells",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.6402,
+     "terms": [
+      "neoantigen",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.5947,
+     "terms": [
+      "mutations",
+      "neoantigen",
+      "work",
+      "cells"
+     ]
+    },
+    {
+     "id": "2021-01-01_hu-2021-nature-medicine-personal-neoanti",
+     "sim": 0.5859,
+     "terms": [
+      "pancreatic",
+      "patients",
+      "neoantigens",
+      "matters"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.5852,
+     "terms": [
+      "pancreatic",
+      "mutations",
+      "tumour",
+      "cancer"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.5425,
+     "terms": [
+      "neoantigen",
+      "mutation",
+      "cells",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.5408,
+     "terms": [
+      "long",
+      "neoantigens",
+      "makes",
+      "cancer"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_qu-2023-bioinformatics-deepmhci-an-ancho": {
+   "xy": [
+    0.47916,
+    0.46053
+   ],
+   "near": [
+    {
+     "id": "2022-01-01_you-2022-bioinformatics-deepmhcii-a-nove",
+     "sim": 0.4463,
+     "terms": [
+      "aware deep",
+      "pseudo",
+      "pseudo sequence",
+      "peptide binding"
+     ]
+    },
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.394,
+     "terms": [
+      "length",
+      "peptide",
+      "binding",
+      "mhc"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.3529,
+     "terms": [
+      "length",
+      "targets",
+      "sequence",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3513,
+     "terms": [
+      "represent",
+      "binding",
+      "binding affinity",
+      "lets"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.3345,
+     "terms": [
+      "anchor",
+      "interaction",
+      "anchor positions",
+      "positions"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.3145,
+     "terms": [
+      "length",
+      "peptide",
+      "binding",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.3018,
+     "terms": [
+      "peptide",
+      "binding",
+      "mhc",
+      "sequence"
+     ]
+    },
+    {
+     "id": "2020-01-01_devlin-2020-nature-chemical-biology-stru",
+     "sim": 0.2555,
+     "terms": [
+      "anchor",
+      "peptide",
+      "binding",
+      "sequence"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_racle-2023-immunity-machine-learning-pre": {
+   "xy": [
+    0.10915,
+    0.31514
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_nilsson-2023-science-advances-accurate-p",
+     "sim": 0.6944,
+     "terms": [
+      "ii",
+      "class ii",
+      "class",
+      "orientation"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.6437,
+     "terms": [
+      "ii",
+      "class ii",
+      "class",
+      "binding"
+     ]
+    },
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.5574,
+     "terms": [
+      "class ii",
+      "class",
+      "ii",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2015-01-01_kreiter-2015-nature-mutant-mhc-class-ii",
+     "sim": 0.5558,
+     "terms": [
+      "ii",
+      "class ii",
+      "class",
+      "finding"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.4809,
+     "terms": [
+      "ligands",
+      "binding",
+      "class",
+      "learning"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.4605,
+     "terms": [
+      "discovery",
+      "class",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.4597,
+     "terms": [
+      "accuracy",
+      "scale",
+      "alleles",
+      "binding"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.4527,
+     "terms": [
+      "ii",
+      "ligands",
+      "alleles",
+      "mhc ii"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_racle-2023-unknown-how-to-predict-bindin": {
+   "xy": [
+    0.59643,
+    0.0
+   ],
+   "near": [
+    {
+     "id": "2026-01-01_yuan-2026-research-epimii-structure-awar",
+     "sim": 0.5642,
+     "terms": [
+      "alleles",
+      "mhc ii",
+      "ii",
+      "training data"
+     ]
+    },
+    {
+     "id": "2025-01-01_tadros-2025-genome-medicine-predicting-m",
+     "sim": 0.5146,
+     "terms": [
+      "alleles",
+      "ligands",
+      "predicting",
+      "specificity"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.4529,
+     "terms": [
+      "sequencing",
+      "alleles",
+      "specificity",
+      "paper"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-immunity-machine-learning-pre",
+     "sim": 0.4527,
+     "terms": [
+      "ii",
+      "ligands",
+      "alleles",
+      "mhc ii"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.4436,
+     "terms": [
+      "ligands",
+      "allele",
+      "sequence",
+      "binding"
+     ]
+    },
+    {
+     "id": "1999-01-01_mhcsequencingconsortium-1999-nature-comp",
+     "sim": 0.435,
+     "terms": [
+      "sequencing",
+      "allele",
+      "mhc",
+      "sequence"
+     ]
+    },
+    {
+     "id": "2019-01-01_sarkizova-2019-nature-biotechnology-a-la",
+     "sim": 0.4312,
+     "terms": [
+      "allele",
+      "alleles",
+      "problem"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.4079,
+     "terms": [
+      "new",
+      "acid",
+      "amino acid",
+      "predict"
+     ]
+    }
+   ]
+  },
+  "2022-01-01_ragone-2022-journal-of-translational-med": {
+   "xy": [
+    0.70534,
+    0.81888
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.3807,
+     "terms": [
+      "tumour",
+      "antigens",
+      "merely",
+      "cells"
+     ]
+    },
+    {
+     "id": "2024-01-01_benhamza-2024-blood-virus-reactive-t-cel",
+     "sim": 0.328,
+     "terms": [
+      "goes",
+      "mimicry",
+      "molecular mimicry",
+      "epitopes"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.3177,
+     "terms": [
+      "tumour",
+      "partly",
+      "cells",
+      "cell"
+     ]
+    },
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.2874,
+     "terms": [
+      "tumour",
+      "antigens",
+      "cells",
+      "cell"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.2838,
+     "terms": [
+      "tumour",
+      "surface",
+      "epitopes",
+      "cell"
+     ]
+    },
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.2818,
+     "terms": [
+      "molecular",
+      "tumour",
+      "cells"
+     ]
+    },
+    {
+     "id": "2021-01-01_chong-2021-nature-biotechnology-identifi",
+     "sim": 0.2798,
+     "terms": [
+      "antigens",
+      "tumor",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.2627,
+     "terms": [
+      "tumour",
+      "antigens",
+      "cell"
+     ]
+    }
+   ]
+  },
+  "2016-01-01_raman-2016-scientific-reports-direct-mol": {
+   "xy": [
+    0.59023,
+    0.81261
+   ],
+   "near": [
+    {
+     "id": "2003-01-01_zhao-2003-bioinformatics-application-of",
+     "sim": 0.5288,
+     "terms": [
+      "cross",
+      "engineered",
+      "mimicry",
+      "cross reactivity"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.5075,
+     "terms": [
+      "engineered",
+      "reactive",
+      "cross",
+      "specificity"
+     ]
+    },
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.498,
+     "terms": [
+      "cross",
+      "weak",
+      "deleted",
+      "cross reactivity"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.4314,
+     "terms": [
+      "work collection",
+      "deleted",
+      "patients",
+      "work"
+     ]
+    },
+    {
+     "id": "2017-01-01_steinegger-2017-nature-biotechnology-mms",
+     "sim": 0.3895,
+     "terms": [
+      "engineered",
+      "engineered tcrs",
+      "tcrs",
+      "used"
+     ]
+    },
+    {
+     "id": "2024-01-01_finnigan-2024-nature-communications-stru",
+     "sim": 0.3718,
+     "terms": [
+      "discrimination",
+      "tcrs",
+      "self discrimination",
+      "therapeutically"
+     ]
+    },
+    {
+     "id": "2024-01-01_benhamza-2024-blood-virus-reactive-t-cel",
+     "sim": 0.317,
+     "terms": [
+      "reactive",
+      "cross",
+      "molecular mimicry",
+      "mimicry"
+     ]
+    },
+    {
+     "id": "2016-01-01_jardine-2016-science-hiv-1-broadly-neutr",
+     "sim": 0.2931,
+     "terms": [
+      "thymic",
+      "work",
+      "selection",
+      "collection"
+     ]
+    }
+   ]
+  },
+  "1995-01-01_rammensee-1995-current-opinion-in-immuno": {
+   "xy": [
+    0.89669,
+    0.77476
+   ],
+   "near": [
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.653,
+     "terms": [
+      "class",
+      "class ii",
+      "ii",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-immunity-machine-learning-pre",
+     "sim": 0.6437,
+     "terms": [
+      "ii",
+      "class ii",
+      "class",
+      "binding"
+     ]
+    },
+    {
+     "id": "2015-01-01_kreiter-2015-nature-mutant-mhc-class-ii",
+     "sim": 0.6332,
+     "terms": [
+      "class ii",
+      "class",
+      "ii",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.6032,
+     "terms": [
+      "class",
+      "associated",
+      "peptides",
+      "binding"
+     ]
+    },
+    {
+     "id": "2022-01-01_you-2022-bioinformatics-deepmhcii-a-nove",
+     "sim": 0.5858,
+     "terms": [
+      "ii",
+      "core",
+      "class",
+      "identification"
+     ]
+    },
+    {
+     "id": "2023-01-01_nilsson-2023-science-advances-accurate-p",
+     "sim": 0.5793,
+     "terms": [
+      "class ii",
+      "ii",
+      "class",
+      "problem"
+     ]
+    },
+    {
+     "id": "2023-01-01_li-2023-nature-communications-crystal-st",
+     "sim": 0.5562,
+     "terms": [
+      "class",
+      "anchor",
+      "non",
+      "anchor positions"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.5442,
+     "terms": [
+      "core",
+      "peptides",
+      "class",
+      "mhc class"
+     ]
+    }
+   ]
+  },
+  "1999-01-01_rammensee-1999-immunogenetics-syfpeithi": {
+   "xy": [
+    0.50296,
+    0.0192
+   ],
+   "near": [
+    {
+     "id": "2018-01-01_vita-2018-nucleic-acids-research-the-imm",
+     "sim": 0.6572,
+     "terms": [
+      "published",
+      "iedb",
+      "database"
+     ]
+    },
+    {
+     "id": "2025-01-01_graber-2025-nature-machine-intelligence",
+     "sim": 0.4663,
+     "terms": [
+      "bias",
+      "published",
+      "data",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2019-01-01_sarkizova-2019-nature-biotechnology-a-la",
+     "sim": 0.4548,
+     "terms": [
+      "stated",
+      "prediction",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.4021,
+     "terms": [
+      "based",
+      "prediction",
+      "mhc",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2020-01-01_reynisson-2020-nucleic-acids-research-ne",
+     "sim": 0.3906,
+     "terms": [
+      "motif",
+      "ligands",
+      "data",
+      "source"
+     ]
+    },
+    {
+     "id": "2024-01-01_vita-2024-nucleic-acids-research-the-imm",
+     "sim": 0.3617,
+     "terms": [
+      "published",
+      "iedb",
+      "database"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.3563,
+     "terms": [
+      "data"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.3349,
+     "terms": [
+      "source",
+      "prediction",
+      "peptide"
+     ]
+    }
+   ]
+  },
+  "2020-01-01_reynisson-2020-nucleic-acids-research-ne": {
+   "xy": [
+    0.69366,
+    0.21146
+   ],
+   "near": [
+    {
+     "id": "2019-01-01_sarkizova-2019-nature-biotechnology-a-la",
+     "sim": 0.6359,
+     "terms": [
+      "allele",
+      "deconvolution",
+      "single",
+      "comes"
+     ]
+    },
+    {
+     "id": "2024-01-01_xu-2024-nature-communications-immuneapp",
+     "sim": 0.6002,
+     "terms": [
+      "allele",
+      "deconvolution",
+      "presentation",
+      "data"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.4873,
+     "terms": [
+      "ligands",
+      "allele",
+      "improved",
+      "trained"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.407,
+     "terms": [
+      "improved predictions",
+      "improved",
+      "predictions",
+      "paper"
+     ]
+    },
+    {
+     "id": "1999-01-01_rammensee-1999-immunogenetics-syfpeithi",
+     "sim": 0.3906,
+     "terms": [
+      "motif",
+      "ligands",
+      "data",
+      "source"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.3631,
+     "terms": [
+      "allele",
+      "ligands",
+      "mhc",
+      "data"
+     ]
+    },
+    {
+     "id": "2025-01-01_graber-2025-nature-machine-intelligence",
+     "sim": 0.3521,
+     "terms": [
+      "data",
+      "available",
+      "binding affinity",
+      "evidence"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.3265,
+     "terms": [
+      "presentation",
+      "antigen presentation",
+      "mhc",
+      "antigen"
+     ]
+    }
+   ]
+  },
+  "2019-01-01_richman-2019-cell-systems-neoantigen-dis": {
+   "xy": [
+    0.08073,
+    0.293
+   ],
+   "near": [
+    {
+     "id": "2022-01-01_uniprotconsortium-2022-nucleic-acids-res",
+     "sim": 0.7498,
+     "terms": [
+      "self",
+      "wild type",
+      "wild",
+      "proteome"
+     ]
+    },
+    {
+     "id": "2020-01-01_devlin-2020-nature-chemical-biology-stru",
+     "sim": 0.7317,
+     "terms": [
+      "neoepitope",
+      "wild type",
+      "quality",
+      "wild"
+     ]
+    },
+    {
+     "id": "2024-01-01_wan-2024-nar-cancer-a-large-scale-study",
+     "sim": 0.6561,
+     "terms": [
+      "wild type",
+      "wild",
+      "type",
+      "differential agretopicity"
+     ]
+    },
+    {
+     "id": "2021-01-01_lang-2021-bioinformatics-neofox-annotati",
+     "sim": 0.5261,
+     "terms": [
+      "self",
+      "differential agretopicity",
+      "agretopicity",
+      "differential"
+     ]
+    },
+    {
+     "id": "2017-01-01_steinegger-2017-nature-biotechnology-mms",
+     "sim": 0.4768,
+     "terms": [
+      "proteome",
+      "self",
+      "neoepitope",
+      "protein"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.4436,
+     "terms": [
+      "protein",
+      "immune",
+      "neoantigen",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.4104,
+     "terms": [
+      "type",
+      "used",
+      "high",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.3969,
+     "terms": [
+      "set",
+      "quality",
+      "neoantigen",
+      "neoantigens"
+     ]
+    }
+   ]
+  },
+  "2016-01-01_roche-2016-microbiology-spectrum-antigen": {
+   "xy": [
+    0.57016,
+    0.98596
+   ],
+   "near": [
+    {
+     "id": "2015-01-01_kreiter-2015-nature-mutant-mhc-class-ii",
+     "sim": 0.7772,
+     "terms": [
+      "class",
+      "cd8",
+      "class ii",
+      "vaccine"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.6611,
+     "terms": [
+      "presentation",
+      "cross",
+      "mhc class",
+      "class"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.653,
+     "terms": [
+      "class",
+      "class ii",
+      "ii",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.605,
+     "terms": [
+      "class",
+      "processing",
+      "antigen",
+      "cell"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.6,
+     "terms": [
+      "tumour",
+      "processing",
+      "antigen",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2024-01-01_sultan-2024-nature-neoantigen-specific-c",
+     "sim": 0.589,
+     "terms": [
+      "treats",
+      "class ii",
+      "vaccine",
+      "ii"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.5644,
+     "terms": [
+      "processing",
+      "antigen",
+      "mhc class",
+      "presentation"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-immunity-machine-learning-pre",
+     "sim": 0.5574,
+     "terms": [
+      "class ii",
+      "class",
+      "ii",
+      "prediction"
+     ]
+    }
+   ]
+  },
+  "2009-01-01_rock-2009-the-journal-of-immunology-prot": {
+   "xy": [
+    0.87271,
+    0.18142
+   ],
+   "near": [
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.6611,
+     "terms": [
+      "presentation",
+      "cross",
+      "mhc class",
+      "class"
+     ]
+    },
+    {
+     "id": "2023-01-01_deng-2023-briefings-in-bioinformatics-ie",
+     "sim": 0.6607,
+     "terms": [
+      "presentation",
+      "antigen presentation",
+      "presented",
+      "immune"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.5852,
+     "terms": [
+      "protein",
+      "presented",
+      "immune",
+      "antigen"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.5492,
+     "terms": [
+      "framing",
+      "ones",
+      "presented",
+      "mhc class"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.5387,
+     "terms": [
+      "antigen",
+      "presented",
+      "mhc class",
+      "presentation"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.4569,
+     "terms": [
+      "antigen",
+      "class"
+     ]
+    },
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.4555,
+     "terms": [
+      "presentation",
+      "mhc"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.4469,
+     "terms": [
+      "presented",
+      "cross",
+      "cells"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_rojas-2023-nature-personalized-rna-neoan": {
+   "xy": [
+    0.44221,
+    0.81406
+   ],
+   "near": [
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.701,
+     "terms": [
+      "rna neoantigen",
+      "personalized",
+      "melanoma",
+      "rna"
+     ]
+    },
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.6707,
+     "terms": [
+      "setting",
+      "personalized",
+      "melanoma",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.6048,
+     "terms": [
+      "cells",
+      "neoantigen",
+      "case",
+      "poorly"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.508,
+     "terms": [
+      "neoantigen",
+      "melanoma",
+      "vaccine",
+      "vaccines"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.4992,
+     "terms": [
+      "setting",
+      "pancreatic cancer",
+      "pancreatic",
+      "patients"
+     ]
+    },
+    {
+     "id": "2021-01-01_hu-2021-nature-medicine-personal-neoanti",
+     "sim": 0.4907,
+     "terms": [
+      "neoantigen vaccines",
+      "melanoma",
+      "patients",
+      "pancreatic"
+     ]
+    },
+    {
+     "id": "2016-01-01_jardine-2016-science-hiv-1-broadly-neutr",
+     "sim": 0.4694,
+     "terms": [
+      "neoantigen",
+      "neoantigen vaccines",
+      "vaccines",
+      "cells"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.4442,
+     "terms": [
+      "melanoma",
+      "vaccine",
+      "result",
+      "neoantigen"
+     ]
+    }
+   ]
+  },
+  "2017-01-01_sahin-2017-nature-personalized-rna-mutan": {
+   "xy": [
+    0.34415,
+    0.96846
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.723,
+     "terms": [
+      "vaccine",
+      "personalized",
+      "melanoma",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2023-01-01_rojas-2023-nature-personalized-rna-neoan",
+     "sim": 0.701,
+     "terms": [
+      "rna neoantigen",
+      "personalized",
+      "melanoma",
+      "rna"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.6891,
+     "terms": [
+      "vaccine",
+      "mutations",
+      "tumour",
+      "specific"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.6501,
+     "terms": [
+      "vaccine",
+      "melanoma",
+      "vaccines",
+      "single"
+     ]
+    },
+    {
+     "id": "2021-01-01_hu-2021-nature-medicine-personal-neoanti",
+     "sim": 0.6389,
+     "terms": [
+      "vaccine",
+      "melanoma",
+      "immunity",
+      "pancreatic"
+     ]
+    },
+    {
+     "id": "2025-01-01_sethna-2025-nature-rna-neoantigen-vaccin",
+     "sim": 0.598,
+     "terms": [
+      "vaccine",
+      "rna neoantigen",
+      "immunity",
+      "pancreatic"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.5852,
+     "terms": [
+      "pancreatic",
+      "mutations",
+      "tumour",
+      "cancer"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.5721,
+     "terms": [
+      "wrong",
+      "specific",
+      "single",
+      "tumour"
+     ]
+    }
+   ]
+  },
+  "2019-01-01_sarkizova-2019-nature-biotechnology-a-la": {
+   "xy": [
+    0.76064,
+    0.07519
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_reynisson-2020-nucleic-acids-research-ne",
+     "sim": 0.6359,
+     "terms": [
+      "allele",
+      "deconvolution",
+      "single",
+      "comes"
+     ]
+    },
+    {
+     "id": "2024-01-01_xu-2024-nature-communications-immuneapp",
+     "sim": 0.6025,
+     "terms": [
+      "allele",
+      "observed",
+      "deconvolution",
+      "allelic"
+     ]
+    },
+    {
+     "id": "2023-01-01_albert-2023-nature-machine-intelligence",
+     "sim": 0.5351,
+     "terms": [
+      "metric",
+      "problem",
+      "ranking",
+      "epitope"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.4913,
+     "terms": [
+      "observed",
+      "allele",
+      "class",
+      "prediction"
+     ]
+    },
+    {
+     "id": "1999-01-01_rammensee-1999-immunogenetics-syfpeithi",
+     "sim": 0.4548,
+     "terms": [
+      "stated",
+      "prediction",
+      "peptide"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.4396,
+     "terms": [
+      "class",
+      "comes",
+      "stated",
+      "problem"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.4313,
+     "terms": [
+      "ranking",
+      "single",
+      "epitope",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.4312,
+     "terms": [
+      "allele",
+      "alleles",
+      "problem"
+     ]
+    }
+   ]
+  },
+  "2021-01-01_schmidt-2021-cell-reports-medicine-predi": {
+   "xy": [
+    0.83773,
+    0.56865
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_deng-2023-briefings-in-bioinformatics-ie",
+     "sim": 0.583,
+     "terms": [
+      "recognition",
+      "tcr recognition",
+      "predicted",
+      "immune"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.4625,
+     "terms": [
+      "systematically",
+      "actually",
+      "immune",
+      "cells"
+     ]
+    },
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.3659,
+     "terms": [
+      "tools",
+      "presentation",
+      "binding",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.3462,
+     "terms": [
+      "interesting",
+      "immune",
+      "presentation",
+      "cells"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.3365,
+     "terms": [
+      "predicted",
+      "responded",
+      "mutations",
+      "cells"
+     ]
+    },
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.3324,
+     "terms": [
+      "argument",
+      "models",
+      "epitope",
+      "epitopes"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.3299,
+     "terms": [
+      "design",
+      "immune",
+      "cells",
+      "epitope"
+     ]
+    },
+    {
+     "id": "2021-01-01_sharma-2021-wires-data-mining-and-knowle",
+     "sim": 0.3288,
+     "terms": [
+      "tools",
+      "design",
+      "epitope",
+      "prediction"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_schmidt-2023-nature-communications-neoan": {
+   "xy": [
+    0.79092,
+    0.64736
+   ],
+   "near": [
+    {
+     "id": "2021-01-01_sharma-2021-wires-data-mining-and-knowle",
+     "sim": 0.5404,
+     "terms": [
+      "paper",
+      "tools",
+      "prediction",
+      "useful"
+     ]
+    },
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.4851,
+     "terms": [
+      "presentation",
+      "cd8",
+      "prediction",
+      "processing"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.4574,
+     "terms": [
+      "did",
+      "cd8",
+      "useful",
+      "high"
+     ]
+    },
+    {
+     "id": "2023-01-01_deng-2023-briefings-in-bioinformatics-ie",
+     "sim": 0.4521,
+     "terms": [
+      "presentation",
+      "poorly",
+      "direct",
+      "antigen"
+     ]
+    },
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.4437,
+     "terms": [
+      "presentation",
+      "tools",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.4361,
+     "terms": [
+      "paper",
+      "prediction",
+      "processing",
+      "antigen"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3754,
+     "terms": [
+      "processing",
+      "predictor",
+      "contribution",
+      "antigen"
+     ]
+    },
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.3556,
+     "terms": [
+      "neoantigen specific",
+      "antigen",
+      "cells",
+      "prediction"
+     ]
+    }
+   ]
+  },
+  "2025-01-01_sethna-2025-nature-rna-neoantigen-vaccin": {
+   "xy": [
+    0.48021,
+    0.83793
+   ],
+   "near": [
+    {
+     "id": "2021-01-01_hu-2021-nature-medicine-personal-neoanti",
+     "sim": 0.8619,
+     "terms": [
+      "vaccine",
+      "neoantigen vaccines",
+      "did",
+      "looked"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.6017,
+     "terms": [
+      "vaccine",
+      "cells",
+      "trial",
+      "question"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.598,
+     "terms": [
+      "vaccine",
+      "rna neoantigen",
+      "immunity",
+      "pancreatic"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.5762,
+     "terms": [
+      "vaccine",
+      "vaccines",
+      "single",
+      "evidence"
+     ]
+    },
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.5754,
+     "terms": [
+      "vaccine",
+      "induced",
+      "trial",
+      "cells"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.5665,
+     "terms": [
+      "vaccine",
+      "years",
+      "evidence",
+      "single"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.518,
+     "terms": [
+      "years",
+      "pancreatic cancer",
+      "long",
+      "pancreatic"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.4661,
+     "terms": [
+      "cells",
+      "did",
+      "negative",
+      "cd8"
+     ]
+    }
+   ]
+  },
+  "2025-01-01_shao-2025-frontiers-in-immunology-neotim": {
+   "xy": [
+    0.28877,
+    0.40034
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_li-2023-briefings-in-bioinformatics-pros",
+     "sim": 0.4422,
+     "terms": [
+      "model",
+      "machine",
+      "machine learning",
+      "learning"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.3291,
+     "terms": [
+      "tumor",
+      "approach",
+      "single",
+      "makes"
+     ]
+    },
+    {
+     "id": "2021-01-01_lang-2021-bioinformatics-neofox-annotati",
+     "sim": 0.2848,
+     "terms": [
+      "features",
+      "makes",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "1999-01-01_rammensee-1999-immunogenetics-syfpeithi",
+     "sim": 0.2793,
+     "terms": [
+      "based prediction",
+      "based",
+      "data",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.2716,
+     "terms": [
+      "tumor",
+      "paper",
+      "learning",
+      "data"
+     ]
+    },
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.2694,
+     "terms": [
+      "novel",
+      "makes",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.2557,
+     "terms": [
+      "novel",
+      "based",
+      "single",
+      "neoantigen"
+     ]
+    }
+   ]
+  },
+  "2021-01-01_sharma-2021-wires-data-mining-and-knowle": {
+   "xy": [
+    0.92246,
+    0.70607
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_schmidt-2023-nature-communications-neoan",
+     "sim": 0.5404,
+     "terms": [
+      "paper",
+      "tools",
+      "prediction",
+      "useful"
+     ]
+    },
+    {
+     "id": "2024-01-01_sultan-2024-nature-neoantigen-specific-c",
+     "sim": 0.4686,
+     "terms": [
+      "design",
+      "vaccine",
+      "collection",
+      "specific"
+     ]
+    },
+    {
+     "id": "2023-01-01_li-2023-briefings-in-bioinformatics-pros",
+     "sim": 0.4635,
+     "terms": [
+      "design",
+      "specific",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.4569,
+     "terms": [
+      "useful",
+      "collection"
+     ]
+    },
+    {
+     "id": "2015-01-01_kreiter-2015-nature-mutant-mhc-class-ii",
+     "sim": 0.4461,
+     "terms": [
+      "vaccine",
+      "design"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.43,
+     "terms": [
+      "epitope",
+      "paper",
+      "collection",
+      "specific"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.4262,
+     "terms": [
+      "design",
+      "paper",
+      "epitope",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.4192,
+     "terms": [
+      "collection",
+      "vaccine",
+      "useful",
+      "prediction"
+     ]
+    }
+   ]
+  },
+  "2017-01-01_steinegger-2017-nature-biotechnology-mms": {
+   "xy": [
+    0.57899,
+    0.97233
+   ],
+   "near": [
+    {
+     "id": "2022-01-01_uniprotconsortium-2022-nucleic-acids-res",
+     "sim": 0.575,
+     "terms": [
+      "self",
+      "proteome",
+      "neoepitope",
+      "protein"
+     ]
+    },
+    {
+     "id": "2020-01-01_malkov-2020-ieee-transactions-on-pattern",
+     "sim": 0.5451,
+     "terms": [
+      "search",
+      "sets",
+      "protein",
+      "collection"
+     ]
+    },
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.5442,
+     "terms": [
+      "self",
+      "sequence",
+      "collection",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2020-01-01_devlin-2020-nature-chemical-biology-stru",
+     "sim": 0.5362,
+     "terms": [
+      "neoepitope",
+      "self",
+      "sequence",
+      "collection"
+     ]
+    },
+    {
+     "id": "2021-01-01_johnson-2021-ieee-transactions-on-big-da",
+     "sim": 0.4983,
+     "terms": [
+      "search",
+      "sets",
+      "scale",
+      "collection"
+     ]
+    },
+    {
+     "id": "2019-01-01_richman-2019-cell-systems-neoantigen-dis",
+     "sim": 0.4768,
+     "terms": [
+      "proteome",
+      "self",
+      "neoepitope",
+      "protein"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.4097,
+     "terms": [
+      "tcrs",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2016-01-01_raman-2016-scientific-reports-direct-mol",
+     "sim": 0.3895,
+     "terms": [
+      "engineered",
+      "engineered tcrs",
+      "tcrs",
+      "used"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_sultan-2024-nature-neoantigen-specific-c": {
+   "xy": [
+    0.46956,
+    0.88732
+   ],
+   "near": [
+    {
+     "id": "2015-01-01_kreiter-2015-nature-mutant-mhc-class-ii",
+     "sim": 0.754,
+     "terms": [
+      "ii",
+      "class ii",
+      "vaccine",
+      "finding"
+     ]
+    },
+    {
+     "id": "2016-01-01_roche-2016-microbiology-spectrum-antigen",
+     "sim": 0.589,
+     "terms": [
+      "treats",
+      "class ii",
+      "vaccine",
+      "ii"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.4908,
+     "terms": [
+      "ii",
+      "class ii",
+      "difference",
+      "class"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.4883,
+     "terms": [
+      "vaccine",
+      "vaccines",
+      "neoantigen",
+      "antigen"
+     ]
+    },
+    {
+     "id": "2021-01-01_sharma-2021-wires-data-mining-and-knowle",
+     "sim": 0.4686,
+     "terms": [
+      "design",
+      "vaccine",
+      "collection",
+      "specific"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.4659,
+     "terms": [
+      "work collection",
+      "vaccine",
+      "neoantigen",
+      "work"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.4534,
+     "terms": [
+      "neoantigen specific",
+      "vaccine",
+      "neoantigen",
+      "work"
+     ]
+    },
+    {
+     "id": "2024-01-01_li-2024-science-translational-medicine-s",
+     "sim": 0.4453,
+     "terms": [
+      "low",
+      "cancer immunotherapy",
+      "work",
+      "immunotherapy"
+     ]
+    }
+   ]
+  },
+  "2014-01-01_szolek-2014-bioinformatics-optitype-prec": {
+   "xy": [
+    0.14768,
+    0.4512
+   ],
+   "near": [
+    {
+     "id": "1999-01-01_mhcsequencingconsortium-1999-nature-comp",
+     "sim": 0.6034,
+     "terms": [
+      "typing",
+      "hla typing",
+      "sequencing",
+      "hla"
+     ]
+    },
+    {
+     "id": "2026-01-01_xing-2026-jhep-reports-mass-spectrometry",
+     "sim": 0.4431,
+     "terms": [
+      "sequencing",
+      "search",
+      "cost",
+      "reference"
+     ]
+    },
+    {
+     "id": "2019-01-01_orenbuch-2019-bioinformatics-arcashla-hi",
+     "sim": 0.4189,
+     "terms": [
+      "typing",
+      "hla typing",
+      "genotype",
+      "neoantigen pipeline"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.3297,
+     "terms": [
+      "cost",
+      "precision",
+      "pipeline"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.2688,
+     "terms": [
+      "assay",
+      "claim"
+     ]
+    },
+    {
+     "id": "2021-01-01_chong-2021-nature-biotechnology-identifi",
+     "sim": 0.2676,
+     "terms": [
+      "search",
+      "reference",
+      "problem"
+     ]
+    },
+    {
+     "id": "2017-01-01_steinegger-2017-nature-biotechnology-mms",
+     "sim": 0.2625,
+     "terms": [
+      "search",
+      "reference",
+      "matters",
+      "data"
+     ]
+    }
+   ]
+  },
+  "2025-01-01_tadros-2025-genome-medicine-predicting-m": {
+   "xy": [
+    0.34672,
+    0.3571
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.5146,
+     "terms": [
+      "alleles",
+      "ligands",
+      "predicting",
+      "specificity"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.3981,
+     "terms": [
+      "alleles",
+      "available",
+      "specificity",
+      "hla"
+     ]
+    },
+    {
+     "id": "2019-01-01_sarkizova-2019-nature-biotechnology-a-la",
+     "sim": 0.3114,
+     "terms": [
+      "alleles",
+      "human",
+      "hla"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-immunity-machine-learning-pre",
+     "sim": 0.3106,
+     "terms": [
+      "ligands",
+      "alleles",
+      "hla",
+      "binding"
+     ]
+    },
+    {
+     "id": "1999-01-01_mhcsequencingconsortium-1999-nature-comp",
+     "sim": 0.2919,
+     "terms": [
+      "human",
+      "hla",
+      "predictor",
+      "specific"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.2567,
+     "terms": [
+      "pan",
+      "ligands",
+      "predictor",
+      "binding"
+     ]
+    }
+   ]
+  },
+  "2022-01-01_taylor-2022-frontiers-in-immunology-mech": {
+   "xy": [
+    0.22704,
+    0.7089
+   ],
+   "near": [
+    {
+     "id": "1999-01-01_mhcsequencingconsortium-1999-nature-comp",
+     "sim": 0.3787,
+     "terms": [
+      "hla loss",
+      "loss",
+      "mhc",
+      "collection"
+     ]
+    },
+    {
+     "id": "2021-01-01_chong-2021-nature-biotechnology-identifi",
+     "sim": 0.3513,
+     "terms": [
+      "review",
+      "tumour specific",
+      "tumour",
+      "specific"
+     ]
+    },
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.339,
+     "terms": [
+      "tumour specific",
+      "tumour",
+      "specific",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2024-01-01_lang-2024-bioinformatics-advances-predic",
+     "sim": 0.3367,
+     "terms": [
+      "tumour specific",
+      "tumours",
+      "tumour",
+      "specific"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.3334,
+     "terms": [
+      "make",
+      "tumour",
+      "hla",
+      "specific"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.3291,
+     "terms": [
+      "tumour",
+      "immunotherapy",
+      "response",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.3122,
+     "terms": [
+      "neoantigen prediction",
+      "presented",
+      "collection",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2017-01-01_mcgranahan-2017-cell-allele-specific-hla",
+     "sim": 0.2814,
+     "terms": [
+      "tumour",
+      "hla loss",
+      "loss",
+      "neoantigen prediction"
+     ]
+    }
+   ]
+  },
+  "2022-01-01_uniprotconsortium-2022-nucleic-acids-res": {
+   "xy": [
+    0.58952,
+    0.61792
+   ],
+   "near": [
+    {
+     "id": "2019-01-01_richman-2019-cell-systems-neoantigen-dis",
+     "sim": 0.7498,
+     "terms": [
+      "self",
+      "wild type",
+      "wild",
+      "proteome"
+     ]
+    },
+    {
+     "id": "2020-01-01_devlin-2020-nature-chemical-biology-stru",
+     "sim": 0.6082,
+     "terms": [
+      "neoepitope",
+      "wild type",
+      "quality",
+      "wild"
+     ]
+    },
+    {
+     "id": "2017-01-01_steinegger-2017-nature-biotechnology-mms",
+     "sim": 0.575,
+     "terms": [
+      "self",
+      "proteome",
+      "neoepitope",
+      "protein"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.2987,
+     "terms": [
+      "protein",
+      "human",
+      "collection",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.29,
+     "terms": [
+      "counterpart",
+      "type",
+      "human",
+      "collection"
+     ]
+    },
+    {
+     "id": "2024-01-01_wan-2024-nar-cancer-a-large-scale-study",
+     "sim": 0.2768,
+     "terms": [
+      "wild type",
+      "wild",
+      "type",
+      "literature"
+     ]
+    }
+   ]
+  },
+  "2018-01-01_vita-2018-nucleic-acids-research-the-imm": {
+   "xy": [
+    0.46661,
+    0.12876
+   ],
+   "near": [
+    {
+     "id": "1999-01-01_rammensee-1999-immunogenetics-syfpeithi",
+     "sim": 0.6572,
+     "terms": [
+      "published",
+      "iedb",
+      "database"
+     ]
+    },
+    {
+     "id": "2024-01-01_vita-2024-nucleic-acids-research-the-imm",
+     "sim": 0.4865,
+     "terms": [
+      "immune epitope",
+      "update",
+      "database iedb",
+      "corpus"
+     ]
+    },
+    {
+     "id": "2025-01-01_graber-2025-nature-machine-intelligence",
+     "sim": 0.3926,
+     "terms": [
+      "published",
+      "2018",
+      "performance",
+      "training"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.2616,
+     "terms": [
+      "update",
+      "epitope",
+      "collection",
+      "epitopes"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_vita-2024-nucleic-acids-research-the-imm": {
+   "xy": [
+    0.38466,
+    0.12114
+   ],
+   "near": [
+    {
+     "id": "2018-01-01_vita-2018-nucleic-acids-research-the-imm",
+     "sim": 0.4865,
+     "terms": [
+      "immune epitope",
+      "update",
+      "database iedb",
+      "corpus"
+     ]
+    },
+    {
+     "id": "2025-01-01_graber-2025-nature-machine-intelligence",
+     "sim": 0.454,
+     "terms": [
+      "substantially",
+      "2018",
+      "published",
+      "performance"
+     ]
+    },
+    {
+     "id": "1999-01-01_rammensee-1999-immunogenetics-syfpeithi",
+     "sim": 0.3617,
+     "terms": [
+      "published",
+      "iedb",
+      "database"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.3307,
+     "terms": [
+      "years",
+      "update",
+      "collection"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_wan-2024-nar-cancer-a-large-scale-study": {
+   "xy": [
+    0.69455,
+    0.6079
+   ],
+   "near": [
+    {
+     "id": "2019-01-01_richman-2019-cell-systems-neoantigen-dis",
+     "sim": 0.6561,
+     "terms": [
+      "wild type",
+      "wild",
+      "type",
+      "differential agretopicity"
+     ]
+    },
+    {
+     "id": "2020-01-01_devlin-2020-nature-chemical-biology-stru",
+     "sim": 0.5344,
+     "terms": [
+      "wild type",
+      "wild",
+      "type",
+      "counterpart"
+     ]
+    },
+    {
+     "id": "2021-01-01_lang-2021-bioinformatics-neofox-annotati",
+     "sim": 0.4756,
+     "terms": [
+      "features",
+      "differential agretopicity",
+      "agretopicity",
+      "differential"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.3137,
+     "terms": [
+      "epitope",
+      "step",
+      "epitopes"
+     ]
+    },
+    {
+     "id": "2022-01-01_uniprotconsortium-2022-nucleic-acids-res",
+     "sim": 0.2768,
+     "terms": [
+      "wild type",
+      "wild",
+      "type",
+      "literature"
+     ]
+    }
+   ]
+  },
+  "2025-01-01_wang-2025-biomarker-research-computation": {
+   "xy": [
+    0.16325,
+    0.70837
+   ],
+   "near": [
+    {
+     "id": "2024-01-01_li-2024-science-translational-medicine-s",
+     "sim": 0.7129,
+     "terms": [
+      "derived",
+      "discovery",
+      "targets",
+      "mutation"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.4413,
+     "terms": [
+      "mutations",
+      "ones",
+      "mutation",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2026-01-01_ma-2026-npj-precision-oncology-inferring",
+     "sim": 0.4386,
+     "terms": [
+      "rna",
+      "clinical",
+      "neoantigen",
+      "cancer"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.3958,
+     "terms": [
+      "rna",
+      "mutations",
+      "target",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.3624,
+     "terms": [
+      "cost",
+      "mutation",
+      "neoantigen",
+      "immunotherapy"
+     ]
+    },
+    {
+     "id": "2024-01-01_lang-2024-bioinformatics-advances-predic",
+     "sim": 0.3272,
+     "terms": [
+      "mutations",
+      "discovery",
+      "tumours",
+      "mutation"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.3194,
+     "terms": [
+      "derived",
+      "clinical",
+      "useful",
+      "target"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.2891,
+     "terms": [
+      "expression",
+      "targets",
+      "target",
+      "tumour"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_weber-2024-the-lancet-individualised-neo": {
+   "xy": [
+    0.4397,
+    1.0
+   ],
+   "near": [
+    {
+     "id": "2021-01-01_hu-2021-nature-medicine-personal-neoanti",
+     "sim": 0.6813,
+     "terms": [
+      "melanoma",
+      "vaccine",
+      "vaccines",
+      "epitope"
+     ]
+    },
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.6762,
+     "terms": [
+      "vaccine",
+      "melanoma",
+      "earlier",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.6613,
+     "terms": [
+      "melanoma",
+      "update",
+      "vaccine",
+      "single"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.6501,
+     "terms": [
+      "vaccine",
+      "melanoma",
+      "vaccines",
+      "single"
+     ]
+    },
+    {
+     "id": "2018-01-01_keskin-2018-nature-neoantigen-vaccine-ge",
+     "sim": 0.6444,
+     "terms": [
+      "vaccine",
+      "neoantigen",
+      "tumour",
+      "cell"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.6402,
+     "terms": [
+      "neoantigen",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2025-01-01_sethna-2025-nature-rna-neoantigen-vaccin",
+     "sim": 0.5762,
+     "terms": [
+      "vaccine",
+      "vaccines",
+      "single",
+      "evidence"
+     ]
+    },
+    {
+     "id": "2015-01-01_kreiter-2015-nature-mutant-mhc-class-ii",
+     "sim": 0.5406,
+     "terms": [
+      "vaccine",
+      "epitopes",
+      "neoantigen"
+     ]
+    }
+   ]
+  },
+  "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap": {
+   "xy": [
+    0.93454,
+    0.67343
+   ],
+   "near": [
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.6456,
+     "terms": [
+      "identification",
+      "matters",
+      "cells",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2017-01-01_sahin-2017-nature-personalized-rna-mutan",
+     "sim": 0.5721,
+     "terms": [
+      "wrong",
+      "specific",
+      "single",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.5601,
+     "terms": [
+      "tumour",
+      "cells",
+      "epitope",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.5178,
+     "terms": [
+      "cells",
+      "tumour",
+      "specific",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2017-01-01_mcgranahan-2017-cell-allele-specific-hla",
+     "sim": 0.514,
+     "terms": [
+      "immune",
+      "tumour",
+      "wrong",
+      "specific"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.5059,
+     "terms": [
+      "single",
+      "tumour",
+      "epitope",
+      "epitopes"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.4866,
+     "terms": [
+      "immune",
+      "matters",
+      "tumour",
+      "cells"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.4843,
+     "terms": [
+      "identification",
+      "case",
+      "cells",
+      "tumour"
+     ]
+    }
+   ]
+  },
+  "2020-01-01_wells-2020-cell-key-parameters-of-tumor": {
+   "xy": [
+    0.99792,
+    0.39994
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_m-ller-2023-immunity-machine-learning-me",
+     "sim": 0.5746,
+     "terms": [
+      "read",
+      "improve",
+      "rate",
+      "benchmark"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.5176,
+     "terms": [
+      "pipeline",
+      "design",
+      "single",
+      "makes"
+     ]
+    },
+    {
+     "id": "2023-01-01_li-2023-briefings-in-bioinformatics-pros",
+     "sim": 0.4828,
+     "terms": [
+      "design",
+      "makes",
+      "data",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.4644,
+     "terms": [
+      "immunogenicity",
+      "different",
+      "makes"
+     ]
+    },
+    {
+     "id": "2026-01-01_ma-2026-npj-precision-oncology-inferring",
+     "sim": 0.4586,
+     "terms": [
+      "directly",
+      "pipeline",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.4403,
+     "terms": [
+      "single",
+      "immunogenicity",
+      "cell"
+     ]
+    },
+    {
+     "id": "2019-01-01_sarkizova-2019-nature-biotechnology-a-la",
+     "sim": 0.4313,
+     "terms": [
+      "ranking",
+      "single",
+      "epitope",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.4265,
+     "terms": [
+      "single",
+      "epitope",
+      "neoantigen",
+      "prediction"
+     ]
+    }
+   ]
+  },
+  "2018-01-01_wood-2018-bmc-cancer-population-level-di": {
+   "xy": [
+    0.37029,
+    0.64776
+   ],
+   "near": [
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.4234,
+     "terms": [
+      "20",
+      "novel",
+      "papers",
+      "sequences"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.3715,
+     "terms": [
+      "patients",
+      "papers",
+      "present",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2016-01-01_jardine-2016-science-hiv-1-broadly-neutr",
+     "sim": 0.3594,
+     "terms": [
+      "neoepitope",
+      "papers",
+      "vaccines",
+      "cell"
+     ]
+    },
+    {
+     "id": "2023-01-01_albert-2023-nature-machine-intelligence",
+     "sim": 0.359,
+     "terms": [
+      "neoepitope",
+      "neoepitopes",
+      "candidates",
+      "ranking"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.34,
+     "terms": [
+      "novel",
+      "papers",
+      "candidates",
+      "single"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.3063,
+     "terms": [
+      "predicted",
+      "patients",
+      "seen",
+      "cancer"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.2849,
+     "terms": [
+      "patients",
+      "level",
+      "hla",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2020-01-01_devlin-2020-nature-chemical-biology-stru",
+     "sim": 0.2731,
+     "terms": [
+      "neoepitope",
+      "distinguishes",
+      "affinity",
+      "binding"
+     ]
+    }
+   ]
+  },
+  "2022-01-01_wu-2022-genomics-proteomics-bioinformati": {
+   "xy": [
+    0.41673,
+    0.18395
+   ],
+   "near": [
+    {
+     "id": "2021-01-01_chong-2021-nature-biotechnology-identifi",
+     "sim": 0.5024,
+     "terms": [
+      "positive",
+      "identification",
+      "database",
+      "tumor"
+     ]
+    },
+    {
+     "id": "2020-01-01_hundal-2020-cancer-immunology-research-p",
+     "sim": 0.4303,
+     "terms": [
+      "classes",
+      "rest",
+      "coverage",
+      "single"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.3782,
+     "terms": [
+      "different",
+      "neoantigen",
+      "single",
+      "evidence"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.3667,
+     "terms": [
+      "feature",
+      "different",
+      "level",
+      "mutation"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.3216,
+     "terms": [
+      "set",
+      "identification",
+      "mutation",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.2863,
+     "terms": [
+      "identification",
+      "tumor",
+      "neoantigen",
+      "large"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.2821,
+     "terms": [
+      "identification",
+      "single",
+      "neoantigen",
+      "specific"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.269,
+     "terms": [
+      "different",
+      "tumor",
+      "neoantigen",
+      "single"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_xia-2024-genome-medicine-pvacview-an-int": {
+   "xy": [
+    0.20017,
+    0.51297
+   ],
+   "near": [
+    {
+     "id": "2026-01-01_ma-2026-npj-precision-oncology-inferring",
+     "sim": 0.3204,
+     "terms": [
+      "clinical",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.3199,
+     "terms": [
+      "selection",
+      "step",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2022-01-01_hanada-2022-cancer-cell-a-phenotypic-sig",
+     "sim": 0.3149,
+     "terms": [
+      "usual",
+      "problem",
+      "human",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.2987,
+     "terms": [
+      "clinical",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2016-01-01_jardine-2016-science-hiv-1-broadly-neutr",
+     "sim": 0.291,
+     "terms": [
+      "neoantigen",
+      "selection",
+      "problem"
+     ]
+    },
+    {
+     "id": "2005-01-01_nielsen-2005-immunogenetics-the-role-of",
+     "sim": 0.2864,
+     "terms": [
+      "step",
+      "predictions"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.2821,
+     "terms": [
+      "neoantigen",
+      "step",
+      "selection",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.2764,
+     "terms": [
+      "clinical",
+      "neoantigen",
+      "peptide"
+     ]
+    }
+   ]
+  },
+  "2013-01-01_xing-2013-proceedings-of-the-national-ac": {
+   "xy": [
+    0.54594,
+    0.68138
+   ],
+   "near": [
+    {
+     "id": "2016-01-01_jardine-2016-science-hiv-1-broadly-neutr",
+     "sim": 0.6068,
+     "terms": [
+      "repertoire",
+      "selection",
+      "thymic",
+      "collection"
+     ]
+    },
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.4547,
+     "terms": [
+      "weak",
+      "deleted",
+      "argument",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2021-01-01_koncz-2021-proceedings-of-the-national-a",
+     "sim": 0.4335,
+     "terms": [
+      "positive selection",
+      "positive",
+      "selection",
+      "ctec"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.3921,
+     "terms": [
+      "selection",
+      "peptide",
+      "collection",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2022-01-01_kubiniok-2022-iscience-understanding-the",
+     "sim": 0.2941,
+     "terms": [
+      "strong",
+      "selection",
+      "peptides",
+      "mhc"
+     ]
+    },
+    {
+     "id": "2017-01-01_ott-2017-nature-an-immunogenic-personal",
+     "sim": 0.2557,
+     "terms": [
+      "deleted",
+      "self",
+      "collection",
+      "peptide"
+     ]
+    }
+   ]
+  },
+  "2026-01-01_xing-2026-jhep-reports-mass-spectrometry": {
+   "xy": [
+    1.0,
+    0.53046
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.5175,
+     "terms": [
+      "cost",
+      "based",
+      "neoantigens",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2020-01-01_malkov-2020-ieee-transactions-on-pattern",
+     "sim": 0.4817,
+     "terms": [
+      "search",
+      "based",
+      "models"
+     ]
+    },
+    {
+     "id": "2021-01-01_johnson-2021-ieee-transactions-on-big-da",
+     "sim": 0.4608,
+     "terms": [
+      "search",
+      "directly",
+      "based",
+      "models"
+     ]
+    },
+    {
+     "id": "2020-01-01_devlin-2020-nature-chemical-biology-stru",
+     "sim": 0.4524,
+     "terms": [
+      "invisible",
+      "cost",
+      "based"
+     ]
+    },
+    {
+     "id": "2014-01-01_szolek-2014-bioinformatics-optitype-prec",
+     "sim": 0.4431,
+     "terms": [
+      "sequencing",
+      "search",
+      "cost",
+      "reference"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.4369,
+     "terms": [
+      "based",
+      "predicted",
+      "neoantigens",
+      "matters"
+     ]
+    },
+    {
+     "id": "1999-01-01_mhcsequencingconsortium-1999-nature-comp",
+     "sim": 0.4351,
+     "terms": [
+      "sequencing",
+      "reference"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.4088,
+     "terms": [
+      "peptides"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_xu-2024-nature-communications-immuneapp": {
+   "xy": [
+    0.66428,
+    0.16748
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_albert-2023-nature-machine-intelligence",
+     "sim": 0.6277,
+     "terms": [
+      "presentation",
+      "data",
+      "labels",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2019-01-01_sarkizova-2019-nature-biotechnology-a-la",
+     "sim": 0.6025,
+     "terms": [
+      "allele",
+      "observed",
+      "deconvolution",
+      "allelic"
+     ]
+    },
+    {
+     "id": "2020-01-01_reynisson-2020-nucleic-acids-research-ne",
+     "sim": 0.6002,
+     "terms": [
+      "allele",
+      "deconvolution",
+      "presentation",
+      "data"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3888,
+     "terms": [
+      "observed",
+      "allele",
+      "contribution",
+      "presentation"
+     ]
+    },
+    {
+     "id": "2023-01-01_deng-2023-briefings-in-bioinformatics-ie",
+     "sim": 0.3089,
+     "terms": [
+      "presentation",
+      "immunogenicity",
+      "epitope",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2009-01-01_rock-2009-the-journal-of-immunology-prot",
+     "sim": 0.2752,
+     "terms": [
+      "presentation"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.2741,
+     "terms": [
+      "allele",
+      "training data",
+      "data",
+      "training"
+     ]
+    }
+   ]
+  },
+  "2022-01-01_you-2022-bioinformatics-deepmhcii-a-nove": {
+   "xy": [
+    0.41826,
+    0.47528
+   ],
+   "near": [
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.5858,
+     "terms": [
+      "ii",
+      "core",
+      "class",
+      "identification"
+     ]
+    },
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.5457,
+     "terms": [
+      "groove",
+      "length",
+      "novel",
+      "binding"
+     ]
+    },
+    {
+     "id": "2023-01-01_qu-2023-bioinformatics-deepmhci-an-ancho",
+     "sim": 0.4463,
+     "terms": [
+      "aware deep",
+      "pseudo",
+      "pseudo sequence",
+      "peptide binding"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-immunity-machine-learning-pre",
+     "sim": 0.4051,
+     "terms": [
+      "ii",
+      "class",
+      "groove",
+      "binding"
+     ]
+    },
+    {
+     "id": "2023-01-01_zhang-2023-computers-in-biology-and-medi",
+     "sim": 0.3921,
+     "terms": [
+      "groove",
+      "binding",
+      "prediction",
+      "mhc"
+     ]
+    },
+    {
+     "id": "2025-01-01_graber-2025-nature-machine-intelligence",
+     "sim": 0.3758,
+     "terms": [
+      "affinity prediction",
+      "affinity",
+      "generalisation",
+      "binding"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.342,
+     "terms": [
+      "class",
+      "length",
+      "binding",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.3254,
+     "terms": [
+      "ii",
+      "mhc ii",
+      "mhc",
+      "allele"
+     ]
+    }
+   ]
+  },
+  "2026-01-01_yuan-2026-research-epimii-structure-awar": {
+   "xy": [
+    0.35254,
+    0.46467
+   ],
+   "near": [
+    {
+     "id": "2023-01-01_racle-2023-unknown-how-to-predict-bindin",
+     "sim": 0.5642,
+     "terms": [
+      "alleles",
+      "mhc ii",
+      "ii",
+      "training data"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-immunity-machine-learning-pre",
+     "sim": 0.3617,
+     "terms": [
+      "ii",
+      "direction",
+      "alleles",
+      "mhc ii"
+     ]
+    },
+    {
+     "id": "2025-01-01_graber-2025-nature-machine-intelligence",
+     "sim": 0.3248,
+     "terms": [
+      "failure",
+      "generalisation",
+      "performance",
+      "training"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.2627,
+     "terms": [
+      "failure",
+      "unseen",
+      "structure",
+      "epitope"
+     ]
+    },
+    {
+     "id": "2025-01-01_zhu-2025-communications-biology-structur",
+     "sim": 0.2579,
+     "terms": [
+      "structure",
+      "sequence",
+      "makes",
+      "hla"
+     ]
+    }
+   ]
+  },
+  "2023-01-01_zhang-2023-computers-in-biology-and-medi": {
+   "xy": [
+    0.09604,
+    0.37946
+   ],
+   "near": [
+    {
+     "id": "2024-01-01_al-okaily-2024-journal-of-immunological",
+     "sim": 0.5955,
+     "terms": [
+      "step",
+      "groove",
+      "binding",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.5568,
+     "terms": [
+      "peptides",
+      "pipeline",
+      "collection",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2026-01-01_xing-2026-jhep-reports-mass-spectrometry",
+     "sim": 0.5175,
+     "terms": [
+      "cost",
+      "based",
+      "neoantigens",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2023-01-01_li-2023-nature-communications-crystal-st",
+     "sim": 0.506,
+     "terms": [
+      "groove",
+      "peptide",
+      "mhc",
+      "binding"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.4988,
+     "terms": [
+      "tumor",
+      "peptide",
+      "binding",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2020-01-01_devlin-2020-nature-chemical-biology-stru",
+     "sim": 0.4864,
+     "terms": [
+      "based",
+      "cost",
+      "binding",
+      "peptide"
+     ]
+    },
+    {
+     "id": "1995-01-01_rammensee-1995-current-opinion-in-immuno",
+     "sim": 0.484,
+     "terms": [
+      "peptides",
+      "binding",
+      "mhc"
+     ]
+    },
+    {
+     "id": "2023-01-01_racle-2023-immunity-machine-learning-pre",
+     "sim": 0.4454,
+     "terms": [
+      "binding",
+      "groove",
+      "prediction",
+      "mhc"
+     ]
+    }
+   ]
+  },
+  "2024-01-01_zhang-2024-briefings-in-bioinformatics-c": {
+   "xy": [
+    0.59968,
+    0.25144
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.3396,
+     "terms": [
+      "derived",
+      "idea",
+      "amino",
+      "structure"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.2735,
+     "terms": [
+      "datasets",
+      "learning",
+      "data",
+      "prediction"
+     ]
+    }
+   ]
+  },
+  "2026-01-01_zhang-2026-cell-genomics-cross-task-inte": {
+   "xy": [
+    0.23203,
+    0.60444
+   ],
+   "near": [
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.3673,
+     "terms": [
+      "positives",
+      "benchmark",
+      "bias",
+      "neoantigen prediction"
+     ]
+    },
+    {
+     "id": "2025-01-01_graber-2025-nature-machine-intelligence",
+     "sim": 0.3315,
+     "terms": [
+      "models",
+      "benchmark",
+      "bias",
+      "training"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.2671,
+     "terms": [
+      "make",
+      "peptide",
+      "hla",
+      "training"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.2546,
+     "terms": [
+      "hla",
+      "cross",
+      "authors",
+      "peptide"
+     ]
+    }
+   ]
+  },
+  "2003-01-01_zhao-2003-bioinformatics-application-of": {
+   "xy": [
+    0.84501,
+    0.82631
+   ],
+   "near": [
+    {
+     "id": "2024-01-01_niu-2024-briefings-in-bioinformatics-att",
+     "sim": 0.5708,
+     "terms": [
+      "long",
+      "recognition",
+      "receptor",
+      "second"
+     ]
+    },
+    {
+     "id": "2024-01-01_benhamza-2024-blood-virus-reactive-t-cel",
+     "sim": 0.5373,
+     "terms": [
+      "long",
+      "mimicry",
+      "cross reactivity",
+      "reactivity"
+     ]
+    },
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.5358,
+     "terms": [
+      "cross",
+      "cross reactivity",
+      "reactivity",
+      "cell"
+     ]
+    },
+    {
+     "id": "2016-01-01_raman-2016-scientific-reports-direct-mol",
+     "sim": 0.5288,
+     "terms": [
+      "cross",
+      "engineered",
+      "mimicry",
+      "cross reactivity"
+     ]
+    },
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.4926,
+     "terms": [
+      "recognition",
+      "cell"
+     ]
+    },
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.4763,
+     "terms": [
+      "worth",
+      "specific",
+      "prediction"
+     ]
+    },
+    {
+     "id": "2023-01-01_deng-2023-briefings-in-bioinformatics-ie",
+     "sim": 0.4529,
+     "terms": [
+      "recognition",
+      "tcr",
+      "prediction"
+     ]
+    },
+    {
+     "id": "1995-01-01_almagro-1995-protein-science-molecular-m",
+     "sim": 0.4491,
+     "terms": [
+      "receptor",
+      "recognition",
+      "cell",
+      "cross"
+     ]
+    }
+   ]
+  },
+  "2018-01-01_zhao-2018-plos-computational-biology-sys": {
+   "xy": [
+    0.82288,
+    0.30957
+   ],
+   "near": [
+    {
+     "id": "2004-01-01_bhasin-2004-vaccine-prediction-of-ctl-ep",
+     "sim": 0.5721,
+     "terms": [
+      "binders",
+      "non",
+      "binding",
+      "methods"
+     ]
+    },
+    {
+     "id": "2002-01-01_ke-mir-2002-protein-engineering-design-a",
+     "sim": 0.3655,
+     "terms": [
+      "binding",
+      "mhc binding",
+      "design",
+      "matters"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3227,
+     "terms": [
+      "binders",
+      "binding",
+      "affinity",
+      "ligands"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.2946,
+     "terms": [
+      "binding assays",
+      "assays",
+      "binding",
+      "paper"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.2741,
+     "terms": [
+      "binding assays",
+      "assays",
+      "candidates",
+      "binding"
+     ]
+    },
+    {
+     "id": "2021-01-01_weeder-2021-bioinformatics-pepsickle-rap",
+     "sim": 0.2623,
+     "terms": [
+      "systematically",
+      "actually",
+      "matters",
+      "epitopes"
+     ]
+    },
+    {
+     "id": "2015-01-01_chowell-2015-proceedings-of-the-national",
+     "sim": 0.255,
+     "terms": [
+      "binders",
+      "binding",
+      "predictors trained",
+      "mhc binding"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.2548,
+     "terms": [
+      "tested",
+      "pipelines",
+      "ranking",
+      "design"
+     ]
+    }
+   ]
+  },
+  "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr": {
+   "xy": [
+    0.59834,
+    0.96526
+   ],
+   "near": [
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.6055,
+     "terms": [
+      "cells",
+      "reactive",
+      "neoantigen",
+      "tumour"
+     ]
+    },
+    {
+     "id": "2022-01-01_hanada-2022-cancer-cell-a-phenotypic-sig",
+     "sim": 0.5905,
+     "terms": [
+      "reactive",
+      "cells",
+      "useful",
+      "human"
+     ]
+    },
+    {
+     "id": "2026-01-01_khattak-2026-journal-of-clinical-oncolog",
+     "sim": 0.5765,
+     "terms": [
+      "melanoma",
+      "papers",
+      "high",
+      "result"
+     ]
+    },
+    {
+     "id": "2021-01-01_hu-2021-nature-medicine-personal-neoanti",
+     "sim": 0.5727,
+     "terms": [
+      "melanoma",
+      "did",
+      "tumour",
+      "does"
+     ]
+    },
+    {
+     "id": "2020-01-01_ott-2020-cell-a-phase-ib-trial-of-person",
+     "sim": 0.5714,
+     "terms": [
+      "tumour",
+      "melanoma",
+      "neoantigen",
+      "used"
+     ]
+    },
+    {
+     "id": "2016-01-01_jardine-2016-science-hiv-1-broadly-neutr",
+     "sim": 0.5666,
+     "terms": [
+      "neoantigen",
+      "papers",
+      "cells",
+      "collection"
+     ]
+    },
+    {
+     "id": "2026-01-01_ma-2026-npj-precision-oncology-inferring",
+     "sim": 0.5653,
+     "terms": [
+      "neoantigen",
+      "used"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.5425,
+     "terms": [
+      "neoantigen",
+      "mutation",
+      "cells",
+      "tumour"
+     ]
+    }
+   ]
+  },
+  "2025-01-01_zhu-2025-communications-biology-structur": {
+   "xy": [
+    0.97841,
+    0.31105
+   ],
+   "near": [
+    {
+     "id": "2021-01-01_kiesgen-2021-nature-protocols-comparativ",
+     "sim": 0.5193,
+     "terms": [
+      "targets",
+      "immunogenic",
+      "analysis",
+      "immunogenicity"
+     ]
+    },
+    {
+     "id": "2013-01-01_cameron-2013-science-translational-medic",
+     "sim": 0.4926,
+     "terms": [
+      "presented",
+      "analysis",
+      "makes",
+      "hla"
+     ]
+    },
+    {
+     "id": "2020-01-01_moris-2020-briefings-in-bioinformatics-c",
+     "sim": 0.4852,
+     "terms": [
+      "different",
+      "structure",
+      "tcr"
+     ]
+    },
+    {
+     "id": "2020-01-01_wells-2020-cell-key-parameters-of-tumor",
+     "sim": 0.4644,
+     "terms": [
+      "immunogenicity",
+      "different",
+      "makes"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.425,
+     "terms": [
+      "hla"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.4053,
+     "terms": [
+      "presented",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2020-01-01_o-donnell-2020-cell-systems-mhcflurry-2",
+     "sim": 0.3963,
+     "terms": [
+      "presented",
+      "sequence",
+      "makes",
+      "peptides"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.3943,
+     "terms": [
+      "mutation",
+      "mutations"
+     ]
+    }
+   ]
+  },
+  "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m": {
+   "xy": [
+    0.05681,
+    0.77759
+   ],
+   "near": [
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.5315,
+     "terms": [
+      "antigens",
+      "recognition",
+      "cell",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.5284,
+     "terms": [
+      "quality",
+      "mutation",
+      "neoantigen",
+      "predicted"
+     ]
+    },
+    {
+     "id": "2018-01-01_bulik-sullivan-2018-nature-biotechnology",
+     "sim": 0.5192,
+     "terms": [
+      "using",
+      "neoantigen",
+      "tumour",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2004-01-01_hanada-2004-nature-immune-recognition-of",
+     "sim": 0.5067,
+     "terms": [
+      "recognition",
+      "immune",
+      "neoantigen",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2024-01-01_weber-2024-the-lancet-individualised-neo",
+     "sim": 0.4996,
+     "terms": [
+      "neoantigen",
+      "tumour",
+      "recognition",
+      "cell"
+     ]
+    },
+    {
+     "id": "2003-01-01_zhao-2003-bioinformatics-application-of",
+     "sim": 0.4926,
+     "terms": [
+      "recognition",
+      "cell"
+     ]
+    },
+    {
+     "id": "2022-01-01_lowery-2022-science-molecular-signatures",
+     "sim": 0.4876,
+     "terms": [
+      "neoantigen",
+      "tumour",
+      "tcrs"
+     ]
+    },
+    {
+     "id": "2025-01-01_jin-2025-cancer-letters-driver-mutation",
+     "sim": 0.4781,
+     "terms": [
+      "asks",
+      "antigens",
+      "neoantigen",
+      "mutation"
+     ]
+    }
+   ]
+  },
+  "2022-01-01_uksza-2022-nature-neoantigen-quality-pre": {
+   "xy": [
+    0.64223,
+    0.73739
+   ],
+   "near": [
+    {
+     "id": "2017-01-01_uksza-2017-nature-a-neoantigen-fitness-m",
+     "sim": 0.4293,
+     "terms": [
+      "quality",
+      "predicts",
+      "model",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2015-01-01_nelson-2015-immunity-t-cell-receptor-cro",
+     "sim": 0.3953,
+     "terms": [
+      "cross reactivity",
+      "self peptide",
+      "reactivity",
+      "cell"
+     ]
+    },
+    {
+     "id": "2019-01-01_richman-2019-cell-systems-neoantigen-dis",
+     "sim": 0.3742,
+     "terms": [
+      "quality",
+      "predicts",
+      "mutant",
+      "high"
+     ]
+    },
+    {
+     "id": "2017-01-01_pancreaticcancergenomeinitiative-2017-na",
+     "sim": 0.3601,
+     "terms": [
+      "quality",
+      "pancreatic cancer",
+      "pancreatic",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2024-01-01_finnigan-2024-nature-communications-stru",
+     "sim": 0.3382,
+     "terms": [
+      "discrimination",
+      "specific tcrs",
+      "derives",
+      "peptide derives"
+     ]
+    },
+    {
+     "id": "1993-01-01_androlewicz-1993-proceedings-of-the-nati",
+     "sim": 0.3377,
+     "terms": [
+      "separates",
+      "mutant",
+      "cell",
+      "peptide"
+     ]
+    },
+    {
+     "id": "2022-01-01_zheng-2022-cancer-cell-transcriptomic-pr",
+     "sim": 0.3334,
+     "terms": [
+      "high",
+      "low",
+      "useful",
+      "neoantigen"
+     ]
+    },
+    {
+     "id": "2003-01-01_zhao-2003-bioinformatics-application-of",
+     "sim": 0.2953,
+     "terms": [
+      "cross reactivity",
+      "reactivity",
+      "cell",
+      "cross"
+     ]
+    }
+   ]
+  }
+ }
+}
