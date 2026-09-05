@@ -62,6 +62,11 @@
     </div>
     <p class="hint">Searches titles, full author lists, journals, abstracts, summaries
        and key points. Press <kbd>/</kbd> to focus, <kbd>Esc</kbd> to clear.</p>
+    <!-- The reading digest: every cluster, then every paper with its summary, key
+         points and limitations. render.py copies the file into dist/ and fills this
+         in; if no digest has been generated the whole block is omitted rather than
+         shipping a dead link. -->
+    __DIGEST_LINK__
     <div id="facets"></div>
   </aside>
 

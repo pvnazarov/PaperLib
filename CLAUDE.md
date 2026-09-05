@@ -24,7 +24,8 @@ areas/<a>/ ONE COLLECTION, self-contained:
     outputs/    the literature review. THE TAXONOMY LIVES HERE, not in a config file.
     annotations/ the taxonomy spec, the review prose, the edit ledger
     data/       generated: library.json, similarity.json, bib_cache.json
-    dist/       generated: three files, works over file:// with no server
+    dist/       generated: the three files, plus the reading digest when one
+                exists. Works over file:// with no server.
     inbox/ reports/ eval/
 index/     generated: registry.json — which areas hold which bytes
 dist/      generated: the portal listing every area
@@ -98,7 +99,9 @@ data really moved rather than that somebody ran `make`.
 
 ### 2.7 The page must work from a clean directory
 
-No server, no network, no build step. `dist/` is three files and the index is
+No server, no network, no build step. `dist/` is three files — plus a copy of the
+reading digest when one exists, so the sidebar link resolves for someone handed
+the folder rather than only on the deployed site — and the index is
 **embedded** in the HTML rather than fetched, because `fetch()` is blocked over
 `file://`. No CDN, no web fonts, no analytics. The check is
 `make ui AREA=<a>` — which defaults to the `file://` URL for exactly this reason.

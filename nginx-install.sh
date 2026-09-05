@@ -168,6 +168,20 @@ location /paperlib/neoantigens/ {
         alias $REPO/areas/neoantigens/dist/;
         index index.html;
         add_header X-Robots-Tag "noindex, nofollow" always;
+
+        # The reading digest is markdown, and nginx's default map has no entry
+        # for .md -- it falls through to application/octet-stream, so clicking
+        # the sidebar link DOWNLOADS the file instead of opening it. Declaring
+        # types inside a location REPLACES the map for that location, so all
+        # four types dist/ actually contains are listed here; the PDFs are
+        # served by the separate /pdf/ block above and are unaffected.
+        types {
+                text/html       html;
+                text/css        css;
+                text/javascript js;
+                text/plain      md;
+        }
+        charset utf-8;
 }
 
 # The portal listing every area. Shortest prefix, kept last by convention

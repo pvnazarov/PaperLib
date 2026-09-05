@@ -5,7 +5,8 @@ each browsable as a static web page: by topic, author, journal, year and type, w
 a similarity map that places every paper next to the ones it resembles, and
 full-text search over titles, author lists, abstracts, summaries and key points.
 
-Each area's page is **three files** — `index.html`, `app.js`, `app.css` — that work
+Each area's page is **three files** — `index.html`, `app.js`, `app.css` — plus a
+copy of the reading digest when one has been generated, that work
 from a directory with no server, no network and no build step. No framework, no
 bundler, no CDN, no analytics.
 
@@ -40,7 +41,8 @@ areas/<area>/raw/        the source files, add-only, hashed
              outputs/<date>_literature_review.md    THE TAXONOMY LIVES HERE
                 │  make build              ──▶ data/library.json
                 │  make embed              ──▶ data/similarity.json  (this area's map)
-                │  make render             ──▶ dist/  (the three files)
+                │  make digest             ──▶ outputs/<date>_reading_digest.md
+                │  make render             ──▶ dist/  (the three files + digest)
                 ▼
       make portal  ──▶ dist/index.html     the front door, listing every area
       ./deploy.sh  ──▶ /var/www/html/paperlib/<area>/

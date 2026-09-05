@@ -94,6 +94,28 @@ def slim(lib: dict) -> dict:
     return out
 
 
+DIGEST_GLOB = "*_reading_digest.md"
+
+
+def newest_digest() -> Path | None:
+    """The newest reading digest in outputs/, or None.
+
+    Optional by design, like the map: a collection that has never run
+    `make digest` renders a page with no link rather than failing.
+    """
+    got = sorted((ROOT / "outputs").glob(DIGEST_GLOB))
+    return got[-1] if got else None
+
+
+def digest_link() -> str:
+    d = newest_digest()
+    if not d:
+        return ""
+    return ('<p class="digest"><a href="' + esc(d.name) + '">Reading digest</a> '
+            '<span>every cluster, then every paper in full &mdash; summary, key '
+            'points and limitations</span></p>')
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--pdf-base", default="pdf/",
@@ -177,6 +199,7 @@ def main() -> int:
         "__N_OWN__": str(sum(1 for p in papers if p.get("own"))),
         "__N_JOURNALS__": str(len({p["venue"] for p in papers if p.get("venue")})),
         "__N_AUTHORS_TOTAL__": str(len({a for p in papers for a in (p.get("authors") or [])})),
+        "__DIGEST_LINK__": digest_link(),
     }
     html = tpl
     for k, v in subs.items():
@@ -192,6 +215,20 @@ def main() -> int:
     (DIST / "index.html").write_text(html, encoding="utf-8")
     for name in ("app.css", "app.js"):
         shutil.copyfile(SRC / name, DIST / name)
+    # The digest is COPIED into dist/ rather than linked across to outputs/,
+    # because §2.7 requires the page to work from a clean directory over file://
+    # -- a link to ../outputs/ would resolve on the deployed site and 404 for
+    # anyone handed the folder. dist/ is therefore three files plus the digest
+    # when one exists, which is what makes the link safe to ship.
+    d = newest_digest()
+    for stale in DIST.glob(DIGEST_GLOB):
+        # Otherwise every regeneration under a new date leaves the previous one
+        # behind, and a reader handed the folder can open a digest that is not the
+        # one the page links.
+        if not d or stale.name != d.name:
+            stale.unlink()
+    if d:
+        shutil.copyfile(d, DIST / d.name)
 
     total = sum(f.stat().st_size for f in DIST.iterdir() if f.is_file())
     print(f"render: dist/index.html  {(DIST / 'index.html').stat().st_size / 1024:.0f} KB "

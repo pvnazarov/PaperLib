@@ -40,7 +40,7 @@ GITKEEP_NOTE = {
     "data": "Generated: library.json, similarity.json, bib_cache.json. Safe to delete.\n",
     "reports": "Drafts and measurements. NOTHING READS THIS DIRECTORY.\n",
     "eval": "Expectations written down BEFORE the answers are looked at.\n",
-    "dist": "Generated: the three files that are the page.\n",
+    "dist": "Generated: the three files that are the page, plus the reading digest.\n",
     "annotations": "taxonomy.json, the review prose, the edit ledger.\n",
 }
 
