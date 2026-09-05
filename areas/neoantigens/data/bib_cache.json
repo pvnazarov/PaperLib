@@ -310,6 +310,21 @@
    "registered_year": 2025,
    "source": "crossref"
   },
+  "2443495a9d48279a7b4fc321f62139be8d7880ce1b3080c6634e897764d94e1a": {
+   "authors": [
+    "Gang Liu",
+    "Jia Wang",
+    "Jia Zhu"
+   ],
+   "fetched": "2026-09-05",
+   "id": "10.63808/ghc.v2i3.498",
+   "registered_first_family": "Liu",
+   "registered_title": "Using multimodal foundational models to predict neoantigen immunogenicity and vaccine effectiveness across different tumor types",
+   "registered_type": "journal-article",
+   "registered_venue": "Global Health Care",
+   "registered_year": 2026,
+   "source": "crossref"
+  },
   "26b095cddc72a03e8dad165b9715abb8782956fda949359aac5ed4eca243fea8": {
    "authors": [
     "Brandie C. Taylor",
@@ -419,6 +434,22 @@
    "registered_type": "journal-article",
    "registered_venue": "Vaccine",
    "registered_year": 2004,
+   "source": "crossref"
+  },
+  "2ea452a32150685f95f96e61dbf82bc5ce916c00a02cd2bc31ce043be6ebf44b": {
+   "authors": [
+    "Ilja E. Shapiro",
+    "Florian Huber",
+    "Justine Michaux",
+    "Michal Bassani-Sternberg"
+   ],
+   "fetched": "2026-09-05",
+   "id": "10.1038/s41467-025-62647-4",
+   "registered_first_family": "Shapiro",
+   "registered_title": "Sensitive neoantigen discovery by real-time mutanome-guided immunopeptidomics",
+   "registered_type": "journal-article",
+   "registered_venue": "Nature Communications",
+   "registered_year": 2025,
    "source": "crossref"
   },
   "3135b9be29dbf79f094047774c9fab9e225d3b219846d6423b36a13edc698934": {
@@ -737,6 +768,44 @@
    "registered_year": 2018,
    "source": "crossref"
   },
+  "4ae15009e006333f00a406f847f84009262430731c2c0bceaf34e309355666f1": {
+   "authors": [
+    "Guanqiao Zhang",
+    "Yaqi Fu",
+    "Kevin C. Chan",
+    "Ruofan Jin",
+    "Yuxuan Yang",
+    "Lei Fu",
+    "Ruhong Zhou"
+   ],
+   "fetched": "2026-09-05",
+   "id": "10.1038/s41598-025-34618-8",
+   "registered_first_family": "Zhang",
+   "registered_title": "Multi-strategy embedded framework for neoantigen vaccine maturation",
+   "registered_type": "journal-article",
+   "registered_venue": "Scientific Reports",
+   "registered_year": 2026,
+   "source": "crossref"
+  },
+  "4b5a809a3404187318db78e7f0d362f8852582dda8aa5ab4006bc054f3a4b088": {
+   "authors": [
+    "Xinjie Hu",
+    "Xinyu Liu",
+    "Tao Wang",
+    "Xinyi Liu",
+    "Ge Yang",
+    "Peng Huang",
+    "Haodong Xu"
+   ],
+   "fetched": "2026-09-05",
+   "id": "10.1016/j.biotechadv.2026.109028",
+   "registered_first_family": "Hu",
+   "registered_title": "Generative AI-enabled neoantigen vaccine engineering: From tumor antigen discovery to personalized construct design and translational validation",
+   "registered_type": "journal-article",
+   "registered_venue": "Biotechnology Advances",
+   "registered_year": 2026,
+   "source": "crossref"
+  },
   "4cce84957ded06f5c0e257327e3ec5f07646e2f741908b6502dfb15d8cec95db": {
    "authors": [
     "Philip Bradley"
@@ -945,6 +1014,19 @@
    "registered_type": "journal-article",
    "registered_venue": "Nature",
    "registered_year": 2017,
+   "source": "crossref"
+  },
+  "5620b8f724ee4b987ce6ecb52ebe4c6543dbe2851bb09428f273df86b402da2d": {
+   "authors": [
+    "Li Shen"
+   ],
+   "fetched": "2026-09-05",
+   "id": "10.1101/2025.08.05.668750",
+   "registered_first_family": "Shen",
+   "registered_title": "AlphaGenome Enhances Personal Gene Expression Prediction but Retains Key Limitations",
+   "registered_type": "posted-content",
+   "registered_venue": null,
+   "registered_year": 2025,
    "source": "crossref"
   },
   "59529c6f581b16c6026c3f0e72f44be2316577512e630d3733f88adf34efdd56": {
@@ -1562,6 +1644,32 @@
    "registered_year": 1999,
    "source": "crossref"
   },
+  "6e7fb82323b681bc4cb3a51c9be12b937913bd9a8b26faf4b481e7f8ef9a3f36": {
+   "authors": [
+    "Jeong Yeon Kim",
+    "Jinhyeon An",
+    "Soyeon Kim",
+    "Hye-Yeong Jo",
+    "Eun Ji Lee",
+    "Minju Kim",
+    "Hongui Cha",
+    "Se-Hoon Lee",
+    "Hyun-Young Park",
+    "Sang Cheol Kim",
+    "Dae-Yeon Cho",
+    "Inkyung Shin",
+    "Suhwan Chang",
+    "Jung Kyoon Choi"
+   ],
+   "fetched": "2026-09-05",
+   "id": "10.1126/sciadv.adx8303",
+   "registered_first_family": "Kim",
+   "registered_title": "B cell–reactive neoantigens boost antitumor immunity",
+   "registered_type": "journal-article",
+   "registered_venue": "Science Advances",
+   "registered_year": 2025,
+   "source": "crossref"
+  },
   "6e8353d2c163c753256e29073242d6743f1bffbb7663d9d4acf19c47eab82dba": {
    "authors": [
     "S. Kawashima",
@@ -1956,6 +2064,28 @@
    "registered_title": "Inferring translational efficiency from transcriptomes improves noncanonical neoantigen prioritization and cancer patient stratification",
    "registered_type": "journal-article",
    "registered_venue": "npj Precision Oncology",
+   "registered_year": 2026,
+   "source": "crossref"
+  },
+  "a8b1281beb869861953d2b2b12444d1ff2b0c910e3a0c408ad0b71aff3c8ead2": {
+   "authors": [
+    "Atefeh Bakhshian",
+    "Sajjad Ghorghanlu",
+    "Fereshteh Fallah Atanaki",
+    "Elham Erfani Ezadyar",
+    "Azadeh Ashkiyan",
+    "Ali Etemadi",
+    "Babak Negahdari",
+    "Kaveh Kavousi",
+    "Gholamali Kardar",
+    "Mohammadali Mazloomi"
+   ],
+   "fetched": "2026-09-05",
+   "id": "10.1186/s12967-026-08535-x",
+   "registered_first_family": "Bakhshian",
+   "registered_title": "AI-driven neoantigen identification: a comprehensive review from somatic variant calling to T cell recognition",
+   "registered_type": "journal-article",
+   "registered_venue": "Journal of Translational Medicine",
    "registered_year": 2026,
    "source": "crossref"
   },
@@ -2473,6 +2603,23 @@
    "registered_year": 1993,
    "source": "crossref"
   },
+  "ca4c719074d0df86c79d21b6d826ffd2646e765c5346b098e72459eb201b4d7a": {
+   "authors": [
+    "Petar Brlek",
+    "Jan Kolić",
+    "Luka Bulić",
+    "Vedrana Škaro",
+    "Dragan Primorac"
+   ],
+   "fetched": "2026-09-05",
+   "id": "10.3389/fgene.2026.1875066",
+   "registered_first_family": "Brlek",
+   "registered_title": "Artificial intelligence in peptide cancer vaccine design: from neoantigen discovery to immunogenicity prediction",
+   "registered_type": "journal-article",
+   "registered_venue": "Frontiers in Genetics",
+   "registered_year": 2026,
+   "source": "crossref"
+  },
   "cd8f5ffd4170a65ced2b91790a5376172771323eda0e341ca37b41c6d2d56143": {
    "authors": [
     "Weilong Zhao",
@@ -2743,6 +2890,32 @@
    "registered_type": "journal-article",
    "registered_venue": "PLOS Computational Biology",
    "registered_year": 2024,
+   "source": "crossref"
+  },
+  "dc0f42dffd6f17029ab648854396e3fed2afc1b7d2914527b4e0ba2042c46c4d": {
+   "authors": [
+    "Jeong Yeon Kim",
+    "Jinhyeon An",
+    "Soyeon Kim",
+    "Hye-Yeong Jo",
+    "Eun Ji Lee",
+    "Minju Kim",
+    "Hongui Cha",
+    "Se-Hoon Lee",
+    "Hyun-Young Park",
+    "Sang Cheol Kim",
+    "Dae-Yeon Cho",
+    "Inkyung Shin",
+    "Suhwan Chang",
+    "Jung Kyoon Choi"
+   ],
+   "fetched": "2026-09-05",
+   "id": "10.1126/sciadv.adx8303",
+   "registered_first_family": "Kim",
+   "registered_title": "B cell–reactive neoantigens boost antitumor immunity",
+   "registered_type": "journal-article",
+   "registered_venue": "Science Advances",
+   "registered_year": 2025,
    "source": "crossref"
   },
   "dc4a46a8cc631307414b11a67a799dc0076b2fd086219c4e9af8a373bb32625a": {

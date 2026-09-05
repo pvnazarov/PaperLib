@@ -1,51 +1,61 @@
-  PASS  MUST   coverage          117 assigned of 117 sources; unfiled=0
-  PASS  MUST   declared          0 undeclared topic(s) used
+  PASS  MUST   coverage          125 assigned of 125; unfiled=0
+  PASS  MUST   declared          all topics declared
   PASS  MUST   part_name_match   0 mismatch(es)
-  PASS  MUST   no_orphan_topic   orphans: none
-  PASS  MUST   batch1_stability  0 of 60 batch-1 papers changed topic (limit 15); 2 renames applied first: ['Thymic selection and repertoire availability', 'MHC class II presentation and CD4 responses']
-  PASS  MUST   no_giant_topic    topics over 15: none
-  PASS  SHOULD min_topic_size    under 3: [('HLA genotyping', 2)]; description declares narrowness: ['HLA genotyping']
-  PASS  SHOULD part_balance      largest part holds 24%
-  PASS  SHOULD topic_count       18 topics
-  n/a   SHOULD cohesion          NOT MEASURED - diagnostic only, and circular by the file's own statement
-  n/a   SHOULD seam_declared     verified by reading the review prose, not by this script
+  PASS  MUST   no_orphan_topic   none
+  PASS  MUST   batch1_stability  1 of 117 previously-filed papers moved (limit 15); Yuan: MHC class II presentation and CD4 responses -> Generative design of epitopes and vaccines
+  PASS  MUST   no_giant_topic    over 15: none
+  PASS  SHOULD min_topic_size    under 3: [('HLA genotyping', 2)] (narrowness declared: ['HLA genotyping'])
+  PASS  SHOULD part_balance      largest part 24%
+  PASS  SHOULD topic_count       19 topics
+  n/a   SHOULD cohesion          NOT MEASURED - circular by the criteria file's own statement
+  n/a   SHOULD seam_declared     verified by reading the review prose
 
 9 passed, 0 failed, 2 not measured
 
+(previous assignment read from git HEAD: 117 papers)
+
 ---
-Criteria: eval/reclustering.json, written 2026-09-05 before any candidate taxonomy
-for the 117-paper collection existed, and before the 57 batch-2 papers were read.
+Criteria: eval/reclustering.json, written before any candidate taxonomy existed.
+Scored by scripts-free harness reading the PREVIOUS taxonomy from git HEAD.
 
-NOTES ON THE PASSES, because a bare PASS overstates two of them:
+A CORRECTION TO THIS REPORT'S OWN EARLIER VERSION.
 
-  min_topic_size  passed ONLY through the exception the criterion allows. "HLA
-                  genotyping" holds 2 papers, below the stated floor of 3. It is
-                  kept because the subject is genuinely narrow and the topic
-                  description says so, which is what the SHOULD permits -- but it
-                  is a use of an escape clause, not a clean pass, and the next
-                  revision should either grow it or fold it into MHC class I.
+The first version of this score, written for the 117-paper revision, reported
+"batch1_stability: 0 of 60 batch-1 papers changed topic" as a PASS. That check
+was VACUOUS. It read the previous assignment by parsing the installed literature
+review with a regex meant to catch topic headings; the regex matched each paper's
+own citation line instead, so it believed the review contained 117 distinct
+"topics", one per paper -- and none of the filenames it extracted matched the
+assignment keys, so the comparison loop ran over an empty intersection and could
+not have reported a move however many there were.
 
-  batch1_stability  passed with 0 of 60 moved, which is a stronger result than the
-                  criterion asked for. Two topics were RENAMED ("Thymic selection
-                  and self-discrimination" -> "... and repertoire availability";
-                  "MHC class II presentation" -> "... and CD4 responses") and the
-                  rename map was declared to the scorer before measuring, so those
-                  are not counted as moves. Renames are declared here so a reader
-                  can disagree with that accounting.
+The check now reads the previous taxonomy.json from git rather than parsing prose,
+and it demonstrably works: it caught the one move in this revision (Yuan 2026,
+MHC class II -> Generative design) and named it.
 
-NOT MEASURED, and why:
+The reported NUMBER was nonetheless correct. The 14-topic taxonomy was
+reconstructed from its generator, pinned to the 60 sources recorded in the edit
+ledger at seq 1-120, and compared against the committed 18-topic taxonomy: 0 of 60
+papers moved, with the two renames accounted for. So the earlier claim was true;
+the evidence offered for it was not. Both facts are recorded here because a number
+that happens to be right for the wrong reason is still a defect in the evaluation.
 
-  cohesion        The criteria file states the circularity: the vectors that would
-                  score within-topic cohesion are TF-IDF over the same summaries a
-                  reading-based clustering was drawn from. Cohesion would measure
-                  agreement with the proposer. It was declared diagnostic-only in
-                  advance and is not reported as evidence.
+NOTES ON THE PASSES:
 
-  seam_declared   Verified by reading annotations/review_prose/recluster.md, which
-                  names the papers that could defensibly sit elsewhere. Not
-                  checkable by script.
+  min_topic_size  passes ONLY through the exception the criterion allows. "HLA
+                  genotyping" holds 2 papers, below the floor of 3, kept because
+                  the subject is genuinely narrow and the description says so.
+                  Unchanged from the previous revision, and still the thing the
+                  next revision should resolve.
 
-WHAT THIS DOES NOT ESTABLISH: that the new taxonomy is better than the old one.
-It establishes that the new taxonomy satisfies constraints fixed in advance, that
-it covers 117 papers with none unfiled, and that it did not quietly re-file the
-existing collection while extending it.
+  batch1_stability  1 of 117 moved. Yuan (2026), EpiMII, moved from "MHC class II
+                  presentation and CD4 responses" to the new "Generative design of
+                  epitopes and vaccines" -- it generates epitopes, which is that
+                  topic's defining act, rather than being a class II prediction
+                  method. Declared rather than left to be noticed.
+
+NOT MEASURED: cohesion (circular by the criteria file's own advance statement) and
+seam_declared (verified by reading the review prose, not checkable by script).
+
+WHAT THIS DOES NOT ESTABLISH: that the taxonomy is better, only that it satisfies
+constraints fixed in advance and did not quietly re-file the existing collection.

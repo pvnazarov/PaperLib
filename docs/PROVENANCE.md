@@ -169,6 +169,53 @@ the losers, and a correction to a misleading number reported earlier in the same
 session -- is in `areas/neoantigens/reports/2026-09-05_embedding_slate.txt`.
 SPECTER, the pre-committed favourite, came last.
 
+## Third batch, 2026-09-05, and an ingest that had to be undone
+
+`lit3.7z`, 10 files, 8 unique papers. Two duplicate pairs, and only one of them was
+findable by bytes: `s41598-025-34618-8.pdf`/`-1.pdf` were byte-identical, while
+`2026-01-ai-cell-reactivity-neoantigens-cancer.pdf` and `sciadv.adx8303.pdf` were
+different files carrying the same DOI. The intra-run DOI guard added for batch 2
+caught the second, which the sha256 guard could not have.
+
+**But the wrong one of that pair was kept.** The ingest plans files in sorted
+order, so the news article sorted first and the real article was refused as its
+duplicate. The kept PDF was a 4-page medicalxpress.com piece ABOUT the paper -- no
+methods, no references -- carrying the Science Advances DOI only because it cites
+it. The sidecar therefore attached a correct registration to the wrong document,
+and the page would have served a news article to anyone clicking through to what
+was labelled a research paper. Found by reading the PDF to write its prose, which
+is the only step that would have caught it.
+
+Fixed with the owner's explicit approval by **breaking the add-only rule once**:
+the file and its sidecar were removed together, so no sha256 claim was orphaned
+and `make verify` still proves the collection intact, and the removal, its reason
+and its evidence are recorded in the ledger. The real 22-page article was then
+ingested under the same name.
+
+Two consequences worth carrying forward. `build.py`'s ledger reader treated an
+entry with no `sha256_after` as malformed, which a recorded removal legitimately
+is; removal entries now carry `"removed": true` and are skipped. And the ingest's
+tie-break between two files sharing a DOI is filename sort order, which is
+arbitrary -- it has no notion of which document is the paper.
+
+## The stability check was passing vacuously
+
+`batch1_stability` -- the MUST that a revision must not quietly re-file the
+existing collection -- was scored by parsing the installed review with a regex
+meant to catch topic headings. The regex matched each paper's own citation line
+instead, so the scorer believed the review held 117 distinct "topics", one per
+paper, and none of the filenames it extracted matched the assignment keys. The
+comparison ran over an empty intersection and could not have reported a move
+however many there were. It was reported as a PASS twice.
+
+The scorer now reads the previous taxonomy from git rather than parsing prose, and
+demonstrably works: it caught the single move in the 125-paper extension and named
+it. The reported numbers were nonetheless correct -- the 14-topic taxonomy was
+reconstructed from its generator, pinned to the 60 sources at ledger seq 1-120,
+and 0 of 60 had moved. A number that is right for the wrong reason is still a
+defect in the evaluation, and both facts are in
+`areas/neoantigens/reports/2026-09-05_reclustering_score.txt`.
+
 ## What was dropped, and why
 
 - **`wiki/group.md` and the All / Ours / Shared switch.** It decides which papers

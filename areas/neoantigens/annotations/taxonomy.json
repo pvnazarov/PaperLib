@@ -1,5 +1,5 @@
 {
-  "_comment": "Taxonomy for areas/neoantigens, 117 papers. Drawn by reading; criteria in eval/reclustering.json were written first.",
+  "_comment": "Taxonomy for areas/neoantigens, 125 papers. Drawn by reading; criteria in eval/reclustering.json were written before the 117-paper revision.",
   "parts": [
     {
       "letter": "A",
@@ -130,6 +130,12 @@
       "part": "E",
       "part_name": "Resources, pipelines and evaluation",
       "description": "Papers that measure how well the methods above actually work, and find the answer turns on training-set bias, train-test leakage, and whether the test peptides were ever seen."
+    },
+    {
+      "name": "Generative design of epitopes and vaccines",
+      "part": "D",
+      "part_name": "Discovery and clinical translation",
+      "description": "Methods that DESIGN a peptide or construct rather than ranking the ones a tumour happened to produce. Separated from the predictors because the task is different: exploring sequence space under constraints, not scoring a fixed candidate list."
     }
   ],
   "assignments": {
@@ -154,7 +160,7 @@
     "Rammensee(1995) Current Opinion in Immunology; Chemistry of peptides associated with MHC class I and class II molecules.pdf": "MHC class I binding and presentation",
     "Nilsson(2023) Science Advances; Accurate prediction of HLA class II antigen presentation across all loci using tailored data acquisition and refined machine learning.pdf": "MHC class II presentation and CD4 responses",
     "You(2022) Bioinformatics; DeepMHCII a novel binding core-aware deep interaction model for accurate MHC-II peptide binding affinity prediction.pdf": "MHC class II presentation and CD4 responses",
-    "Yuan(2026) Research; EpiMII Structure-Aware Graph Neural Networks for MHC-II Epitope Generation.pdf": "MHC class II presentation and CD4 responses",
+    "Yuan(2026) Research; EpiMII Structure-Aware Graph Neural Networks for MHC-II Epitope Generation.pdf": "Generative design of epitopes and vaccines",
     "Racle(2023) Immunity; Machine learning predictions of MHC-II specificities reveal alternative binding mode of class II epitopes.pdf": "MHC class II presentation and CD4 responses",
     "Racle(2023) unknown; How to predict binding specificity and ligands for new MHC-II alleles with MixMHC2pred.pdf": "MHC class II presentation and CD4 responses",
     "Kreiter(2015) Nature; Mutant MHC class II epitopes drive therapeutic immune responses to cancer.pdf": "MHC class II presentation and CD4 responses",
@@ -249,6 +255,14 @@
     "Zhang(2026) Cell Genomics; Cross-task interpretability through unified modeling reveals a universal shortcut bias in neoantigen prediction.pdf": "Benchmarking, bias and generalisation",
     "Tadros(2025) Genome Medicine; Predicting MHC-I ligands across alleles and species how far can we go.pdf": "Benchmarking, bias and generalisation",
     "Graber(2025) Nature Machine Intelligence; Resolving data bias improves generalization in binding affinity prediction.pdf": "Benchmarking, bias and generalisation",
-    "Wells(2020) Cell; Key Parameters of Tumor Epitope Immunogenicity Revealed Through a Consortium Approach Improve Neoantigen Prediction.pdf": "Benchmarking, bias and generalisation"
+    "Wells(2020) Cell; Key Parameters of Tumor Epitope Immunogenicity Revealed Through a Consortium Approach Improve Neoantigen Prediction.pdf": "Benchmarking, bias and generalisation",
+    "Bakhshian(2026) Journal of Translational Medicine; AI-driven neoantigen identification a comprehensive review from somatic variant calling to T cell recognition.pdf": "Pipelines and analysis tools",
+    "Brlek(2026) Frontiers in Genetics; Artificial intelligence in peptide cancer vaccine design from neoantigen discovery to immunogenicity prediction.pdf": "Pipelines and analysis tools",
+    "Shapiro(2025) Nature Communications; Sensitive neoantigen discovery by real-time mutanome-guided immunopeptidomics.pdf": "Pipelines and analysis tools",
+    "Kim(2025) Science Advances; B cell–reactive neoantigens boost antitumor immunity.pdf": "Immunogenicity predictors for neoepitopes",
+    "Liu(2026) Global Health Care; Using multimodal foundational models to predict neoantigen immunogenicity and vaccine effectiveness across different tumor types.pdf": "Immunogenicity predictors for neoepitopes",
+    "Shen(2025) unknown; AlphaGenome Enhances Personal Gene Expression Prediction but Retains Key Limitations.pdf": "Benchmarking, bias and generalisation",
+    "Hu(2026) Biotechnology Advances; Generative AI-enabled neoantigen vaccine engineering From tumor antigen discovery to personalized construct design and translational validation.pdf": "Generative design of epitopes and vaccines",
+    "Zhang(2026) Scientific Reports; Multi-strategy embedded framework for neoantigen vaccine maturation.pdf": "Generative design of epitopes and vaccines"
   }
 }

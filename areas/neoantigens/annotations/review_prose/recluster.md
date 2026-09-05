@@ -29,6 +29,14 @@ responses*. Four topics are new. The before-and-after measurement is in
 `reports/2026-09-05_reclustering_score.txt`, against criteria written in
 `eval/reclustering.json` before any candidate existed.
 
+**What changed in the 125-paper extension.** Eight papers were added and one topic
+created: *Generative design of epitopes and vaccines*. The batch was dominated by methods that
+DESIGN a peptide or construct rather than rank the ones a tumour produced, and the Hu (2026)
+review in it makes exactly that distinction the organising one -- discriminative models score a
+fixed candidate list, generative ones explore sequence space under constraints. Three papers sit
+there: Hu's review, Zhang (2026)'s NEOM, and Yuan (2026)'s EpiMII, which moved out of *MHC class
+II presentation* because generating epitopes is what it does. One paper moved in total.
+
 **Which criteria failed.** None failed outright, and two deserve more than a PASS. *Minimum
 topic size* passed only through the exception the criterion itself allows: **HLA genotyping
 holds 2 papers, below the stated floor of 3**, and is kept because its subject is genuinely

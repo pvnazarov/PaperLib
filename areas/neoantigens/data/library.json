@@ -24,7 +24,7 @@
     {
      "name": "MHC class II presentation and CD4 responses",
      "description": "The same problem for class II, where the groove is open at both ends, the binding core is not fixed by length, and the data are thinner - together with the evidence that CD4 responses matter more than the field long assumed.",
-     "count": 6
+     "count": 5
     },
     {
      "name": "HLA genotyping",
@@ -40,7 +40,7 @@
     {
      "name": "Immunogenicity predictors for neoepitopes",
      "description": "Models that go past presentation to ask which presented peptides a T cell responds to - the step where most predicted candidates are lost, and where the training labels are weakest.",
-     "count": 11
+     "count": 13
     },
     {
      "name": "Peptide features and neoantigen quality",
@@ -98,6 +98,11 @@
      "name": "Immunotherapy response prediction",
      "description": "Using the neoantigen landscape to say in advance who will benefit: quality- and clonality-aware scores set against tumour mutation burden.",
      "count": 3
+    },
+    {
+     "name": "Generative design of epitopes and vaccines",
+     "description": "Methods that DESIGN a peptide or construct rather than ranking the ones a tumour happened to produce. Separated from the predictors because the task is different: exploring sequence space under constraints, not scoring a fixed candidate list.",
+     "count": 3
     }
    ]
   },
@@ -113,12 +118,12 @@
     {
      "name": "Pipelines and analysis tools",
      "description": "Software that assembles the parts into something usable - end-to-end pipelines, feature toolboxes, prioritisation interfaces, reviews of the whole workflow, and the sequence-search and nearest-neighbour infrastructure underneath.",
-     "count": 9
+     "count": 12
     },
     {
      "name": "Benchmarking, bias and generalisation",
      "description": "Papers that measure how well the methods above actually work, and find the answer turns on training-set bias, train-test leakage, and whether the test peptides were ever seen.",
-     "count": 6
+     "count": 7
     }
    ]
   }
@@ -273,7 +278,7 @@
    "topic": "Predicting proteolysis, trimming and transport",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "ERAMER is a prediction model for the trimming performed by ERAP1, the ER-resident aminopeptidase that shortens precursor peptides from the N-terminus to the 8-10 residues a stable MHC-I complex requires. The authors note that although ERAP1 specificities had been reported, no in silico tool existed for the trimming step.",
    "authors": [
     "Anas Al-okaily",
     "Razan Abu Khashabeh",
@@ -334,7 +339,7 @@
    "topic": "MHC class I binding and presentation",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "BigMHC is an ensemble of seven pan-allelic deep neural networks trained on peptide-MHC eluted ligand mass spectrometry data, then transfer-learned on antigen-specific immune response assays to predict neoepitope immunogenicity. It significantly improves epitope presentation prediction over four state-of-the-art classifiers.",
    "authors": [
     "Benjamin Alexander Albert",
     "Yunxiao Yang",
@@ -453,11 +458,75 @@
    "topic": "Antigen processing and peptide supply",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Using streptolysin-O-permeabilised cells, the authors show that peptide binding to MHC class I is both TAP-dependent and ATP-dependent, and that short 8-10mer peptides known to bind class I compete efficiently for TAP-dependent translocation while longer peptides and an ER signal-sequence peptide do not.",
    "authors": [
     "M J Androlewicz",
     "K S Anderson",
     "P Cresswell"
+   ],
+   "authors_source": "crossref",
+   "file_ok": true,
+   "own": null,
+   "own_members": [],
+   "own_basis": null
+  },
+  {
+   "id": "2026-01-01_bakhshian-2026-journal-of-translational",
+   "source": "Bakhshian(2026) Journal of Translational Medicine; AI-driven neoantigen identification a comprehensive review from somatic variant calling to T cell recognition.pdf",
+   "sha256": "a8b1281beb869861953d2b2b12444d1ff2b0c910e3a0c408ad0b71aff3c8ead2",
+   "size_bytes": 7927228,
+   "media": "pdf",
+   "type": "paper",
+   "classification": "Public",
+   "year": 2026,
+   "doi": "10.1186/s12967-026-08535-x",
+   "doi_source": "sidecar",
+   "duplicate_of_area": null,
+   "area": "neoantigens",
+   "also_in_areas": [],
+   "extraction_chars": 399207,
+   "abstract": "A review of how AI has reshaped neoantigen discovery across the whole pipeline: somatic variant calling, HLA typing, peptide processing, peptide-MHC binding, presentation, and T cell recognition. It reports that models trained on eluted ligand datasets substantially outperform affinity-only predictors across diverse HLA alleles and populations.",
+   "summary": "The organising claim is that the bottleneck has not moved: high-throughput sequencing, immunopeptidomics and AI turned neoantigen discovery from bespoke experiments into scalable pipelines, but identifying the small subset of mutations that yield processed, presented and immunogenic epitopes remains where the process fails.\n\nAt 47 pages it is the most complete map in this collection of how the stages connect, and it catalogues tools stage by stage rather than surveying a single step.",
+   "key_points": [
+    "Covers the pipeline end to end, from variant calling through to TCR recognition, rather than one stage.",
+    "States plainly that eluted-ligand-trained models beat affinity-only predictors for presentation, across alleles and populations.",
+    "Cites consortium-scale benchmarking as the evidence for integrating features rather than relying on any single one.",
+    "Catalogues named tools with repositories per stage, which makes it usable as an index into the rest of this collection."
+   ],
+   "limitations": "A review, so every quantitative claim belongs to a cited study and must be traced before use. It surveys methods largely on their authors' reported terms and runs no independent benchmark, so the comparisons it relays inherit whatever train-test leakage those papers carry - a problem this collection documents in detail elsewhere. Tool catalogues date quickly.",
+   "provenance": {
+    "one_liner": "located in the published literature and deposited by the data owner in inbox/ as s12967-026-08535-x.pdf; ingested into area 'neoantigens' by scripts/ingest_inbox.py on 2026-09-05",
+    "traceable": true,
+    "join": null,
+    "events": [],
+    "sharers": []
+   },
+   "hay_drop": [],
+   "sidecar_sha256": "9aa12842a03bb1a0ea9f5a5ce7180904753a9ede5720e075b9f40fd2ec99e66f",
+   "title": "AI-driven neoantigen identification: a comprehensive review from somatic variant calling to T cell recognition",
+   "title_from_filename": false,
+   "title_source": "review",
+   "first_author": "Bakhshian, A. et al.",
+   "venue": "Journal of Translational Medicine",
+   "venue_source": "review",
+   "arxiv": null,
+   "part_letter": "E",
+   "part": "Resources, pipelines and evaluation",
+   "topic": "Pipelines and analysis tools",
+   "topic_source": "review",
+   "unfiled": false,
+   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "authors": [
+    "Atefeh Bakhshian",
+    "Sajjad Ghorghanlu",
+    "Fereshteh Fallah Atanaki",
+    "Elham Erfani Ezadyar",
+    "Azadeh Ashkiyan",
+    "Ali Etemadi",
+    "Babak Negahdari",
+    "Kaveh Kavousi",
+    "Gholamali Kardar",
+    "Mohammadali Mazloomi"
    ],
    "authors_source": "crossref",
    "file_ok": true,
@@ -584,7 +653,7 @@
    "topic": "Immunogenicity predictors for neoepitopes",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A direct CTL epitope predictor built from quantitative matrices, support vector machines and neural networks, trained on a non-redundant set including 1,137 experimentally proven MHC class I restricted T cell epitopes. Accuracies were 70.0% (QM), 72.2% (ANN) and 75.2% (SVM), with machine learning ahead of the matrix method on a blind set.",
    "authors": [
     "Manoj Bhasin",
     "G.P.S. Raghava"
@@ -712,6 +781,65 @@
    "own_basis": null
   },
   {
+   "id": "2026-01-01_brlek-2026-frontiers-in-genetics-artific",
+   "source": "Brlek(2026) Frontiers in Genetics; Artificial intelligence in peptide cancer vaccine design from neoantigen discovery to immunogenicity prediction.pdf",
+   "sha256": "ca4c719074d0df86c79d21b6d826ffd2646e765c5346b098e72459eb201b4d7a",
+   "size_bytes": 3248078,
+   "media": "pdf",
+   "type": "paper",
+   "classification": "Public",
+   "year": 2026,
+   "doi": "10.3389/fgene.2026.1875066",
+   "doi_source": "sidecar",
+   "duplicate_of_area": null,
+   "area": "neoantigens",
+   "also_in_areas": [],
+   "extraction_chars": 100998,
+   "abstract": "A mini-review of AI across the peptide cancer vaccine pipeline: neoantigen discovery, epitope prioritisation, peptide-HLA binding, antigen presentation and TCR recognition, including modern pan-allele computational frameworks.",
+   "summary": "Shorter and more focused than the other AI reviews here, and its value is that it keeps the vaccine platform in view rather than treating prediction as the whole problem.\n\nIt is unusually direct about the constraints that are not computational: short peptides are often weakly immunogenic and need adjuvants or delivery systems, tumour heterogeneity means a genetically diverse tumour may not uniformly express the target, and HLA polymorphism complicates design regardless of how good the predictor is.",
+   "key_points": [
+    "Scoped to peptide vaccines specifically, so the design constraints stay visible alongside the prediction methods.",
+    "Names three non-computational limits: weak peptide immunogenicity, tumour heterogeneity, HLA polymorphism.",
+    "Covers pan-allele frameworks, the approach that makes rare alleles addressable at all.",
+    "A compact entry point where the Bakhshian and Hu reviews here are exhaustive."
+   ],
+   "limitations": "A mini-review: brief by design, so coverage is selective and every number belongs to a cited study. It describes the pipeline without evaluating any part of it. Where it and the other two AI reviews in this batch disagree in emphasis, none of them provides the measurement that would settle it.",
+   "provenance": {
+    "one_liner": "located in the published literature and deposited by the data owner in inbox/ as fgene-17-1875066.pdf; ingested into area 'neoantigens' by scripts/ingest_inbox.py on 2026-09-05",
+    "traceable": true,
+    "join": null,
+    "events": [],
+    "sharers": []
+   },
+   "hay_drop": [],
+   "sidecar_sha256": "bb744cf05da74f533685ed8036408340f6244c819aa7f3b9d4ac4170f38f80b8",
+   "title": "Artificial intelligence in peptide cancer vaccine design: from neoantigen discovery to immunogenicity prediction",
+   "title_from_filename": false,
+   "title_source": "review",
+   "first_author": "Brlek, P. et al.",
+   "venue": "Frontiers in Genetics",
+   "venue_source": "review",
+   "arxiv": null,
+   "part_letter": "E",
+   "part": "Resources, pipelines and evaluation",
+   "topic": "Pipelines and analysis tools",
+   "topic_source": "review",
+   "unfiled": false,
+   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "authors": [
+    "Petar Brlek",
+    "Jan Kolić",
+    "Luka Bulić",
+    "Vedrana Škaro",
+    "Dragan Primorac"
+   ],
+   "authors_source": "crossref",
+   "file_ok": true,
+   "own": null,
+   "own_members": [],
+   "own_basis": null
+  },
+  {
    "id": "2018-01-01_brown-2018-oncoimmunology-neoantigen-cha",
    "source": "Brown(2018) OncoImmunology; Neoantigen characteristics in the context of the complete predicted MHC class I self-immunopeptidome.pdf",
    "sha256": "f4cd6b42b990ef48f92d1470bb98633238424f7950f515e86b3b813aca5c3882",
@@ -812,7 +940,7 @@
    "topic": "MHC class I binding and presentation",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "EDGE applies deep learning to a large HLA peptide and transcriptome dataset from 74 patients to predict neoantigen presentation, improving on binding-affinity prediction. The stated aim is to remove the need for invasive specimens, screening of thousands of synthetic peptides or tandem minigenes, and HLA-allele-restricted multimer reagents.",
    "authors": [
     "Brendan Bulik-Sullivan",
     "Jennifer Busby",
@@ -1034,7 +1162,7 @@
    "topic": "Molecular mimicry and off-target toxicity",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "An affinity-enhanced TCR against the HLA-A*01-restricted MAGE-A3 peptide EVDPIGHLY passed extensive preclinical off-target testing, then caused a serious adverse event and fatal cardiac toxicity in patients. The cross-reactive target is identified here as a Titin-derived peptide presented on cardiac tissue.",
    "authors": [
     "Brian J. Cameron",
     "Andrew B. Gerry",
@@ -1118,7 +1246,7 @@
    "topic": "Neoantigen sources beyond point mutations",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A review of mass-spectrometry immunopeptidomics for tumour antigen discovery, covering canonical antigens from protein-coding regions and, increasingly, noncanonical antigens arising from outside coding sequence or from noncanonical processing. Combined with transcriptomics and ribosome profiling it can identify thousands of noncanonical peptides, a substantial fraction detectable only in tumours.",
    "authors": [
     "Chloe Chong",
     "George Coukos",
@@ -1363,7 +1491,7 @@
    "topic": "Immunogenicity predictors for neoepitopes",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "IEPAPI uses transformer-based feature extraction for peptides and HLA-I proteins, then feeds the antigen presentation prediction into the input of the immunogenicity branch, explicitly modelling the sequence of biological steps in a T-cell response. It also reveals HLA-restricted motifs for presentation and immunogenicity separately.",
    "authors": [
     "Juntao Deng",
     "Xiao Zhou",
@@ -1423,7 +1551,7 @@
    "topic": "Peptide features and neoantigen quality",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A point mutation at a non-MHC-anchor position in an immunologically active ovarian cancer neoepitope induces structural and dynamic changes that pre-organise the peptide into the conformation optimal for its cognate TCR, allowing high-affinity binding and potent signalling. Immunogenicity here comes from structural and physical dissimilarity to self, not from changed MHC binding.",
    "authors": [
     "Jason R. Devlin",
     "Jesus A. Alonso",
@@ -1736,7 +1864,7 @@
    "topic": "Benchmarking, bias and generalisation",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Train-test leakage between PDBbind and the CASF benchmarks has severely inflated reported performance of deep-learning protein-ligand binding affinity models. The authors build PDBbind CleanSplit, a structure-based filtered training set removing leakage and internal redundancy; retraining top models on it causes their benchmark scores to drop substantially.",
    "authors": [
     "David Graber",
     "Peter Stockinger",
@@ -1796,7 +1924,7 @@
    "topic": "Neoantigen sources beyond point mutations",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "CTLs cloned from a renal cell carcinoma recognise an HLA-A3-presented nine-residue FGF-5 peptide generated by protein splicing - post-translational excision of a polypeptide segment followed by ligation of the newly liberated ends. The process had previously been described only in plants and unicellular organisms.",
    "authors": [
     "Ken-ichi Hanada",
     "Jonathan W. Yewdell",
@@ -1853,7 +1981,7 @@
    "topic": "Finding and measuring neoantigen-reactive T cells",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "CITE-seq with paired TCR-seq on T cells from fresh non-small-cell lung tumours identifies neoantigen-reactive T cells by phenotype: CD39 protein-positive, CXCL13-positive, and belonging to a high-frequency clonotype. The signature finds both CD4 and CD8 neoantigen-reactive TCRs.",
    "authors": [
     "Ken-ichi Hanada",
     "Chihao Zhao",
@@ -1924,7 +2052,7 @@
    "topic": "Neoantigen vaccines and clinical responses",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Long-term follow-up of eight melanoma patients given a personal neoantigen vaccine shows persistent memory T cell responses and epitope spreading - responses to neoepitopes that were not in the vaccine - years after immunisation.",
    "authors": [
     "Zhuting Hu",
     "Donna E. Leet",
@@ -1967,6 +2095,67 @@
     "Derin B. Keskin",
     "Catherine J. Wu",
     "Patrick A. Ott"
+   ],
+   "authors_source": "crossref",
+   "file_ok": true,
+   "own": null,
+   "own_members": [],
+   "own_basis": null
+  },
+  {
+   "id": "2026-01-01_hu-2026-biotechnology-advances-generativ",
+   "source": "Hu(2026) Biotechnology Advances; Generative AI-enabled neoantigen vaccine engineering From tumor antigen discovery to personalized construct design and translational validation.pdf",
+   "sha256": "4b5a809a3404187318db78e7f0d362f8852582dda8aa5ab4006bc054f3a4b088",
+   "size_bytes": 8327025,
+   "media": "pdf",
+   "type": "paper",
+   "classification": "Public",
+   "year": 2026,
+   "doi": "10.1016/j.biotechadv.2026.109028",
+   "doi_source": "sidecar",
+   "duplicate_of_area": null,
+   "area": "neoantigens",
+   "also_in_areas": [],
+   "extraction_chars": 183854,
+   "abstract": "A review arguing that current neoantigen pipelines are dominated by discriminative models that rank pre-existing mutant peptides on binding and presentation features, and that generative AI offers a complementary design-oriented framework: exploring and iteratively optimising sequence space under explicit constraints rather than scoring predefined candidates.",
+   "summary": "The distinction it draws is genuinely useful. Everything else in this collection ranks candidates the tumour happened to produce; a generative framework designs constructs against multiple objectives at once - presentation, recognition potential, and translational feasibility such as manufacturability.\n\nIt also insists on the boundary: generative models are components of an AI-assisted workflow, not substitutes for tumour-derived evidence. Given that the same review states peptide-MHC binding is necessary but not sufficient, and that a neoepitope also depends on expression, processing, transport, loading, stability, clonality, foreignness and productive TCR recognition, that caution is earned.",
+   "key_points": [
+    "Frames the field's methods as discriminative ranking and proposes generative design as the complement, not the replacement.",
+    "Extends optimisation to multi-epitope and mRNA construct engineering, not just peptide choice.",
+    "Incorporates tumour-specific constraints - antigen-presentation defects, clonal architecture, microenvironment state - into the design objective.",
+    "Explicitly positions generative models as components subordinate to tumour-derived evidence."
+   ],
+   "limitations": "A review of a direction rather than a report of results: it argues what generative AI may enable, and the clinical evidence for any of it is not yet in. Designed sequences are hypotheses, and this collection's own record shows that predicted binders convert to immunogenic epitopes at a low rate. Every quantitative claim belongs to a cited study.",
+   "provenance": {
+    "one_liner": "located in the published literature and deposited by the data owner in inbox/ as 1-s2.0-S073497502600234X-main.pdf; ingested into area 'neoantigens' by scripts/ingest_inbox.py on 2026-09-05",
+    "traceable": true,
+    "join": null,
+    "events": [],
+    "sharers": []
+   },
+   "hay_drop": [],
+   "sidecar_sha256": "8968b7e2aa20ec3e0b87eb67fb8c0ac8a746d448237c4ba1f48d4d2983ab0c99",
+   "title": "Generative AI-enabled neoantigen vaccine engineering: From tumor antigen discovery to personalized construct design and translational validation",
+   "title_from_filename": false,
+   "title_source": "review",
+   "first_author": "Hu, X. et al.",
+   "venue": "Biotechnology Advances",
+   "venue_source": "review",
+   "arxiv": null,
+   "part_letter": "D",
+   "part": "Discovery and clinical translation",
+   "topic": "Generative design of epitopes and vaccines",
+   "topic_source": "review",
+   "unfiled": false,
+   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "authors": [
+    "Xinjie Hu",
+    "Xinyu Liu",
+    "Tao Wang",
+    "Xinyi Liu",
+    "Ge Yang",
+    "Peng Huang",
+    "Haodong Xu"
    ],
    "authors_source": "crossref",
    "file_ok": true,
@@ -2019,7 +2208,7 @@
    "topic": "Pipelines and analysis tools",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "pVACtools is an extensible toolkit covering computational identification, selection, prioritisation and visualisation of neoantigens, taking somatic variants in VCF and handling gene fusions and insertion/deletion frameshift variants as well as missense mutations.",
    "authors": [
     "Jasreet Hundal",
     "Susanna Kiwala",
@@ -2091,7 +2280,7 @@
    "topic": "Thymic selection and repertoire availability",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A germline-targeting immunogen, eOD-GT8, is used with human B cell probing to detect naive B cell precursors of VRC01-class broadly neutralising antibodies against HIV-1. Correcting for sorting and PCR losses, the precursor frequency is calculated as roughly 1 in 400,000 naive B cells.",
    "authors": [
     "Joseph G. Jardine",
     "Daniel W. Kulp",
@@ -2287,7 +2476,7 @@
    "topic": "Neoantigen sources beyond point mutations",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Matched DNA and RNA sequencing of 304 AML patients, integrated with about 2,500 further cases, identifies 49 driver genes with a notably high proportion of indels. Indels yielded more and higher-quality neoantigens than SNVs or fusions; two immunogenicity models were built, 30 neoantigens validated by direct MHC binding and 20 confirmed immunogenic by IFN-gamma ELISpot.",
    "authors": [
     "Peng Jin",
     "Jie Shen",
@@ -2477,7 +2666,7 @@
    "topic": "Neoantigen vaccines and clinical responses",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A phase Ib trial of a personal neoantigen-targeting vaccine in glioblastoma, a tumour with low mutation burden and an immunologically cold microenvironment behind the blood-brain barrier. Vaccine-induced neoantigen-specific T cells were detected within the tumour itself, not only in circulation.",
    "authors": [
     "Derin B. Keskin",
     "Annabelle J. Anandappa",
@@ -2582,7 +2771,7 @@
    "topic": "Predicting proteolysis, trimming and transport",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A neural network predicting proteasomal cleavage - the degradation step that generates the fragments capable of binding MHC class I. Unlike earlier algorithms trained on in vitro digestion by constitutive proteasomes, this one accounts for the immunoproteasome, and the authors combine cleavage, TAP transport and MHC binding into a single quality-of-presentation score.",
    "authors": [
     "Can Keşmir",
     "Alexander K. Nussbaum",
@@ -2641,7 +2830,7 @@
    "topic": "Neoantigen vaccines and clinical responses",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Five-year outcomes from KEYNOTE-942, a randomised phase IIb trial of the individualised mRNA neoantigen therapy intismeran autogene plus pembrolizumab versus pembrolizumab alone in resected stage IIIB-IV melanoma (n=157, randomised 2:1). At a median 60.3 months, recurrence-free survival HR 0.510 (95% CI 0.294-0.887) and distant metastasis-free survival HR 0.411 (0.200-0.843) favoured the combination.",
    "authors": [
     "Adnan Khattak",
     "Matteo S. Carlino",
@@ -2717,13 +2906,81 @@
    "topic": "Finding and measuring neoantigen-reactive T cells",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A comparative review of in vitro cytotoxicity assays for engineered T cells - chromium release, bioluminescence, impedance and flow cytometry - covering experimental setup, appropriate uses, advantages, disadvantages and ways to compensate for each one's limitations, together with FDA directives for a potency assay for clinical cell therapy release.",
    "authors": [
     "Stefan Kiesgen",
     "John C. Messinger",
     "Navin K. Chintala",
     "Zachary Tano",
     "Prasad S. Adusumilli"
+   ],
+   "authors_source": "crossref",
+   "file_ok": true,
+   "own": null,
+   "own_members": [],
+   "own_basis": null
+  },
+  {
+   "id": "2025-01-01_kim-2025-science-advances-b-cell-reactiv",
+   "source": "Kim(2025) Science Advances; B cell–reactive neoantigens boost antitumor immunity.pdf",
+   "sha256": "dc0f42dffd6f17029ab648854396e3fed2afc1b7d2914527b4e0ba2042c46c4d",
+   "size_bytes": 3189048,
+   "media": "pdf",
+   "type": "paper",
+   "classification": "Public",
+   "year": 2025,
+   "doi": "10.1126/sciadv.adx8303",
+   "doi_source": "sidecar",
+   "duplicate_of_area": null,
+   "area": "neoantigens",
+   "also_in_areas": [],
+   "extraction_chars": 257642,
+   "abstract": "DeepNeo-BCR, a CNN-based model, predicts B cell reactivity to neoantigens, extending neoantigen selection beyond the T cell focus that dominates the field. Validated across large-scale cancer genome data, animal experiments and cancer vaccine clinical trial data.",
+   "summary": "The motivating observation is that antitumor immunity work has been almost entirely T cell centred, while B cells contribute through tertiary lymphoid structures - lymph-node-like aggregates where B cells help reinvigorate T cells by antigen recognition and costimulation.\n\nSelecting neoantigens for B cell reactivity as well as T cell reactivity is therefore a different objective, not a refinement of the same one, and the authors argue it is what would let a vaccine produce durable memory rather than a single wave of killing.",
+   "key_points": [
+    "First model reported to quantitatively predict B cell reactivity to neoantigens, alongside T cell reactivity.",
+    "Motivated by tertiary lymphoid structures, where B cells sustain local T cell responses.",
+    "Validated on three independent kinds of evidence: cancer genomes, mouse experiments, and vaccine trial data.",
+    "Complements Jardine (2016) in this collection, the other paper here concerned with B cell rather than T cell recognition."
+   ],
+   "limitations": "The authors state theirs directly: DeepNeo-BCR's ROC-AUC on the test set was below 0.9; in the clinical trial analysis they could only select B cell epitopes from sequences already preselected for MHC binding, rather than identifying B-cell-engaging neoepitopes ab initio from the full mutation pool; and unlike the mouse data, the human wild-type sequence comparison was constrained. So the model is demonstrated within a T-cell-shaped candidate set, which is the very framing it argues against.",
+   "provenance": {
+    "one_liner": "located in the published literature and deposited by the data owner in inbox/ as sciadv.adx8303.pdf; ingested into area 'neoantigens' by scripts/ingest_inbox.py on 2026-09-05",
+    "traceable": true,
+    "join": null,
+    "events": [],
+    "sharers": []
+   },
+   "hay_drop": [],
+   "sidecar_sha256": "95e0e2f26bd7decf7364d154424494a0e66df60cbdc126dbc1b6657536bc5c02",
+   "title": "B cell–reactive neoantigens boost antitumor immunity",
+   "title_from_filename": false,
+   "title_source": "review",
+   "first_author": "Kim, J. Y. et al.",
+   "venue": "Science Advances",
+   "venue_source": "review",
+   "arxiv": null,
+   "part_letter": "B",
+   "part": "Immunogenicity and T cell recognition",
+   "topic": "Immunogenicity predictors for neoepitopes",
+   "topic_source": "review",
+   "unfiled": false,
+   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "authors": [
+    "Jeong Yeon Kim",
+    "Jinhyeon An",
+    "Soyeon Kim",
+    "Hye-Yeong Jo",
+    "Eun Ji Lee",
+    "Minju Kim",
+    "Hongui Cha",
+    "Se-Hoon Lee",
+    "Hyun-Young Park",
+    "Sang Cheol Kim",
+    "Dae-Yeon Cho",
+    "Inkyung Shin",
+    "Suhwan Chang",
+    "Jung Kyoon Choi"
    ],
    "authors_source": "crossref",
    "file_ok": true,
@@ -2898,7 +3155,7 @@
    "topic": "MHC class II presentation and CD4 responses",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Across three mouse tumour models with different MHC backgrounds, a considerable fraction of non-synonymous cancer mutations is immunogenic, and the immunogenic mutanome is predominantly recognised by CD4+ T cells. RNA vaccination with a single class II epitope, B16-M30, profoundly retarded B16F10 tumour growth, with efficacy depending on CD4+ and not CD8+ T cells.",
    "authors": [
     "Sebastian Kreiter",
     "Mathias Vormehr",
@@ -2967,7 +3224,7 @@
    "topic": "Databases and reference resources",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A global analysis of MHC-I immunopeptidomes across 29 human and 19 mouse primary tissues. HLA-A, -B and -C allotypes contribute unevenly to the immunopeptidome; tissue-specific and housekeeping peptides have distinct properties; evolutionarily hyperconserved proteins are the primary source at organism scale; and new antigen-processing components are identified, including carboxypeptidases CPE, CNDP1/2 and CPVL.",
    "authors": [
     "Peter Kubiniok",
     "Ana Marcu",
@@ -3035,7 +3292,7 @@
    "topic": "Pipelines and analysis tools",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "NeoFox is an open-source Python package that annotates neoantigen candidates with 16 neoantigen features gathered from the literature, bringing scattered published metrics into one toolbox.",
    "authors": [
     "Franziska Lang",
     "Pablo Riesgo-Ferreiro",
@@ -3094,7 +3351,7 @@
    "topic": "Neoantigen sources beyond point mutations",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "splice2neo integrates predicted splice effects of somatic mutations with splice junctions detected in tumour RNA-seq and annotates the resulting transcripts and peptides; EasyQuant provides targeted read mapping to candidate junctions. Under a stringent rule, 1.7 splice junctions per patient were predicted as targets at under 5% FDR in a melanoma cohort, with tumour-specificity confirmed against independent healthy tissue.",
    "authors": [
     "Franziska Lang",
     "Patrick Sorn",
@@ -3279,7 +3536,7 @@
    "topic": "Predicting proteolysis, trimming and transport",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "ProsperousPlus is a platform that lets users build their own protease-specific substrate cleavage site predictors rather than shipping a fixed model per protease. The rationale is that substrate cleavage data now exist for over 100 protease types and are growing faster than predictors can be published for them.",
    "authors": [
     "Fuyi Li",
     "Cong Wang",
@@ -3399,7 +3656,7 @@
    "topic": "Neoantigen sources beyond point mutations",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "SNAF (Splicing Neo Antigen Finder) defines tumour-specific and likely immunogenic neoantigens from patient RNA-seq, targeting post-transcriptional regulation as a source of neoantigens. Because splicing alterations recur across patients, it identifies shared rather than purely private targets, supported by long-read sequencing and spike-in mass spectrometry.",
    "authors": [
     "Guangyuan Li",
     "Shweta Mahajan",
@@ -3414,6 +3671,63 @@
     "Gloria M. Sheynkman",
     "Tamara Tilburgs",
     "Nathan Salomonis"
+   ],
+   "authors_source": "crossref",
+   "file_ok": true,
+   "own": null,
+   "own_members": [],
+   "own_basis": null
+  },
+  {
+   "id": "2026-01-01_liu-2026-global-health-care-using-multim",
+   "source": "Liu(2026) Global Health Care; Using multimodal foundational models to predict neoantigen immunogenicity and vaccine effectiveness across different tumor types.pdf",
+   "sha256": "2443495a9d48279a7b4fc321f62139be8d7880ce1b3080c6634e897764d94e1a",
+   "size_bytes": 880068,
+   "media": "pdf",
+   "type": "paper",
+   "classification": "Public",
+   "year": 2026,
+   "doi": "10.63808/ghc.v2i3.498",
+   "doi_source": "sidecar",
+   "duplicate_of_area": null,
+   "area": "neoantigens",
+   "also_in_areas": [],
+   "extraction_chars": 65757,
+   "abstract": "NeoVAX-FM is a multi-modal foundation model embedding peptide sequences, pHLA 3D structures and gene expression into one semantic space via a contrastive pretraining paradigm, then fine-tuned to score immunogenicity and predict progression-free survival. Trained on paired data from 15 solid tumour types, it reports an average cross-tumour AUC of 0.94 in melanoma, NSCLC and microsatellite-stable colorectal cancer.",
+   "summary": "The problem it targets is one this collection documents repeatedly: prediction models are trained and validated on a single tumour type and are rarely tested across cancers that differ in immune milieu, mutation burden and MHC genotype.\n\nThe design response is to fuse modalities - sequence, structure and expression - into a shared space, and to predict a clinical endpoint alongside immunogenicity rather than treating them as separate tasks.",
+   "key_points": [
+    "Explicitly targets cross-tumour generalisation, tested on 15 solid tumour types.",
+    "Fuses peptide sequence, pHLA structure and transcriptome in one contrastively pretrained space.",
+    "Predicts progression-free survival jointly with immunogenicity, not as a downstream afterthought.",
+    "Evaluated on one prospective trial and three external validation cohorts."
+   ],
+   "limitations": "An average AUC of 0.94 for immunogenicity is far above anything else measured in this collection - the Wells consortium found 37 immunogenic of 608 tested peptide-MHCs - and a result that large invites the leakage and evaluation-design questions that Zhang (2026) and Graber (2025) here show are pervasive. The venue is outside the mainstream of this literature and the paper reports no bias control. Treat the headline number as unverified until an independent group reproduces it.",
+   "provenance": {
+    "one_liner": "located in the published literature and deposited by the data owner in inbox/ as GHC-498.pdf; ingested into area 'neoantigens' by scripts/ingest_inbox.py on 2026-09-05",
+    "traceable": true,
+    "join": null,
+    "events": [],
+    "sharers": []
+   },
+   "hay_drop": [],
+   "sidecar_sha256": "85c3c56fd707d0ed8c657aea6ca3c42dd91a87c4b6fa9158a78ee4d5e0310ee3",
+   "title": "Using multimodal foundational models to predict neoantigen immunogenicity and vaccine effectiveness across different tumor types",
+   "title_from_filename": false,
+   "title_source": "review",
+   "first_author": "Liu, G. et al.",
+   "venue": "Global Health Care",
+   "venue_source": "review",
+   "arxiv": null,
+   "part_letter": "B",
+   "part": "Immunogenicity and T cell recognition",
+   "topic": "Immunogenicity predictors for neoepitopes",
+   "topic_source": "review",
+   "unfiled": false,
+   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "authors": [
+    "Gang Liu",
+    "Jia Wang",
+    "Jia Zhu"
    ],
    "authors_source": "crossref",
    "file_ok": true,
@@ -3466,7 +3780,7 @@
    "topic": "Finding and measuring neoantigen-reactive T cells",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Mapping 55 neoantigen-specific TCR clonotypes from 10 metastatic human tumours to their single-cell transcriptomes yields NeoTCR signatures for CD8+ and CD4+ neoantigen-reactive TILs. Prospective testing of 73 signature-derived clonotypes showed half recognised tumour antigens or autologous tumours.",
    "authors": [
     "Frank J. Lowery",
     "Sri Krishna",
@@ -3562,7 +3876,7 @@
    "topic": "Databases and reference resources",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "The first complete sequence and gene map of a human MHC, the chromosome 6 region essential to the immune system. Of 224 identified gene loci, 128 are predicted to be expressed, and the authors estimate about 40% of expressed genes have immune system function. Over 50% of the MHC was sequenced twice in different haplotypes.",
    "authors": [
     "The MHC sequencing consortium"
    ],
@@ -3617,7 +3931,7 @@
    "topic": "Neoantigen sources beyond point mutations",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A framework evaluating inferred translational profiles across 15 independent datasets shows they outperform conventional RNA-seq proxies at recapitulating ribosome occupancy, and reveal lncRNA translational potential. Integrated into a translation-aware neoantigen pipeline, this identifies high-confidence noncanonical neoantigens missed by expression-based filtering, and corrects high-risk misclassification in glioma stratification.",
    "authors": [
     "Yingying Ma",
     "Chao Gao",
@@ -3683,7 +3997,7 @@
    "topic": "Pipelines and analysis tools",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Hierarchical NSW builds a multi-layer structure of proximity graphs over nested subsets of the stored elements, with an element's maximum layer chosen randomly under an exponentially decaying distribution. Searching from the top layer exploits scale separation to achieve logarithmic complexity, and a neighbour-selection heuristic improves performance at high recall and on clustered data.",
    "authors": [
     "Yu A. Malkov",
     "D. A. Yashunin"
@@ -4099,7 +4413,7 @@
    "topic": "TCR specificity and structural recognition",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "An examination of why generic TCR-epitope recognition prediction remains unsolved, focusing on validation strategies that distinguish performance on seen from unseen epitopes. It introduces ImRex, which represents a TCR-epitope pair as an interaction map of pairwise physicochemical properties for a convolutional network, and catalogues data problems specific to this task.",
    "authors": [
     "Pieter Moris",
     "Joey De Pauw",
@@ -4231,7 +4545,7 @@
    "topic": "Thymic selection and repertoire availability",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "MHC class II-bound nonamer peptides need share only five residues to bind the same TCR. A self peptide can therefore delete T cells specific for a similar foreign peptide, making some naive T cell populations small, and a foreign peptide can provoke autoimmunity against a similar self peptide that was previously ignored.",
    "authors": [
     "Ryan W. Nelson",
     "Daniel Beisang",
@@ -4298,7 +4612,7 @@
    "topic": "Predicting proteolysis, trimming and transport",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "An improved NetChop, using novel sequence encoding, predicts about 10% more proteasomal cleavage sites correctly while lowering false positives by close to 15%. The better predictor is then used to study the proteasome's role: estimating the N-terminal extension of epitope precursors, and how often epitopes are destroyed rather than generated.",
    "authors": [
     "Morten Nielsen",
     "Claus Lundegaard",
@@ -4537,7 +4851,7 @@
    "topic": "Neoantigen vaccines and clinical responses",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "One of the first-in-human personal neoantigen vaccine trials, immunising melanoma patients against up to 20 predicted personal neoantigens. Neoantigens are argued to be highly immunogenic because they are absent from normal tissue and so bypass central thymic tolerance, and the trial demonstrates that a personalised vaccine can induce neoantigen-specific T cell responses.",
    "authors": [
     "Patrick A. Ott",
     "Zhuting Hu",
@@ -4631,7 +4945,7 @@
    "topic": "Neoantigen vaccines and clinical responses",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A phase Ib trial of the personalised neoantigen vaccine NEO-PV-01 plus nivolumab in advanced melanoma, NSCLC and bladder cancer. The combination was feasible and safe, induced durable neoantigen-specific T cell reactivity with cytotoxic potential, and produced T cells that trafficked to tumours; epitope spread and major pathologic responses were observed.",
    "authors": [
     "Patrick A. Ott",
     "Siwen Hu-Lieskovan",
@@ -4794,7 +5108,7 @@
    "topic": "MHC class I binding and presentation",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "MHCflurry 2.0 trains separate predictors for MHC class I binding and for antigen processing, the latter on mass-spectrometry-identified MHC ligands, and combines them into a presentation predictor that outperforms existing methods. It is an open-source Python package with command-line and library interfaces.",
    "authors": [
     "Timothy J. O’Donnell",
     "Alex Rubinsteyn",
@@ -4851,7 +5165,7 @@
    "topic": "Peptide features and neoantigen quality",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Comparing long-term pancreatic cancer survivors (median survival 6 years, n=82) with short-term survivors (median 0.8 years, n=68), the authors find that survival is associated not with neoantigen quantity but with neoantigen quality, and identify MUC16 as a candidate immunogenic hotspot.",
    "authors": [
     "Australian Pancreatic Cancer Genome Initiative",
     "Vinod P. Balachandran",
@@ -5001,7 +5315,7 @@
    "topic": "MHC class II presentation and CD4 responses",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Curating over 600,000 MHC-II ligands and deconvolving motifs yields high-resolution binding motifs for 88 MHC-II alleles. Structural analysis reveals a widespread reverse binding mode for HLA-DP ligands, and MixMHC2pred improves CD4+ T cell epitope prediction.",
    "authors": [
     "Julien Racle",
     "Philippe Guillaume",
@@ -5070,7 +5384,7 @@
    "topic": "MHC class II presentation and CD4 responses",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A practical guide to using MixMHC2pred to predict the binding specificity of any MHC-II allele directly from its amino acid sequence, and to predict MHC-II ligands and CD4+ T cell epitopes across species. Available as a web server and as precompiled executables.",
    "authors": [
     "Julien Racle",
     "David Gfeller"
@@ -5258,7 +5572,7 @@
    "topic": "MHC class I binding and presentation",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A review setting out that peptides presented by MHC class I and class II follow stringent, allele-specific rules involving a nine-amino-acid stretch spanning the groove, with anchor side chains held in complementary pockets. The sum of these requirements is described as a motif - the number, spacing and specificity of anchors plus degenerate preferences at non-anchor positions.",
    "authors": [
     "Hans-Georg Rammensee"
    ],
@@ -5313,7 +5627,7 @@
    "topic": "Databases and reference resources",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "SYFPEITHI is a public database of MHC class I and class II ligands and peptide motifs across humans, apes, cattle, chicken and mouse, searchable by allele, motif, natural ligand, T-cell epitope, source protein and reference, with hyperlinks to EMBL and PubMed and ligand predictions for a number of allelic products.",
    "authors": [
     "H. -G. Rammensee",
     "J. Bachmann",
@@ -5431,7 +5745,7 @@
    "topic": "Peptide features and neoantigen quality",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Dissimilarity of a neoantigen to the non-mutated proteome is identified as a predictor of peptide immunogenicity. Implemented in the antigen.garnish R package, dissimilarity identifies a distinct set of high-quality neoantigens that correlates with survival in clinical checkpoint blockade datasets.",
    "authors": [
     "Lee P. Richman",
     "Robert H. Vonderheide",
@@ -5488,7 +5802,7 @@
    "topic": "Antigen processing and peptide supply",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A review of antigen processing and presentation in myeloid cells, particularly dendritic cells: antigen acquisition, proteolysis into fragments, peptide binding to MHC, and surface display of both MHC class I-peptide and class II-peptide complexes.",
    "authors": [
     "Paul A. Roche",
     "Peter Cresswell"
@@ -5544,7 +5858,7 @@
    "topic": "Antigen processing and peptide supply",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A review of the proteases involved in generating MHC class I presented peptides, in both the classical direct pathway and cross-presentation. Cells continuously degrade their proteins into oligopeptide fragments, a fraction of which are transported by TAP into the ER where those of the right length and sequence bind newly synthesised class I molecules.",
    "authors": [
     "Kenneth L Rock",
     "Diego J Farfán-Arribas",
@@ -5706,7 +6020,7 @@
    "topic": "Neoantigen vaccines and clinical responses",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A first-in-human study of individualised RNA mutanome vaccines, targeting each patient's own set of mutations. The premise is that T cells against mutant neo-epitopes drive cancer immunity but spontaneous recognition of mutations is inefficient, so vaccination is used to mobilise poly-specific responses that would not arise on their own.",
    "authors": [
     "Ugur Sahin",
     "Evelyna Derhovanessian",
@@ -5810,7 +6124,7 @@
    "topic": "MHC class I binding and presentation",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Mass spectrometry profiling of more than 185,000 peptides eluted from 95 HLA-A, -B, -C and -G mono-allelic cell lines produces training data covering a large fraction of the human population. Predictors trained on it achieve 1.5-2.7x improvements in positive predictive value at the top 0.1% of the dataset, corresponding to 3-12x gains at 40% recall.",
    "authors": [
     "Siranush Sarkizova",
     "Susan Klaeger",
@@ -6163,6 +6477,64 @@
    "own_basis": null
   },
   {
+   "id": "2025-01-01_shapiro-2025-nature-communications-sensi",
+   "source": "Shapiro(2025) Nature Communications; Sensitive neoantigen discovery by real-time mutanome-guided immunopeptidomics.pdf",
+   "sha256": "2ea452a32150685f95f96e61dbf82bc5ce916c00a02cd2bc31ce043be6ebf44b",
+   "size_bytes": 1844696,
+   "media": "pdf",
+   "type": "paper",
+   "classification": "Public",
+   "year": 2025,
+   "doi": "10.1038/s41467-025-62647-4",
+   "doi_source": "sidecar",
+   "duplicate_of_area": null,
+   "area": "neoantigens",
+   "also_in_areas": [],
+   "extraction_chars": 177735,
+   "abstract": "NeoDiscMS extends NeoDisc to personalised immunopeptidomics, using next-generation-sequencing-guided real-time spectral acquisition to maximise sensitivity with minimal loss of global depth. It improves detection of tumour-associated-antigen-derived peptides by up to 20% and increases confidence in neoantigen identifications.",
+   "summary": "The instrument decides what it fragments while the sample is running, guided by the patient's own mutanome from sequencing - so the mass spectrometer is told in advance which masses matter rather than selecting by abundance alone.\n\nThat matters because neoantigens are low-abundance by nature, and conventional data-dependent acquisition preferentially fragments what is plentiful. The trade the paper optimises explicitly is target sensitivity against global coverage, which most targeted methods sacrifice entirely.",
+   "key_points": [
+    "Real-time, sequencing-guided acquisition: the mutanome steers the instrument during the run.",
+    "Up to 20% better detection of tumour-associated-antigen peptides, without abandoning global depth.",
+    "Spike-in free, unlike targeted approaches that need heavy-labelled standards.",
+    "Designed for clinical constraints - scarce sample input, short turnaround, minimal manual data processing."
+   ],
+   "limitations": "The authors survey why previous sensitivity approaches fall short and their own inherits some of the same ceiling: co-isolated precursors limit sensitivity for low-abundance targets even in narrow-window acquisition, and they note chimeric spectrum deconvolution, used in low-input proteomics, has not yet been implemented for immunopeptidomics. Detecting a presented peptide is not showing it is immunogenic. Sample input remains the binding constraint for clinical use.",
+   "provenance": {
+    "one_liner": "located in the published literature and deposited by the data owner in inbox/ as s41467-025-62647-4.pdf; ingested into area 'neoantigens' by scripts/ingest_inbox.py on 2026-09-05",
+    "traceable": true,
+    "join": null,
+    "events": [],
+    "sharers": []
+   },
+   "hay_drop": [],
+   "sidecar_sha256": "8ea2261f36183a962bcbb08119144c2aacce18bd5f0d970d478fc96e6b426243",
+   "title": "Sensitive neoantigen discovery by real-time mutanome-guided immunopeptidomics",
+   "title_from_filename": false,
+   "title_source": "review",
+   "first_author": "Shapiro, I. E. et al.",
+   "venue": "Nature Communications",
+   "venue_source": "review",
+   "arxiv": null,
+   "part_letter": "E",
+   "part": "Resources, pipelines and evaluation",
+   "topic": "Pipelines and analysis tools",
+   "topic_source": "review",
+   "unfiled": false,
+   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "authors": [
+    "Ilja E. Shapiro",
+    "Florian Huber",
+    "Justine Michaux",
+    "Michal Bassani-Sternberg"
+   ],
+   "authors_source": "crossref",
+   "file_ok": true,
+   "own": null,
+   "own_members": [],
+   "own_basis": null
+  },
+  {
    "id": "2021-01-01_sharma-2021-wires-data-mining-and-knowle",
    "source": "Sharma(2021) WIREs Data Mining and Knowledge Discovery; Computational resources in healthcare.pdf",
    "sha256": "6aa6544fb7a277846239961eb17d0ecb9a2223fa279a15f3b2d75c2266137a5e",
@@ -6207,12 +6579,67 @@
    "topic": "Pipelines and analysis tools",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A broad review cataloguing computational resources across informatics-based fields with healthcare applications - medical, bio-, chem-, pharmaco-, immuno- and clinical informatics - grouped into drug discovery, toxicity prediction, vaccine design, disease biomarkers and Internet of Things, with emphasis on freely available functional resources.",
    "authors": [
     "Neelam Sharma",
     "Leimarembi Devi Naorem",
     "Satakshi Gupta",
     "Gajendra P. S. Raghava"
+   ],
+   "authors_source": "crossref",
+   "file_ok": true,
+   "own": null,
+   "own_members": [],
+   "own_basis": null
+  },
+  {
+   "id": "2025-01-01_shen-2025-unknown-alphagenome-enhances-p",
+   "source": "Shen(2025) unknown; AlphaGenome Enhances Personal Gene Expression Prediction but Retains Key Limitations.pdf",
+   "sha256": "5620b8f724ee4b987ce6ecb52ebe4c6543dbe2851bb09428f273df86b402da2d",
+   "size_bytes": 5051234,
+   "media": "pdf",
+   "type": "preprint",
+   "classification": "Public",
+   "year": 2025,
+   "doi": "10.1101/2025.08.05.668750",
+   "doi_source": "sidecar",
+   "duplicate_of_area": null,
+   "area": "neoantigens",
+   "also_in_areas": [],
+   "extraction_chars": 32393,
+   "abstract": "An evaluation of AlphaGenome for predicting individual-specific gene expression, comparing it against Enformer, Elastic Net and Random Forest on GTEx data. It improves prediction of expression direction over Enformer with an odds ratio of 3.0 and in some cases reverses previously negative correlations to positive, while retaining key limitations.",
+   "summary": "Genome AI models have been criticised for poor accuracy on personal, individual-specific expression even while excelling at general sequence-to-function tasks, and this asks whether the current state of the art has closed that gap.\n\nIt is in this collection because expression is a filter in every neoantigen pipeline - a mutation in an unexpressed gene yields nothing - and the Ma (2026) paper here argues transcript abundance is the wrong proxy anyway. How well personal expression can be predicted from sequence bounds what those filters can do.",
+   "key_points": [
+    "Evaluates personal, individual-specific expression prediction, not the general sequence-to-expression task where these models already do well.",
+    "Odds ratio of 3.0 for expression direction over Enformer, on GTEx.",
+    "Compared against classical baselines (Elastic Net, Random Forest), not only against its predecessor.",
+    "Finds AlphaGenome exploits mechanisms distinct from those tree-based models identify on nonlinear genes."
+   ],
+   "limitations": "A preprint, not peer reviewed, and it carries no journal venue in its registration. It is a single-author evaluation on GTEx, so the tissues and populations GTEx covers bound the conclusions. The title concedes the point: improvement over a predecessor is not the same as usable personal prediction, and the paper reports the gap rather than closing it. Its relevance to neoantigens is indirect.",
+   "provenance": {
+    "one_liner": "located in the published literature and deposited by the data owner in inbox/ as 2025.08.05.668750v1.full.pdf; ingested into area 'neoantigens' by scripts/ingest_inbox.py on 2026-09-05",
+    "traceable": true,
+    "join": null,
+    "events": [],
+    "sharers": []
+   },
+   "hay_drop": [],
+   "sidecar_sha256": "da3f9e9d2681916c100ac4ef2ae2004c74f359fbe11d2df753fe3af832701cac",
+   "title": "AlphaGenome Enhances Personal Gene Expression Prediction but Retains Key Limitations",
+   "title_from_filename": false,
+   "title_source": "review",
+   "first_author": "Shen, L.",
+   "venue": null,
+   "venue_source": null,
+   "arxiv": null,
+   "part_letter": "E",
+   "part": "Resources, pipelines and evaluation",
+   "topic": "Benchmarking, bias and generalisation",
+   "topic_source": "review",
+   "unfiled": false,
+   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "authors": [
+    "Li Shen"
    ],
    "authors_source": "crossref",
    "file_ok": true,
@@ -6265,7 +6692,7 @@
    "topic": "Pipelines and analysis tools",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "MMseqs2 performs sensitive protein sequence searching at speeds that make massive datasets tractable: annotating 1.1 billion hypothetical protein sequences against 16,479 Pfam profiles took 8.3 hours on one server, roughly 4,000-14,000 times faster than HMMER3 while finding comparable or more annotations.",
    "authors": [
     "Martin Steinegger",
     "Johannes Söding"
@@ -7005,7 +7432,7 @@
    "topic": "Neoantigen vaccines and clinical responses",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "The primary report of KEYNOTE-942, a randomised phase 2b trial of individualised neoantigen therapy mRNA-4157 (V940) plus pembrolizumab versus pembrolizumab alone in resected high-risk melanoma. Recurrence-free survival favoured the combination.",
    "authors": [
     "Jeffrey S Weber",
     "Matteo S Carlino",
@@ -7093,7 +7520,7 @@
    "topic": "Predicting proteolysis, trimming and transport",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "pepsickle is an open-source proteasomal cleavage predictor with better in vivo AUC and speed than existing models, and the ability to predict from both constitutive and immunoproteasome profiles. Post hoc filtering of predicted patient neoepitopes with it significantly enriches for immune-responsive epitopes.",
    "authors": [
     "Benjamin R Weeder",
     "Mary A Wood",
@@ -7152,7 +7579,7 @@
    "topic": "Benchmarking, bias and generalisation",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A global consortium ran diverse neoantigen prediction pipelines on shared genomic data with matched experimental immunogenicity measurements. Of 608 tested peptide-MHCs, 37 were bound by patient-matched T cells; presentation and recognition characteristics predicted immunogenicity, and model-based interventions improved prediction.",
    "authors": [
     "Daniel K. Wells",
     "Marit M. van Buuren",
@@ -7604,7 +8031,7 @@
    "topic": "Neoantigen sources beyond point mutations",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Mass-spectrometry de novo sequencing, rather than database search, is used to identify non-canonical neoantigens in hepatocellular carcinoma. Candidates were validated by ELISpot for immunogenicity and PRM targeted proteomics for endogenous expression, then tested as a peptide vaccine in subcutaneous and orthotopic mouse HCC models.",
    "authors": [
     "Xiaohua Xing",
     "Mingxin Liu",
@@ -7782,9 +8209,9 @@
    "venue": "Research",
    "venue_source": "review",
    "arxiv": null,
-   "part_letter": "A",
-   "part": "Antigen presentation",
-   "topic": "MHC class II presentation and CD4 responses",
+   "part_letter": "D",
+   "part": "Discovery and clinical translation",
+   "topic": "Generative design of epitopes and vaccines",
    "topic_source": "review",
    "unfiled": false,
    "review_summary": "EpiMII applies structure-aware graph neural networks to MHC-II epitope generation, using an inverse-folding formulation: rather than predicting structure from sequence, it starts from a fixed 3D backbone and searches sequence space for residues compatible with that geometry, using atomic-level features such as hydrogen bonding, side-chain packing and electrostatics.",
@@ -7853,7 +8280,7 @@
    "topic": "Predicting proteolysis, trimming and transport",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "DeepTAP uses a bidirectional gated recurrent unit to predict TAP-binding peptides, alongside an analysis of TAP-binding motifs and N- and C-terminal amino acid preferences. It is reported to achieve a better balance of precision and false positives than TAPPred, TAPREG and KSMM.",
    "authors": [
     "Xue Zhang",
     "Jingcheng Wu",
@@ -7989,6 +8416,67 @@
    "own_basis": null
   },
   {
+   "id": "2026-01-01_zhang-2026-scientific-reports-multi-stra",
+   "source": "Zhang(2026) Scientific Reports; Multi-strategy embedded framework for neoantigen vaccine maturation.pdf",
+   "sha256": "4ae15009e006333f00a406f847f84009262430731c2c0bceaf34e309355666f1",
+   "size_bytes": 6726383,
+   "media": "pdf",
+   "type": "paper",
+   "classification": "Public",
+   "year": 2026,
+   "doi": "10.1038/s41598-025-34618-8",
+   "doi_source": "sidecar",
+   "duplicate_of_area": null,
+   "area": "neoantigens",
+   "also_in_areas": [],
+   "extraction_chars": 88344,
+   "abstract": "NEOM evolves a single input peptide into diverse higher-affinity candidates by combining adaptive Markov chain Monte Carlo sampling with explicit pHLA structural modelling, in five modules: policy, structure, evaluation, selection and filter. Free energy perturbation narrowed 38 candidates to six, and MHC tetramer exchange assays with flow cytometry validated five.",
+   "summary": "This is affinity maturation for neoantigens: rather than choosing among the peptides a tumour produced, it modifies one into variants that bind HLA better, which is the generative approach the Hu review in this batch describes.\n\nWhat distinguishes it from sequence-only generative methods is that the three-dimensional dynamics of pHLA binding are modelled explicitly at each step, and the funnel ends in physical experiment rather than in a predicted score.",
+   "key_points": [
+    "Generative rather than discriminative: designs improved peptides instead of ranking existing ones.",
+    "Explicit pHLA structural modelling inside the sampling loop, not as a post hoc filter.",
+    "A real validation funnel: in silico filtering, then free energy perturbation to 6 of 38, then tetramer exchange assays confirming 5.",
+    "Modular design makes each stage - policy, structure, evaluation, selection, filter - separately inspectable."
+   ],
+   "limitations": "The objective optimised is HLA class I binding, and this collection's central lesson is that binding is necessary but far from sufficient - a matured peptide binding better may be no more immunogenic, and a peptide altered away from the tumour's actual mutation may not match what the tumour presents at all. Validation is tetramer binding, which measures pMHC formation rather than T cell response. Free energy perturbation is computationally expensive, limiting how many candidates can pass that stage.",
+   "provenance": {
+    "one_liner": "located in the published literature and deposited by the data owner in inbox/ as s41598-025-34618-8-1.pdf; ingested into area 'neoantigens' by scripts/ingest_inbox.py on 2026-09-05",
+    "traceable": true,
+    "join": null,
+    "events": [],
+    "sharers": []
+   },
+   "hay_drop": [],
+   "sidecar_sha256": "55003bded5fdd6b1626ecc7863859877c8892ed073a6e22960197428e4606713",
+   "title": "Multi-strategy embedded framework for neoantigen vaccine maturation",
+   "title_from_filename": false,
+   "title_source": "review",
+   "first_author": "Zhang, G. et al.",
+   "venue": "Scientific Reports",
+   "venue_source": "review",
+   "arxiv": null,
+   "part_letter": "D",
+   "part": "Discovery and clinical translation",
+   "topic": "Generative design of epitopes and vaccines",
+   "topic_source": "review",
+   "unfiled": false,
+   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "authors": [
+    "Guanqiao Zhang",
+    "Yaqi Fu",
+    "Kevin C. Chan",
+    "Ruofan Jin",
+    "Yuxuan Yang",
+    "Lei Fu",
+    "Ruhong Zhou"
+   ],
+   "authors_source": "crossref",
+   "file_ok": true,
+   "own": null,
+   "own_members": [],
+   "own_basis": null
+  },
+  {
    "id": "2003-01-01_zhao-2003-bioinformatics-application-of",
    "source": "Zhao(2003) Bioinformatics; Application of support vector machines for T-cell epitopes prediction.pdf",
    "sha256": "a90597bec33d60df6c76befa214943aec7bc2a95409eaeb0802840d53bed6916",
@@ -8033,7 +8521,7 @@
    "topic": "Immunogenicity predictors for neoepitopes",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "The first application of support vector machines to T-cell epitope prediction, trained on an MHC class I restricted T-cell clone. Cross-validation shows SVMs can be trained on relatively small datasets to give predictions more accurate than previously published methods or than MHC binding alone.",
    "authors": [
     "Yingdong Zhao",
     "Clemencia Pinilla",
@@ -8148,7 +8636,7 @@
    "topic": "Finding and measuring neoantigen-reactive T cells",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Single-cell RNA-seq with in vitro immunological screening identifies neoantigen-reactive T cells infiltrating cholangiocarcinoma and pancreatic cancer. Most CD8+ and CD4+ neoantigen-reactive TILs are in an exhausted state, with CD8+ cells enriched for CXCL13 and GZMA co-expression and CD4+ cells for HOPX or ADGRG1.",
    "authors": [
     "Chunhong Zheng",
     "Joseph N. Fass",
@@ -8216,7 +8704,7 @@
    "topic": "Peptide features and neoantigen quality",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "Structural, biophysical and functional analysis of KRAS G12 variants presented by HLA-A*11:01 shows that single substitutions at position 12 induce distinct conformational changes in the MHC groove, with G12D uniquely destabilising the complex through a buried aspartate. G12D peptides adopt both 9-mer and 10-mer registers that differ sharply in structure and immunogenicity.",
    "authors": [
     "Jiali Zhu",
     "Zhifeng Chen",
@@ -8283,7 +8771,7 @@
    "topic": "Peptide features and neoantigen quality",
    "topic_source": "review",
    "unfiled": false,
-   "review_summary": "_NOT YET WRITTEN._ This section is read off the paper by a person; `scripts/ingest_inbox.py` does not invent it. `status: prose-pending` in the frontmatter says so, and `make audit` reports it.",
+   "review_summary": "A fitness model for tumours based on immune interactions of neoantigens, predicting response to checkpoint blockade. Neoantigen fitness has two components: likelihood of MHC presentation, estimated from binding affinity relative to the wild-type peptide, and T cell recognition, estimated from a nonlinear dependence on sequence similarity to known antigens.",
    "authors": [
     "Marta Łuksza",
     "Nadeem Riaz",

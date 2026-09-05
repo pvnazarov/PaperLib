@@ -6799,6 +6799,516 @@
       "approved": "the owner said: there was shutdown. please check the status and let's continue — continuing the batch-2 work they had approved: prose for all 117 and a taxonomy revision",
       "sha256_before": "794d69846d4a0090d25e68bc7bf3b7855a0872884fc52527dc2de1a0f51567ab",
       "sha256_after": "9693d6d0dc9ee43bf5151634a8b9b4993e7c401a2edba1d586b4e719b751a522"
+    },
+    {
+      "seq": 355,
+      "date": "2026-09-05",
+      "file": "raw/Hu(2026) Biotechnology Advances; Generative AI-enabled neoantigen vaccine engineering From tumor antigen discovery to personalized construct design and translational validation.pdf",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/1-s2.0-S073497502600234X-main.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/1-s2.0-S073497502600234X-main.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1016/j.biotechadv.2026.109028",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "4b5a809a3404187318db78e7f0d362f8852582dda8aa5ab4006bc054f3a4b088"
+    },
+    {
+      "seq": 356,
+      "date": "2026-09-05",
+      "file": "meta/Hu(2026) Biotechnology Advances; Generative AI-enabled neoantigen vaccine engineering From tumor antigen discovery to personalized construct design and translational validation.pdf.md",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/1-s2.0-S073497502600234X-main.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/1-s2.0-S073497502600234X-main.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1016/j.biotechadv.2026.109028",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "3ef0547d9deb7f176afbc8a56cf0aa7c6483078ffdc1fa7237046e16ac35d4b9"
+    },
+    {
+      "seq": 357,
+      "date": "2026-09-05",
+      "file": "raw/Shen(2025) unknown; AlphaGenome Enhances Personal Gene Expression Prediction but Retains Key Limitations.pdf",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/2025.08.05.668750v1.full.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/2025.08.05.668750v1.full.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1101/2025.08.05.668750",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "5620b8f724ee4b987ce6ecb52ebe4c6543dbe2851bb09428f273df86b402da2d"
+    },
+    {
+      "seq": 358,
+      "date": "2026-09-05",
+      "file": "meta/Shen(2025) unknown; AlphaGenome Enhances Personal Gene Expression Prediction but Retains Key Limitations.pdf.md",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/2025.08.05.668750v1.full.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/2025.08.05.668750v1.full.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1101/2025.08.05.668750",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "4582cc96831f5c11c6d386ce19b77581059abb6072b8e1b8d1978d6d936c0a2f"
+    },
+    {
+      "seq": 359,
+      "date": "2026-09-05",
+      "file": "raw/Kim(2025) Science Advances; B cell–reactive neoantigens boost antitumor immunity.pdf",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/2026-01-ai-cell-reactivity-neoantigens-cancer.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/2026-01-ai-cell-reactivity-neoantigens-cancer.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1126/sciadv.adx8303",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "6e7fb82323b681bc4cb3a51c9be12b937913bd9a8b26faf4b481e7f8ef9a3f36"
+    },
+    {
+      "seq": 360,
+      "date": "2026-09-05",
+      "file": "meta/Kim(2025) Science Advances; B cell–reactive neoantigens boost antitumor immunity.pdf.md",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/2026-01-ai-cell-reactivity-neoantigens-cancer.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/2026-01-ai-cell-reactivity-neoantigens-cancer.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1126/sciadv.adx8303",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "281b39d70f56981805d62efdc5e3ae5b9ddb5f0f0ed1fb7857325e5c7cddc51f"
+    },
+    {
+      "seq": 361,
+      "date": "2026-09-05",
+      "file": "raw/Liu(2026) Global Health Care; Using multimodal foundational models to predict neoantigen immunogenicity and vaccine effectiveness across different tumor types.pdf",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/GHC-498.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/GHC-498.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.63808/ghc.v2i3.498",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "2443495a9d48279a7b4fc321f62139be8d7880ce1b3080c6634e897764d94e1a"
+    },
+    {
+      "seq": 362,
+      "date": "2026-09-05",
+      "file": "meta/Liu(2026) Global Health Care; Using multimodal foundational models to predict neoantigen immunogenicity and vaccine effectiveness across different tumor types.pdf.md",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/GHC-498.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/GHC-498.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.63808/ghc.v2i3.498",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "2af1e235ac3b11b1b75482754115cd111cba9efe33fbd675dbb9416fe427a93a"
+    },
+    {
+      "seq": 363,
+      "date": "2026-09-05",
+      "file": "raw/Brlek(2026) Frontiers in Genetics; Artificial intelligence in peptide cancer vaccine design from neoantigen discovery to immunogenicity prediction.pdf",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/fgene-17-1875066.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/fgene-17-1875066.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.3389/fgene.2026.1875066",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "ca4c719074d0df86c79d21b6d826ffd2646e765c5346b098e72459eb201b4d7a"
+    },
+    {
+      "seq": 364,
+      "date": "2026-09-05",
+      "file": "meta/Brlek(2026) Frontiers in Genetics; Artificial intelligence in peptide cancer vaccine design from neoantigen discovery to immunogenicity prediction.pdf.md",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/fgene-17-1875066.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/fgene-17-1875066.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.3389/fgene.2026.1875066",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "8adfa2578099ca5c332d3f2cbcc88935b2a1ce124afc64a747f863e200417ef2"
+    },
+    {
+      "seq": 365,
+      "date": "2026-09-05",
+      "file": "raw/Bakhshian(2026) Journal of Translational Medicine; AI-driven neoantigen identification a comprehensive review from somatic variant calling to T cell recognition.pdf",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/s12967-026-08535-x.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/s12967-026-08535-x.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1186/s12967-026-08535-x",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "a8b1281beb869861953d2b2b12444d1ff2b0c910e3a0c408ad0b71aff3c8ead2"
+    },
+    {
+      "seq": 366,
+      "date": "2026-09-05",
+      "file": "meta/Bakhshian(2026) Journal of Translational Medicine; AI-driven neoantigen identification a comprehensive review from somatic variant calling to T cell recognition.pdf.md",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/s12967-026-08535-x.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/s12967-026-08535-x.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1186/s12967-026-08535-x",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "3411a8b31cfd4c6c6b367814a2696adad5e08e0facab17d1aa75bcf7767253b5"
+    },
+    {
+      "seq": 367,
+      "date": "2026-09-05",
+      "file": "raw/Shapiro(2025) Nature Communications; Sensitive neoantigen discovery by real-time mutanome-guided immunopeptidomics.pdf",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/s41467-025-62647-4.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/s41467-025-62647-4.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1038/s41467-025-62647-4",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "2ea452a32150685f95f96e61dbf82bc5ce916c00a02cd2bc31ce043be6ebf44b"
+    },
+    {
+      "seq": 368,
+      "date": "2026-09-05",
+      "file": "meta/Shapiro(2025) Nature Communications; Sensitive neoantigen discovery by real-time mutanome-guided immunopeptidomics.pdf.md",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/s41467-025-62647-4.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/s41467-025-62647-4.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1038/s41467-025-62647-4",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "2d5f0e3cb6866d1a3efb222cf3719a15534c307437b722a2f7a4cd9d5e9aabf0"
+    },
+    {
+      "seq": 369,
+      "date": "2026-09-05",
+      "file": "raw/Zhang(2026) Scientific Reports; Multi-strategy embedded framework for neoantigen vaccine maturation.pdf",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/s41598-025-34618-8-1.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/s41598-025-34618-8-1.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1038/s41598-025-34618-8",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "4ae15009e006333f00a406f847f84009262430731c2c0bceaf34e309355666f1"
+    },
+    {
+      "seq": 370,
+      "date": "2026-09-05",
+      "file": "meta/Zhang(2026) Scientific Reports; Multi-strategy embedded framework for neoantigen vaccine maturation.pdf.md",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/s41598-025-34618-8-1.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/s41598-025-34618-8-1.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1038/s41598-025-34618-8",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": null,
+      "sha256_after": "fc80f2b9668342747b47ee0a1f58d97d3928861f9d829ca94928a935924e652f"
+    },
+    {
+      "seq": 371,
+      "date": "2026-09-05",
+      "file": "raw/Kim(2025) Science Advances; B cell–reactive neoantigens boost antitumor immunity.pdf  +  meta/Kim(2025) Science Advances; B cell–reactive neoantigens boost antitumor immunity.pdf.md",
+      "keys": [
+        "<REMOVED FROM raw/ AND meta/>"
+      ],
+      "before": {
+        "sha256_raw": "6e7fb82323b681bc4cb3a51c9be12b937913bd9a8b26faf4b481e7f8ef9a3f36",
+        "sha256_sidecar": "281b39d70f56981805d62efdc5e3ae5b9ddb5f0f0ed1fb7857325e5c7cddc51f"
+      },
+      "after": {
+        "<removed>": null
+      },
+      "reason": "BREAKS THE ADD-ONLY RULE, deliberately and with the owner's approval. The ingested PDF was a 4-page medicalxpress.com news article ABOUT the paper, not the paper: no methods, no references, and it carried the Science Advances DOI only because it cites it. Two files in the batch shared that DOI; the intra-run DOI guard refused the second, which was the real 22-page article, and the news piece was kept because it sorted first. The sidecar therefore attached correct bibliographic metadata to the wrong document. Removed together with its sidecar so no sha256 claim is left orphaned and `make verify` still proves the collection intact; the real article is ingested under the same name immediately after.",
+      "evidence": "pdfinfo: 4 pages, 4321 chars, 0 methods/reference sections; the document's own footer reads 'retrieved 5 September 2026 from https://medicalxpress.com/news/2026-01-ai-cell-reactivity-neoantigens-cancer.html'",
+      "approved": "the owner chose: Undo the ingest, then add the real paper",
+      "sha256_before": "6e7fb82323b681bc4cb3a51c9be12b937913bd9a8b26faf4b481e7f8ef9a3f36",
+      "sha256_after": null,
+      "removed": true
+    },
+    {
+      "seq": 372,
+      "date": "2026-09-05",
+      "file": "raw/Kim(2025) Science Advances; B cell–reactive neoantigens boost antitumor immunity.pdf",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/sciadv.adx8303.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/sciadv.adx8303.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1126/sciadv.adx8303",
+      "approved": "the owner chose: Undo the ingest, then add the real paper",
+      "sha256_before": null,
+      "sha256_after": "dc0f42dffd6f17029ab648854396e3fed2afc1b7d2914527b4e0ba2042c46c4d"
+    },
+    {
+      "seq": 373,
+      "date": "2026-09-05",
+      "file": "meta/Kim(2025) Science Advances; B cell–reactive neoantigens boost antitumor immunity.pdf.md",
+      "keys": [
+        "<new file>"
+      ],
+      "before": {
+        "<new file>": null
+      },
+      "after": {
+        "<new file>": "inbox/sciadv.adx8303.pdf"
+      },
+      "reason": "a paper the owner dropped in inbox/, ingested into the corpus",
+      "evidence": "bytes copied from inbox/sciadv.adx8303.pdf and re-hashed after the copy; bibliography from the publisher's registration for 10.1126/sciadv.adx8303",
+      "approved": "the owner chose: Undo the ingest, then add the real paper",
+      "sha256_before": null,
+      "sha256_after": "c892bee9ab9296fa6a644f948f445b184b6d7925a70e78618e440bfd8c96f5c6"
+    },
+    {
+      "date": "2026-09-05",
+      "file": "meta/Bakhshian(2026) Journal of Translational Medicine; AI-driven neoantigen identification a comprehensive review from somatic variant calling to T cell recognition.pdf.md",
+      "keys": [
+        "abstract",
+        "summary",
+        "key_points",
+        "limitations",
+        "status"
+      ],
+      "reason": "the four prose sections, written by reading the paper",
+      "evidence": "the paper itself, in raw/",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_after": "9aa12842a03bb1a0ea9f5a5ce7180904753a9ede5720e075b9f40fd2ec99e66f",
+      "seq": 374
+    },
+    {
+      "date": "2026-09-05",
+      "file": "meta/Brlek(2026) Frontiers in Genetics; Artificial intelligence in peptide cancer vaccine design from neoantigen discovery to immunogenicity prediction.pdf.md",
+      "keys": [
+        "abstract",
+        "summary",
+        "key_points",
+        "limitations",
+        "status"
+      ],
+      "reason": "the four prose sections, written by reading the paper",
+      "evidence": "the paper itself, in raw/",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_after": "bb744cf05da74f533685ed8036408340f6244c819aa7f3b9d4ac4170f38f80b8",
+      "seq": 375
+    },
+    {
+      "date": "2026-09-05",
+      "file": "meta/Hu(2026) Biotechnology Advances; Generative AI-enabled neoantigen vaccine engineering From tumor antigen discovery to personalized construct design and translational validation.pdf.md",
+      "keys": [
+        "abstract",
+        "summary",
+        "key_points",
+        "limitations",
+        "status"
+      ],
+      "reason": "the four prose sections, written by reading the paper",
+      "evidence": "the paper itself, in raw/",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_after": "8968b7e2aa20ec3e0b87eb67fb8c0ac8a746d448237c4ba1f48d4d2983ab0c99",
+      "seq": 376
+    },
+    {
+      "date": "2026-09-05",
+      "file": "meta/Kim(2025) Science Advances; B cell–reactive neoantigens boost antitumor immunity.pdf.md",
+      "keys": [
+        "abstract",
+        "summary",
+        "key_points",
+        "limitations",
+        "status"
+      ],
+      "reason": "the four prose sections, written by reading the paper",
+      "evidence": "the paper itself, in raw/",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_after": "95e0e2f26bd7decf7364d154424494a0e66df60cbdc126dbc1b6657536bc5c02",
+      "seq": 377
+    },
+    {
+      "date": "2026-09-05",
+      "file": "meta/Liu(2026) Global Health Care; Using multimodal foundational models to predict neoantigen immunogenicity and vaccine effectiveness across different tumor types.pdf.md",
+      "keys": [
+        "abstract",
+        "summary",
+        "key_points",
+        "limitations",
+        "status"
+      ],
+      "reason": "the four prose sections, written by reading the paper",
+      "evidence": "the paper itself, in raw/",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_after": "85c3c56fd707d0ed8c657aea6ca3c42dd91a87c4b6fa9158a78ee4d5e0310ee3",
+      "seq": 378
+    },
+    {
+      "date": "2026-09-05",
+      "file": "meta/Shapiro(2025) Nature Communications; Sensitive neoantigen discovery by real-time mutanome-guided immunopeptidomics.pdf.md",
+      "keys": [
+        "abstract",
+        "summary",
+        "key_points",
+        "limitations",
+        "status"
+      ],
+      "reason": "the four prose sections, written by reading the paper",
+      "evidence": "the paper itself, in raw/",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_after": "8ea2261f36183a962bcbb08119144c2aacce18bd5f0d970d478fc96e6b426243",
+      "seq": 379
+    },
+    {
+      "date": "2026-09-05",
+      "file": "meta/Shen(2025) unknown; AlphaGenome Enhances Personal Gene Expression Prediction but Retains Key Limitations.pdf.md",
+      "keys": [
+        "abstract",
+        "summary",
+        "key_points",
+        "limitations",
+        "status"
+      ],
+      "reason": "the four prose sections, written by reading the paper",
+      "evidence": "the paper itself, in raw/",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_after": "da3f9e9d2681916c100ac4ef2ae2004c74f359fbe11d2df753fe3af832701cac",
+      "seq": 380
+    },
+    {
+      "date": "2026-09-05",
+      "file": "meta/Zhang(2026) Scientific Reports; Multi-strategy embedded framework for neoantigen vaccine maturation.pdf.md",
+      "keys": [
+        "abstract",
+        "summary",
+        "key_points",
+        "limitations",
+        "status"
+      ],
+      "reason": "the four prose sections, written by reading the paper",
+      "evidence": "the paper itself, in raw/",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_after": "55003bded5fdd6b1626ecc7863859877c8892ed073a6e22960197428e4606713",
+      "seq": 381
+    },
+    {
+      "seq": 382,
+      "date": "2026-09-05",
+      "file": "outputs/2026-09-05_literature_review.md",
+      "keys": [
+        "<whole file>"
+      ],
+      "before": {
+        "<whole file>": "9693d6d0dc9ee43bf5151634a8b9b4993e7c401a2edba1d586b4e719b751a522"
+      },
+      "after": {
+        "<whole file>": "reports/2026-09-05_literature_review.md"
+      },
+      "reason": "installs the 19-topic taxonomy covering all 125 papers, adding Generative design of epitopes and vaccines",
+      "evidence": "all 125 read and their prose written before the taxonomy was extended; 6 MUSTs and 3 SHOULDs pass with a now-working stability check that caught and named the single move",
+      "approved": "the owner said: Please download, unzip, process and integrate last smaller set of papers (same sablab)",
+      "sha256_before": "9693d6d0dc9ee43bf5151634a8b9b4993e7c401a2edba1d586b4e719b751a522",
+      "sha256_after": "6fc21882a2fb94c17163fb275c29179c9eee217729f6054796e5dba99a286f4d"
     }
   ],
   "_about": [

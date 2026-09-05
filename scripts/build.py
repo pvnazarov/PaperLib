@@ -396,6 +396,13 @@ def load_edit_ledger(path: Path, problems: list) -> dict:
     latest: dict = {}
     for e in doc.get("edits", []):
         f = e.get("file")
+        # A recorded REMOVAL has no `sha256_after` because there is no file left to
+        # hash, and that is the correct shape for it -- not a malformed entry. The
+        # add-only rule means these are rare and each one carries its reason; they
+        # are skipped here because this map answers "which CURRENT file carries an
+        # edit made in this project", and a removed file carries nothing.
+        if e.get("removed"):
+            continue
         if not f or not e.get("sha256_after"):
             problems.append(f"{path.name}: an edit entry has no `file`/`sha256_after`")
             continue
