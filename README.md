@@ -131,6 +131,15 @@ make new-area NAME=immunopeptidomics APPLY=1
 From then on every collection-touching target needs `AREA=`, because with more
 than one area the tool refuses to pick for you.
 
+## Installing it somewhere else
+
+A clone is ~6 MB and carries every sidecar, the taxonomy, `library.json` and
+`similarity.json` — so it renders the full page before any PDF is copied. The
+PDFs (`areas/*/raw/`, 551 MB) and the two embedding caches are not in git and are
+copied by hand. **Copy `raw/` before the first `make build`**, or every PDF link
+is dropped from the page. Full procedure, in order, with the failure modes:
+`docs/INSTALL.md`.
+
 ## Requirements
 
 Measured on this machine, 2026-09-05:
