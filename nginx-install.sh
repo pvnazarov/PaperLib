@@ -238,8 +238,24 @@ say ""
 if [[ "$FAIL" -eq 0 ]]; then
     say "nginx-install: all checks passed"
     say ""
-    say "  portal       https://hatkapina.cc/paperlib/"
-    say "  neoantigens  https://hatkapina.cc/paperlib/neoantigens/"
+    # Listed from the SAME areas/*/ scan, under the SAME dist/ predicate, that
+    # generated the blocks above. A hardcoded pair of lines here went on saying
+    # "neoantigens" for as long as a second area was being served -- reporting
+    # a route that had just been installed as though it did not exist. That is
+    # the drift AREA_BLOCKS was introduced to end, and the summary has to be
+    # driven by the same scan or it reintroduces it one print statement later.
+    w=6
+    for dir in "$REPO"/areas/*/; do
+        [[ -d "$dir/dist" ]] || continue
+        n=$(basename "$dir")
+        if (( ${#n} > w )); then w=${#n}; fi
+    done
+    printf '  %-*s https://hatkapina.cc/paperlib/\n' "$w" portal
+    for dir in "$REPO"/areas/*/; do
+        [[ -d "$dir/dist" ]] || continue
+        area=$(basename "$dir")
+        printf '  %-*s https://hatkapina.cc/paperlib/%s/\n' "$w" "$area" "$area"
+    done
 else
     say "nginx-install: CHECKS FAILED -- see above. Backup kept at $BACKUP" >&2
     exit 1
