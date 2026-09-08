@@ -23,8 +23,16 @@ where a tag stood, so a legitimate spaced dash in an unmarked title is untouched
 
 Proven against every registered title on disk: **8 of 312 change, and they are
 exactly the intended 8.** The `single cell -omics`, `MLLr + AML` and
-`N 6 -Methyladenosine` cases are all left alone; see `upstream_findings.md` for
-why each was excluded.
+`N 6 -Methyladenosine` cases are all left alone by the code; see
+`upstream_findings.md` for why each was excluded.
+
+**Follow-up, same day.** The owner then asked for `N 6 -Methyladenosine` to be
+corrected as well. Checking its registration first showed it carries no markup at
+all — both spaces are the publisher's — so it is an upstream override rather than
+a repair of our own defect, and it is recorded as its own ledger entry (seq 565)
+with the registration quoted verbatim. An earlier claim in `upstream_findings.md`
+that it registered as `N<sup>6</sup>` was inferred from the other cases, never
+checked, and is corrected there.
 
 **What was changed, per paper.** `title:` and `source:` in the sidecar, the
 `meta/` and `raw/` filenames where the artifact was in them, `taxonomy.json`, and

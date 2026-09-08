@@ -25,15 +25,24 @@ It was in the first list of 11 candidates and was dropped on inspection — the
 distinguishing test is whether the raw registration contains markup, not whether
 the rendered string looks wrong. Left exactly as registered.
 
-## `N 6 -Methyladenosine` — FTO paper — partly ours, deliberately left
+## `N 6 -Methyladenosine` — FTO paper — UPSTREAM, corrected 2026-09-08
 
-    registered_title: '...as a N<sup>6</sup>-Methyladenosine RNA Demethylase'
+    registered_title: 'FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a
+                       N 6 -Methyladenosine RNA Demethylase'   (verbatim)
 
-The correct rendering is `N6-Methyladenosine`. Our fix takes it to
-`N 6-Methyladenosine`: the space before the hyphen goes, but the one between `N`
-and the former superscript `6` does not, because joining a superscript digit to
-its letter is a different transformation and no rule for it has been measured.
-Left as it is rather than half-guessed; `strip_markup`'s docstring says so too.
+**Correcting an earlier entry in this file.** It first said this registered as
+`N<sup>6</sup>-Methyladenosine` and was therefore half ours to fix. That was
+inferred from the shape of the other cases and never checked against this one.
+There is no markup here at all: both spaces are literally in the registration, so
+`strip_markup()` leaves it untouched — correctly, since it has nothing to strip.
+This belongs with Baronas above, not with the eight the ingest broke.
+
+The paper itself prints `N6-Methyladenosine` (page 1; the 6 typeset as a
+superscript, which `pdftotext` renders as `N6`), and `N6-methyladenosine`
+throughout the body. The owner asked for it to be corrected, so the registered
+title has been overridden — a bigger act than repairing our own bug, recorded as
+its own ledger entry (seq 565) with the registration quoted verbatim so the
+override stays visible and reversible.
 
 ## `MLLr + AML` — METTL3-YTHDC1 paper — thin spaces, deliberately left
 

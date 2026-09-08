@@ -182,7 +182,7 @@ The clustering lives in `outputs/` and is the same one the browsable page uses. 
 - [The m6A reader IGF2BP2 regulates glutamine metabolism and represents a therapeutic target in acute myeloid leukemia](#p-2022-01-01-weng-2022-cancer-cell-the-m6a-reader-igf) — Weng (2022), *Cancer Cell*
 - [R-2-hydroxyglutarate attenuates aerobic glycolysis in leukemia by targeting the FTO/m6A/PFKP/LDHB axis](#p-2021-01-01-qing-2021-molecular-cell-r-2-hydroxyglut) — Qing (2021), *Molecular Cell*
 - [Promoter-bound METTL3 maintains myeloid leukaemia by m6A-dependent translation control](#p-2017-01-01-barbieri-2017-nature-promoter-bound-mett) — Barbieri (2017), *Nature*
-- [FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase](#p-2017-01-01-li-2017-cancer-cell-fto-plays-an-oncogen) — Li (2017), *Cancer Cell*
+- [FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase](#p-2017-01-01-li-2017-cancer-cell-fto-plays-an-oncogen) — Li (2017), *Cancer Cell*
 - [The N6-methyladenosine (m6A)-forming enzyme METTL3 controls myeloid differentiation of normal hematopoietic and leukemia cells](#p-2017-01-01-vu-2017-nature-medicine-the-n6-methylade) — Vu (2017), *Nature Medicine*
 
 ### Long-read transcriptomics, circular and chimeric RNAs
@@ -2511,7 +2511,7 @@ The consequence is translational, not transcriptional, which is the part worth h
 
 <a id="p-2017-01-01-li-2017-cancer-cell-fto-plays-an-oncogen"></a>
 
-#### FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase
+#### FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase
 
 Li (2017) · *Cancer Cell* · [doi:10.1016/j.ccell.2016.11.017](https://doi.org/10.1016/j.ccell.2016.11.017)
 

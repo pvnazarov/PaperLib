@@ -824,9 +824,9 @@ R-2-hydroxyglutarate, the metabolite produced by mutant IDH enzymes, is shown to
 
 Two independent CRISPR screens - a genome-wide dropout screen in MLL-AF9/FLT3-ITD mouse primary leukemia cells and a custom domain-focused library - identify METTL3 as essential for AML growth. Knockdown causes cell cycle arrest, differentiation and failure to establish leukemia in immunodeficient mice. METTL3 associates with chromatin independently of METTL14 and localises to transcriptional start sites of active genes, the majority of which carry CEBPZ at the TSS, which is required for its recruitment. Promoter-bound METTL3 induces m6A within the coding region of the associated transcript and enhances translation by relieving ribosome stalling.
 
-### Li (2017). *Cancer Cell.* FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase
+### Li (2017). *Cancer Cell.* FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase
 [doi:10.1016/j.ccell.2016.11.017](https://doi.org/10.1016/j.ccell.2016.11.017) · `paper`  
-[src](<../raw/Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase.pdf>)
+[src](<../raw/Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase.pdf>)
 
 FTO, the first identified m6A RNA demethylase, is shown to have a critical oncogenic role in AML. It is highly expressed in AML with MLL rearrangement, PML-RARA, FLT3-ITD and/or NPM1 mutations, enhances leukemic oncogene-mediated transformation and leukemogenesis, and inhibits all-trans-retinoic acid-induced differentiation, by reducing m6A levels on target transcripts including ASB2 and RARA and thereby lowering their expression.
 

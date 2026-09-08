@@ -267,10 +267,11 @@ def strip_markup(s: str) -> str:
     punctuation that attaches to the preceding word was layout; anywhere else it
     is a word gap, and only if it actually carried whitespace.
 
-    Deliberately narrow. It fires only where a tag stood, so a legitimate spaced
-    dash in a title with no markup is untouched, and `N<sup>6</sup>-methyl...`
-    still yields `N 6-methyl...` rather than `N6-` -- a superscript digit joined
-    to its letter is a different problem, reported and not guessed at here.
+    Deliberately narrow. It fires only where a tag stood, so a title that carries
+    a stray space with no markup around it is left exactly as registered -- two
+    such exist here and both are recorded in reports/upstream_findings.md rather
+    than silently normalised. Overriding a registration is a separate, recorded
+    act; this function only undoes damage the ingest itself did.
     """
     s = re.sub(r"<[^>]+>", "\x00", s)
     s = build.unescape_md(s)

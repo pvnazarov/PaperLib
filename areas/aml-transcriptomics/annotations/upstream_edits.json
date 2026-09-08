@@ -5019,7 +5019,7 @@
   {
    "seq": 265,
    "date": "2026-09-08",
-   "file": "raw/Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase.pdf",
+   "file": "raw/Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase.pdf",
    "keys": [
     "<new file>"
    ],
@@ -5038,7 +5038,7 @@
   {
    "seq": 266,
    "date": "2026-09-08",
-   "file": "meta/Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase.pdf.md",
+   "file": "meta/Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase.pdf.md",
    "keys": [
     "<new file>"
    ],
@@ -8302,7 +8302,7 @@
   },
   {
    "date": "2026-09-08",
-   "file": "meta/Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase.pdf.md",
+   "file": "meta/Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase.pdf.md",
    "keys": [
     "abstract",
     "summary",
@@ -10175,6 +10175,30 @@
    "approved": "the owner said: fix the NPM1 -mutated name -- then, shown that it was 1 of 11 titles hit by the same ingest defect, chose: 'The 9 unambiguous ones + fix the ingest'. Baronas was dropped from that set on inspection: its space is in the Crossref registration itself, not introduced here.",
    "sha256_before": "60a2547b24117f69742b85e396924c5ba3bde816bd62cdd26deb9e66a6144d1c",
    "sha256_after": "94fe540193cf804a158de993eb470dfc3726784e1d5e4bacaedbe37465db7506"
+  },
+  {
+   "seq": 565,
+   "date": "2026-09-08",
+   "file": "meta/Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase.pdf.md",
+   "keys": [
+    "title",
+    "source",
+    "citation"
+   ],
+   "before": {
+    "title": "FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase",
+    "source": "Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase.pdf"
+   },
+   "after": {
+    "title": "FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase",
+    "source": "Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase.pdf",
+    "citation": "Li et al. Cancer Cell 2017. FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase. doi: 10.1016/j.ccell.2016.11.017"
+   },
+   "reason": "UPSTREAM CORRECTION, not one of ours. The Crossref registration carries 'N 6 -Methyladenosine' with both spaces literally present -- there is no markup here to strip, so strip_markup() leaves it alone and correctly so. The paper itself prints N6-Methyladenosine (the 6 typeset as a superscript). Overriding a registered title is a bigger act than repairing our own bug, which is why it is recorded separately and why the registration is quoted verbatim above.",
+   "evidence": "the paper in raw/, page 1: pdftotext yields 'N6-Methyladenosine' in the title and 'N6-methyladenosine' in the body. Registered title, verbatim: 'FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase' (doi 10.1016/j.ccell.2016.11.017).",
+   "approved": "the owner said: fix the N6-Methyladenosine one too",
+   "sha256_before": "3f01d5012b26d57cac8ca8e969de0d8595883fbad1b3e6481b7e67cd2feaac8d",
+   "sha256_after": "a2df7c20182f3b984f7aa59bc4d5b69acd894c122cfd8a0f83755b531f47dfe5"
   }
  ]
 }

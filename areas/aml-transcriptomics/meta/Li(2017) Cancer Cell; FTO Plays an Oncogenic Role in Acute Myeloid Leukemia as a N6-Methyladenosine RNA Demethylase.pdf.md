@@ -2,7 +2,7 @@
 # --- identity ------------------------------------------------
 id: 2017-01-01_li-2017-cancer-cell-fto-plays-an-oncogen
 id_basis: filename-year
-source: Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase.pdf
+source: Li(2017) Cancer Cell; FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase.pdf
 sha256: ebcd9fd94ce82e8f49e9f214a4045e9f85398ee01dcaddd7c820d4a0f0d29280
 size_bytes: 6512194
 media: pdf
@@ -24,7 +24,7 @@ classification_basis: "published literature — publicly available at its venue"
 # --- bibliographic -------------------------------------------
 doi: "10.1016/j.ccell.2016.11.017"
 year: 2017
-title: "FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase"
+title: "FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase"
 
 # --- cross-area ----------------------------------------------
 area: aml-transcriptomics
@@ -61,4 +61,4 @@ Located in the published literature, dropped into `inbox/` as `Li(2017) Cancer C
 
 ## Citation
 
-Li et al. Cancer Cell 2017. FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N 6 -Methyladenosine RNA Demethylase. doi: 10.1016/j.ccell.2016.11.017
+Li et al. Cancer Cell 2017. FTO Plays an Oncogenic Role in Acute Myeloid Leukemia as a N6-Methyladenosine RNA Demethylase. doi: 10.1016/j.ccell.2016.11.017
