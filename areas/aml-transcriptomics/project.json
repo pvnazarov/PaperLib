@@ -1,0 +1,13 @@
+{
+  "_comment": [
+    "What this AREA calls itself. Inherits paperlib.json; anything set here",
+    "wins. site_dir is the path under the web root deploy.sh publishes into."
+  ],
+  "name": "AML transcriptomics",
+  "tagline": "the AML transcriptomics literature: expression, subtypes and single-cell",
+  "subtitle": "",
+  "footer_scope": "the AML transcriptomics literature",
+  "site_dir": "paperlib/aml-transcriptomics",
+  "uplink_label": "PaperLib",
+  "uplink_href": "/paperlib/"
+}
