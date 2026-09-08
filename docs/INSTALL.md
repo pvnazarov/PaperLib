@@ -173,20 +173,25 @@ because nginx runs as `www-data` and cannot otherwise read them. Modes only — 
 byte, name or hash changes, so `make verify` still passes afterwards. The web root
 must be writable by whoever runs it.
 
-**c. `nginx-install.sh` — serve by alias, no copy.** This one is **specific to the
-home server and will not work as-is elsewhere.** It appends its block to
-`/etc/nginx/snippets/alcmaeon-common.conf`, a file that exists only there, and the
-`location` blocks name `neoantigens` literally rather than looping over areas.
-If you want this shape on the work server, edit before running:
+**c. `nginx-install.sh` — serve by alias, no copy.** It generates one pair of
+`location` blocks per area by looping over `areas/*/`, so a new area is picked up
+by re-running it — but it is still **partly specific to the home server**: it
+appends to `/etc/nginx/snippets/alcmaeon-common.conf`, a file that exists only
+there, and prints `https://hatkapina.cc/...` at the end. Before running it
+elsewhere, set:
 
 - `SNIPPET=` → whichever nginx conf file the work server actually includes
-- the three `location /paperlib/...` blocks → the right prefix and area names
-- the closing `https://hatkapina.cc/...` URLs it prints → cosmetic, but wrong
+- the closing URLs it prints → cosmetic, but wrong
+
+**Re-run it after adding an area.** Until you do, the new area's URL 404s while
+every existing one keeps working, because the installed block does not mention it.
 
 `X-Robots-Tag: noindex, nofollow` in that block keeps the collection out of search
-indexes. It is **not access control** — anyone with the URL reads everything. If
+indexes; `nginx-noindex.conf` does the same job for the `deploy.sh` model, in one
+prefix location that covers current and future areas. Pick one model, not both.
+Either way it is **not access control** — anyone with the URL reads everything. If
 the work server is internet-facing, that distinction is the thing to decide before
-publishing 125 publisher PDFs, not after.
+publishing a few hundred publisher PDFs, not after.
 
 ## Note on what is public
 
