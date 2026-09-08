@@ -2,7 +2,7 @@
 # --- identity ------------------------------------------------
 id: 2025-01-01_fu-2025-molecular-cancer-the-mettl3-ythd
 id_basis: filename-year
-source: Fu(2025) Molecular Cancer; The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr + AML genome.pdf
+source: Fu(2025) Molecular Cancer; The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr+ AML genome.pdf
 sha256: 0047fbf241a4080574ef63864e7fc2b736f3f1bbe111e5a6707e0cb20f132c46
 size_bytes: 9668195
 media: pdf
@@ -24,7 +24,7 @@ classification_basis: "published literature — publicly available at its venue"
 # --- bibliographic -------------------------------------------
 doi: "10.1186/s12943-025-02545-x"
 year: 2025
-title: "The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr + AML genome"
+title: "The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr+ AML genome"
 
 # --- cross-area ----------------------------------------------
 area: aml-transcriptomics

@@ -109,6 +109,10 @@ way in. The inbox directories are created by the ingest when you need them, and
 `make route` / `make inbox` say "no inbox/ — nothing to do" until then rather than
 failing.
 
+If this installation already existed and you are bringing it up to date rather
+than creating it, the filenames in `raw/` may be behind the sidecars — see
+`docs/PROPAGATING-CORRECTIONS.md`, which is one `make fix-names APPLY=1` per area.
+
 ### 3. Prove the copy
 
 ```bash

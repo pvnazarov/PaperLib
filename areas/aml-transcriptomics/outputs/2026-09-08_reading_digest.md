@@ -176,7 +176,7 @@ The clustering lives in `outputs/` and is the same one the browsable page uses. 
 
 *8 papers.* Writers, erasers and readers of the most abundant internal mRNA modification, all of which turn out to matter in AML. The direction is not conserved across tissues, which is a caution as much as a finding.
 
-- [The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr + AML genome](#p-2025-01-01-fu-2025-molecular-cancer-the-mettl3-ythd) — Fu (2025), *Molecular Cancer*
+- [The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr+ AML genome](#p-2025-01-01-fu-2025-molecular-cancer-the-mettl3-ythd) — Fu (2025), *Molecular Cancer*
 - [Disrupting tRNA modifications to target mitochondrial vulnerabilities in drug-resistant leukemia cells](#p-2025-01-01-pauli-2025-blood-disrupting-trna-modific) — Pauli (2025), *Blood*
 - [METTL16 drives leukemogenesis and leukemia stem cell self-renewal by reprogramming BCAA metabolism](#p-2023-01-01-han-2023-cell-stem-cell-mettl16-drives-l) — Han (2023), *Cell Stem Cell*
 - [The m6A reader IGF2BP2 regulates glutamine metabolism and represents a therapeutic target in acute myeloid leukemia](#p-2022-01-01-weng-2022-cancer-cell-the-m6a-reader-igf) — Weng (2022), *Cancer Cell*
@@ -2391,7 +2391,7 @@ SYNCRIP is the standout hit precisely because it is the most differentially requ
 
 <a id="p-2025-01-01-fu-2025-molecular-cancer-the-mettl3-ythd"></a>
 
-#### The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr + AML genome
+#### The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr+ AML genome
 
 Fu (2025) · *Molecular Cancer* · [doi:10.1186/s12943-025-02545-x](https://doi.org/10.1186/s12943-025-02545-x)
 

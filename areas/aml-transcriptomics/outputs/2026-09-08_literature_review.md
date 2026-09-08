@@ -788,9 +788,9 @@ Proteomic analysis of the MSI2-interacting RNA-binding protein network combined 
 
 *8 papers.* Writers, erasers and readers of the most abundant internal mRNA modification, all of which turn out to matter in AML. The direction is not conserved across tissues, which is a caution as much as a finding.
 
-### Fu (2025). *Molecular Cancer.* The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr + AML genome
+### Fu (2025). *Molecular Cancer.* The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr+ AML genome
 [doi:10.1186/s12943-025-02545-x](https://doi.org/10.1186/s12943-025-02545-x) · `paper`  
-[src](<../raw/Fu(2025) Molecular Cancer; The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr + AML genome.pdf>)
+[src](<../raw/Fu(2025) Molecular Cancer; The METTL3-YTHDC1 axis mediates architectural RNA m6A modification to modulate the integrity of chromatin TADs in MLLr+ AML genome.pdf>)
 
 A multi-omics study (RNA-seq, IP-MS, DRIP-seq, ChIP-seq for METTL3, CTCF, H3K4me3 and H3K27ac, RIP-seq, m6A-seq and Hi-C) showing that METTL3 is transcriptionally activated by MLL in MLL-rearranged AML and forms a complex with YTHDC1 and CTCF at promoters and enhancers. METTL3 depletion disrupts CTCF binding sites and reduces chromatin accessibility at leukemic genes including MYB and RUNX1, and YTHDC1 loss compromises CTCF-dependent 3D genome organisation. Mechanistically, YTHDC1 recognises m6A-modified architectural RNAs such as MALAT1, enhancing R-loop formation and sustaining CTCF-mediated TAD activity.
 

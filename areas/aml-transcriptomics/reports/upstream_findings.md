@@ -44,14 +44,24 @@ title has been overridden — a bigger act than repairing our own bug, recorded 
 its own ledger entry (seq 565) with the registration quoted verbatim so the
 override stays visible and reversible.
 
-## `MLLr + AML` — METTL3-YTHDC1 paper — thin spaces, deliberately left
+## `MLLr + AML` — METTL3-YTHDC1 paper — UPSTREAM, corrected 2026-09-08
 
-    registered_title: '...chromatin TADs in MLLr + AML genome'
+    registered_title: '...chromatin TADs in MLLr\u2009+\u2009AML genome'
 
-U+2009 THIN SPACE either side of the `+`. That is typography, not an error, and
-the stored `MLLr + AML` is a fair rendering of it. The mechanical rule would have
-produced the asymmetric `MLLr+ AML`, which is worse than what is there — the
-reason this one was excluded rather than swept in with the rest.
+U+2009 THIN SPACE either side of the `+`.
+
+**Correcting an earlier entry in this file.** It said the stored `MLLr + AML` was
+a fair rendering, and that the mechanical `MLLr+ AML` would be *worse*. That was a
+judgement on how the two looked, made without opening the paper, and it was wrong.
+The plus is a SUPERSCRIPT attached to `MLLr` — MLL-rearranged **positive** — so
+the thin space before it is not a space at all, and `MLLr + AML` reads as a
+free-standing operator that means nothing.
+
+The paper settles it. One occurrence survives extraction as `MLLr⁺ AML` (U+207A
+SUPERSCRIPT PLUS) and seven as `MLLr+ AML`, against ten of the negative
+counterpart `MLLr- AML` — every one attached. The 47 `MLLr + AML` hits are that
+same superscript flattened by `pdftotext`, which is precisely the trap the stored
+title had fallen into. Corrected to `MLLr+ AML`; ledger seq 566.
 
 ## No registered venue
 
