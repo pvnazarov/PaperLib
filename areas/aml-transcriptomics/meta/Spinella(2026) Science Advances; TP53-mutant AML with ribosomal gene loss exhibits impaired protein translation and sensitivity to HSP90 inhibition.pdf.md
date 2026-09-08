@@ -2,7 +2,7 @@
 # --- identity ------------------------------------------------
 id: 2026-01-01_spinella-2026-science-advances-tp53-muta
 id_basis: filename-year
-source: Spinella(2026) Science Advances; TP53 -mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition.pdf
+source: Spinella(2026) Science Advances; TP53-mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition.pdf
 sha256: 2711a799c50adc971b70ce82058b5bc872c5ea0601324db7e7390fda71279184
 size_bytes: 11010213
 media: pdf
@@ -24,7 +24,7 @@ classification_basis: "published literature — publicly available at its venue"
 # --- bibliographic -------------------------------------------
 doi: "10.1126/sciadv.aed7122"
 year: 2026
-title: "TP53 -mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition"
+title: "TP53-mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition"
 
 # --- cross-area ----------------------------------------------
 area: aml-transcriptomics

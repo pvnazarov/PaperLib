@@ -29,7 +29,7 @@ The clustering lives in `outputs/` and is the same one the browsable page uses. 
 *6 papers.* Computational models of the steps before the groove - proteasomal cleavage, TAP transport, ERAP1 trimming. A peptide that is never cut out or never transported cannot be presented however well it would bind.
 
 - [ERAMER: A novel in silico tool for prediction of ERAP1 enzyme trimming](#p-2024-01-01-al-okaily-2024-journal-of-immunological) — Al-okaily, A. et al. (2024), *Journal of Immunological Methods*
-- [ProsperousPlus : a one-stop and comprehensive platform for accurate protease-specific substrate cleavage prediction and machine-learning model construction](#p-2023-01-01-li-2023-briefings-in-bioinformatics-pros) — Li, F. et al. (2023), *Briefings in Bioinformatics*
+- [ProsperousPlus: a one-stop and comprehensive platform for accurate protease-specific substrate cleavage prediction and machine-learning model construction](#p-2023-01-01-li-2023-briefings-in-bioinformatics-pros) — Li, F. et al. (2023), *Briefings in Bioinformatics*
 - [DeepTAP: An RNN-based method of TAP-binding peptide prediction in the selection of tumor neoantigens](#p-2023-01-01-zhang-2023-computers-in-biology-and-medi) — Zhang, X. et al. (2023), *Computers in Biology and Medicine*
 - [pepsickle rapidly and accurately predicts proteasomal cleavage sites for improved neoantigen identification](#p-2021-01-01-weeder-2021-bioinformatics-pepsickle-rap) — Weeder, B. R. et al. (2021), *Bioinformatics*
 - [The role of the proteasome in generating cytotoxic T-cell epitopes: insights obtained from improved predictions of proteasomal cleavage](#p-2005-01-01-nielsen-2005-immunogenetics-the-role-of) — Nielsen, M. et al. (2005), *Immunogenetics*
@@ -98,7 +98,7 @@ The clustering lives in `outputs/` and is the same one the browsable page uses. 
 - [Population-level distribution and putative immunogenicity of cancer neoepitopes](#p-2018-01-01-wood-2018-bmc-cancer-population-level-di) — Wood, M. A. et al. (2018), *BMC Cancer*
 - [Identification of unique neoantigen qualities in long-term survivors of pancreatic cancer](#p-2017-01-01-pancreaticcancergenomeinitiative-2017-na) — PancreaticCancerGenomeInitiative et al. (2017), *Nature*
 - [A neoantigen fitness model predicts tumour response to checkpoint blockade immunotherapy](#p-2017-01-01-uksza-2017-nature-a-neoantigen-fitness-m) — Łuksza, M. et al. (2017), *Nature*
-- [TCR contact residue hydrophobicity is a hallmark of immunogenic CD8 + T cell epitopes](#p-2015-01-01-chowell-2015-proceedings-of-the-national) — Chowell, D. et al. (2015), *Proceedings of the National Academy of Sciences*
+- [TCR contact residue hydrophobicity is a hallmark of immunogenic CD8+ T cell epitopes](#p-2015-01-01-chowell-2015-proceedings-of-the-national) — Chowell, D. et al. (2015), *Proceedings of the National Academy of Sciences*
 - [Properties of MHC Class I Presented Peptides That Enhance Immunogenicity](#p-2013-01-01-calis-2013-plos-computational-biology-pr) — Calis, J. J. A. et al. (2013), *PLoS Computational Biology*
 
 ### TCR specificity and structural recognition
@@ -332,7 +332,7 @@ This fills the trimming step specifically, which makes it one of the few tools a
 
 <a id="p-2023-01-01-li-2023-briefings-in-bioinformatics-pros"></a>
 
-#### ProsperousPlus : a one-stop and comprehensive platform for accurate protease-specific substrate cleavage prediction and machine-learning model construction
+#### ProsperousPlus: a one-stop and comprehensive platform for accurate protease-specific substrate cleavage prediction and machine-learning model construction
 
 Li, F. et al. (2023) · *Briefings in Bioinformatics* · [doi:10.1093/bib/bbad372](https://doi.org/10.1093/bib/bbad372)
 
@@ -1142,7 +1142,7 @@ Using similarity to known antigens as the recognition proxy is the pragmatic ste
 
 <a id="p-2015-01-01-chowell-2015-proceedings-of-the-national"></a>
 
-#### TCR contact residue hydrophobicity is a hallmark of immunogenic CD8 + T cell epitopes
+#### TCR contact residue hydrophobicity is a hallmark of immunogenic CD8+ T cell epitopes
 
 Chowell, D. et al. (2015) · *Proceedings of the National Academy of Sciences* · [doi:10.1073/pnas.1500973112](https://doi.org/10.1073/pnas.1500973112)
 

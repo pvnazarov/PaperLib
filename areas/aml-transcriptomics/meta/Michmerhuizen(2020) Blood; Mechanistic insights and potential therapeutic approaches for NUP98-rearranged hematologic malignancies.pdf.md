@@ -2,7 +2,7 @@
 # --- identity ------------------------------------------------
 id: 2020-01-01_michmerhuizen-2020-blood-mechanistic-ins
 id_basis: filename-year
-source: Michmerhuizen(2020) Blood; Mechanistic insights and potential therapeutic approaches for NUP98 -rearranged hematologic malignancies.pdf
+source: Michmerhuizen(2020) Blood; Mechanistic insights and potential therapeutic approaches for NUP98-rearranged hematologic malignancies.pdf
 sha256: fe4976f85a31ff0e253eb86cfd025ac396d6024ebe26f0d6fa93be49bfeb6b78
 size_bytes: 1565693
 media: pdf
@@ -24,7 +24,7 @@ classification_basis: "published literature — publicly available at its venue"
 # --- bibliographic -------------------------------------------
 doi: "10.1182/blood.2020007093"
 year: 2020
-title: "Mechanistic insights and potential therapeutic approaches for NUP98 -rearranged hematologic malignancies"
+title: "Mechanistic insights and potential therapeutic approaches for NUP98-rearranged hematologic malignancies"
 
 # --- cross-area ----------------------------------------------
 area: aml-transcriptomics

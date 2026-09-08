@@ -249,15 +249,39 @@ def clean_title(s: str) -> str:
     a filename.
     """
     s = unicodedata.normalize("NFC", s or "")
-    s = re.sub(r"<[^>]+>", "", s)
+    return strip_markup(s).strip()
+
+
+def strip_markup(s: str) -> str:
+    """Remove publisher markup, and the pretty-printing that came with it.
+
+    Crossref deposits inline markup on its OWN indented line, so deleting the tag
+    and collapsing whitespace leaves that indentation behind as a real space:
+
+        'revumenib for\\n   <i>NPM1</i>\\n   -mutated'  ->  'NPM1 -mutated'
+
+    Measured 2026-09-08: 8 titles across two areas, and the filenames built from
+    them, carried a space that no publisher wrote. Whitespace alone cannot say
+    which boundary was a word gap and which was layout -- but the TAG's position
+    can, so mark where each tag stood and decide per boundary. A boundary hugging
+    punctuation that attaches to the preceding word was layout; anywhere else it
+    is a word gap, and only if it actually carried whitespace.
+
+    Deliberately narrow. It fires only where a tag stood, so a legitimate spaced
+    dash in a title with no markup is untouched, and `N<sup>6</sup>-methyl...`
+    still yields `N 6-methyl...` rather than `N6-` -- a superscript digit joined
+    to its letter is a different problem, reported and not guessed at here.
+    """
+    s = re.sub(r"<[^>]+>", "\x00", s)
     s = build.unescape_md(s)
-    return re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"\s+", " ", s)
+    s = re.sub(r" ?\x00 ?(?=[-:;,+)])", "", s)
+    return re.sub(r" ?\x00 ?", lambda m: " " if " " in m.group(0) else "", s)
 
 
 def clean_component(s: str) -> str:
     s = unicodedata.normalize("NFC", s or "")
-    s = re.sub(r"<[^>]+>", "", s)
-    s = build.unescape_md(s)
+    s = strip_markup(s)
     s = s.replace(":", "").replace(";", ",")       # `; ` is the field separator
     s = BAD.sub(" ", s)
     return re.sub(r"\s+", " ", s).strip(" .")

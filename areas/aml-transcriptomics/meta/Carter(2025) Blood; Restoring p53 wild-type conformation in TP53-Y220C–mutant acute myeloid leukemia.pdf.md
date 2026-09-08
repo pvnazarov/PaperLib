@@ -2,7 +2,7 @@
 # --- identity ------------------------------------------------
 id: 2025-01-01_carter-2025-blood-restoring-p53-wild-typ
 id_basis: filename-year
-source: Carter(2025) Blood; Restoring p53 wild-type conformation in TP53 -Y220C–mutant acute myeloid leukemia.pdf
+source: Carter(2025) Blood; Restoring p53 wild-type conformation in TP53-Y220C–mutant acute myeloid leukemia.pdf
 sha256: eca47b39c8800ffb46c6bd93318be027b10f67996ea3766dc3a4bb857be4f577
 size_bytes: 3302941
 media: pdf
@@ -24,7 +24,7 @@ classification_basis: "published literature — publicly available at its venue"
 # --- bibliographic -------------------------------------------
 doi: "10.1182/blood.2025028935"
 year: 2025
-title: "Restoring p53 wild-type conformation in TP53 -Y220C–mutant acute myeloid leukemia"
+title: "Restoring p53 wild-type conformation in TP53-Y220C–mutant acute myeloid leukemia"
 
 # --- cross-area ----------------------------------------------
 area: aml-transcriptomics

@@ -2,7 +2,7 @@
 # --- identity ------------------------------------------------
 id: 2025-01-01_arellano-2025-blood-menin-inhibition-wit
 id_basis: filename-year
-source: Arellano(2025) Blood; Menin inhibition with revumenib for NPM1 -mutated relapsed or refractory acute myeloid leukemia the AUGMENT-101 study.pdf
+source: Arellano(2025) Blood; Menin inhibition with revumenib for NPM1-mutated relapsed or refractory acute myeloid leukemia the AUGMENT-101 study.pdf
 sha256: a3d6c7bc0933970500b54f7924b1bf703d8c5f4b510e085903f446ce332e0395
 size_bytes: 1150705
 media: pdf
@@ -24,7 +24,7 @@ classification_basis: "published literature — publicly available at its venue"
 # --- bibliographic -------------------------------------------
 doi: "10.1182/blood.2025028357"
 year: 2025
-title: "Menin inhibition with revumenib for NPM1 -mutated relapsed or refractory acute myeloid leukemia: the AUGMENT-101 study"
+title: "Menin inhibition with revumenib for NPM1-mutated relapsed or refractory acute myeloid leukemia: the AUGMENT-101 study"
 
 # --- cross-area ----------------------------------------------
 area: aml-transcriptomics

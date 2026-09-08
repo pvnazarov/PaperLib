@@ -2,7 +2,7 @@
 # --- identity ------------------------------------------------
 id: 2015-01-01_chowell-2015-proceedings-of-the-national
 id_basis: filename-year
-source: Chowell(2015) Proceedings of the National Academy of Sciences; TCR contact residue hydrophobicity is a hallmark of immunogenic CD8 + T cell epitopes.pdf
+source: Chowell(2015) Proceedings of the National Academy of Sciences; TCR contact residue hydrophobicity is a hallmark of immunogenic CD8+ T cell epitopes.pdf
 sha256: b3667b915b49e496f2acbc2969fb9995188dc058b14cfdd52b749361f7d4db14
 size_bytes: 1148358
 media: pdf
@@ -24,7 +24,7 @@ classification_basis: "published literature — publicly available at its venue"
 # --- bibliographic -------------------------------------------
 doi: "10.1073/pnas.1500973112"
 year: 2015
-title: "TCR contact residue hydrophobicity is a hallmark of immunogenic CD8 + T cell epitopes"
+title: "TCR contact residue hydrophobicity is a hallmark of immunogenic CD8+ T cell epitopes"
 
 # --- cross-area ----------------------------------------------
 area: neoantigens

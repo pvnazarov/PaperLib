@@ -287,7 +287,7 @@
   },
   {
    "id": "2025-01-01_arellano-2025-blood-menin-inhibition-wit",
-   "source": "Arellano(2025) Blood; Menin inhibition with revumenib for NPM1 -mutated relapsed or refractory acute myeloid leukemia the AUGMENT-101 study.pdf",
+   "source": "Arellano(2025) Blood; Menin inhibition with revumenib for NPM1-mutated relapsed or refractory acute myeloid leukemia the AUGMENT-101 study.pdf",
    "sha256": "a3d6c7bc0933970500b54f7924b1bf703d8c5f4b510e085903f446ce332e0395",
    "size_bytes": 1150705,
    "media": "pdf",
@@ -318,8 +318,8 @@
     "sharers": []
    },
    "hay_drop": [],
-   "sidecar_sha256": "2b943c716f4067873845b5038d518440fcd48fcc242152932f1aef9722404a66",
-   "title": "Menin inhibition with revumenib for NPM1 -mutated relapsed or refractory acute myeloid leukemia: the AUGMENT-101 study",
+   "sidecar_sha256": "dbf76aff776dc2bae167260d95d5590a737c3d0e3488a8091a65937372eb0e7f",
+   "title": "Menin inhibition with revumenib for NPM1-mutated relapsed or refractory acute myeloid leukemia: the AUGMENT-101 study",
    "title_from_filename": false,
    "title_source": "review",
    "first_author": "Arellano",
@@ -1461,7 +1461,7 @@
   },
   {
    "id": "2025-01-01_carter-2025-blood-restoring-p53-wild-typ",
-   "source": "Carter(2025) Blood; Restoring p53 wild-type conformation in TP53 -Y220C–mutant acute myeloid leukemia.pdf",
+   "source": "Carter(2025) Blood; Restoring p53 wild-type conformation in TP53-Y220C–mutant acute myeloid leukemia.pdf",
    "sha256": "eca47b39c8800ffb46c6bd93318be027b10f67996ea3766dc3a4bb857be4f577",
    "size_bytes": 3302941,
    "media": "pdf",
@@ -1492,8 +1492,8 @@
     "sharers": []
    },
    "hay_drop": [],
-   "sidecar_sha256": "ab2dbdd0a25db56ee9dd4696a2a54bbada625d5963a1270608aa1df6d191ee33",
-   "title": "Restoring p53 wild-type conformation in TP53 -Y220C–mutant acute myeloid leukemia",
+   "sidecar_sha256": "48f4cbbb727c02e9616a2cf39414532e6854289935774c16722f3844e986e24d",
+   "title": "Restoring p53 wild-type conformation in TP53-Y220C–mutant acute myeloid leukemia",
    "title_from_filename": false,
    "title_source": "review",
    "first_author": "Carter",
@@ -1968,7 +1968,7 @@
   },
   {
    "id": "2025-01-01_damaskou-2025-blood-posttranscriptional",
-   "source": "Damaskou(2025) Blood; Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1 -mutant AML.pdf",
+   "source": "Damaskou(2025) Blood; Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1-mutant AML.pdf",
    "sha256": "5bf372bfe8a31f1c3d39ae7eb644490d265033be537a8030a1d2a81898f4e457",
    "size_bytes": 3321026,
    "media": "pdf",
@@ -1999,8 +1999,8 @@
     "sharers": []
    },
    "hay_drop": [],
-   "sidecar_sha256": "a5088d1b33bdceff2d0d30de2d4849ffee6c22efeb2352b142190c07dcf6fd07",
-   "title": "Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1 -mutant AML",
+   "sidecar_sha256": "d8e907d4cda611e4c1a65666646873fd7c04082adf5ca7a35eaf64d05dab2e01",
+   "title": "Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1-mutant AML",
    "title_from_filename": false,
    "title_source": "review",
    "first_author": "Damaskou",
@@ -7035,7 +7035,7 @@
   },
   {
    "id": "2020-01-01_michmerhuizen-2020-blood-mechanistic-ins",
-   "source": "Michmerhuizen(2020) Blood; Mechanistic insights and potential therapeutic approaches for NUP98 -rearranged hematologic malignancies.pdf",
+   "source": "Michmerhuizen(2020) Blood; Mechanistic insights and potential therapeutic approaches for NUP98-rearranged hematologic malignancies.pdf",
    "sha256": "fe4976f85a31ff0e253eb86cfd025ac396d6024ebe26f0d6fa93be49bfeb6b78",
    "size_bytes": 1565693,
    "media": "pdf",
@@ -7066,8 +7066,8 @@
     "sharers": []
    },
    "hay_drop": [],
-   "sidecar_sha256": "7fc863eeec4d766cfd1b0e800423749f3f3c6316da8ce266b9181c6a1c21b016",
-   "title": "Mechanistic insights and potential therapeutic approaches for NUP98 -rearranged hematologic malignancies",
+   "sidecar_sha256": "d6b7756f84b2482a0337731194fe5fec909c90462179430b7ec54f636ea7f10a",
+   "title": "Mechanistic insights and potential therapeutic approaches for NUP98-rearranged hematologic malignancies",
    "title_from_filename": false,
    "title_source": "review",
    "first_author": "Michmerhuizen",
@@ -8888,7 +8888,7 @@
   },
   {
    "id": "2023-01-01_sabatier-2023-cancer-discovery-c-ebp-con",
-   "source": "Sabatier(2023) Cancer Discovery; C EBPα Confers Dependence to Fatty Acid Anabolic Pathways and Vulnerability to Lipid Oxidative Stress–Induced Ferroptosis in FLT3 -Mutant Leukemia.pdf",
+   "source": "Sabatier(2023) Cancer Discovery; C EBPα Confers Dependence to Fatty Acid Anabolic Pathways and Vulnerability to Lipid Oxidative Stress–Induced Ferroptosis in FLT3-Mutant Leukemia.pdf",
    "sha256": "25ee6d56a62b08513f2a66d9fb0457b6fcc7b48d3adc5764aaaa9a6f5d79ffee",
    "size_bytes": 16098308,
    "media": "pdf",
@@ -8919,8 +8919,8 @@
     "sharers": []
    },
    "hay_drop": [],
-   "sidecar_sha256": "60a2547b24117f69742b85e396924c5ba3bde816bd62cdd26deb9e66a6144d1c",
-   "title": "C/EBPα Confers Dependence to Fatty Acid Anabolic Pathways and Vulnerability to Lipid Oxidative Stress–Induced Ferroptosis in FLT3 -Mutant Leukemia",
+   "sidecar_sha256": "94fe540193cf804a158de993eb470dfc3726784e1d5e4bacaedbe37465db7506",
+   "title": "C/EBPα Confers Dependence to Fatty Acid Anabolic Pathways and Vulnerability to Lipid Oxidative Stress–Induced Ferroptosis in FLT3-Mutant Leukemia",
    "title_from_filename": false,
    "title_source": "review",
    "first_author": "Sabatier",
@@ -9930,7 +9930,7 @@
   },
   {
    "id": "2026-01-01_spinella-2026-science-advances-tp53-muta",
-   "source": "Spinella(2026) Science Advances; TP53 -mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition.pdf",
+   "source": "Spinella(2026) Science Advances; TP53-mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition.pdf",
    "sha256": "2711a799c50adc971b70ce82058b5bc872c5ea0601324db7e7390fda71279184",
    "size_bytes": 11010213,
    "media": "pdf",
@@ -9961,8 +9961,8 @@
     "sharers": []
    },
    "hay_drop": [],
-   "sidecar_sha256": "b01c19f3558a46a53adf85c75b96a599c2ab1250806803e925fe3831a571ef76",
-   "title": "TP53 -mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition",
+   "sidecar_sha256": "0f7c28ef45da923d15a38023a642f6a1ced23f5645cbd5e3d0ac260186fcb35d",
+   "title": "TP53-mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition",
    "title_from_filename": false,
    "title_source": "review",
    "first_author": "Spinella",

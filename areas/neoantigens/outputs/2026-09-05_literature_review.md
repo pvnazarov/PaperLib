@@ -147,7 +147,7 @@ Using streptolysin-O-permeabilised cells, the authors show that peptide binding 
 
 ERAMER is a prediction model for the trimming performed by ERAP1, the ER-resident aminopeptidase that shortens precursor peptides from the N-terminus to the 8-10 residues a stable MHC-I complex requires. The authors note that although ERAP1 specificities had been reported, no in silico tool existed for the trimming step.
 
-### Li, F. et al. (2023). *Briefings in Bioinformatics.* ProsperousPlus : a one-stop and comprehensive platform for accurate protease-specific substrate cleavage prediction and machine-learning model construction
+### Li, F. et al. (2023). *Briefings in Bioinformatics.* ProsperousPlus: a one-stop and comprehensive platform for accurate protease-specific substrate cleavage prediction and machine-learning model construction
 [doi:10.1093/bib/bbad372](https://doi.org/10.1093/bib/bbad372) · `paper`  
 [src](<../raw/Li(2023) Briefings in Bioinformatics; ProsperousPlus a one-stop and comprehensive platform for accurate protease-specific substrate cleavage prediction and machine-learning model construction.pdf>)
 
@@ -422,9 +422,9 @@ Comparing long-term pancreatic cancer survivors (median survival 6 years, n=82) 
 
 A fitness model for tumours based on immune interactions of neoantigens, predicting response to checkpoint blockade. Neoantigen fitness has two components: likelihood of MHC presentation, estimated from binding affinity relative to the wild-type peptide, and T cell recognition, estimated from a nonlinear dependence on sequence similarity to known antigens.
 
-### Chowell, D. et al. (2015). *Proceedings of the National Academy of Sciences.* TCR contact residue hydrophobicity is a hallmark of immunogenic CD8 + T cell epitopes
+### Chowell, D. et al. (2015). *Proceedings of the National Academy of Sciences.* TCR contact residue hydrophobicity is a hallmark of immunogenic CD8+ T cell epitopes
 [doi:10.1073/pnas.1500973112](https://doi.org/10.1073/pnas.1500973112) · `paper`  
-[src](<../raw/Chowell(2015) Proceedings of the National Academy of Sciences; TCR contact residue hydrophobicity is a hallmark of immunogenic CD8 + T cell epitopes.pdf>)
+[src](<../raw/Chowell(2015) Proceedings of the National Academy of Sciences; TCR contact residue hydrophobicity is a hallmark of immunogenic CD8+ T cell epitopes.pdf>)
 
 Interrogating the biochemical properties of 9,888 MHC class I peptides, the authors find a strong bias toward hydrophobic amino acids specifically at TCR contact residues of immunogenic epitopes. They train a hydrophobicity-based neural network (ANN-Hydro) on this signal and validate it blind on 364 peptides from three HIV-1 Gag variants in vivo.
 

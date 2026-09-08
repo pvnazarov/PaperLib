@@ -1260,7 +1260,7 @@
   },
   {
    "id": "2015-01-01_chowell-2015-proceedings-of-the-national",
-   "source": "Chowell(2015) Proceedings of the National Academy of Sciences; TCR contact residue hydrophobicity is a hallmark of immunogenic CD8 + T cell epitopes.pdf",
+   "source": "Chowell(2015) Proceedings of the National Academy of Sciences; TCR contact residue hydrophobicity is a hallmark of immunogenic CD8+ T cell epitopes.pdf",
    "sha256": "b3667b915b49e496f2acbc2969fb9995188dc058b14cfdd52b749361f7d4db14",
    "size_bytes": 1148358,
    "media": "pdf",
@@ -1290,8 +1290,8 @@
     "sharers": []
    },
    "hay_drop": [],
-   "sidecar_sha256": "c2a1b77d55b2934f0fb8a6ccb9a07ca51964b5dcad5be1142e7301fe5badc1ed",
-   "title": "TCR contact residue hydrophobicity is a hallmark of immunogenic CD8 + T cell epitopes",
+   "sidecar_sha256": "0ee5e34ca4ce2bc9dba518d70f0b66cf41ba7114c68d32beb9d49ea1025c2cdc",
+   "title": "TCR contact residue hydrophobicity is a hallmark of immunogenic CD8+ T cell epitopes",
    "title_from_filename": false,
    "title_source": "review",
    "first_author": "Chowell, D. et al.",
@@ -3523,8 +3523,8 @@
     "sharers": []
    },
    "hay_drop": [],
-   "sidecar_sha256": "4b4de555e2b8e92075e81f83b802f929ce3c70294c128dbc3d7261a2a309ad34",
-   "title": "ProsperousPlus : a one-stop and comprehensive platform for accurate protease-specific substrate cleavage prediction and machine-learning model construction",
+   "sidecar_sha256": "4350067f11dd96258522cf3235c8c39cba26749a56177d7782fbe4ebce6b74b3",
+   "title": "ProsperousPlus: a one-stop and comprehensive platform for accurate protease-specific substrate cleavage prediction and machine-learning model construction",
    "title_from_filename": false,
    "title_source": "review",
    "first_author": "Li, F. et al.",

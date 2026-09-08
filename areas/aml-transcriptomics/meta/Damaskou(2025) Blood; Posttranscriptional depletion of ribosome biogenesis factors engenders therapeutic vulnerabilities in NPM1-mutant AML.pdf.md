@@ -2,7 +2,7 @@
 # --- identity ------------------------------------------------
 id: 2025-01-01_damaskou-2025-blood-posttranscriptional
 id_basis: filename-year
-source: Damaskou(2025) Blood; Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1 -mutant AML.pdf
+source: Damaskou(2025) Blood; Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1-mutant AML.pdf
 sha256: 5bf372bfe8a31f1c3d39ae7eb644490d265033be537a8030a1d2a81898f4e457
 size_bytes: 3321026
 media: pdf
@@ -24,7 +24,7 @@ classification_basis: "published literature — publicly available at its venue"
 # --- bibliographic -------------------------------------------
 doi: "10.1182/blood.2024026113"
 year: 2025
-title: "Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1 -mutant AML"
+title: "Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1-mutant AML"
 
 # --- cross-area ----------------------------------------------
 area: aml-transcriptomics

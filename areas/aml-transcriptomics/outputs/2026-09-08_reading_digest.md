@@ -51,7 +51,7 @@ The clustering lives in `outputs/` and is the same one the browsable page uses. 
 
 - [A Perturb-seq map of a differentiation hub reveals synergistic vulnerabilities in KMT2A-rearranged acute myeloid leukemia](#p-2026-01-01-aryal-2026-leukemia-a-perturb-seq-map-of) — Aryal (2026), *Leukemia*
 - [Upfront menin-inhibitor resistance in multiply pretreated leukemias](#p-2026-01-01-mahdavi-2026-experimental-hematology-upf) — Mahdavi (2026), *Experimental Hematology*
-- [Menin inhibition with revumenib for NPM1 -mutated relapsed or refractory acute myeloid leukemia: the AUGMENT-101 study](#p-2025-01-01-arellano-2025-blood-menin-inhibition-wit) — Arellano (2025), *Blood*
+- [Menin inhibition with revumenib for NPM1-mutated relapsed or refractory acute myeloid leukemia: the AUGMENT-101 study](#p-2025-01-01-arellano-2025-blood-menin-inhibition-wit) — Arellano (2025), *Blood*
 - [Guanine nucleotide biosynthesis blockade impairs MLL complex formation and sensitizes leukemias to menin inhibition](#p-2025-01-01-shi-2025-nature-communications-guanine-n) — Shi (2025), *Nature Communications*
 - [Insights into KMT2A rearrangements in acute myeloid leukemia: from molecular characteristics to targeted therapies](#p-2025-01-01-zehtabcheh-2025-biomarker-research-insig) — Zehtabcheh (2025), *Biomarker Research*
 - [NUP98 fusion proteins and KMT2A-MENIN antagonize PRC1.1 to drive gene expression in AML](#p-2024-01-01-heikamp-2024-cell-reports-nup98-fusion-p) — Heikamp (2024), *Cell Reports*
@@ -70,7 +70,7 @@ The clustering lives in `outputs/` and is the same one the browsable page uses. 
 
 *9 papers.* The most common lesion in adult AML, defined by a protein leaving the nucleus - and recently shown to act on chromatin anyway. Two independent groups overturned the standing loss-of-function model in the same journal issue.
 
-- [Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1 -mutant AML](#p-2025-01-01-damaskou-2025-blood-posttranscriptional) — Damaskou (2025), *Blood*
+- [Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1-mutant AML](#p-2025-01-01-damaskou-2025-blood-posttranscriptional) — Damaskou (2025), *Blood*
 - [Disparate leukemia mutations converge on nuclear phase-separated condensates](#p-2025-01-01-datar-2025-cell-disparate-leukemia-mutat) — Datar (2025), *Cell*
 - [NPM1-fusion proteins promote myeloid leukemogenesis through XPO1-dependent HOX activation](#p-2024-01-01-shimosato-2024-leukemia-npm1-fusion-prot) — Shimosato (2024), *Leukemia*
 - [Mutant NPM1 Directly Regulates Oncogenic Transcription in Acute Myeloid Leukemia](#p-2022-01-01-uckelmann-2022-cancer-discovery-mutant-n) — Uckelmann (2022), *Cancer Discovery*
@@ -93,7 +93,7 @@ The clustering lives in `outputs/` and is the same one the browsable page uses. 
 - [Structural variants involving MLLT10 fusion are associated with adverse outcomes in pediatric acute myeloid leukemia](#p-2024-01-01-abla-2024-blood-advances-structural-vari) — Abla (2024), *Blood Advances*
 - [Genomic and global gene expression profiling in pediatric and young adult acute leukemia with PICALM::MLLT10 Fusion](#p-2024-01-01-ma-2024-leukemia-genomic-and-global-gene) — Ma (2024), *Leukemia*
 - [Aberrant EVI1 splicing contributes to EVI1-rearranged leukemia](#p-2022-01-01-tanaka-2022-blood-aberrant-evi1-splicing) — Tanaka (2022), *Blood*
-- [Mechanistic insights and potential therapeutic approaches for NUP98 -rearranged hematologic malignancies](#p-2020-01-01-michmerhuizen-2020-blood-mechanistic-ins) — Michmerhuizen (2020), *Blood*
+- [Mechanistic insights and potential therapeutic approaches for NUP98-rearranged hematologic malignancies](#p-2020-01-01-michmerhuizen-2020-blood-mechanistic-ins) — Michmerhuizen (2020), *Blood*
 
 ## B. Chromatin, transcription and genome architecture
 
@@ -235,15 +235,15 @@ The clustering lives in `outputs/` and is the same one the browsable page uses. 
 - [ACSL4-associated lipid metabolism is a distinct therapeutic vulnerability in KMT2A-rearranged acute myeloid leukemia](#p-2026-01-01-sch-fer-2026-cell-reports-acsl4-associat) — Schäfer (2026), *Cell Reports*
 - [Lactylation modulation identifies key biomarkers and therapeutic targets in KMT2A-rearranged AML](#p-2025-01-01-liu-2025-scientific-reports-lactylation) — Liu (2025), *Scientific Reports*
 - [Chemoresistance of TP53 mutant acute myeloid leukemia requires the mevalonate byproduct, geranylgeranyl pyrophosphate, for induction of an adaptive stress response](#p-2025-01-01-skuli-2025-leukemia-chemoresistance-of-t) — Skuli (2025), *Leukemia*
-- [C/EBPα Confers Dependence to Fatty Acid Anabolic Pathways and Vulnerability to Lipid Oxidative Stress–Induced Ferroptosis in FLT3 -Mutant Leukemia](#p-2023-01-01-sabatier-2023-cancer-discovery-c-ebp-con) — Sabatier (2023), *Cancer Discovery*
+- [C/EBPα Confers Dependence to Fatty Acid Anabolic Pathways and Vulnerability to Lipid Oxidative Stress–Induced Ferroptosis in FLT3-Mutant Leukemia](#p-2023-01-01-sabatier-2023-cancer-discovery-c-ebp-con) — Sabatier (2023), *Cancer Discovery*
 - [Transcriptional Silencing of ALDH2 Confers a Dependency on Fanconi Anemia Proteins in Acute Myeloid Leukemia](#p-2021-01-01-yang-2021-cancer-discovery-transcription) — Yang (2021), *Cancer Discovery*
 
 ### TP53 alteration and complex karyotype
 
 *9 papers.* The group every other strategy in this collection excludes. Median survival is six to nine months, p53-restoring approaches have failed in trials, and the papers here are mostly about working around p53 rather than through it.
 
-- [TP53 -mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition](#p-2026-01-01-spinella-2026-science-advances-tp53-muta) — Spinella (2026), *Science Advances*
-- [Restoring p53 wild-type conformation in TP53 -Y220C–mutant acute myeloid leukemia](#p-2025-01-01-carter-2025-blood-restoring-p53-wild-typ) — Carter (2025), *Blood*
+- [TP53-mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition](#p-2026-01-01-spinella-2026-science-advances-tp53-muta) — Spinella (2026), *Science Advances*
+- [Restoring p53 wild-type conformation in TP53-Y220C–mutant acute myeloid leukemia](#p-2025-01-01-carter-2025-blood-restoring-p53-wild-typ) — Carter (2025), *Blood*
 - [TP53-agnostic lethality through combined pan-HDAC and CDK inhibition in acute myeloid leukemia](#p-2025-01-01-pottier-2025-cancer-letters-tp53-agnosti) — Pottier (2025), *Cancer Letters*
 - [Single-cell multiomics analysis reveals dynamic clonal evolution and targetable phenotypes in acute myeloid leukemia with complex karyotype](#p-2024-01-01-lepp-2024-nature-genetics-single-cell-mu) — Leppä (2024), *Nature Genetics*
 - [AML with complex karyotype: extreme genomic complexity revealed by combined long-read sequencing and Hi-C technology](#p-2023-01-01-klever-2023-blood-advances-aml-with-comp) — Klever (2023), *Blood Advances*
@@ -751,7 +751,7 @@ The mechanistic dissection is careful in what it rules out. The drug still works
 
 <a id="p-2025-01-01-arellano-2025-blood-menin-inhibition-wit"></a>
 
-#### Menin inhibition with revumenib for NPM1 -mutated relapsed or refractory acute myeloid leukemia: the AUGMENT-101 study
+#### Menin inhibition with revumenib for NPM1-mutated relapsed or refractory acute myeloid leukemia: the AUGMENT-101 study
 
 Arellano (2025) · *Blood* · [doi:10.1182/blood.2025028357](https://doi.org/10.1182/blood.2025028357)
 
@@ -1033,7 +1033,7 @@ The review also corrects a common assumption about complex membership. DOT1L is 
 
 <a id="p-2025-01-01-damaskou-2025-blood-posttranscriptional"></a>
 
-#### Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1 -mutant AML
+#### Posttranscriptional depletion of ribosome biogenesis factors engenders therapeutic vulnerabilities in NPM1-mutant AML
 
 Damaskou (2025) · *Blood* · [doi:10.1182/blood.2024026113](https://doi.org/10.1182/blood.2024026113)
 
@@ -1395,7 +1395,7 @@ The cross-species control is the elegant part: mis-splicing of EVI1 was seen in 
 
 <a id="p-2020-01-01-michmerhuizen-2020-blood-mechanistic-ins"></a>
 
-#### Mechanistic insights and potential therapeutic approaches for NUP98 -rearranged hematologic malignancies
+#### Mechanistic insights and potential therapeutic approaches for NUP98-rearranged hematologic malignancies
 
 Michmerhuizen (2020) · *Blood* · [doi:10.1182/blood.2020007093](https://doi.org/10.1182/blood.2020007093)
 
@@ -3141,7 +3141,7 @@ Then they test it where it counts. Statins did not fully reverse chemoresistance
 
 <a id="p-2023-01-01-sabatier-2023-cancer-discovery-c-ebp-con"></a>
 
-#### C/EBPα Confers Dependence to Fatty Acid Anabolic Pathways and Vulnerability to Lipid Oxidative Stress–Induced Ferroptosis in FLT3 -Mutant Leukemia
+#### C/EBPα Confers Dependence to Fatty Acid Anabolic Pathways and Vulnerability to Lipid Oxidative Stress–Induced Ferroptosis in FLT3-Mutant Leukemia
 
 Sabatier (2023) · *Cancer Discovery* · [doi:10.1158/2159-8290.CD-22-0411](https://doi.org/10.1158/2159-8290.CD-22-0411)
 
@@ -3183,7 +3183,7 @@ The authors are unusually forthright about what they cannot explain. Why ALDH2 i
 
 <a id="p-2026-01-01-spinella-2026-science-advances-tp53-muta"></a>
 
-#### TP53 -mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition
+#### TP53-mutant AML with ribosomal gene loss exhibits impaired protein translation and sensitivity to HSP90 inhibition
 
 Spinella (2026) · *Science Advances* · [doi:10.1126/sciadv.aed7122](https://doi.org/10.1126/sciadv.aed7122)
 
@@ -3203,7 +3203,7 @@ The p53 connection is mechanistically necessary rather than incidental: ribosoma
 
 <a id="p-2025-01-01-carter-2025-blood-restoring-p53-wild-typ"></a>
 
-#### Restoring p53 wild-type conformation in TP53 -Y220C–mutant acute myeloid leukemia
+#### Restoring p53 wild-type conformation in TP53-Y220C–mutant acute myeloid leukemia
 
 Carter (2025) · *Blood* · [doi:10.1182/blood.2025028935](https://doi.org/10.1182/blood.2025028935)
 
