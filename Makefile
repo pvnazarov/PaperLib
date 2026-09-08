@@ -23,7 +23,7 @@ PY := $(if $(VENV_READY),.venv/bin/python,python3)
 AREAS := $(notdir $(wildcard areas/*))
 
 .PHONY: help all areas new-area portal update build render embed bib test verify \
-        deploy clean venv topics audit edit review digest bundle bundle-clean route inbox ui example demo demo-clean
+        deploy clean venv topics audit edit review digest bundle bundle-clean route inbox ui example demo demo-clean fix-names
 
 help:
 	@echo "AREA=<name> selects the collection. Omit it only if there is exactly one."
@@ -35,6 +35,7 @@ help:
 	@echo ""
 	@echo "  make route             shared inbox/ -> areas/<a>/inbox/  (DRY RUN; APPLY=1)"
 	@echo "  make inbox AREA=x      DRY RUN over that area's inbox -- runbook in CLAUDE.md"
+	@echo "  make fix-names         raw/ names that drifted from meta/  (DRY RUN; APPLY=1)"
 	@echo ""
 	@echo "  make update AREA=x     build + embed + render  (no network, idempotent)"
 	@echo "  make build AREA=x      meta/ + newest review -> data/library.json"
@@ -143,6 +144,12 @@ audit:
 # shows that deploy.sh's chmod changed modes and nothing else.
 verify:
 	python3 scripts/build.py --verify-bytes
+
+# Repairs raw/ filenames that drifted from the sidecars -- unicode normalisation
+# or truncation from copying the PDFs between machines. Renames only to the name
+# a file's own sha256 proves it should have. DRY RUN unless APPLY=1.
+fix-names:
+	python3 scripts/fix_raw_names.py $(if $(APPLY),--apply,)
 
 test:
 	python3 scripts/selftest.py

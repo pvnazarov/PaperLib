@@ -77,7 +77,20 @@ Use `rsync`, not a shell loop and not a zip round-trip through a non-UTF-8
 filesystem: the filenames carry spaces, semicolons, parentheses and non-ASCII
 (`Keşmir`, `Łuksza`, `Koşaloğlu-Yalçın`, and a curly apostrophe in `O’Brien`).
 Those are the names the sidecars' `source:` fields and the sha256 manifest are
-keyed on, so a mangled filename is a broken paper.
+keyed on, so a mangled filename is a broken paper. If they do get mangled anyway,
+`make fix-names` repairs it: it hashes every file in `raw/`, looks the sha256 up
+in the sidecars, and renames each file to the `source:` its own bytes prove it
+should have. It names the cause it found (normalisation vs truncation), is a dry
+run unless `APPLY=1`, and refuses any rename that would overwrite an existing
+file. That is a rename inside add-only `raw/` and the exception is narrow: it
+runs only where the join is *already* broken, and it restores the name the
+sidecar declares rather than inventing one. `make verify` afterwards is the proof.
+
+Two mangles seen in practice: **NFD normalisation**, when `raw/` is copied via a
+machine whose filesystem decomposes accents (macOS) while `meta/` came from `git
+clone`, which stores NFC — the two then disagree even though both look identical
+in a terminal. And **truncation**: the longest sidecar name here is 253 bytes,
+which fits ext4 and APFS but not eCryptfs (~143) or a Windows path.
 
 ```bash
 # from the source machine, for each area:
@@ -106,6 +119,12 @@ make areas                     # 'src' column should now read 125, not 0
 `make verify` is the real check: it re-proves that every sha256 in `meta/` matches
 the bytes that arrived. If it passes, the collection is byte-identical to the
 source machine and nothing else about the transfer can be wrong.
+
+A failure reading ``sidecar `source:` does not resolve in raw/`` is the filename
+problem above, not a missing paper: the bytes arrived, under a name the sidecar
+does not recognise. `make fix-names` reports which files drifted and why, and
+`make fix-names APPLY=1` puts them back. A `sha256 MISMATCH` is the other thing
+entirely — those bytes really are different, and no rename will fix it.
 
 ### 4. Build the page
 
