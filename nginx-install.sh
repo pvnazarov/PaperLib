@@ -7,7 +7,8 @@
 # deploy and the served page is current the moment it is rendered.
 #
 # Deliberately NOT linked from the homepage (owner, 2026-09-05): reachable by
-# link only. `X-Robots-Tag: noindex, nofollow` is what makes "by link" stay true
+# link only. `X-Robots-Tag: noindex, nofollow, noarchive, nosnippet` is what makes
+# "by link" stay true
 # rather than the collection turning up in search results. It is NOT access
 # control: anyone with the URL can read everything. See --help.
 #
@@ -86,8 +87,15 @@ verify() {
     # collection and a search index. Google does index PDF text.
     for url in "${urls[@]}" "http://localhost/paperlib/$(basename "$sample_area")/pdf/$enc"; do
         hdr=$(curl -s -I "$url" | tr -d '\r' | grep -i '^x-robots-tag:' || true)
-        [[ -n "$hdr" ]] && ok "noindex on ${url#http://localhost} (${hdr#*: })" \
-                        || bad "NO X-Robots-Tag on ${url#http://localhost} -- indexable"
+        # Presence is not correctness: a header that says the wrong thing passes an
+        # existence check and indexes anyway. Assert the directive that matters.
+        if [[ "$hdr" == *noindex* ]]; then
+            ok "noindex on ${url#http://localhost} (${hdr#*: })"
+        elif [[ -n "$hdr" ]]; then
+            bad "X-Robots-Tag on ${url#http://localhost} lacks noindex: ${hdr#*: }"
+        else
+            bad "NO X-Robots-Tag on ${url#http://localhost} -- indexable"
+        fi
     done
 
     # The homepage must not have grown a link to it.
@@ -167,13 +175,13 @@ for dir in "$REPO"/areas/*/; do
 # page already links, not to browse.
 location /paperlib/$area/pdf/ {
         alias $REPO/areas/$area/raw/;
-        add_header X-Robots-Tag \"noindex, nofollow\" always;
+        add_header X-Robots-Tag \"noindex, nofollow, noarchive, nosnippet\" always;
 }
 
 location /paperlib/$area/ {
         alias $REPO/areas/$area/dist/;
         index index.html;
-        add_header X-Robots-Tag \"noindex, nofollow\" always;
+        add_header X-Robots-Tag \"noindex, nofollow, noarchive, nosnippet\" always;
 
         # The reading digest is markdown, and nginx's default map has no entry
         # for .md -- it falls through to application/octet-stream, so clicking
@@ -224,7 +232,7 @@ $AREA_BLOCKS
 location /paperlib/ {
         alias $REPO/dist/;
         index index.html;
-        add_header X-Robots-Tag "noindex, nofollow" always;
+        add_header X-Robots-Tag "noindex, nofollow, noarchive, nosnippet" always;
 }
 $MARK_END
 CONF

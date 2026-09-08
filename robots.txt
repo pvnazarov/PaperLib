@@ -1,0 +1,89 @@
+# robots.txt for this host. Governs the WHOLE site (/, /gol/, /venn/, /paperlib/),
+# not just PaperLib -- robots.txt only has meaning at the root, so it cannot be
+# scoped to one project. Install it with:
+#
+#     sudo install -m 644 robots.txt /var/www/html/robots.txt
+#
+# ---------------------------------------------------------------------------
+# WHY `User-agent: *` HAS NO `Disallow` BELOW, AND MUST NOT GROW ONE
+# ---------------------------------------------------------------------------
+# /paperlib/ is kept out of search indexes by `X-Robots-Tag: noindex, nofollow,
+# noarchive, nosnippet` on every page, every PDF and every digest, plus a robots
+# meta tag on the HTML.
+#
+# Adding `Disallow: /paperlib/` here would WEAKEN that, not strengthen it. A
+# disallowed URL is never fetched, so the crawler never receives the noindex --
+# and a URL it may not fetch can still be listed, bare, on the strength of a
+# link from somewhere else. Allowing the fetch and answering with noindex is
+# what actually keeps it out. Do not "tighten" this by adding a Disallow.
+#
+# ---------------------------------------------------------------------------
+# WHY THE NAMED AGENTS BELOW *ARE* DISALLOWED
+# ---------------------------------------------------------------------------
+# The reasoning above holds for crawlers that want to build a search index,
+# because they read `X-Robots-Tag`. Crawlers that collect text to train or
+# ground a model do not: for them `noindex` means nothing and `Disallow` is the
+# only signal there is. So the two groups get opposite treatment on purpose --
+# search engines are invited to fetch and told not to index; model crawlers are
+# asked not to fetch at all.
+#
+# Two of these are not crawlers. `Google-Extended` and `Applebot-Extended` are
+# permission tokens: the page is still fetched by Googlebot/Applebot for search,
+# and the token says whether that content may also feed Gemini / Apple
+# Intelligence. Disallowing them is the documented way to opt out of that use
+# without dropping out of search.
+#
+# None of this is enforcement. It is a request that well-behaved agents honour
+# and everyone else ignores, and it is NOT access control: anyone with a URL
+# still reads everything. If that matters, the answer is authentication.
+#
+# Reviewed 2026-09-08. This list dates; revisit it.
+
+# --- model training and AI-answer crawlers ---------------------------------
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Claude-Web
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: PerplexityBot
+User-agent: Amazonbot
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+User-agent: FacebookBot
+User-agent: cohere-ai
+User-agent: Diffbot
+User-agent: Omgilibot
+User-agent: ImagesiftBot
+User-agent: YouBot
+User-agent: AI2Bot
+User-agent: Webzio-Extended
+User-agent: Timpibot
+User-agent: PanguBot
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
+Disallow: /
+
+# --- permission tokens, not crawlers ---------------------------------------
+# Opt out of Gemini / Apple Intelligence training WITHOUT leaving search.
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+# --- user-triggered assistant fetches --------------------------------------
+# These fire when a PERSON asks an assistant to open a URL, rather than as a
+# background crawl. Blocking them means that request fails -- including one you
+# make yourself. Listed separately so they are easy to drop if that is a
+# nuisance rather than a protection.
+User-agent: ChatGPT-User
+User-agent: Perplexity-User
+Disallow: /
+
+# --- everyone else ----------------------------------------------------------
+# No Disallow. Deliberate: see the top of this file. Ordinary crawlers must be
+# able to FETCH /paperlib/ in order to be told noindex.
+User-agent: *
+Disallow:
