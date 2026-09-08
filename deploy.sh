@@ -149,10 +149,24 @@ for area in "${AREAS[@]}"; do
 
     # An absolute asset path would break the page under a subdirectory, and every
     # area lives under one.
-    if grep -qE 'src="/|href="/[^/]' "$dest/index.html" 2>/dev/null; then
+    #
+    # The ONE absolute href that is correct is the uplink -- project.json's
+    # uplink_href, the "<- PaperLib" link back to the portal at /$PREFIX/. It is
+    # navigation, not an asset, and it has to be absolute precisely because the
+    # area page lives one level down. So href="/$PREFIX/..." is allowed and every
+    # other absolute href is not; src= is never allowed absolute.
+    # Collected into a variable rather than tested with `grep -q` in a pipeline:
+    # -q exits on the first match and closes the pipe, the upstream `grep -o` dies
+    # of SIGPIPE (141), and under `set -o pipefail` the pipeline is non-zero, which
+    # `if` reads as "no absolute paths". The guard would pass precisely on the pages
+    # that have the most to flag. Same trap as `find | head`, noted below.
+    absolute=$(grep -oE '(src|href)="/[^"]*' "$dest/index.html" 2>/dev/null \
+               | grep -vE "^href=\"/$PREFIX/" || true)
+    if [[ -n "$absolute" ]]; then
         bad "$area: index.html has absolute paths -- it would break under /$PREFIX/$area/"
+        printf '        %s\n' $absolute | sort -u | head -5
     else
-        ok "$area: no absolute asset paths"
+        ok "$area: no absolute asset paths (the uplink to /$PREFIX/ is expected)"
     fi
 
     if command -v curl >/dev/null; then
