@@ -92,6 +92,14 @@ def why(actual: str, canonical: str) -> str:
     if " ".join(actual.split()) == " ".join(canonical.split()):
         return "whitespace only"
 
+    # Publisher markup leaves a real space inside a token -- `NPM1 -mutated`,
+    # `CD8 + T cell`, `N 6 -Methyladenosine`. Correcting the registered title
+    # then renames the file, and every such rename differs from the old name by
+    # spaces alone. Distinguished from "whitespace only" above, which is a
+    # collapsed run of spaces rather than spaces removed outright.
+    if actual.replace(" ", "") == canonical.replace(" ", ""):
+        return "spacing inside a title (publisher markup artifact)"
+
     if len(actual) < len(canonical) and canonical.startswith(actual[:-4]):
         return f"truncated ({len(actual.encode())} bytes on disk vs {len(canonical.encode())})"
 
