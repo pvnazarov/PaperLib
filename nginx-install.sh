@@ -46,7 +46,11 @@ verify() {
     say "verifying over HTTP"
     command -v curl >/dev/null || { say "  skip  curl not installed"; return 0; }
 
-    for url in http://localhost/paperlib/ http://localhost/paperlib/neoantigens/; do
+    urls=(http://localhost/paperlib/)
+    for d in "$REPO"/areas/*/; do
+        [[ -d "$d/dist" ]] && urls+=("http://localhost/paperlib/$(basename "$d")/")
+    done
+    for url in "${urls[@]}"; do
         code=$(curl -s -o /dev/null -w '%{http_code}' "$url" || echo 000)
         [[ "$code" == 200 ]] && ok "GET $url -> 200" || bad "GET $url -> $code"
     done
@@ -54,13 +58,19 @@ verify() {
     # A real paper through the alias, percent-encoded the way the page links it.
     # -print -quit rather than `| head -1`: under `set -o pipefail`, head closing
     # the pipe early makes find die of SIGPIPE and take the script with it.
-    sample=$(find "$REPO/areas/neoantigens/raw" -maxdepth 1 -name '*.pdf' -print -quit)
+    sample_area=""
+    for d in "$REPO"/areas/*/; do
+        if find "$d/raw" -maxdepth 1 -name '*.pdf' -print -quit 2>/dev/null | grep -q .; then
+            sample_area="$d"; break
+        fi
+    done
+    sample=$(find "$sample_area/raw" -maxdepth 1 -name '*.pdf' -print -quit 2>/dev/null)
     if [[ -n "$sample" ]]; then
         enc=$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" \
               "$(basename "$sample")")
         read -r code ctype < <(curl -s -o /dev/null \
             -w '%{http_code} %{content_type}\n' \
-            "http://localhost/paperlib/neoantigens/pdf/$enc" || echo "000 -")
+            "http://localhost/paperlib/$(basename "$sample_area")/pdf/$enc" || echo "000 -")
         if [[ "$code" == 200 ]]; then
             ok "GET a paper through the alias -> 200 ($ctype)"
         else
@@ -71,9 +81,14 @@ verify() {
     fi
 
     # "By link only" is a claim this script makes on the page's behalf; check it.
-    hdr=$(curl -s -I http://localhost/paperlib/neoantigens/ | tr -d '\r' | grep -i '^x-robots-tag:' || true)
-    [[ -n "$hdr" ]] && ok "noindex header present (${hdr#*: })" \
-                    || bad "no X-Robots-Tag -- search engines may index this"
+    # Checked on every page AND on a PDF: a .pdf cannot carry a robots meta tag,
+    # so for the papers the header is the only thing standing between the
+    # collection and a search index. Google does index PDF text.
+    for url in "${urls[@]}" "http://localhost/paperlib/$(basename "$sample_area")/pdf/$enc"; do
+        hdr=$(curl -s -I "$url" | tr -d '\r' | grep -i '^x-robots-tag:' || true)
+        [[ -n "$hdr" ]] && ok "noindex on ${url#http://localhost} (${hdr#*: })" \
+                        || bad "NO X-Robots-Tag on ${url#http://localhost} -- indexable"
+    done
 
     # The homepage must not have grown a link to it.
     if curl -s http://localhost/ | grep -qi 'paperlib'; then
@@ -136,6 +151,53 @@ if grep -qF "$MARK_BEGIN" "$SNIPPET"; then
     exit 0
 fi
 
+# One pair of location blocks per area, GENERATED. This used to name
+# neoantigens literally, which meant a second area was served by the catch-all:
+# no X-Robots-Tag on its pages or its PDFs, and .md digests downloaded instead
+# of opening. "All areas are noindex" is a claim that has to be generated from
+# what is on disk, not typed once and left behind by the next area.
+AREA_BLOCKS=""
+for dir in "$REPO"/areas/*/; do
+    [[ -d "$dir/dist" ]] || continue
+    area=$(basename "$dir")
+    AREA_BLOCKS+="
+# --- $area ---
+# The papers themselves. autoindex stays OFF: a directory listing would
+# enumerate the whole collection, and this route exists to serve a filename the
+# page already links, not to browse.
+location /paperlib/$area/pdf/ {
+        alias $REPO/areas/$area/raw/;
+        add_header X-Robots-Tag \"noindex, nofollow\" always;
+}
+
+location /paperlib/$area/ {
+        alias $REPO/areas/$area/dist/;
+        index index.html;
+        add_header X-Robots-Tag \"noindex, nofollow\" always;
+
+        # The reading digest is markdown, and nginx's default map has no entry
+        # for .md -- it falls through to application/octet-stream, so clicking
+        # the sidebar link DOWNLOADS the file instead of opening it. Declaring
+        # types inside a location REPLACES the map for that location, so all
+        # four types dist/ actually contains are listed here; the PDFs are
+        # served by the separate /pdf/ block above and are unaffected.
+        types {
+                text/html       html;
+                text/css        css;
+                text/javascript js;
+                text/plain      md;
+        }
+        # REQUIRED alongside the types block above. Declaring \`types\` replaces the
+        # map for this location, and nginx's built-in fallback for anything not
+        # listed is text/plain -- which would serve a several-hundred-megabyte
+        # .tar.gz as text and break the download offer.
+        default_type application/octet-stream;
+        charset utf-8;
+}
+"
+done
+[[ -n "$AREA_BLOCKS" ]] || { echo "nginx-install: no areas with dist/ -- run make render first" >&2; exit 1; }
+
 cat >> "$SNIPPET" <<CONF
 
 $MARK_BEGIN
@@ -156,39 +218,7 @@ location = /paperlib {
         return 301 /paperlib/;
 }
 
-# The papers themselves. autoindex stays OFF: a directory listing would
-# enumerate the whole collection, and this route exists to serve a filename the
-# page already links, not to browse.
-location /paperlib/neoantigens/pdf/ {
-        alias $REPO/areas/neoantigens/raw/;
-        add_header X-Robots-Tag "noindex, nofollow" always;
-}
-
-location /paperlib/neoantigens/ {
-        alias $REPO/areas/neoantigens/dist/;
-        index index.html;
-        add_header X-Robots-Tag "noindex, nofollow" always;
-
-        # The reading digest is markdown, and nginx's default map has no entry
-        # for .md -- it falls through to application/octet-stream, so clicking
-        # the sidebar link DOWNLOADS the file instead of opening it. Declaring
-        # types inside a location REPLACES the map for that location, so all
-        # four types dist/ actually contains are listed here; the PDFs are
-        # served by the separate /pdf/ block above and are unaffected.
-        types {
-                text/html       html;
-                text/css        css;
-                text/javascript js;
-                text/plain      md;
-        }
-        # REQUIRED alongside the types block above. Declaring `types` replaces the
-        # map for this location, and nginx's built-in fallback for anything not
-        # listed is text/plain -- which would serve a several-hundred-megabyte
-        # .tar.gz as text and break the download offer.
-        default_type application/octet-stream;
-        charset utf-8;
-}
-
+$AREA_BLOCKS
 # The portal listing every area. Shortest prefix, kept last by convention
 # because it is the one most easily mistaken for a catch-all.
 location /paperlib/ {

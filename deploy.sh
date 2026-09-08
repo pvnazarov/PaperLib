@@ -66,6 +66,24 @@ say()  { printf '%s\n' "$*"; }
 ok()   { printf '  ok    %s\n' "$*"; }
 bad()  { printf '  FAIL  %s\n' "$*"; fail=1; }
 
+# A page can carry <meta name="robots" content="noindex"> and src/index.html
+# does -- but a .pdf has no <head>, and search engines index PDF text. So for
+# the papers the HTTP header is the only thing there is, and it comes from the
+# server, not from anything this script copies. Left unverified, "not
+# searchable" is a belief about a config file nobody re-reads. The header is
+# set by nginx-noindex.conf (this serving model) or nginx-install.sh (the
+# alias model).
+noindex() {
+    local what="$1" url="$2" hdr
+    hdr=$(curl -s -I "$url" | tr -d '\r' | grep -i '^x-robots-tag:' || true)
+    if [[ -n "$hdr" ]]; then
+        ok "$what: ${hdr#*: }"
+    else
+        bad "$what: no X-Robots-Tag -- search engines may index this"
+        say "        add nginx-noindex.conf to the server block, then reload nginx"
+    fi
+}
+
 if [[ -n "$ONE_AREA" ]]; then
     AREAS=("$ONE_AREA")
 else
@@ -173,6 +191,7 @@ for area in "${AREAS[@]}"; do
         code=$(curl -s -o /dev/null -w '%{http_code}' "$URL_BASE/$area/" || echo 000)
         [[ "$code" == 200 ]] && ok "$area: GET $URL_BASE/$area/ -> 200" \
                              || bad "$area: GET $URL_BASE/$area/ -> $code"
+        noindex "$area: page" "$URL_BASE/$area/"
         # A real source file, url-encoded the way the page links it. Proves nginx
         # follows the symlink rather than assuming it.
         # -print -quit rather than `| head -1`: under `set -o pipefail`, head
@@ -184,6 +203,7 @@ for area in "${AREAS[@]}"; do
             code=$(curl -s -o /dev/null -w '%{http_code}' "$URL_BASE/$area/pdf/$enc" || echo 000)
             if [[ "$code" == 200 ]]; then
                 ok "$area: GET a source through the symlink -> 200 (nginx IS following symlinks)"
+                noindex "$area: a source PDF" "$URL_BASE/$area/pdf/$enc"
             else
                 bad "$area: GET a source through the symlink -> $code"
                 say "        'Permission denied' in nginx's error log means raw/ or its files"
@@ -192,7 +212,11 @@ for area in "${AREAS[@]}"; do
         fi
     fi
 done
-[[ $(command -v curl) ]] || say "  skip  curl not installed; nothing verified over HTTP"
+if command -v curl >/dev/null; then
+    noindex "portal" "$URL_BASE/"
+else
+    say "  skip  curl not installed; nothing verified over HTTP"
+fi
 
 say ""
 if [[ "$fail" -eq 0 ]]; then
